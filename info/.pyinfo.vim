@@ -20,2361 +20,2396 @@
 $eqs
 
 # Command Line History (newest to oldest):
-:tabf main.py
-|2,0,1621147172,,"tabf main.py"
-:tabnew mod.h
-|2,0,1621147172,,"tabnew mod.h"
-:s/\<j\>/k/g
-|2,0,1621147172,,"s/\\<j\\>/k/g"
-:vsplit main.c
-|2,0,1621147172,,"vsplit main.c"
-:%s/hello/goodbye/g
-|2,0,1621147172,,"%s/hello/goodbye/g"
-:vsplit intro.txt
-|2,0,1621147172,,"vsplit intro.txt"
-:s/\<b\>/cd/g
-|2,0,1621147172,,"s/\\<b\\>/cd/g"
-:s/a/ab/g
-|2,0,1621147172,,"s/a/ab/g"
-:s/\<cd\>/b/g
-|2,0,1621147172,,"s/\\<cd\\>/b/g"
-:s/\<ab\>/a/g
-|2,0,1621147172,,"s/\\<ab\\>/a/g"
-:let @" =expand("%")
-|2,0,1621147172,,"let @\" =expand(\"%\")"
-:tabm2
-|2,0,1621147172,,"tabm2"
 :%d
-|2,0,1621147172,,"%d"
-:reg d
-|2,0,1621147172,,"reg d"
-:wv! ~/.hinfo.vim
-|2,0,1621147172,,"wv! ~/.hinfo.vim"
-:s/hey/Hey/g
-|2,0,1621147172,,"s/hey/Hey/g"
-:wv ~/.pyinfo.vim
-|2,0,1621147172,,"wv ~/.pyinfo.vim"
-:!python3 %
-|2,0,1621147172,,"!python3 %"
-:help Session
-|2,0,1621147172,,"help Session"
-:python3 %
-|2,0,1621147172,,"python3 %"
-:scripnames
-|2,0,1621147172,,"scripnames"
-:%y*
-|2,0,1621147172,,"%y*"
-:checkhealth
-|2,0,1621147172,,"checkhealth"
-:Helptags
-|2,0,1621147172,,"Helptags"
-:tabnew first_vim.py
-|2,0,1621147172,,"tabnew first_vim.py"
-:version
-|2,0,1621147172,,"version"
-:set wrap
-|2,0,1621147172,,"set wrap"
-:set breakindent
-|2,0,1621147172,,"set breakindent"
-:set formatoptions=l
-|2,0,1621147172,,"set formatoptions=l"
-:set lbr
-|2,0,1621147172,,"set lbr"
-:foldmethod=syntax
-|2,0,1621147172,,"foldmethod=syntax"
-:set foldmethod=syntax
-|2,0,1621147172,,"set foldmethod=syntax"
-:help folding
-|2,0,1621147172,,"help folding"
-:w !python
-|2,0,1621147172,,"w !python"
-:w !python3
-|2,0,1621147172,,"w !python3"
-:tabnew subscriber_member_function2.cpp
-|2,0,1621147172,,"tabnew subscriber_member_function2.cpp"
-:tabf ../
-|2,0,1621147172,,"tabf ../"
-:tabf ../CMakeLists.txt
-|2,0,1621147172,,"tabf ../CMakeLists.txt"
-:h find
-|2,0,1621147172,,"h find"
-:h expandtab
-|2,0,1621147172,,"h expandtab"
-:set expandtab 2
-|2,0,1621147172,,"set expandtab 2"
-:set expandtab=2
-|2,0,1621147172,,"set expandtab=2"
-:vim ~/.vimrc
-|2,0,1621147172,,"vim ~/.vimrc"
-:set shiftwidth=4
-|2,0,1621147172,,"set shiftwidth=4"
-:h tabstop
-|2,0,1621147172,,"h tabstop"
-:h shiftwidth()
-|2,0,1621147172,,"h shiftwidth()"
-:h shiftwidth
-|2,0,1621147172,,"h shiftwidth"
-:findf ~/.vimrc
-|2,0,1621147172,,"findf ~/.vimrc"
-:tabf CMakeLists.txt
-|2,0,1621147172,,"tabf CMakeLists.txt"
-:tabf ..
-|2,0,1621147172,,"tabf .."
-:tabnew src/publish_address_book.cpp
-|2,0,1621147172,,"tabnew src/publish_address_book.cpp"
-:tabf package.xml
-|2,0,1621147172,,"tabf package.xml"
-:tabf msg/AddressBook.msg
-|2,0,1621147172,,"tabf msg/AddressBook.msg"
-:tabf src/publish_address_book.cpp
-|2,0,1621147172,,"tabf src/publish_address_book.cpp"
-:s/MAX/MIN/g
-|2,0,1621147172,,"s/MAX/MIN/g"
-:set tabstop=4
-|2,0,1621147172,,"set tabstop=4"
-:set tabstop=2
-|2,0,1621147172,,"set tabstop=2"
-:set shiftwidth=2
-|2,0,1621147172,,"set shiftwidth=2"
-:tabf ../*4/*.cpp
-|2,0,1621147172,,"tabf ../*4/*.cpp"
-:%s/R/
-|2,0,1621147172,,"%s/R/"
-:%s/R/v/gc
-|2,0,1621147172,,"%s/R/v/gc"
-:set nopaste
-|2,0,1621147172,,"set nopaste"
-:s/v/root/g
-|2,0,1621147172,,"s/v/root/g"
-:s/v/T->root/g
-|2,0,1621147172,,"s/v/T->root/g"
-:tabf ../4_set_range_sum/set_range_sum.cpp
-|2,0,1621147172,,"tabf ../4_set_range_sum/set_range_sum.cpp"
-:%s/vector<list/list<list/gc
-|2,0,1621147172,,"%s/vector<list/list<list/gc"
-:wqwa
-|2,0,1621147172,,"wqwa"
-:Wq
-|2,0,1621147172,,"Wq"
-:s/std::pair<long long, int>/ipair/gc
-|2,0,1621147172,,"s/std::pair<long long, int>/ipair/gc"
-:scriptnames
-|2,0,1621147172,,"scriptnames"
-:wq!
-|2,0,1621147172,,"wq!"
-:w!
-|2,0,1621147172,,"w!"
-:tabf /usr/share/vim/vimrc
-|2,0,1621147172,,"tabf /usr/share/vim/vimrc"
-:h next
-|2,0,1621147172,,"h next"
-:mksession sess.vim
-|2,0,1621147172,,"mksession sess.vim"
-:tabf ./sess.vim
-|2,0,1621147172,,"tabf ./sess.vim"
-:Vtabnew hello.cpp
-|2,0,1621147172,,"Vtabnew hello.cpp"
-:split file2
-|2,0,1621147172,,"split file2"
-:hsplit hello.cpp
-|2,0,1621147172,,"hsplit hello.cpp"
-:vsplit yo.cpp
-|2,0,1621147172,,"vsplit yo.cpp"
-:!man cout
-|2,0,1621147172,,"!man cout"
-:!man std::cout 
-|2,0,1621147172,,"!man std::cout "
-:!man vim
-|2,0,1621147172,,"!man vim"
-:tabf ~/.vim/
-|2,0,1621147172,,"tabf ~/.vim/"
-:tabf /etc/vim/vimrc
-|2,0,1621147172,,"tabf /etc/vim/vimrc"
-:tabf make
-|2,0,1621147172,,"tabf make"
-:make test2
-|2,0,1621147172,,"make test2"
-:make test3
-|2,0,1621147172,,"make test3"
-:mkae
-|2,0,1621147172,,"mkae"
-:%s/c/
-|2,0,1621147172,,"%s/c/"
-:source
-|2,0,1621147172,,"source"
-:make test
-|2,0,1621147172,,"make test"
-:male
-|2,0,1621147172,,"male"
-:mae
-|2,0,1621147172,,"mae"
-:ake
-|2,0,1621147172,,"ake"
-:s/i/x/gc
-|2,0,1621147172,,"s/i/x/gc"
-:tabnew 3.in
-|2,0,1621147172,,"tabnew 3.in"
-:make 3
-|2,0,1621147172,,"make 3"
-:tabnew 4.in
-|2,0,1621147172,,"tabnew 4.in"
-:make 4
-|2,0,1621147172,,"make 4"
-:tabnew 5.in
-|2,0,1621147172,,"tabnew 5.in"
-:make 5
-|2,0,1621147172,,"make 5"
-:source S
-|2,0,1621147172,,"source S"
-:tabnew 1.in Makefile -p
-|2,0,1621147172,,"tabnew 1.in Makefile -p"
-:make1
-|2,0,1621147172,,"make1"
-:tabf Session.vim
-|2,0,1621147172,,"tabf Session.vim"
-:ls
-|2,0,1621147172,,"ls"
-:cd ..
-|2,0,1621147172,,"cd .."
-:time
-|2,0,1621147172,,"time"
-:type -a time
-|2,0,1621147172,,"type -a time"
-:mksession prim.vim
-|2,0,1621147172,,"mksession prim.vim"
-:tabf 1.in 2.in
-|2,0,1621147172,,"tabf 1.in 2.in"
-:source prim.vim
-|2,0,1621147172,,"source prim.vim"
-:make all
-|2,0,1621147172,,"make all"
-:%s/\\/ /gc
-|2,0,1621147172,,"%s/\\\\/ /gc"
-:make prim
-|2,0,1621147172,,"make prim"
-:amke
-|2,0,1621147172,,"amke"
-:%s/bfs/dfs/gc
-|2,0,1621147172,,"%s/bfs/dfs/gc"
-:! HardwareSimulator And.tst
-|2,0,1621147172,,"! HardwareSimulator And.tst"
-:tabf Not.hdl
-|2,0,1621147172,,"tabf Not.hdl"
-:! HardwareSimulator Or.tst
-|2,0,1621147172,,"! HardwareSimulator Or.tst"
-:! HardwareSimulator Xor.tst
-|2,0,1621147172,,"! HardwareSimulator Xor.tst"
-:s/s/sel/g
-|2,0,1621147172,,"s/s/sel/g"
-:! HardwareSimulator Mux.tst
-|2,0,1621147172,,"! HardwareSimulator Mux.tst"
-:s/sel/in/g
-|2,0,1621147172,,"s/sel/in/g"
-:! HardwareSimulator DMux.tst
-|2,0,1621147172,,"! HardwareSimulator DMux.tst"
-:! HardwareSimulator Not16.tst
-|2,0,1621147172,,"! HardwareSimulator Not16.tst"
-:!HardwareSimulator And.tst
-|2,0,1621147172,,"!HardwareSimulator And.tst"
-:!HardwareSimulator Or16.tst
-|2,0,1621147172,,"!HardwareSimulator Or16.tst"
-:!HardwareSimulator And16.tst
-|2,0,1621147172,,"!HardwareSimulator And16.tst"
-:tabf Mux.hdl
-|2,0,1621147172,,"tabf Mux.hdl"
-:!HardwareSimulator Mux16.tst
-|2,0,1621147172,,"!HardwareSimulator Mux16.tst"
-:tabf Or.hdl
-|2,0,1621147172,,"tabf Or.hdl"
-:find
-|2,0,1621147172,,"find"
-:! HardwareSimulator Mux16.tst
-|2,0,1621147172,,"! HardwareSimulator Mux16.tst"
-:tabf Mux16.hdl
-|2,0,1621147172,,"tabf Mux16.hdl"
-:tabf Mux4Way16.cmp
-|2,0,1621147172,,"tabf Mux4Way16.cmp"
-:tabf Mux4Way16.out
-|2,0,1621147172,,"tabf Mux4Way16.out"
-:! HardwareSimulator Mux4Way16.tst
-|2,0,1621147172,,"! HardwareSimulator Mux4Way16.tst"
-:! HardwareSimulator Mux8Way16.tst
-|2,0,1621147172,,"! HardwareSimulator Mux8Way16.tst"
-:! HardwareSimulator DMux4Way.tst
-|2,0,1621147172,,"! HardwareSimulator DMux4Way.tst"
-:tabf Mux8Way16.hdl
-|2,0,1621147172,,"tabf Mux8Way16.hdl"
-:tabnew Xor16.hdl
-|2,0,1621147172,,"tabnew Xor16.hdl"
-:%s/And/Xor/gc
-|2,0,1621147172,,"%s/And/Xor/gc"
-:! HardwareSimulator DMux8Way.tst
-|2,0,1621147172,,"! HardwareSimulator DMux8Way.tst"
-:s/x/y/g
-|2,0,1621147172,,"s/x/y/g"
-:s/zx/f/g
-|2,0,1621147172,,"s/zx/f/g"
-:tabf Add16.hdl
-|2,0,1621147172,,"tabf Add16.hdl"
-:! HardwareSimulator Add16.hdl
-|2,0,1621147172,,"! HardwareSimulator Add16.hdl"
-:! HardwareSimulator Add16.tst
-|2,0,1621147172,,"! HardwareSimulator Add16.tst"
-:! HardwareSimulator Or8Way.hdl
-|2,0,1621147172,,"! HardwareSimulator Or8Way.hdl"
-:! HardwareSimulator Or8Way.tst
-|2,0,1621147172,,"! HardwareSimulator Or8Way.tst"
-:! HardwareSimulator ALU.tst
-|2,0,1621147172,,"! HardwareSimulator ALU.tst"
-:edit main.cpp
-|2,0,1621147172,,"edit main.cpp"
-:make 1
-|2,0,1621147172,,"make 1"
-:source Makefile
-|2,0,1621147172,,"source Makefile"
-:make 1.ini
-|2,0,1621147172,,"make 1.ini"
-:%s/size/sz/gc
-|2,0,1621147172,,"%s/size/sz/gc"
-:make !.in
-|2,0,1621147172,,"make !.in"
-:%s/SortedHeap/sortedHeap/g
-|2,0,1621147172,,"%s/SortedHeap/sortedHeap/g"
-:make 1.n
-|2,0,1621147172,,"make 1.n"
-:tabnew reading.cpp
-|2,0,1621147172,,"tabnew reading.cpp"
-:tabf values.h
-|2,0,1621147172,,"tabf values.h"
-:tabf reading.cpp
-|2,0,1621147172,,"tabf reading.cpp"
-:! g++ reading.cpp && cat 1.in | ./a.out
-|2,0,1621147172,,"! g++ reading.cpp && cat 1.in | ./a.out"
-:%s/visited/dist/g/c
-|2,0,1621147172,,"%s/visited/dist/g/c"
-:%s/visited/dist/gc
-|2,0,1621147172,,"%s/visited/dist/gc"
-:! g++ main.cpp && cat 1.in | ./a.out
-|2,0,1621147172,,"! g++ main.cpp && cat 1.in | ./a.out"
-:! HardwareSimulator Bit.hdl
-|2,0,1621147172,,"! HardwareSimulator Bit.hdl"
-:! HardwareSimulator Bit.tst
-|2,0,1621147172,,"! HardwareSimulator Bit.tst"
-:! HardwareSimulator Register.tst
-|2,0,1621147172,,"! HardwareSimulator Register.tst"
-:! HardwareSimulator RAM8.tst
-|2,0,1621147172,,"! HardwareSimulator RAM8.tst"
-:tabf Register.hdl
-|2,0,1621147172,,"tabf Register.hdl"
-:tabf Bit.cmp
-|2,0,1621147172,,"tabf Bit.cmp"
-:tabf Bit.hdl
-|2,0,1621147172,,"tabf Bit.hdl"
-:ta
-|2,0,1621147172,,"ta"
-:tabf RAM64.hdl
-|2,0,1621147172,,"tabf RAM64.hdl"
-:! HardwareSimulator RAM64.tst
-|2,0,1621147172,,"! HardwareSimulator RAM64.tst"
-:tab ~/.vimrc
-|2,0,1621147172,,"tab ~/.vimrc"
-:! HardwareSimulator RAM512.tst
-|2,0,1621147172,,"! HardwareSimulator RAM512.tst"
-:tabf RAM4K.hdl
-|2,0,1621147172,,"tabf RAM4K.hdl"
-:! HardwareSimulator RAM4K.tst
-|2,0,1621147172,,"! HardwareSimulator RAM4K.tst"
-:tabf RAM16K.hdl
-|2,0,1621147172,,"tabf RAM16K.hdl"
-:! HardwareSimulator RAM16K.tst
-|2,0,1621147172,,"! HardwareSimulator RAM16K.tst"
-:tabf .
-|2,0,1621147172,,"tabf ."
-:! HardwareSimulator PC.tst
-|2,0,1621147172,,"! HardwareSimulator PC.tst"
-:tabf Fill.tst
-|2,0,1621147172,,"tabf Fill.tst"
-:tabf *.tst
-|2,0,1621147172,,"tabf *.tst"
-:tabf FillAutomatic.tst
-|2,0,1621147172,,"tabf FillAutomatic.tst"
-:Q!
-|2,0,1621147172,,"Q!"
-:! HardwareSimulator CPU.tst
-|2,0,1621147172,,"! HardwareSimulator CPU.tst"
-:! HardwareSimulator Memory.tst
-|2,0,1621147172,,"! HardwareSimulator Memory.tst"
-:tabf CPU.hdl
-|2,0,1621147172,,"tabf CPU.hdl"
-:tabf Memory.hdl
-|2,0,1621147172,,"tabf Memory.hdl"
-:! HardwareSimulator Computer.tst
-|2,0,1621147172,,"! HardwareSimulator Computer.tst"
-:! HardwareSimulator
-|2,0,1621147172,,"! HardwareSimulator"
-:%s/Hash/HashTable/gc
-|2,0,1621147172,,"%s/Hash/HashTable/gc"
-:! HardwareSimulator Mult.tst
-|2,0,1621147172,,"! HardwareSimulator Mult.tst"
-:make 2.in
-|2,0,1621147172,,"make 2.in"
-:! g++ main.cpp && cat 2.in | ./a.out
-|2,0,1621147172,,"! g++ main.cpp && cat 2.in | ./a.out"
-:! g++ main.cpp && ./a.out
-|2,0,1621147172,,"! g++ main.cpp && ./a.out"
-:! python3 Assembler.py
-|2,0,1621147172,,"! python3 Assembler.py"
-:find Makefile
-|2,0,1621147172,,"find Makefile"
-:mks
-|2,0,1621147172,,"mks"
-:make pong.asm
-|2,0,1621147172,,"make pong.asm"
-:make add.asm
-|2,0,1621147172,,"make add.asm"
-:make max
-|2,0,1621147172,,"make max"
-:make rect
-|2,0,1621147172,,"make rect"
-:ma
-|2,0,1621147172,,"ma"
-:make sum
-|2,0,1621147172,,"make sum"
-:make pong
-|2,0,1621147172,,"make pong"
-:! ls -la
-|2,0,1621147172,,"! ls -la"
-:! make rect
-|2,0,1621147172,,"! make rect"
-:tabf rect/Rect.hack
-|2,0,1621147172,,"tabf rect/Rect.hack"
-:tabf rect/cmp.hack
-|2,0,1621147172,,"tabf rect/cmp.hack"
-:tabnew rect/cmp.hack
-|2,0,1621147172,,"tabnew rect/cmp.hack"
-:! diff rect/Rect.hack rect/cmp.hack
-|2,0,1621147172,,"! diff rect/Rect.hack rect/cmp.hack"
-:tabf add/Add.hack
-|2,0,1621147172,,"tabf add/Add.hack"
-:tabnew add/cmp.hack
-|2,0,1621147172,,"tabnew add/cmp.hack"
-:! diff add/Add.hack add/cmp.hack
-|2,0,1621147172,,"! diff add/Add.hack add/cmp.hack"
-:! make max
-|2,0,1621147172,,"! make max"
-:tabf max/Max.hack
-|2,0,1621147172,,"tabf max/Max.hack"
-:tabnew max/cmp.hack
-|2,0,1621147172,,"tabnew max/cmp.hack"
-:! diff max/Max.hack max/cmp.hack
-|2,0,1621147172,,"! diff max/Max.hack max/cmp.hack"
-:! make pong
-|2,0,1621147172,,"! make pong"
-:tabnew pong/cmp.hack
-|2,0,1621147172,,"tabnew pong/cmp.hack"
-:! wget https://github.com/jtdowney/nand2tetris/blob/master/06/pong/Pong.hack
-|2,0,1621147172,,"! wget https://github.com/jtdowney/nand2tetris/blob/master/06/pong/Pong.hack"
-:! mv Pong.hack cmp.hack
-|2,0,1621147172,,"! mv Pong.hack cmp.hack"
-:mv cmp.hack pong/
-|2,0,1621147172,,"mv cmp.hack pong/"
-:! mv cmp.hack pong/
-|2,0,1621147172,,"! mv cmp.hack pong/"
-:! diff pong/Pong.hack pong/cmp.hack
-|2,0,1621147172,,"! diff pong/Pong.hack pong/cmp.hack"
-:tabf ./pong/cmp.hack
-|2,0,1621147172,,"tabf ./pong/cmp.hack"
-:! g++ main.cpp -fsanitize=address
-|2,0,1621147172,,"! g++ main.cpp -fsanitize=address"
-:! cat 1.in | ./a.out
-|2,0,1621147172,,"! cat 1.in | ./a.out"
-:m!
-|2,0,1621147172,,"m!"
-:make 1.in
-|2,0,1621147172,,"make 1.in"
-:! make 1.in
-|2,0,1621147172,,"! make 1.in"
-:!make 1.in
-|2,0,1621147172,,"!make 1.in"
-:! python3 integers.py
-|2,0,1621147172,,"! python3 integers.py"
-:tabf ../StackTest/StackTest.vm
-|2,0,1621147172,,"tabf ../StackTest/StackTest.vm"
-:tabf ./StackArithmetic/*/*.vm
-|2,0,1621147172,,"tabf ./StackArithmetic/*/*.vm"
-:args ./StackArithmetic/*/*.vm
-|2,0,1621147172,,"args ./StackArithmetic/*/*.vm"
-:tabf *.py
-|2,0,1621147172,,"tabf *.py"
-:mak
-|2,0,1621147172,,"mak"
-:! python
-|2,0,1621147172,,"! python"
-:%s/sp/SP/gc
-|2,0,1621147172,,"%s/sp/SP/gc"
-:tabf ./StackArithmetic/SimpleAdd/SimpleAdd.asm
-|2,0,1621147172,,"tabf ./StackArithmetic/SimpleAdd/SimpleAdd.asm"
-:makr
-|2,0,1621147172,,"makr"
-:mark
-|2,0,1621147172,,"mark"
-:makrs
-|2,0,1621147172,,"makrs"
-:m
-|2,0,1621147172,,"m"
-:! make 
-|2,0,1621147172,,"! make "
-:! make add
-|2,0,1621147172,,"! make add"
-:tabf pulse/
-|2,0,1621147172,,"tabf pulse/"
-:! VMEmulator
-|2,0,1621147172,,"! VMEmulator"
-:explore
-|2,0,1621147172,,"explore"
-:!py
-|2,0,1621147172,,"!py"
-:! man split
-|2,0,1621147172,,"! man split"
-:! make nested
-|2,0,1621147172,,"! make nested"
-:!ad
-|2,0,1621147172,,"!ad"
-:! 	. VMTranslator/bin/activate && \	python3 VMTranslator.py FunctionCalls/StaticsTest/Class1.vm && \	deactivate
-|2,0,1621147172,,"! 	. VMTranslator/bin/activate && \\	python3 VMTranslator.py FunctionCalls/StaticsTest/Class1.vm && \\	deactivate"
-:!. VMTranslator/bin/activate && python3 VMTranslator.py FunctionCalls/StaticsTest/Class1.vm &&  deactivate
-|2,0,1621147172,,"!. VMTranslator/bin/activate && python3 VMTranslator.py FunctionCalls/StaticsTest/Class1.vm &&  deactivate"
-:tabf ProgramFlow/BasicLoop/BasicLoop.vm
-|2,0,1621147172,,"tabf ProgramFlow/BasicLoop/BasicLoop.vm"
-:! make basic
-|2,0,1621147172,,"! make basic"
-:tabf ./ProgramFlow/BasicLoop/BasicLoop.asm
-|2,0,1621147172,,"tabf ./ProgramFlow/BasicLoop/BasicLoop.asm"
-:tabf ProgramFlow/BasicLoop/*.asm
-|2,0,1621147172,,"tabf ProgramFlow/BasicLoop/*.asm"
-:! CPUEmulator ./StackArithmetic/SimpleAdd/SimpleAdd.tst
-|2,0,1621147172,,"! CPUEmulator ./StackArithmetic/SimpleAdd/SimpleAdd.tst"
-:source Session.vim
-|2,0,1621147172,,"source Session.vim"
-:tabf ../08/VMTranslator.py
-|2,0,1621147172,,"tabf ../08/VMTranslator.py"
-:!CPUEmulator
-|2,0,1621147172,,"!CPUEmulator"
-:tabf ./MemoryAccess/PointerTest/PointerTest.asm
-|2,0,1621147172,,"tabf ./MemoryAccess/PointerTest/PointerTest.asm"
-:!make poiniter
-|2,0,1621147172,,"!make poiniter"
-:! make stack
-|2,0,1621147172,,"! make stack"
-:! make all
-|2,0,1621147172,,"! make all"
-:tabf ../07/VMTranslator.py
-|2,0,1621147172,,"tabf ../07/VMTranslator.py"
-:foldmethod
-|2,0,1621147172,,"foldmethod"
-:set foldmethod
-|2,0,1621147172,,"set foldmethod"
-:help foldmethod
-|2,0,1621147172,,"help foldmethod"
-:marks
-|2,0,1621147172,,"marks"
-:! vim ~/.vimrc
-|2,0,1621147172,,"! vim ~/.vimrc"
-:set foldmethod=manual
-|2,0,1621147172,,"set foldmethod=manual"
-:18,8fo
-|2,0,1621147172,,"18,8fo"
-:set codefolding?
-|2,0,1621147172,,"set codefolding?"
-:set codefold?
-|2,0,1621147172,,"set codefold?"
-:set foldmethod?
-|2,0,1621147172,,"set foldmethod?"
-:set foldmethod=expr
-|2,0,1621147172,,"set foldmethod=expr"
-:18,26fo
-|2,0,1621147172,,"18,26fo"
-:tabf ./*/*/*.vm
-|2,0,1621147172,,"tabf ./*/*/*.vm"
-:n ./*/*/*.vm
-|2,0,1621147172,,"n ./*/*/*.vm"
-:help tab
-|2,0,1621147172,,"help tab"
-:next ./*/*/*.vm
-|2,0,1621147172,,"next ./*/*/*.vm"
-:args ./*/*/*.vm
-|2,0,1621147172,,"args ./*/*/*.vm"
-:tab all
-|2,0,1621147172,,"tab all"
-:find ./ProgramFlow/
-|2,0,1621147172,,"find ./ProgramFlow/"
-:! CPUEmulator
-|2,0,1621147172,,"! CPUEmulator"
-:tabf ./ProgramFlow/BasicLoop/BasicLoop.vm
-|2,0,1621147172,,"tabf ./ProgramFlow/BasicLoop/BasicLoop.vm"
-:! make fibs
-|2,0,1621147172,,"! make fibs"
-:tabf ProgramFlow/FibonacciSeries/FibonacciSeries.tst
-|2,0,1621147172,,"tabf ProgramFlow/FibonacciSeries/FibonacciSeries.tst"
-:tabf ProgramFlow/FibonacciSeries/FibonacciSeries.tst
-|2,0,1621147172,,"tabf ProgramFlow/FibonacciSeries/FibonacciSeries.tst"
-:tabf FibonacciSeries.asm
-|2,0,1621147172,,"tabf FibonacciSeries.asm"
-:! python3
-|2,0,1621147172,,"! python3"
-:make 
-|2,0,1621147172,,"make "
-:make add
-|2,0,1621147172,,"make add"
-:make stack
-|2,0,1621147172,,"make stack"
-:make pointer
-|2,0,1621147172,,"make pointer"
-:make static
-|2,0,1621147172,,"make static"
-:! ls
-|2,0,1621147172,,"! ls"
-:find ./VMTranslator.py
-|2,0,1621147172,,"find ./VMTranslator.py"
-:! make fibe
-|2,0,1621147172,,"! make fibe"
-:make basic
-|2,0,1621147172,,"make basic"
-:tabf ./VMTranslator/
-|2,0,1621147172,,"tabf ./VMTranslator/"
-:tabf ./FunctionCalls/FibonacciElement/Main.vm
-|2,0,1621147172,,"tabf ./FunctionCalls/FibonacciElement/Main.vm"
-:make fibs
-|2,0,1621147172,,"make fibs"
-::q
-|2,0,1621147172,,":q"
-:tabf ./FunctionCalls/FibonacciElement/FibonacciElement.asm
-|2,0,1621147172,,"tabf ./FunctionCalls/FibonacciElement/FibonacciElement.asm"
-:tabf ./ProgramFlow/FibonacciSeries/FibonacciSeries.vm
-|2,0,1621147172,,"tabf ./ProgramFlow/FibonacciSeries/FibonacciSeries.vm"
-:make fibe
-|2,0,1621147172,,"make fibe"
-:make simple
-|2,0,1621147172,,"make simple"
-:tabf 
-|2,0,1621147172,,"tabf "
-:tabf ./FunctionCalls/
-|2,0,1621147172,,"tabf ./FunctionCalls/"
-:tabf ./FunctionCalls/NestedCall/Sys.vm
-|2,0,1621147172,,"tabf ./FunctionCalls/NestedCall/Sys.vm"
-:make nest
-|2,0,1621147172,,"make nest"
-:make nested
-|2,0,1621147172,,"make nested"
-:make statics
-|2,0,1621147172,,"make statics"
-:tabf ./FunctionCalls/StaticsTest/Class1.asm
-|2,0,1621147172,,"tabf ./FunctionCalls/StaticsTest/Class1.asm"
-:tabf ./FunctionCalls/StaticsTest/StaticsTest.asm
-|2,0,1621147172,,"tabf ./FunctionCalls/StaticsTest/StaticsTest.asm"
-:Explore 
-|2,0,1621147172,,"Explore "
-:!VMEmulator
-|2,0,1621147172,,"!VMEmulator"
-:!make statics
-|2,0,1621147172,,"!make statics"
-:!make fibe
-|2,0,1621147172,,"!make fibe"
-:!make nested
-|2,0,1621147172,,"!make nested"
-:!make simple
-|2,0,1621147172,,"!make simple"
-:!make fibs
-|2,0,1621147172,,"!make fibs"
-:!make basic
-|2,0,1621147172,,"!make basic"
-:!make pointer
-|2,0,1621147172,,"!make pointer"
-:!make static
-|2,0,1621147172,,"!make static"
-:!make stack
-|2,0,1621147172,,"!make stack"
-:!make add
-|2,0,1621147172,,"!make add"
-:'<,'>!
-|2,0,1621147172,,"'<,'>!"
-:tabnew 1.in
-|2,0,1621147172,,"tabnew 1.in"
-:W
-|2,0,1621147172,,"W"
-:1
-|2,0,1621147172,,"1"
-:Qa
-|2,0,1621147172,,"Qa"
-::::::::::!
-|2,0,1621147172,,":::::::::!"
-:tabnew Main.jack
-|2,0,1621147172,,"tabnew Main.jack"
-:!tabf ../HelloWorld/Main.jack
-|2,0,1621147172,,"!tabf ../HelloWorld/Main.jack"
-:!JackCompiler ../
-|2,0,1621147172,,"!JackCompiler ../"
-:tabf ../HelloWorld/Main.jack
-|2,0,1621147172,,"tabf ../HelloWorld/Main.jack"
-:tabf ../Fraction/Main.jack
-|2,0,1621147172,,"tabf ../Fraction/Main.jack"
-:tabf ../Average/Main.jack
-|2,0,1621147172,,"tabf ../Average/Main.jack"
-:tabf ../Fraction/Fraction.jack
-|2,0,1621147172,,"tabf ../Fraction/Fraction.jack"
-:%s/circle/circle2/gc
-|2,0,1621147172,,"%s/circle/circle2/gc"
-:tabnew Empty.jack
-|2,0,1621147172,,"tabnew Empty.jack"
-:tabnew Cross.jack
-|2,0,1621147172,,"tabnew Cross.jack"
-:tabnew White.jack
-|2,0,1621147172,,"tabnew White.jack"
-:mksession Session.vim
-|2,0,1621147172,,"mksession Session.vim"
-::w
-|2,0,1621147172,,":w"
-:tabnew Cell.jack
-|2,0,1621147172,,"tabnew Cell.jack"
-:tabnew State.jack
-|2,0,1621147172,,"tabnew State.jack"
-:Wa
-|2,0,1621147172,,"Wa"
-:tabf Cell.jack
-|2,0,1621147172,,"tabf Cell.jack"
-:tabf State.jack
-|2,0,1621147172,,"tabf State.jack"
-:tabnew TicTac.jack
-|2,0,1621147172,,"tabnew TicTac.jack"
-:tabnew KeyListener.jack
-|2,0,1621147172,,"tabnew KeyListener.jack"
-:tabf ./KeyListener.jack
-|2,0,1621147172,,"tabf ./KeyListener.jack"
-:tabnew GameState.jack
-|2,0,1621147172,,"tabnew GameState.jack"
-:s/0/2/g
-|2,0,1621147172,,"s/0/2/g"
-:tabf GameState.jack
-|2,0,1621147172,,"tabf GameState.jack"
-:! python3 password.py
-|2,0,1621147172,,"! python3 password.py"
-:qs
-|2,0,1621147172,,"qs"
-:%s/string/hello/g
-|2,0,1621147172,,"%s/string/hello/g"
-:tabnew output.txt
-|2,0,1621147172,,"tabnew output.txt"
-:!make py
-|2,0,1621147172,,"!make py"
-:ret
-|2,0,1621147172,,"ret"
-:tabf ~/.vimrc
-|2,0,1621147172,,"tabf ~/.vimrc"
-:retab!
-|2,0,1621147172,,"retab!"
-:!autopep8
-|2,0,1621147172,,"!autopep8"
-:!pip3 install autopep8
-|2,0,1621147172,,"!pip3 install autopep8"
-:tabm 4
-|2,0,1621147172,,"tabm 4"
-:!autopep8 -i main.py
-|2,0,1621147172,,"!autopep8 -i main.py"
-:! make py
-|2,0,1621147172,,"! make py"
-:! g++ main.c
-|2,0,1621147172,,"! g++ main.c"
-:tabnew binary_tree.cpp
-|2,0,1621147172,,"tabnew binary_tree.cpp"
-:tabnew binary_tree.h
-|2,0,1621147172,,"tabnew binary_tree.h"
-:tabnew parser.h
-|2,0,1621147172,,"tabnew parser.h"
-:%s/var/val/g
-|2,0,1621147172,,"%s/var/val/g"
-:tabf ../guess/1.in
-|2,0,1621147172,,"tabf ../guess/1.in"
-:! xdg-open ../
-|2,0,1621147172,,"! xdg-open ../"
-:!make i.in
-|2,0,1621147172,,"!make i.in"
-:! python3 main.py
-|2,0,1621147172,,"! python3 main.py"
-:!xdg-open .
-|2,0,1621147172,,"!xdg-open ."
-:s/0/1/g
-|2,0,1621147172,,"s/0/1/g"
-:s/1/0/g
-|2,0,1621147172,,"s/1/0/g"
-:.,.+1!
-|2,0,1621147172,,".,.+1!"
-:! make i.in
-|2,0,1621147172,,"! make i.in"
-:tabf d.in
-|2,0,1621147172,,"tabf d.in"
-:tabnew d.in
-|2,0,1621147172,,"tabnew d.in"
-:! make d.in
-|2,0,1621147172,,"! make d.in"
-:python3 JackAnalyser.py
-|2,0,1621147172,,"python3 JackAnalyser.py"
-:!python3 JackAnalyser.py
-|2,0,1621147172,,"!python3 JackAnalyser.py"
-:! source ./JackAnalyser/bin/activate
-|2,0,1621147172,,"! source ./JackAnalyser/bin/activate"
-:tabe 
-|2,0,1621147172,,"tabe "
-:tabf ./ExpressionLessSquare/Main.jack
-|2,0,1621147172,,"tabf ./ExpressionLessSquare/Main.jack"
-:Explore
-|2,0,1621147172,,"Explore"
-:! pwd
-|2,0,1621147172,,"! pwd"
-:!make express
-|2,0,1621147172,,"!make express"
-:tabnew CodeReader.py
-|2,0,1621147172,,"tabnew CodeReader.py"
-:tabf jack_tokenizer.py
-|2,0,1621147172,,"tabf jack_tokenizer.py"
-:!make jack_tokenizer
-|2,0,1621147172,,"!make jack_tokenizer"
-:tabf ./ExpressionLessSquare/Square.xml
-|2,0,1621147172,,"tabf ./ExpressionLessSquare/Square.xml"
-:tabf SquareGameT.xml
-|2,0,1621147172,,"tabf SquareGameT.xml"
-:! diff SquareGameT.JT.xml SquareGameT.xml
-|2,0,1621147172,,"! diff SquareGameT.JT.xml SquareGameT.xml"
-:! TextComparer
-|2,0,1621147172,,"! TextComparer"
-:! TextComparer SquareGameT.JT.xml SquareGameT.xml
-|2,0,1621147172,,"! TextComparer SquareGameT.JT.xml SquareGameT.xml"
-:! TextCompare
-|2,0,1621147172,,"! TextCompare"
-:tabm 0
-|2,0,1621147172,,"tabm 0"
-:tabf Square.xml
-|2,0,1621147172,,"tabf Square.xml"
-:tabf Main.jack
-|2,0,1621147172,,"tabf Main.jack"
-:g++ lims.cpp && ./a.out
-|2,0,1621147172,,"g++ lims.cpp && ./a.out"
-:! g++ lims.cpp && ./a.out
-|2,0,1621147172,,"! g++ lims.cpp && ./a.out"
-:s/a/b/g
-|2,0,1621147172,,"s/a/b/g"
-:!g++ --version
-|2,0,1621147172,,"!g++ --version"
-:%/long long/unsigned long long/g
-|2,0,1621147172,,"%/long long/unsigned long long/g"
-:%s/long long/unsigned long long/g
-|2,0,1621147172,,"%s/long long/unsigned long long/g"
-:tabf ~
-|2,0,1621147172,,"tabf ~"
-:%s/long long/int/g
-|2,0,1621147172,,"%s/long long/int/g"
-:e
-|2,0,1621147172,,"e"
-:%s/[nx][ny]/[ny][nx]/gc
-|2,0,1621147172,,"%s/[nx][ny]/[ny][nx]/gc"
-:!g++ main.cpp && cat 1.in | ./a.out
-|2,0,1621147172,,"!g++ main.cpp && cat 1.in | ./a.out"
-:!g++ main.cpp -fsanitize=address && cat 1.in | ./a.out
-|2,0,1621147172,,"!g++ main.cpp -fsanitize=address && cat 1.in | ./a.out"
-:!python3 roman.py
-|2,0,1621147172,,"!python3 roman.py"
-:%/>>/<</g
-|2,0,1621147172,,"%/>>/<</g"
-:s/>>/<</g
-|2,0,1621147172,,"s/>>/<</g"
-:tabf
-|2,0,1621147172,,"tabf"
-:tabnew 2.out
-|2,0,1621147172,,"tabnew 2.out"
-:!make 2.in
-|2,0,1621147172,,"!make 2.in"
-:! make 2
-|2,0,1621147172,,"! make 2"
-:! make
-|2,0,1621147172,,"! make"
-:tab
-|2,0,1621147172,,"tab"
-:color industry
-|2,0,1621147172,,"color industry"
-:color desert
-|2,0,1621147172,,"color desert"
-:%/ull/ll/g
-|2,0,1621147172,,"%/ull/ll/g"
-:%s/ull/ll/g
-|2,0,1621147172,,"%s/ull/ll/g"
-:python
-|2,0,1621147172,,"python"
-:!cat 1.in | python3 main.py
-|2,0,1621147172,,"!cat 1.in | python3 main.py"
-:5y
-|2,0,1621147172,,"5y"
-:tabm 3
-|2,0,1621147172,,"tabm 3"
-:s/i/t
-|2,0,1621147172,,"s/i/t"
-:s/i/t/g
-|2,0,1621147172,,"s/i/t/g"
-:s/ //g
-|2,0,1621147172,,"s/ //g"
-:!g++ hello_world.cpp && ./a.out
-|2,0,1621147172,,"!g++ hello_world.cpp && ./a.out"
-:!./a.out
-|2,0,1621147172,,"!./a.out"
-:s/3/ /g
-|2,0,1621147172,,"s/3/ /g"
-:s/_3//g
-|2,0,1621147172,,"s/_3//g"
-:%dp+
-|2,0,1621147172,,"%dp+"
-:%p+
-|2,0,1621147172,,"%p+"
-:s/M/j/g
-|2,0,1621147172,,"s/M/j/g"
-:%v
-|2,0,1621147172,,"%v"
-:%s/char * str/string str/gc
-|2,0,1621147172,,"%s/char * str/string str/gc"
-:s/str[i]/c/g
-|2,0,1621147172,,"s/str[i]/c/g"
-:s/str\[i\]/c/g
-|2,0,1621147172,,"s/str\\[i\\]/c/g"
-:%s/&str/str/gc
-|2,0,1621147172,,"%s/&str/str/gc"
-:%s/void/string/gc
-|2,0,1621147172,,"%s/void/string/gc"
-:k
-|2,0,1621147172,,"k"
-:!python3 inter
-|2,0,1621147172,,"!python3 inter"
-:!python3 interleavings.py
-|2,0,1621147172,,"!python3 interleavings.py"
-:!python3 interleavings.py > output.txt
-|2,0,1621147172,,"!python3 interleavings.py > output.txt"
-:tabf output.txt
-|2,0,1621147172,,"tabf output.txt"
-:!python
-|2,0,1621147172,,"!python"
-:tabf 2.in
-|2,0,1621147172,,"tabf 2.in"
-:%s/2//gc
-|2,0,1621147172,,"%s/2//gc"
-:!make 1 && make 2
-|2,0,1621147172,,"!make 1 && make 2"
-:tabf 2.out
-|2,0,1621147172,,"tabf 2.out"
-:%s/./a.out/main
-|2,0,1621147172,,"%s/./a.out/main"
-:%s/.\/a.out/main.g
-|2,0,1621147172,,"%s/.\\/a.out/main.g"
-:%s/.\/a.out/main/g
-|2,0,1621147172,,"%s/.\\/a.out/main/g"
-:tabf main.cpp
-|2,0,1621147172,,"tabf main.cpp"
-:mks Session.vim
-|2,0,1621147172,,"mks Session.vim"
-:tabf ./shapecolour.p
-|2,0,1621147172,,"tabf ./shapecolour.p"
-:Wqa
-|2,0,1621147172,,"Wqa"
-:s/,//g
-|2,0,1621147172,,"s/,//g"
-:tabf ./main2.cpp
-|2,0,1621147172,,"tabf ./main2.cpp"
-:!mawke
-|2,0,1621147172,,"!mawke"
-:!make 
-|2,0,1621147172,,"!make "
-:!make all
-|2,0,1621147172,,"!make all"
-:%s/big/b/g
-|2,0,1621147172,,"%s/big/b/g"
-:%s/small/s/g
-|2,0,1621147172,,"%s/small/s/g"
-:%s/'/"/g
-|2,0,1621147172,,"%s/'/\"/g"
-:%s/\'/\"/g
-|2,0,1621147172,,"%s/\\'/\\\"/g"
-:%s/\â€˜/\'/g
-|2,0,1621147172,,"%s/\\â€˜/\\'/g"
-:%s/â€˜/'/g
-|2,0,1621147172,,"%s/â€˜/'/g"
-:%/â€™/'/g
-|2,0,1621147172,,"%/â€™/'/g"
-:%s/â€™/'/g
-|2,0,1621147172,,"%s/â€™/'/g"
-:%s/convert/str2int/gc
-|2,0,1621147172,,"%s/convert/str2int/gc"
-:ewqa
-|2,0,1621147172,,"ewqa"
-:s/makepair/make_pair/g
-|2,0,1621147172,,"s/makepair/make_pair/g"
-:%s/\.\/a\.out/main/g
-|2,0,1621147172,,"%s/\\.\\/a\\.out/main/g"
-:!mks
-|2,0,1621147172,,"!mks"
-:mks!
-|2,0,1621147172,,"mks!"
-:!ma
-|2,0,1621147172,,"!ma"
-:tabf 1.cm
-|2,0,1621147172,,"tabf 1.cm"
-:! diff
-|2,0,1621147172,,"! diff"
-:! diff 1.out 1.cmp
-|2,0,1621147172,,"! diff 1.out 1.cmp"
-:%y
-|2,0,1621147172,,"%y"
-:tabf main2.cpp
-|2,0,1621147172,,"tabf main2.cpp"
-:!rm ./a.out
-|2,0,1621147172,,"!rm ./a.out"
-:!make krusk
-|2,0,1621147172,,"!make krusk"
-:!mke
-|2,0,1621147172,,"!mke"
-:s/\<count\>/countP/g
-|2,0,1621147172,,"s/\\<count\\>/countP/g"
-:s/j/n/g
-|2,0,1621147172,,"s/j/n/g"
-:tabnew main2.cpp
-|2,0,1621147172,,"tabnew main2.cpp"
-:s/i/j/g
-|2,0,1621147172,,"s/i/j/g"
-:!mkae
-|2,0,1621147172,,"!mkae"
-:'<,'>
-|2,0,1621147172,,"'<,'>"
-:%s/\<n\>/N/gc
-|2,0,1621147172,,"%s/\\<n\\>/N/gc"
-:tabnew 1.out
-|2,0,1621147172,,"tabnew 1.out"
-:tabf 1.cmp
-|2,0,1621147172,,"tabf 1.cmp"
-:tabm 1
-|2,0,1621147172,,"tabm 1"
-:tabf 1.in
-|2,0,1621147172,,"tabf 1.in"
-:tabf ../1/main.cpp
-|2,0,1621147172,,"tabf ../1/main.cpp"
-:s/prims/Prims/g
-|2,0,1621147172,,"s/prims/Prims/g"
-:tabnew 2.in
-|2,0,1621147172,,"tabnew 2.in"
-:make 2
-|2,0,1621147172,,"make 2"
-:%s/Prims/Prim's/gc
-|2,0,1621147172,,"%s/Prims/Prim's/gc"
-:!make 2
-|2,0,1621147172,,"!make 2"
-:!make 2cp
-|2,0,1621147172,,"!make 2cp"
-:!make 1
-|2,0,1621147172,,"!make 1"
-:make cp
-|2,0,1621147172,,"make cp"
-:make 1cp
-|2,0,1621147172,,"make 1cp"
-:!make cp
-|2,0,1621147172,,"!make cp"
-:mks Session.vim 
-|2,0,1621147172,,"mks Session.vim "
-:wqaa
-|2,0,1621147172,,"wqaa"
-:.!
-|2,0,1621147172,,".!"
-:tabm 2
-|2,0,1621147172,,"tabm 2"
-:%s/queue/deque/gc
-|2,0,1621147172,,"%s/queue/deque/gc"
-:tabnew 1.cmp
-|2,0,1621147172,,"tabnew 1.cmp"
-:!make 1cp
-|2,0,1621147172,,"!make 1cp"
-:s/1/2/g
-|2,0,1621147172,,"s/1/2/g"
-:!make 1out
-|2,0,1621147172,,"!make 1out"
-:!mae
-|2,0,1621147172,,"!mae"
-:!mak
-|2,0,1621147172,,"!mak"
-:!mk
-|2,0,1621147172,,"!mk"
-:~
-|2,0,1621147172,,"~"
-:tabf 1.out
-|2,0,1621147172,,"tabf 1.out"
-:!python3 main.py
-|2,0,1621147172,,"!python3 main.py"
-:python3 acronym	
-|2,0,1621147172,,"python3 acronym	"
-:!pythond3 acronym.py
-|2,0,1621147172,,"!pythond3 acronym.py"
-:!python3 acronym.py1
-|2,0,1621147172,,"!python3 acronym.py1"
-:!python3 acronym.py
-|2,0,1621147172,,"!python3 acronym.py"
-:!python3
-|2,0,1621147172,,"!python3"
-:!python3 longest_distance.py
-|2,0,1621147172,,"!python3 longest_distance.py"
-:wq
-|2,0,1621147172,,"wq"
-:%s/data/d/g
-|2,0,1621147172,,"%s/data/d/g"
-:! g++ 
-|2,0,1621147172,,"! g++ "
-:!python3 lucky.py
-|2,0,1621147172,,"!python3 lucky.py"
-:wqa
-|2,0,1621147172,,"wqa"
-:!m
-|2,0,1621147172,,"!m"
-:split
-|2,0,1621147172,,"split"
-:%yC
-|2,0,1621147172,,"%yC"
-:re
-|2,0,1621147172,,"re"
-:%yp
-|2,0,1621147172,,"%yp"
-:%y"p
-|2,0,1621147172,,"%y\"p"
-:%"py
-|2,0,1621147172,,"%\"py"
-:%py
-|2,0,1621147172,,"%py"
-:s/\<i\>/kg
-|2,0,1621147172,,"s/\\<i\\>/kg"
-:s/\<i\>/k/g
-|2,0,1621147172,,"s/\\<i\\>/k/g"
-:%=
-|2,0,1621147172,,"%="
-:s/\<i\>/j/g
-|2,0,1621147172,,"s/\\<i\\>/j/g"
-:%cy
-|2,0,1621147172,,"%cy"
-:%yc
-|2,0,1621147172,,"%yc"
-:%"cy
-|2,0,1621147172,,"%\"cy"
-:tabf module.c module.h
-|2,0,1621147172,,"tabf module.c module.h"
-:help tabnew
-|2,0,1621147172,,"help tabnew"
-:%s/\<.\>/./g
-|2,0,1621147172,,"%s/\\<.\\>/./g"
-:%s/\<.\>/\<_\>/g
-|2,0,1621147172,,"%s/\\<.\\>/\\<_\\>/g"
-:%s/\<.\>/_/g
-|2,0,1621147172,,"%s/\\<.\\>/_/g"
-:%s/./_/g
-|2,0,1621147172,,"%s/./_/g"
-:let "@ = expand("%")
-|2,0,1621147172,,"let \"@ = expand(\"%\")"
-:let @" = explore("%")
-|2,0,1621147172,,"let @\" = explore(\"%\")"
-:tabnew module_2.h
-|2,0,1621147172,,"tabnew module_2.h"
-:v
-|2,0,1621147172,,"v"
-:s
-|2,0,1621147172,,"s"
-:split ter
-|2,0,1621147172,,"split ter"
-:s/\<j\>/k/
-|2,0,1621147172,,"s/\\<j\\>/k/"
-:tabnew hello.h
-|2,0,1621147172,,"tabnew hello.h"
-:put expand("%")
-|2,0,1621147172,,"put expand(\"%\")"
-:put =expand("%")
-|2,0,1621147172,,"put =expand(\"%\")"
-:put strftime('%c')
-|2,0,1621147172,,"put strftime('%c')"
-:put =strftime('%c')
-|2,0,1621147172,,"put =strftime('%c')"
-:let = expand("%")
-|2,0,1621147172,,"let = expand(\"%\")"
-:p
-|2,0,1621147172,,"p"
-:%
-|2,0,1621147172,,"%"
-:let @"=expand("%")
-|2,0,1621147172,,"let @\"=expand(\"%\")"
-:tabf hello.h
-|2,0,1621147172,,"tabf hello.h"
-:tabnew module.h
-|2,0,1621147172,,"tabnew module.h"
-:tabnew
-|2,0,1621147172,,"tabnew"
-:tabf Makefile
-|2,0,1621147172,,"tabf Makefile"
-:wa
-|2,0,1621147172,,"wa"
-:!rm Makefile
-|2,0,1621147172,,"!rm Makefile"
-:!ls
-|2,0,1621147172,,"!ls"
-:1make
-|2,0,1621147172,,"1make"
-:tabnew Makefile
-|2,0,1621147172,,"tabnew Makefile"
-:tabe
-|2,0,1621147172,,"tabe"
-:E
-|2,0,1621147172,,"E"
-:make
-|2,0,1621147172,,"make"
-:help mksession
-|2,0,1621147172,,"help mksession"
-:vsplit
-|2,0,1621147172,,"vsplit"
-:help
-|2,0,1621147172,,"help"
-:close
-|2,0,1621147172,,"close"
-:help autocmd
-|2,0,1621147172,,"help autocmd"
-:endfor
-|2,0,1621147172,,"endfor"
-:elseif
-|2,0,1621147172,,"elseif"
-:tabf ~/.viminfo
-|2,0,1621147172,,"tabf ~/.viminfo"
-:!make
-|2,0,1621147172,,"!make"
-:wv cinfo.vim
-|2,0,1621147172,,"wv cinfo.vim"
-:%y+
-|2,0,1621147172,,"%y+"
-:tabf main.c
-|2,0,1621147172,,"tabf main.c"
-:tabnew main2.py
-|2,0,1621147172,,"tabnew main2.py"
-:set @" = expand("%")
-|2,0,1621147172,,"set @\" = expand(\"%\")"
-:let @" = expand("%")
-|2,0,1621147172,,"let @\" = expand(\"%\")"
-:put = strftime('%c')
-|2,0,1621147172,,"put = strftime('%c')"
-:wv pyinfo.vim
-|2,0,1621147172,,"wv pyinfo.vim"
-:qa!
-|2,0,1621147172,,"qa!"
-:tab ter
-|2,0,1621147172,,"tab ter"
-:rv cinfo.vim
-|2,0,1621147172,,"rv cinfo.vim"
-:q!
-|2,0,1621147172,,"q!"
-:tabf pyinfo.vim
-|2,0,1621147172,,"tabf pyinfo.vim"
-:tabf cinfo.vim
-|2,0,1621147172,,"tabf cinfo.vim"
-:help rv
-|2,0,1621147172,,"help rv"
-:help session
-|2,0,1621147172,,"help session"
-:qa
-|2,0,1621147172,,"qa"
-:set paste
-|2,0,1621147172,,"set paste"
-:!python3 sol
-|2,0,1621147172,,"!python3 sol"
-:q
-|2,0,1621147172,,"q"
-:!pip3 install sympy
-|2,0,1621147172,,"!pip3 install sympy"
-:[
-|2,0,1621147172,,"["
-:s/eqns/eqs/g
-|2,0,1621147172,,"s/eqns/eqs/g"
-:!
-|2,0,1621147172,,"!"
-:w
-|2,0,1621147172,,"w"
-:!python3 solve.py
-|2,0,1621147172,,"!python3 solve.py"
-:tabnew main.py
-|2,0,1621147172,,"tabnew main.py"
-:rv pyinfo.vim
-|2,0,1621147172,,"rv pyinfo.vim"
-:wv! pyinfo.vim
-|2,0,1621147172,,"wv! pyinfo.vim"
-:tabf ~/.pyinfo.vim
-|2,0,1621147172,,"tabf ~/.pyinfo.vim"
-:wv! ~/.cinfo.vim
-|2,0,1621147172,,"wv! ~/.cinfo.vim"
-:wv!
-|2,0,1621147172,,"wv!"
-:wv ~/.cinfo.vim
-|2,0,1621147172,,"wv ~/.cinfo.vim"
-:tabf ~/.cinfo.vim
-|2,0,1621147172,,"tabf ~/.cinfo.vim"
-:rv! ~/.cinfo.vim
-|2,0,1621147172,,"rv! ~/.cinfo.vim"
-:!rv ~/.cinfo.vim
-|2,0,1621147172,,"!rv ~/.cinfo.vim"
-:erg
-|2,0,1621147172,,"erg"
-:tabnew main.c
-|2,0,1621147172,,"tabnew main.c"
-:ter
-|2,0,1621147172,,"ter"
-:set relativenumber
-|2,0,1621147172,,"set relativenumber"
-:tabnew 
-|2,0,1621147172,,"tabnew "
-:help viminfo
-|2,0,1621147172,,"help viminfo"
-:rv! pyinfo.vim
-|2,0,1621147172,,"rv! pyinfo.vim"
-:!rv pyinfo.vim
-|2,0,1621147172,,"!rv pyinfo.vim"
-:scripname
-|2,0,1621147172,,"scripname"
-:rv! ../../c/zeev/cinfo.vim
-|2,0,1621147172,,"rv! ../../c/zeev/cinfo.vim"
-:%s/\<k\>/e/g
-|2,0,1621147172,,"%s/\\<k\\>/e/g"
-:reg 
-|2,0,1621147172,,"reg "
-:t
-|2,0,1621147172,,"t"
-:tabf module.h
-|2,0,1621147172,,"tabf module.h"
-:! cp ~/.cinfo.vim ~/.hinfo.vim
-|2,0,1621147172,,"! cp ~/.cinfo.vim ~/.hinfo.vim"
-:tabf ~./
-|2,0,1621147172,,"tabf ~./"
-:help tabf
-|2,0,1621147172,,"help tabf"
-:help buffer
-|2,0,1621147172,,"help buffer"
-:help BufnewFile
-|2,0,1621147172,,"help BufnewFile"
-:help beffer
-|2,0,1621147172,,"help beffer"
-:tabf solve.py
-|2,0,1621147172,,"tabf solve.py"
-:tabf solver.py
-|2,0,1621147172,,"tabf solver.py"
-:tab solve.py
-|2,0,1621147172,,"tab solve.py"
-:rv! ~/.pyinfo.vim
-|2,0,1621147172,,"rv! ~/.pyinfo.vim"
-:!g++ % && ./a.out
-|2,0,1621147172,,"!g++ % && ./a.out"
-:!make % && ./a.out
-|2,0,1621147172,,"!make % && ./a.out"
-:!gcc main.c
-|2,0,1621147172,,"!gcc main.c"
-:!gcc % && ./a.out
-|2,0,1621147172,,"!gcc % && ./a.out"
-:wv! ~/.pyinfo.vim
-|2,0,1621147172,,"wv! ~/.pyinfo.vim"
-:rege
-|2,0,1621147172,,"rege"
-:reg
-|2,0,1621147172,,"reg"
-:! cp ~/.cinfo.vim ~/.cppinfo.vim
-|2,0,1621147172,,"! cp ~/.cinfo.vim ~/.cppinfo.vim"
+|2,0,1621163882,,"%d"
 :%s/;/,/gc
-|2,0,1621147172,,"%s/;/,/gc"
+|2,0,1621163878,,"%s/;/,/gc"
+:! cp ~/.cinfo.vim ~/.cppinfo.vim
+|2,0,1621163878,,"! cp ~/.cinfo.vim ~/.cppinfo.vim"
+:reg
+|2,0,1621163878,,"reg"
+:rege
+|2,0,1621163878,,"rege"
+:wv! ~/.pyinfo.vim
+|2,0,1621163878,,"wv! ~/.pyinfo.vim"
+:!gcc % && ./a.out
+|2,0,1621163878,,"!gcc % && ./a.out"
+:!gcc main.c
+|2,0,1621163878,,"!gcc main.c"
+:!make % && ./a.out
+|2,0,1621163878,,"!make % && ./a.out"
+:!g++ % && ./a.out
+|2,0,1621163878,,"!g++ % && ./a.out"
+:rv! ~/.pyinfo.vim
+|2,0,1621163878,,"rv! ~/.pyinfo.vim"
+:tab solve.py
+|2,0,1621163878,,"tab solve.py"
+:tabf solver.py
+|2,0,1621163878,,"tabf solver.py"
+:tabf solve.py
+|2,0,1621163878,,"tabf solve.py"
+:help beffer
+|2,0,1621163878,,"help beffer"
+:help BufnewFile
+|2,0,1621163878,,"help BufnewFile"
+:help buffer
+|2,0,1621163878,,"help buffer"
+:help tabf
+|2,0,1621163878,,"help tabf"
+:tabf ~./
+|2,0,1621163878,,"tabf ~./"
+:! cp ~/.cinfo.vim ~/.hinfo.vim
+|2,0,1621163878,,"! cp ~/.cinfo.vim ~/.hinfo.vim"
+:tabf module.h
+|2,0,1621163878,,"tabf module.h"
+:t
+|2,0,1621163878,,"t"
+:reg 
+|2,0,1621163878,,"reg "
+:%s/\<k\>/e/g
+|2,0,1621163878,,"%s/\\<k\\>/e/g"
+:rv! ../../c/zeev/cinfo.vim
+|2,0,1621163878,,"rv! ../../c/zeev/cinfo.vim"
+:scripname
+|2,0,1621163878,,"scripname"
+:!rv pyinfo.vim
+|2,0,1621163878,,"!rv pyinfo.vim"
+:rv! pyinfo.vim
+|2,0,1621163878,,"rv! pyinfo.vim"
+:help viminfo
+|2,0,1621163878,,"help viminfo"
+:tabnew 
+|2,0,1621163878,,"tabnew "
+:set relativenumber
+|2,0,1621163878,,"set relativenumber"
+:ter
+|2,0,1621163878,,"ter"
+:tabnew main.c
+|2,0,1621163878,,"tabnew main.c"
+:erg
+|2,0,1621163878,,"erg"
+:!rv ~/.cinfo.vim
+|2,0,1621163878,,"!rv ~/.cinfo.vim"
+:rv! ~/.cinfo.vim
+|2,0,1621163878,,"rv! ~/.cinfo.vim"
+:tabf ~/.cinfo.vim
+|2,0,1621163878,,"tabf ~/.cinfo.vim"
+:wv ~/.cinfo.vim
+|2,0,1621163878,,"wv ~/.cinfo.vim"
+:wv!
+|2,0,1621163878,,"wv!"
+:wv! ~/.cinfo.vim
+|2,0,1621163878,,"wv! ~/.cinfo.vim"
+:tabf ~/.pyinfo.vim
+|2,0,1621163878,,"tabf ~/.pyinfo.vim"
+:wv! pyinfo.vim
+|2,0,1621163878,,"wv! pyinfo.vim"
+:rv pyinfo.vim
+|2,0,1621163878,,"rv pyinfo.vim"
+:tabnew main.py
+|2,0,1621163878,,"tabnew main.py"
+:!python3 solve.py
+|2,0,1621163878,,"!python3 solve.py"
+:w
+|2,0,1621163878,,"w"
+:!
+|2,0,1621163878,,"!"
+:s/eqns/eqs/g
+|2,0,1621163878,,"s/eqns/eqs/g"
+:[
+|2,0,1621163878,,"["
+:!pip3 install sympy
+|2,0,1621163878,,"!pip3 install sympy"
+:q
+|2,0,1621163878,,"q"
+:!python3 sol
+|2,0,1621163878,,"!python3 sol"
+:set paste
+|2,0,1621163878,,"set paste"
+:qa
+|2,0,1621163878,,"qa"
+:help session
+|2,0,1621163878,,"help session"
+:help rv
+|2,0,1621163878,,"help rv"
+:tabf cinfo.vim
+|2,0,1621163878,,"tabf cinfo.vim"
+:tabf pyinfo.vim
+|2,0,1621163878,,"tabf pyinfo.vim"
+:q!
+|2,0,1621163878,,"q!"
+:rv cinfo.vim
+|2,0,1621163878,,"rv cinfo.vim"
+:tab ter
+|2,0,1621163878,,"tab ter"
+:qa!
+|2,0,1621163878,,"qa!"
+:wv pyinfo.vim
+|2,0,1621163878,,"wv pyinfo.vim"
+:put = strftime('%c')
+|2,0,1621163878,,"put = strftime('%c')"
+:let @" = expand("%")
+|2,0,1621163878,,"let @\" = expand(\"%\")"
+:set @" = expand("%")
+|2,0,1621163878,,"set @\" = expand(\"%\")"
+:tabnew main2.py
+|2,0,1621163878,,"tabnew main2.py"
+:tabf main.c
+|2,0,1621163878,,"tabf main.c"
+:%y+
+|2,0,1621163878,,"%y+"
+:wv cinfo.vim
+|2,0,1621163878,,"wv cinfo.vim"
+:!make
+|2,0,1621163878,,"!make"
+:tabf ~/.viminfo
+|2,0,1621163878,,"tabf ~/.viminfo"
+:elseif
+|2,0,1621163878,,"elseif"
+:endfor
+|2,0,1621163878,,"endfor"
+:help autocmd
+|2,0,1621163878,,"help autocmd"
+:close
+|2,0,1621163878,,"close"
+:help
+|2,0,1621163878,,"help"
+:vsplit
+|2,0,1621163878,,"vsplit"
+:help mksession
+|2,0,1621163878,,"help mksession"
+:make
+|2,0,1621163878,,"make"
+:E
+|2,0,1621163878,,"E"
+:tabe
+|2,0,1621163878,,"tabe"
+:tabnew Makefile
+|2,0,1621163878,,"tabnew Makefile"
+:1make
+|2,0,1621163878,,"1make"
+:!ls
+|2,0,1621163878,,"!ls"
+:!rm Makefile
+|2,0,1621163878,,"!rm Makefile"
+:wa
+|2,0,1621163878,,"wa"
+:tabf Makefile
+|2,0,1621163878,,"tabf Makefile"
+:tabnew
+|2,0,1621163878,,"tabnew"
+:tabnew module.h
+|2,0,1621163878,,"tabnew module.h"
+:tabf hello.h
+|2,0,1621163878,,"tabf hello.h"
+:let @"=expand("%")
+|2,0,1621163878,,"let @\"=expand(\"%\")"
+:%
+|2,0,1621163878,,"%"
+:p
+|2,0,1621163878,,"p"
+:let = expand("%")
+|2,0,1621163878,,"let = expand(\"%\")"
+:put =strftime('%c')
+|2,0,1621163878,,"put =strftime('%c')"
+:put strftime('%c')
+|2,0,1621163878,,"put strftime('%c')"
+:put =expand("%")
+|2,0,1621163878,,"put =expand(\"%\")"
+:put expand("%")
+|2,0,1621163878,,"put expand(\"%\")"
+:tabnew hello.h
+|2,0,1621163878,,"tabnew hello.h"
+:s/\<j\>/k/
+|2,0,1621163878,,"s/\\<j\\>/k/"
+:split ter
+|2,0,1621163878,,"split ter"
+:s
+|2,0,1621163878,,"s"
+:v
+|2,0,1621163878,,"v"
+:tabnew module_2.h
+|2,0,1621163878,,"tabnew module_2.h"
+:let @" = explore("%")
+|2,0,1621163878,,"let @\" = explore(\"%\")"
+:let "@ = expand("%")
+|2,0,1621163878,,"let \"@ = expand(\"%\")"
+:%s/./_/g
+|2,0,1621163878,,"%s/./_/g"
+:%s/\<.\>/_/g
+|2,0,1621163878,,"%s/\\<.\\>/_/g"
+:%s/\<.\>/\<_\>/g
+|2,0,1621163878,,"%s/\\<.\\>/\\<_\\>/g"
+:%s/\<.\>/./g
+|2,0,1621163878,,"%s/\\<.\\>/./g"
+:help tabnew
+|2,0,1621163878,,"help tabnew"
+:tabf module.c module.h
+|2,0,1621163878,,"tabf module.c module.h"
+:%"cy
+|2,0,1621163878,,"%\"cy"
+:%yc
+|2,0,1621163878,,"%yc"
+:%cy
+|2,0,1621163878,,"%cy"
+:s/\<i\>/j/g
+|2,0,1621163878,,"s/\\<i\\>/j/g"
+:%=
+|2,0,1621163878,,"%="
+:s/\<i\>/k/g
+|2,0,1621163878,,"s/\\<i\\>/k/g"
+:s/\<i\>/kg
+|2,0,1621163878,,"s/\\<i\\>/kg"
+:%py
+|2,0,1621163878,,"%py"
+:%"py
+|2,0,1621163878,,"%\"py"
+:%y"p
+|2,0,1621163878,,"%y\"p"
+:%yp
+|2,0,1621163878,,"%yp"
+:re
+|2,0,1621163878,,"re"
+:%yC
+|2,0,1621163878,,"%yC"
+:split
+|2,0,1621163878,,"split"
+:!m
+|2,0,1621163878,,"!m"
+:wqa
+|2,0,1621163878,,"wqa"
+:!python3 lucky.py
+|2,0,1621163878,,"!python3 lucky.py"
+:! g++ 
+|2,0,1621163878,,"! g++ "
+:%s/data/d/g
+|2,0,1621163878,,"%s/data/d/g"
+:wq
+|2,0,1621163878,,"wq"
+:!python3 longest_distance.py
+|2,0,1621163878,,"!python3 longest_distance.py"
+:!python3
+|2,0,1621163878,,"!python3"
+:!python3 acronym.py
+|2,0,1621163878,,"!python3 acronym.py"
+:!python3 acronym.py1
+|2,0,1621163878,,"!python3 acronym.py1"
+:!pythond3 acronym.py
+|2,0,1621163878,,"!pythond3 acronym.py"
+:python3 acronym	
+|2,0,1621163878,,"python3 acronym	"
+:!python3 main.py
+|2,0,1621163878,,"!python3 main.py"
+:tabf 1.out
+|2,0,1621163878,,"tabf 1.out"
+:~
+|2,0,1621163878,,"~"
+:!mk
+|2,0,1621163878,,"!mk"
+:!mak
+|2,0,1621163878,,"!mak"
+:!mae
+|2,0,1621163878,,"!mae"
+:!make 1out
+|2,0,1621163878,,"!make 1out"
+:s/1/2/g
+|2,0,1621163878,,"s/1/2/g"
+:!make 1cp
+|2,0,1621163878,,"!make 1cp"
+:tabnew 1.cmp
+|2,0,1621163878,,"tabnew 1.cmp"
+:%s/queue/deque/gc
+|2,0,1621163878,,"%s/queue/deque/gc"
+:tabm 2
+|2,0,1621163878,,"tabm 2"
+:.!
+|2,0,1621163878,,".!"
+:wqaa
+|2,0,1621163878,,"wqaa"
+:mks Session.vim 
+|2,0,1621163878,,"mks Session.vim "
+:!make cp
+|2,0,1621163878,,"!make cp"
+:make 1cp
+|2,0,1621163878,,"make 1cp"
+:make cp
+|2,0,1621163878,,"make cp"
+:!make 1
+|2,0,1621163878,,"!make 1"
+:!make 2cp
+|2,0,1621163878,,"!make 2cp"
+:!make 2
+|2,0,1621163878,,"!make 2"
+:%s/Prims/Prim's/gc
+|2,0,1621163878,,"%s/Prims/Prim's/gc"
+:make 2
+|2,0,1621163878,,"make 2"
+:tabnew 2.in
+|2,0,1621163878,,"tabnew 2.in"
+:s/prims/Prims/g
+|2,0,1621163878,,"s/prims/Prims/g"
+:tabf ../1/main.cpp
+|2,0,1621163878,,"tabf ../1/main.cpp"
+:tabf 1.in
+|2,0,1621163878,,"tabf 1.in"
+:tabm 1
+|2,0,1621163878,,"tabm 1"
+:tabf 1.cmp
+|2,0,1621163878,,"tabf 1.cmp"
+:tabnew 1.out
+|2,0,1621163878,,"tabnew 1.out"
+:%s/\<n\>/N/gc
+|2,0,1621163878,,"%s/\\<n\\>/N/gc"
+:'<,'>
+|2,0,1621163878,,"'<,'>"
+:!mkae
+|2,0,1621163878,,"!mkae"
+:s/i/j/g
+|2,0,1621163878,,"s/i/j/g"
+:tabnew main2.cpp
+|2,0,1621163878,,"tabnew main2.cpp"
+:s/j/n/g
+|2,0,1621163878,,"s/j/n/g"
+:s/\<count\>/countP/g
+|2,0,1621163878,,"s/\\<count\\>/countP/g"
+:!mke
+|2,0,1621163878,,"!mke"
+:!make krusk
+|2,0,1621163878,,"!make krusk"
+:!rm ./a.out
+|2,0,1621163878,,"!rm ./a.out"
+:tabf main2.cpp
+|2,0,1621163878,,"tabf main2.cpp"
+:%y
+|2,0,1621163878,,"%y"
+:! diff 1.out 1.cmp
+|2,0,1621163878,,"! diff 1.out 1.cmp"
+:! diff
+|2,0,1621163878,,"! diff"
+:tabf 1.cm
+|2,0,1621163878,,"tabf 1.cm"
+:!ma
+|2,0,1621163878,,"!ma"
+:mks!
+|2,0,1621163878,,"mks!"
+:!mks
+|2,0,1621163878,,"!mks"
+:%s/\.\/a\.out/main/g
+|2,0,1621163878,,"%s/\\.\\/a\\.out/main/g"
+:s/makepair/make_pair/g
+|2,0,1621163878,,"s/makepair/make_pair/g"
+:ewqa
+|2,0,1621163878,,"ewqa"
+:%s/convert/str2int/gc
+|2,0,1621163878,,"%s/convert/str2int/gc"
+:%s/â€™/'/g
+|2,0,1621163878,,"%s/â€™/'/g"
+:%/â€™/'/g
+|2,0,1621163878,,"%/â€™/'/g"
+:%s/â€˜/'/g
+|2,0,1621163878,,"%s/â€˜/'/g"
+:%s/\â€˜/\'/g
+|2,0,1621163878,,"%s/\\â€˜/\\'/g"
+:%s/\'/\"/g
+|2,0,1621163878,,"%s/\\'/\\\"/g"
+:%s/'/"/g
+|2,0,1621163878,,"%s/'/\"/g"
+:%s/small/s/g
+|2,0,1621163878,,"%s/small/s/g"
+:%s/big/b/g
+|2,0,1621163878,,"%s/big/b/g"
+:!make all
+|2,0,1621163878,,"!make all"
+:!make 
+|2,0,1621163878,,"!make "
+:!mawke
+|2,0,1621163878,,"!mawke"
+:tabf ./main2.cpp
+|2,0,1621163878,,"tabf ./main2.cpp"
+:s/,//g
+|2,0,1621163878,,"s/,//g"
+:Wqa
+|2,0,1621163878,,"Wqa"
+:tabf ./shapecolour.p
+|2,0,1621163878,,"tabf ./shapecolour.p"
+:mks Session.vim
+|2,0,1621163878,,"mks Session.vim"
+:tabf main.cpp
+|2,0,1621163878,,"tabf main.cpp"
+:%s/.\/a.out/main/g
+|2,0,1621163878,,"%s/.\\/a.out/main/g"
+:%s/.\/a.out/main.g
+|2,0,1621163878,,"%s/.\\/a.out/main.g"
+:%s/./a.out/main
+|2,0,1621163878,,"%s/./a.out/main"
+:tabf 2.out
+|2,0,1621163878,,"tabf 2.out"
+:!make 1 && make 2
+|2,0,1621163878,,"!make 1 && make 2"
+:%s/2//gc
+|2,0,1621163878,,"%s/2//gc"
+:tabf 2.in
+|2,0,1621163878,,"tabf 2.in"
+:!python
+|2,0,1621163878,,"!python"
+:tabf output.txt
+|2,0,1621163878,,"tabf output.txt"
+:!python3 interleavings.py > output.txt
+|2,0,1621163878,,"!python3 interleavings.py > output.txt"
+:!python3 interleavings.py
+|2,0,1621163878,,"!python3 interleavings.py"
+:!python3 inter
+|2,0,1621163878,,"!python3 inter"
+:k
+|2,0,1621163878,,"k"
+:%s/void/string/gc
+|2,0,1621163878,,"%s/void/string/gc"
+:%s/&str/str/gc
+|2,0,1621163878,,"%s/&str/str/gc"
+:s/str\[i\]/c/g
+|2,0,1621163878,,"s/str\\[i\\]/c/g"
+:s/str[i]/c/g
+|2,0,1621163878,,"s/str[i]/c/g"
+:%s/char * str/string str/gc
+|2,0,1621163878,,"%s/char * str/string str/gc"
+:%v
+|2,0,1621163878,,"%v"
+:s/M/j/g
+|2,0,1621163878,,"s/M/j/g"
+:%p+
+|2,0,1621163878,,"%p+"
+:%dp+
+|2,0,1621163878,,"%dp+"
+:s/_3//g
+|2,0,1621163878,,"s/_3//g"
+:s/3/ /g
+|2,0,1621163878,,"s/3/ /g"
+:!./a.out
+|2,0,1621163878,,"!./a.out"
+:!g++ hello_world.cpp && ./a.out
+|2,0,1621163878,,"!g++ hello_world.cpp && ./a.out"
+:s/ //g
+|2,0,1621163878,,"s/ //g"
+:s/i/t/g
+|2,0,1621163878,,"s/i/t/g"
+:s/i/t
+|2,0,1621163878,,"s/i/t"
+:tabm 3
+|2,0,1621163878,,"tabm 3"
+:5y
+|2,0,1621163878,,"5y"
+:!cat 1.in | python3 main.py
+|2,0,1621163878,,"!cat 1.in | python3 main.py"
+:python
+|2,0,1621163878,,"python"
+:%s/ull/ll/g
+|2,0,1621163878,,"%s/ull/ll/g"
+:%/ull/ll/g
+|2,0,1621163878,,"%/ull/ll/g"
+:color desert
+|2,0,1621163878,,"color desert"
+:color industry
+|2,0,1621163878,,"color industry"
+:tab
+|2,0,1621163878,,"tab"
+:! make
+|2,0,1621163878,,"! make"
+:! make 2
+|2,0,1621163878,,"! make 2"
+:!make 2.in
+|2,0,1621163878,,"!make 2.in"
+:tabnew 2.out
+|2,0,1621163878,,"tabnew 2.out"
+:tabf
+|2,0,1621163878,,"tabf"
+:s/>>/<</g
+|2,0,1621163878,,"s/>>/<</g"
+:%/>>/<</g
+|2,0,1621163878,,"%/>>/<</g"
+:!python3 roman.py
+|2,0,1621163878,,"!python3 roman.py"
+:!g++ main.cpp -fsanitize=address && cat 1.in | ./a.out
+|2,0,1621163878,,"!g++ main.cpp -fsanitize=address && cat 1.in | ./a.out"
+:!g++ main.cpp && cat 1.in | ./a.out
+|2,0,1621163878,,"!g++ main.cpp && cat 1.in | ./a.out"
+:%s/[nx][ny]/[ny][nx]/gc
+|2,0,1621163878,,"%s/[nx][ny]/[ny][nx]/gc"
+:e
+|2,0,1621163878,,"e"
+:%s/long long/int/g
+|2,0,1621163878,,"%s/long long/int/g"
+:tabf ~
+|2,0,1621163878,,"tabf ~"
+:%s/long long/unsigned long long/g
+|2,0,1621163878,,"%s/long long/unsigned long long/g"
+:%/long long/unsigned long long/g
+|2,0,1621163878,,"%/long long/unsigned long long/g"
+:!g++ --version
+|2,0,1621163878,,"!g++ --version"
+:s/a/b/g
+|2,0,1621163878,,"s/a/b/g"
+:! g++ lims.cpp && ./a.out
+|2,0,1621163878,,"! g++ lims.cpp && ./a.out"
+:g++ lims.cpp && ./a.out
+|2,0,1621163878,,"g++ lims.cpp && ./a.out"
+:tabf Main.jack
+|2,0,1621163878,,"tabf Main.jack"
+:tabf Square.xml
+|2,0,1621163878,,"tabf Square.xml"
+:tabm 0
+|2,0,1621163878,,"tabm 0"
+:! TextCompare
+|2,0,1621163878,,"! TextCompare"
+:! TextComparer SquareGameT.JT.xml SquareGameT.xml
+|2,0,1621163878,,"! TextComparer SquareGameT.JT.xml SquareGameT.xml"
+:! TextComparer
+|2,0,1621163878,,"! TextComparer"
+:! diff SquareGameT.JT.xml SquareGameT.xml
+|2,0,1621163878,,"! diff SquareGameT.JT.xml SquareGameT.xml"
+:tabf SquareGameT.xml
+|2,0,1621163878,,"tabf SquareGameT.xml"
+:tabf ./ExpressionLessSquare/Square.xml
+|2,0,1621163878,,"tabf ./ExpressionLessSquare/Square.xml"
+:!make jack_tokenizer
+|2,0,1621163878,,"!make jack_tokenizer"
+:tabf jack_tokenizer.py
+|2,0,1621163878,,"tabf jack_tokenizer.py"
+:tabnew CodeReader.py
+|2,0,1621163878,,"tabnew CodeReader.py"
+:!make express
+|2,0,1621163878,,"!make express"
+:! pwd
+|2,0,1621163878,,"! pwd"
+:Explore
+|2,0,1621163878,,"Explore"
+:tabf ./ExpressionLessSquare/Main.jack
+|2,0,1621163878,,"tabf ./ExpressionLessSquare/Main.jack"
+:tabe 
+|2,0,1621163878,,"tabe "
+:! source ./JackAnalyser/bin/activate
+|2,0,1621163878,,"! source ./JackAnalyser/bin/activate"
+:!python3 JackAnalyser.py
+|2,0,1621163878,,"!python3 JackAnalyser.py"
+:python3 JackAnalyser.py
+|2,0,1621163878,,"python3 JackAnalyser.py"
+:! make d.in
+|2,0,1621163878,,"! make d.in"
+:tabnew d.in
+|2,0,1621163878,,"tabnew d.in"
+:tabf d.in
+|2,0,1621163878,,"tabf d.in"
+:! make i.in
+|2,0,1621163878,,"! make i.in"
+:.,.+1!
+|2,0,1621163878,,".,.+1!"
+:s/1/0/g
+|2,0,1621163878,,"s/1/0/g"
+:s/0/1/g
+|2,0,1621163878,,"s/0/1/g"
+:!xdg-open .
+|2,0,1621163878,,"!xdg-open ."
+:! python3 main.py
+|2,0,1621163878,,"! python3 main.py"
+:!make i.in
+|2,0,1621163878,,"!make i.in"
+:! xdg-open ../
+|2,0,1621163878,,"! xdg-open ../"
+:tabf ../guess/1.in
+|2,0,1621163878,,"tabf ../guess/1.in"
+:%s/var/val/g
+|2,0,1621163878,,"%s/var/val/g"
+:tabnew parser.h
+|2,0,1621163878,,"tabnew parser.h"
+:tabnew binary_tree.h
+|2,0,1621163878,,"tabnew binary_tree.h"
+:tabnew binary_tree.cpp
+|2,0,1621163878,,"tabnew binary_tree.cpp"
+:! g++ main.c
+|2,0,1621163878,,"! g++ main.c"
+:! make py
+|2,0,1621163878,,"! make py"
+:!autopep8 -i main.py
+|2,0,1621163878,,"!autopep8 -i main.py"
+:tabm 4
+|2,0,1621163878,,"tabm 4"
+:!pip3 install autopep8
+|2,0,1621163878,,"!pip3 install autopep8"
+:!autopep8
+|2,0,1621163878,,"!autopep8"
+:retab!
+|2,0,1621163878,,"retab!"
+:tabf ~/.vimrc
+|2,0,1621163878,,"tabf ~/.vimrc"
+:ret
+|2,0,1621163878,,"ret"
+:!make py
+|2,0,1621163878,,"!make py"
+:tabnew output.txt
+|2,0,1621163878,,"tabnew output.txt"
+:%s/string/hello/g
+|2,0,1621163878,,"%s/string/hello/g"
+:qs
+|2,0,1621163878,,"qs"
+:! python3 password.py
+|2,0,1621163878,,"! python3 password.py"
+:tabf GameState.jack
+|2,0,1621163878,,"tabf GameState.jack"
+:s/0/2/g
+|2,0,1621163878,,"s/0/2/g"
+:tabnew GameState.jack
+|2,0,1621163878,,"tabnew GameState.jack"
+:tabf ./KeyListener.jack
+|2,0,1621163878,,"tabf ./KeyListener.jack"
+:tabnew KeyListener.jack
+|2,0,1621163878,,"tabnew KeyListener.jack"
+:tabnew TicTac.jack
+|2,0,1621163878,,"tabnew TicTac.jack"
+:tabf State.jack
+|2,0,1621163878,,"tabf State.jack"
+:tabf Cell.jack
+|2,0,1621163878,,"tabf Cell.jack"
+:Wa
+|2,0,1621163878,,"Wa"
+:tabnew State.jack
+|2,0,1621163878,,"tabnew State.jack"
+:tabnew Cell.jack
+|2,0,1621163878,,"tabnew Cell.jack"
+::w
+|2,0,1621163878,,":w"
+:mksession Session.vim
+|2,0,1621163878,,"mksession Session.vim"
+:tabnew White.jack
+|2,0,1621163878,,"tabnew White.jack"
+:tabnew Cross.jack
+|2,0,1621163878,,"tabnew Cross.jack"
+:tabnew Empty.jack
+|2,0,1621163878,,"tabnew Empty.jack"
+:%s/circle/circle2/gc
+|2,0,1621163878,,"%s/circle/circle2/gc"
+:tabf ../Fraction/Fraction.jack
+|2,0,1621163878,,"tabf ../Fraction/Fraction.jack"
+:tabf ../Average/Main.jack
+|2,0,1621163878,,"tabf ../Average/Main.jack"
+:tabf ../Fraction/Main.jack
+|2,0,1621163878,,"tabf ../Fraction/Main.jack"
+:tabf ../HelloWorld/Main.jack
+|2,0,1621163878,,"tabf ../HelloWorld/Main.jack"
+:!JackCompiler ../
+|2,0,1621163878,,"!JackCompiler ../"
+:!tabf ../HelloWorld/Main.jack
+|2,0,1621163878,,"!tabf ../HelloWorld/Main.jack"
+:tabnew Main.jack
+|2,0,1621163878,,"tabnew Main.jack"
+::::::::::!
+|2,0,1621163878,,":::::::::!"
+:Qa
+|2,0,1621163878,,"Qa"
+:1
+|2,0,1621163878,,"1"
+:W
+|2,0,1621163878,,"W"
+:tabnew 1.in
+|2,0,1621163878,,"tabnew 1.in"
+:'<,'>!
+|2,0,1621163878,,"'<,'>!"
+:!make add
+|2,0,1621163878,,"!make add"
+:!make stack
+|2,0,1621163878,,"!make stack"
+:!make static
+|2,0,1621163878,,"!make static"
+:!make pointer
+|2,0,1621163878,,"!make pointer"
+:!make basic
+|2,0,1621163878,,"!make basic"
+:!make fibs
+|2,0,1621163878,,"!make fibs"
+:!make simple
+|2,0,1621163878,,"!make simple"
+:!make nested
+|2,0,1621163878,,"!make nested"
+:!make fibe
+|2,0,1621163878,,"!make fibe"
+:!make statics
+|2,0,1621163878,,"!make statics"
+:!VMEmulator
+|2,0,1621163878,,"!VMEmulator"
+:Explore 
+|2,0,1621163878,,"Explore "
+:tabf ./FunctionCalls/StaticsTest/StaticsTest.asm
+|2,0,1621163878,,"tabf ./FunctionCalls/StaticsTest/StaticsTest.asm"
+:tabf ./FunctionCalls/StaticsTest/Class1.asm
+|2,0,1621163878,,"tabf ./FunctionCalls/StaticsTest/Class1.asm"
+:make statics
+|2,0,1621163878,,"make statics"
+:make nested
+|2,0,1621163878,,"make nested"
+:make nest
+|2,0,1621163878,,"make nest"
+:tabf ./FunctionCalls/NestedCall/Sys.vm
+|2,0,1621163878,,"tabf ./FunctionCalls/NestedCall/Sys.vm"
+:tabf ./FunctionCalls/
+|2,0,1621163878,,"tabf ./FunctionCalls/"
+:tabf 
+|2,0,1621163878,,"tabf "
+:make simple
+|2,0,1621163878,,"make simple"
+:make fibe
+|2,0,1621163878,,"make fibe"
+:tabf ./ProgramFlow/FibonacciSeries/FibonacciSeries.vm
+|2,0,1621163878,,"tabf ./ProgramFlow/FibonacciSeries/FibonacciSeries.vm"
+:tabf ./FunctionCalls/FibonacciElement/FibonacciElement.asm
+|2,0,1621163878,,"tabf ./FunctionCalls/FibonacciElement/FibonacciElement.asm"
+::q
+|2,0,1621163878,,":q"
+:make fibs
+|2,0,1621163878,,"make fibs"
+:tabf ./FunctionCalls/FibonacciElement/Main.vm
+|2,0,1621163878,,"tabf ./FunctionCalls/FibonacciElement/Main.vm"
+:tabf ./VMTranslator/
+|2,0,1621163878,,"tabf ./VMTranslator/"
+:make basic
+|2,0,1621163878,,"make basic"
+:! make fibe
+|2,0,1621163878,,"! make fibe"
+:find ./VMTranslator.py
+|2,0,1621163878,,"find ./VMTranslator.py"
+:! ls
+|2,0,1621163878,,"! ls"
+:make static
+|2,0,1621163878,,"make static"
+:make pointer
+|2,0,1621163878,,"make pointer"
+:make stack
+|2,0,1621163878,,"make stack"
+:make add
+|2,0,1621163878,,"make add"
+:make 
+|2,0,1621163878,,"make "
+:! python3
+|2,0,1621163878,,"! python3"
+:tabf FibonacciSeries.asm
+|2,0,1621163878,,"tabf FibonacciSeries.asm"
+:tabf ProgramFlow/FibonacciSeries/FibonacciSeries.tst
+|2,0,1621163878,,"tabf ProgramFlow/FibonacciSeries/FibonacciSeries.tst"
+:tabf ProgramFlow/FibonacciSeries/FibonacciSeries.tst
+|2,0,1621163878,,"tabf ProgramFlow/FibonacciSeries/FibonacciSeries.tst"
+:! make fibs
+|2,0,1621163878,,"! make fibs"
+:tabf ./ProgramFlow/BasicLoop/BasicLoop.vm
+|2,0,1621163878,,"tabf ./ProgramFlow/BasicLoop/BasicLoop.vm"
+:! CPUEmulator
+|2,0,1621163878,,"! CPUEmulator"
+:find ./ProgramFlow/
+|2,0,1621163878,,"find ./ProgramFlow/"
+:tab all
+|2,0,1621163878,,"tab all"
+:args ./*/*/*.vm
+|2,0,1621163878,,"args ./*/*/*.vm"
+:next ./*/*/*.vm
+|2,0,1621163878,,"next ./*/*/*.vm"
+:help tab
+|2,0,1621163878,,"help tab"
+:n ./*/*/*.vm
+|2,0,1621163878,,"n ./*/*/*.vm"
+:tabf ./*/*/*.vm
+|2,0,1621163878,,"tabf ./*/*/*.vm"
+:18,26fo
+|2,0,1621163878,,"18,26fo"
+:set foldmethod=expr
+|2,0,1621163878,,"set foldmethod=expr"
+:set foldmethod?
+|2,0,1621163878,,"set foldmethod?"
+:set codefold?
+|2,0,1621163878,,"set codefold?"
+:set codefolding?
+|2,0,1621163878,,"set codefolding?"
+:18,8fo
+|2,0,1621163878,,"18,8fo"
+:set foldmethod=manual
+|2,0,1621163878,,"set foldmethod=manual"
+:! vim ~/.vimrc
+|2,0,1621163878,,"! vim ~/.vimrc"
+:marks
+|2,0,1621163878,,"marks"
+:help foldmethod
+|2,0,1621163878,,"help foldmethod"
+:set foldmethod
+|2,0,1621163878,,"set foldmethod"
+:foldmethod
+|2,0,1621163878,,"foldmethod"
+:tabf ../07/VMTranslator.py
+|2,0,1621163878,,"tabf ../07/VMTranslator.py"
+:! make all
+|2,0,1621163878,,"! make all"
+:! make stack
+|2,0,1621163878,,"! make stack"
+:!make poiniter
+|2,0,1621163878,,"!make poiniter"
+:tabf ./MemoryAccess/PointerTest/PointerTest.asm
+|2,0,1621163878,,"tabf ./MemoryAccess/PointerTest/PointerTest.asm"
+:!CPUEmulator
+|2,0,1621163878,,"!CPUEmulator"
+:tabf ../08/VMTranslator.py
+|2,0,1621163878,,"tabf ../08/VMTranslator.py"
+:source Session.vim
+|2,0,1621163878,,"source Session.vim"
+:! CPUEmulator ./StackArithmetic/SimpleAdd/SimpleAdd.tst
+|2,0,1621163878,,"! CPUEmulator ./StackArithmetic/SimpleAdd/SimpleAdd.tst"
+:tabf ProgramFlow/BasicLoop/*.asm
+|2,0,1621163878,,"tabf ProgramFlow/BasicLoop/*.asm"
+:tabf ./ProgramFlow/BasicLoop/BasicLoop.asm
+|2,0,1621163878,,"tabf ./ProgramFlow/BasicLoop/BasicLoop.asm"
+:! make basic
+|2,0,1621163878,,"! make basic"
+:tabf ProgramFlow/BasicLoop/BasicLoop.vm
+|2,0,1621163878,,"tabf ProgramFlow/BasicLoop/BasicLoop.vm"
+:!. VMTranslator/bin/activate && python3 VMTranslator.py FunctionCalls/StaticsTest/Class1.vm &&  deactivate
+|2,0,1621163878,,"!. VMTranslator/bin/activate && python3 VMTranslator.py FunctionCalls/StaticsTest/Class1.vm &&  deactivate"
+:! 	. VMTranslator/bin/activate && \	python3 VMTranslator.py FunctionCalls/StaticsTest/Class1.vm && \	deactivate
+|2,0,1621163878,,"! 	. VMTranslator/bin/activate && \\	python3 VMTranslator.py FunctionCalls/StaticsTest/Class1.vm && \\	deactivate"
+:!ad
+|2,0,1621163878,,"!ad"
+:! make nested
+|2,0,1621163878,,"! make nested"
+:! man split
+|2,0,1621163878,,"! man split"
+:!py
+|2,0,1621163878,,"!py"
+:explore
+|2,0,1621163878,,"explore"
+:! VMEmulator
+|2,0,1621163878,,"! VMEmulator"
+:tabf pulse/
+|2,0,1621163878,,"tabf pulse/"
+:! make add
+|2,0,1621163878,,"! make add"
+:! make 
+|2,0,1621163878,,"! make "
+:m
+|2,0,1621163878,,"m"
+:makrs
+|2,0,1621163878,,"makrs"
+:mark
+|2,0,1621163878,,"mark"
+:makr
+|2,0,1621163878,,"makr"
+:tabf ./StackArithmetic/SimpleAdd/SimpleAdd.asm
+|2,0,1621163878,,"tabf ./StackArithmetic/SimpleAdd/SimpleAdd.asm"
+:%s/sp/SP/gc
+|2,0,1621163878,,"%s/sp/SP/gc"
+:! python
+|2,0,1621163878,,"! python"
+:mak
+|2,0,1621163878,,"mak"
+:tabf *.py
+|2,0,1621163878,,"tabf *.py"
+:args ./StackArithmetic/*/*.vm
+|2,0,1621163878,,"args ./StackArithmetic/*/*.vm"
+:tabf ./StackArithmetic/*/*.vm
+|2,0,1621163878,,"tabf ./StackArithmetic/*/*.vm"
+:tabf ../StackTest/StackTest.vm
+|2,0,1621163878,,"tabf ../StackTest/StackTest.vm"
+:! python3 integers.py
+|2,0,1621163878,,"! python3 integers.py"
+:!make 1.in
+|2,0,1621163878,,"!make 1.in"
+:! make 1.in
+|2,0,1621163878,,"! make 1.in"
+:make 1.in
+|2,0,1621163878,,"make 1.in"
+:m!
+|2,0,1621163878,,"m!"
+:! cat 1.in | ./a.out
+|2,0,1621163878,,"! cat 1.in | ./a.out"
+:! g++ main.cpp -fsanitize=address
+|2,0,1621163878,,"! g++ main.cpp -fsanitize=address"
+:tabf ./pong/cmp.hack
+|2,0,1621163878,,"tabf ./pong/cmp.hack"
+:! diff pong/Pong.hack pong/cmp.hack
+|2,0,1621163878,,"! diff pong/Pong.hack pong/cmp.hack"
+:! mv cmp.hack pong/
+|2,0,1621163878,,"! mv cmp.hack pong/"
+:mv cmp.hack pong/
+|2,0,1621163878,,"mv cmp.hack pong/"
+:! mv Pong.hack cmp.hack
+|2,0,1621163878,,"! mv Pong.hack cmp.hack"
+:! wget https://github.com/jtdowney/nand2tetris/blob/master/06/pong/Pong.hack
+|2,0,1621163878,,"! wget https://github.com/jtdowney/nand2tetris/blob/master/06/pong/Pong.hack"
+:tabnew pong/cmp.hack
+|2,0,1621163878,,"tabnew pong/cmp.hack"
+:! make pong
+|2,0,1621163878,,"! make pong"
+:! diff max/Max.hack max/cmp.hack
+|2,0,1621163878,,"! diff max/Max.hack max/cmp.hack"
+:tabnew max/cmp.hack
+|2,0,1621163878,,"tabnew max/cmp.hack"
+:tabf max/Max.hack
+|2,0,1621163878,,"tabf max/Max.hack"
+:! make max
+|2,0,1621163878,,"! make max"
+:! diff add/Add.hack add/cmp.hack
+|2,0,1621163878,,"! diff add/Add.hack add/cmp.hack"
+:tabnew add/cmp.hack
+|2,0,1621163878,,"tabnew add/cmp.hack"
+:tabf add/Add.hack
+|2,0,1621163878,,"tabf add/Add.hack"
+:! diff rect/Rect.hack rect/cmp.hack
+|2,0,1621163878,,"! diff rect/Rect.hack rect/cmp.hack"
+:tabnew rect/cmp.hack
+|2,0,1621163878,,"tabnew rect/cmp.hack"
+:tabf rect/cmp.hack
+|2,0,1621163878,,"tabf rect/cmp.hack"
+:tabf rect/Rect.hack
+|2,0,1621163878,,"tabf rect/Rect.hack"
+:! make rect
+|2,0,1621163878,,"! make rect"
+:! ls -la
+|2,0,1621163878,,"! ls -la"
+:make pong
+|2,0,1621163878,,"make pong"
+:make sum
+|2,0,1621163878,,"make sum"
+:ma
+|2,0,1621163878,,"ma"
+:make rect
+|2,0,1621163878,,"make rect"
+:make max
+|2,0,1621163878,,"make max"
+:make add.asm
+|2,0,1621163878,,"make add.asm"
+:make pong.asm
+|2,0,1621163878,,"make pong.asm"
+:mks
+|2,0,1621163878,,"mks"
+:find Makefile
+|2,0,1621163878,,"find Makefile"
+:! python3 Assembler.py
+|2,0,1621163878,,"! python3 Assembler.py"
+:! g++ main.cpp && ./a.out
+|2,0,1621163878,,"! g++ main.cpp && ./a.out"
+:! g++ main.cpp && cat 2.in | ./a.out
+|2,0,1621163878,,"! g++ main.cpp && cat 2.in | ./a.out"
+:make 2.in
+|2,0,1621163878,,"make 2.in"
+:! HardwareSimulator Mult.tst
+|2,0,1621163878,,"! HardwareSimulator Mult.tst"
+:%s/Hash/HashTable/gc
+|2,0,1621163878,,"%s/Hash/HashTable/gc"
+:! HardwareSimulator
+|2,0,1621163878,,"! HardwareSimulator"
+:! HardwareSimulator Computer.tst
+|2,0,1621163878,,"! HardwareSimulator Computer.tst"
+:tabf Memory.hdl
+|2,0,1621163878,,"tabf Memory.hdl"
+:tabf CPU.hdl
+|2,0,1621163878,,"tabf CPU.hdl"
+:! HardwareSimulator Memory.tst
+|2,0,1621163878,,"! HardwareSimulator Memory.tst"
+:! HardwareSimulator CPU.tst
+|2,0,1621163878,,"! HardwareSimulator CPU.tst"
+:Q!
+|2,0,1621163878,,"Q!"
+:tabf FillAutomatic.tst
+|2,0,1621163878,,"tabf FillAutomatic.tst"
+:tabf *.tst
+|2,0,1621163878,,"tabf *.tst"
+:tabf Fill.tst
+|2,0,1621163878,,"tabf Fill.tst"
+:! HardwareSimulator PC.tst
+|2,0,1621163878,,"! HardwareSimulator PC.tst"
+:tabf .
+|2,0,1621163878,,"tabf ."
+:! HardwareSimulator RAM16K.tst
+|2,0,1621163878,,"! HardwareSimulator RAM16K.tst"
+:tabf RAM16K.hdl
+|2,0,1621163878,,"tabf RAM16K.hdl"
+:! HardwareSimulator RAM4K.tst
+|2,0,1621163878,,"! HardwareSimulator RAM4K.tst"
+:tabf RAM4K.hdl
+|2,0,1621163878,,"tabf RAM4K.hdl"
+:! HardwareSimulator RAM512.tst
+|2,0,1621163878,,"! HardwareSimulator RAM512.tst"
+:tab ~/.vimrc
+|2,0,1621163878,,"tab ~/.vimrc"
+:! HardwareSimulator RAM64.tst
+|2,0,1621163878,,"! HardwareSimulator RAM64.tst"
+:tabf RAM64.hdl
+|2,0,1621163878,,"tabf RAM64.hdl"
+:ta
+|2,0,1621163878,,"ta"
+:tabf Bit.hdl
+|2,0,1621163878,,"tabf Bit.hdl"
+:tabf Bit.cmp
+|2,0,1621163878,,"tabf Bit.cmp"
+:tabf Register.hdl
+|2,0,1621163878,,"tabf Register.hdl"
+:! HardwareSimulator RAM8.tst
+|2,0,1621163878,,"! HardwareSimulator RAM8.tst"
+:! HardwareSimulator Register.tst
+|2,0,1621163878,,"! HardwareSimulator Register.tst"
+:! HardwareSimulator Bit.tst
+|2,0,1621163878,,"! HardwareSimulator Bit.tst"
+:! HardwareSimulator Bit.hdl
+|2,0,1621163878,,"! HardwareSimulator Bit.hdl"
+:! g++ main.cpp && cat 1.in | ./a.out
+|2,0,1621163878,,"! g++ main.cpp && cat 1.in | ./a.out"
+:%s/visited/dist/gc
+|2,0,1621163878,,"%s/visited/dist/gc"
+:%s/visited/dist/g/c
+|2,0,1621163878,,"%s/visited/dist/g/c"
+:! g++ reading.cpp && cat 1.in | ./a.out
+|2,0,1621163878,,"! g++ reading.cpp && cat 1.in | ./a.out"
+:tabf reading.cpp
+|2,0,1621163878,,"tabf reading.cpp"
+:tabf values.h
+|2,0,1621163878,,"tabf values.h"
+:tabnew reading.cpp
+|2,0,1621163878,,"tabnew reading.cpp"
+:make 1.n
+|2,0,1621163878,,"make 1.n"
+:%s/SortedHeap/sortedHeap/g
+|2,0,1621163878,,"%s/SortedHeap/sortedHeap/g"
+:make !.in
+|2,0,1621163878,,"make !.in"
+:%s/size/sz/gc
+|2,0,1621163878,,"%s/size/sz/gc"
+:make 1.ini
+|2,0,1621163878,,"make 1.ini"
+:source Makefile
+|2,0,1621163878,,"source Makefile"
+:make 1
+|2,0,1621163878,,"make 1"
+:edit main.cpp
+|2,0,1621163878,,"edit main.cpp"
+:! HardwareSimulator ALU.tst
+|2,0,1621163878,,"! HardwareSimulator ALU.tst"
+:! HardwareSimulator Or8Way.tst
+|2,0,1621163878,,"! HardwareSimulator Or8Way.tst"
+:! HardwareSimulator Or8Way.hdl
+|2,0,1621163878,,"! HardwareSimulator Or8Way.hdl"
+:! HardwareSimulator Add16.tst
+|2,0,1621163878,,"! HardwareSimulator Add16.tst"
+:! HardwareSimulator Add16.hdl
+|2,0,1621163878,,"! HardwareSimulator Add16.hdl"
+:tabf Add16.hdl
+|2,0,1621163878,,"tabf Add16.hdl"
+:s/zx/f/g
+|2,0,1621163878,,"s/zx/f/g"
+:s/x/y/g
+|2,0,1621163878,,"s/x/y/g"
+:! HardwareSimulator DMux8Way.tst
+|2,0,1621163878,,"! HardwareSimulator DMux8Way.tst"
+:%s/And/Xor/gc
+|2,0,1621163878,,"%s/And/Xor/gc"
+:tabnew Xor16.hdl
+|2,0,1621163878,,"tabnew Xor16.hdl"
+:tabf Mux8Way16.hdl
+|2,0,1621163878,,"tabf Mux8Way16.hdl"
+:! HardwareSimulator DMux4Way.tst
+|2,0,1621163878,,"! HardwareSimulator DMux4Way.tst"
+:! HardwareSimulator Mux8Way16.tst
+|2,0,1621163878,,"! HardwareSimulator Mux8Way16.tst"
+:! HardwareSimulator Mux4Way16.tst
+|2,0,1621163878,,"! HardwareSimulator Mux4Way16.tst"
+:tabf Mux4Way16.out
+|2,0,1621163878,,"tabf Mux4Way16.out"
+:tabf Mux4Way16.cmp
+|2,0,1621163878,,"tabf Mux4Way16.cmp"
+:tabf Mux16.hdl
+|2,0,1621163878,,"tabf Mux16.hdl"
+:! HardwareSimulator Mux16.tst
+|2,0,1621163878,,"! HardwareSimulator Mux16.tst"
+:find
+|2,0,1621163878,,"find"
+:tabf Or.hdl
+|2,0,1621163878,,"tabf Or.hdl"
+:!HardwareSimulator Mux16.tst
+|2,0,1621163878,,"!HardwareSimulator Mux16.tst"
+:tabf Mux.hdl
+|2,0,1621163878,,"tabf Mux.hdl"
+:!HardwareSimulator And16.tst
+|2,0,1621163878,,"!HardwareSimulator And16.tst"
+:!HardwareSimulator Or16.tst
+|2,0,1621163878,,"!HardwareSimulator Or16.tst"
+:!HardwareSimulator And.tst
+|2,0,1621163878,,"!HardwareSimulator And.tst"
+:! HardwareSimulator Not16.tst
+|2,0,1621163878,,"! HardwareSimulator Not16.tst"
+:! HardwareSimulator DMux.tst
+|2,0,1621163878,,"! HardwareSimulator DMux.tst"
+:s/sel/in/g
+|2,0,1621163878,,"s/sel/in/g"
+:! HardwareSimulator Mux.tst
+|2,0,1621163878,,"! HardwareSimulator Mux.tst"
+:s/s/sel/g
+|2,0,1621163878,,"s/s/sel/g"
+:! HardwareSimulator Xor.tst
+|2,0,1621163878,,"! HardwareSimulator Xor.tst"
+:! HardwareSimulator Or.tst
+|2,0,1621163878,,"! HardwareSimulator Or.tst"
+:tabf Not.hdl
+|2,0,1621163878,,"tabf Not.hdl"
+:! HardwareSimulator And.tst
+|2,0,1621163878,,"! HardwareSimulator And.tst"
+:%s/bfs/dfs/gc
+|2,0,1621163878,,"%s/bfs/dfs/gc"
+:amke
+|2,0,1621163878,,"amke"
+:make prim
+|2,0,1621163878,,"make prim"
+:%s/\\/ /gc
+|2,0,1621163878,,"%s/\\\\/ /gc"
+:make all
+|2,0,1621163878,,"make all"
+:source prim.vim
+|2,0,1621163878,,"source prim.vim"
+:tabf 1.in 2.in
+|2,0,1621163878,,"tabf 1.in 2.in"
+:mksession prim.vim
+|2,0,1621163878,,"mksession prim.vim"
+:type -a time
+|2,0,1621163878,,"type -a time"
+:time
+|2,0,1621163878,,"time"
+:cd ..
+|2,0,1621163878,,"cd .."
+:ls
+|2,0,1621163878,,"ls"
+:tabf Session.vim
+|2,0,1621163878,,"tabf Session.vim"
+:make1
+|2,0,1621163878,,"make1"
+:tabnew 1.in Makefile -p
+|2,0,1621163878,,"tabnew 1.in Makefile -p"
+:source S
+|2,0,1621163878,,"source S"
+:make 5
+|2,0,1621163878,,"make 5"
+:tabnew 5.in
+|2,0,1621163878,,"tabnew 5.in"
+:make 4
+|2,0,1621163878,,"make 4"
+:tabnew 4.in
+|2,0,1621163878,,"tabnew 4.in"
+:make 3
+|2,0,1621163878,,"make 3"
+:tabnew 3.in
+|2,0,1621163878,,"tabnew 3.in"
+:s/i/x/gc
+|2,0,1621163878,,"s/i/x/gc"
+:ake
+|2,0,1621163878,,"ake"
+:mae
+|2,0,1621163878,,"mae"
+:male
+|2,0,1621163878,,"male"
+:make test
+|2,0,1621163878,,"make test"
+:source
+|2,0,1621163878,,"source"
+:%s/c/
+|2,0,1621163878,,"%s/c/"
+:mkae
+|2,0,1621163878,,"mkae"
+:make test3
+|2,0,1621163878,,"make test3"
+:make test2
+|2,0,1621163878,,"make test2"
+:tabf make
+|2,0,1621163878,,"tabf make"
+:tabf /etc/vim/vimrc
+|2,0,1621163878,,"tabf /etc/vim/vimrc"
+:tabf ~/.vim/
+|2,0,1621163878,,"tabf ~/.vim/"
+:!man vim
+|2,0,1621163878,,"!man vim"
+:!man std::cout 
+|2,0,1621163878,,"!man std::cout "
+:!man cout
+|2,0,1621163878,,"!man cout"
+:vsplit yo.cpp
+|2,0,1621163878,,"vsplit yo.cpp"
+:hsplit hello.cpp
+|2,0,1621163878,,"hsplit hello.cpp"
+:split file2
+|2,0,1621163878,,"split file2"
+:Vtabnew hello.cpp
+|2,0,1621163878,,"Vtabnew hello.cpp"
+:tabf ./sess.vim
+|2,0,1621163878,,"tabf ./sess.vim"
+:mksession sess.vim
+|2,0,1621163878,,"mksession sess.vim"
+:h next
+|2,0,1621163878,,"h next"
+:tabf /usr/share/vim/vimrc
+|2,0,1621163878,,"tabf /usr/share/vim/vimrc"
+:w!
+|2,0,1621163878,,"w!"
+:wq!
+|2,0,1621163878,,"wq!"
+:scriptnames
+|2,0,1621163878,,"scriptnames"
+:s/std::pair<long long, int>/ipair/gc
+|2,0,1621163878,,"s/std::pair<long long, int>/ipair/gc"
+:Wq
+|2,0,1621163878,,"Wq"
+:wqwa
+|2,0,1621163878,,"wqwa"
+:%s/vector<list/list<list/gc
+|2,0,1621163878,,"%s/vector<list/list<list/gc"
+:tabf ../4_set_range_sum/set_range_sum.cpp
+|2,0,1621163878,,"tabf ../4_set_range_sum/set_range_sum.cpp"
+:s/v/T->root/g
+|2,0,1621163878,,"s/v/T->root/g"
+:s/v/root/g
+|2,0,1621163878,,"s/v/root/g"
+:set nopaste
+|2,0,1621163878,,"set nopaste"
+:%s/R/v/gc
+|2,0,1621163878,,"%s/R/v/gc"
+:%s/R/
+|2,0,1621163878,,"%s/R/"
+:tabf ../*4/*.cpp
+|2,0,1621163878,,"tabf ../*4/*.cpp"
+:set shiftwidth=2
+|2,0,1621163878,,"set shiftwidth=2"
+:set tabstop=2
+|2,0,1621163878,,"set tabstop=2"
+:set tabstop=4
+|2,0,1621163878,,"set tabstop=4"
+:s/MAX/MIN/g
+|2,0,1621163878,,"s/MAX/MIN/g"
+:tabf src/publish_address_book.cpp
+|2,0,1621163878,,"tabf src/publish_address_book.cpp"
+:tabf msg/AddressBook.msg
+|2,0,1621163878,,"tabf msg/AddressBook.msg"
+:tabf package.xml
+|2,0,1621163878,,"tabf package.xml"
+:tabnew src/publish_address_book.cpp
+|2,0,1621163878,,"tabnew src/publish_address_book.cpp"
+:tabf ..
+|2,0,1621163878,,"tabf .."
+:tabf CMakeLists.txt
+|2,0,1621163878,,"tabf CMakeLists.txt"
+:findf ~/.vimrc
+|2,0,1621163878,,"findf ~/.vimrc"
+:h shiftwidth
+|2,0,1621163878,,"h shiftwidth"
+:h shiftwidth()
+|2,0,1621163878,,"h shiftwidth()"
+:h tabstop
+|2,0,1621163878,,"h tabstop"
+:set shiftwidth=4
+|2,0,1621163878,,"set shiftwidth=4"
+:vim ~/.vimrc
+|2,0,1621163878,,"vim ~/.vimrc"
+:set expandtab=2
+|2,0,1621163878,,"set expandtab=2"
+:set expandtab 2
+|2,0,1621163878,,"set expandtab 2"
+:h expandtab
+|2,0,1621163878,,"h expandtab"
+:h find
+|2,0,1621163878,,"h find"
+:tabf ../CMakeLists.txt
+|2,0,1621163878,,"tabf ../CMakeLists.txt"
+:tabf ../
+|2,0,1621163878,,"tabf ../"
+:tabnew subscriber_member_function2.cpp
+|2,0,1621163878,,"tabnew subscriber_member_function2.cpp"
+:w !python3
+|2,0,1621163878,,"w !python3"
+:w !python
+|2,0,1621163878,,"w !python"
+:help folding
+|2,0,1621163878,,"help folding"
+:set foldmethod=syntax
+|2,0,1621163878,,"set foldmethod=syntax"
+:foldmethod=syntax
+|2,0,1621163878,,"foldmethod=syntax"
+:set lbr
+|2,0,1621163878,,"set lbr"
+:set formatoptions=l
+|2,0,1621163878,,"set formatoptions=l"
+:set breakindent
+|2,0,1621163878,,"set breakindent"
+:set wrap
+|2,0,1621163878,,"set wrap"
+:version
+|2,0,1621163878,,"version"
+:tabnew first_vim.py
+|2,0,1621163878,,"tabnew first_vim.py"
+:Helptags
+|2,0,1621163878,,"Helptags"
+:checkhealth
+|2,0,1621163878,,"checkhealth"
+:%y*
+|2,0,1621163878,,"%y*"
+:scripnames
+|2,0,1621163878,,"scripnames"
+:python3 %
+|2,0,1621163878,,"python3 %"
+:help Session
+|2,0,1621163878,,"help Session"
+:!python3 %
+|2,0,1621163878,,"!python3 %"
+:wv ~/.pyinfo.vim
+|2,0,1621163878,,"wv ~/.pyinfo.vim"
+:s/hey/Hey/g
+|2,0,1621163878,,"s/hey/Hey/g"
+:wv! ~/.hinfo.vim
+|2,0,1621163878,,"wv! ~/.hinfo.vim"
+:reg d
+|2,0,1621163878,,"reg d"
+:tabm2
+|2,0,1621163878,,"tabm2"
+:let @" =expand("%")
+|2,0,1621163878,,"let @\" =expand(\"%\")"
+:s/\<ab\>/a/g
+|2,0,1621163878,,"s/\\<ab\\>/a/g"
+:s/\<cd\>/b/g
+|2,0,1621163878,,"s/\\<cd\\>/b/g"
+:s/a/ab/g
+|2,0,1621163878,,"s/a/ab/g"
+:s/\<b\>/cd/g
+|2,0,1621163878,,"s/\\<b\\>/cd/g"
+:vsplit intro.txt
+|2,0,1621163878,,"vsplit intro.txt"
+:%s/hello/goodbye/g
+|2,0,1621163878,,"%s/hello/goodbye/g"
+:vsplit main.c
+|2,0,1621163878,,"vsplit main.c"
+:s/\<j\>/k/g
+|2,0,1621163878,,"s/\\<j\\>/k/g"
+:tabnew mod.h
+|2,0,1621163878,,"tabnew mod.h"
+:tabf main.py
+|2,0,1621163878,,"tabf main.py"
+:reg v
+|2,0,1621163819,,"reg v"
+:YcmRestartServer
+|2,0,1621163196,,"YcmRestartServer"
+:let "+ = expand("%")
+|2,0,1621158539,,"let \"+ = expand(\"%\")"
+:let +" = expand("%")
+|2,0,1621158524,,"let +\" = expand(\"%\")"
+:color default
+|2,0,1621149882,,"color default"
+:!uname
+|2,0,1621148729,,"!uname"
 
 # Search String History (newest to oldest):
-? \<j\>
-|2,1,1621147172,,"\\<j\\>"
-? \<main\>
-|2,1,1621147172,,"\\<main\\>"
-? hello
-|2,1,1621147172,,"hello"
-?/hello
-|2,1,1621147172,47,"hello"
-? \<b\>
-|2,1,1621147172,,"\\<b\\>"
-? \<cd\>
-|2,1,1621147172,,"\\<cd\\>"
-? \<ab\>
-|2,1,1621147172,,"\\<ab\\>"
-? hey
-|2,1,1621147172,,"hey"
-??filetype
-|2,1,1621147172,63,"filetype"
-??plugin
-|2,1,1621147172,63,"plugin"
-? \<w\>
-|2,1,1621147172,,"\\<w\\>"
-??add_exe
-|2,1,1621147172,63,"add_exe"
-??memory
-|2,1,1621147172,63,"memory"
-??AddTwoInts
-|2,1,1621147172,63,"AddTwoInts"
-??Add
-|2,1,1621147172,63,"Add"
-??add_execu
-|2,1,1621147172,63,"add_execu"
-??add_executable
-|2,1,1621147172,63,"add_executable"
-??request
-|2,1,1621147172,63,"request"
-??install
-|2,1,1621147172,63,"install"
-??build_depend
-|2,1,1621147172,63,"build_depend"
-??timer_call
-|2,1,1621147172,63,"timer_call"
-??find_package
-|2,1,1621147172,63,"find_package"
-??turt
-|2,1,1621147172,63,"turt"
-??subscription
-|2,1,1621147172,63,"subscription"
-??private
-|2,1,1621147172,63,"private"
-??String
-|2,1,1621147172,63,"String"
-??tur
-|2,1,1621147172,63,"tur"
-??kkkk
-|2,1,1621147172,63,"kkkk"
-??std::m
-|2,1,1621147172,63,"std::m"
-??std_msgs
-|2,1,1621147172,63,"std_msgs"
-??std_
-|2,1,1621147172,63,"std_"
-? \<add_newdoc_ufunc\>
-|2,1,1621147172,,"\\<add_newdoc_ufunc\\>"
-??def Settings
-|2,1,1621147172,63,"def Settings"
-??setting
-|2,1,1621147172,63,"setting"
-??set
-|2,1,1621147172,63,"set"
-? \<flags\>
-|2,1,1621147172,,"\\<flags\\>"
-??family
-|2,1,1621147172,63,"family"
-??plugged
-|2,1,1621147172,63,"plugged"
-??shiftwidth
-|2,1,1621147172,63,"shiftwidth"
-??find_package(rosidl_default_generators R
-|2,1,1621147172,63,"find_package(rosidl_default_generators R"
-??set(msg_files
-|2,1,1621147172,63,"set(msg_files"
-??"msg/AddressBook.msg
-|2,1,1621147172,63,"\"msg/AddressBook.msg"
-??rosidl_generate_interfaces(${PROJECT_NAME}
-|2,1,1621147172,63,"rosidl_generate_interfaces(${PROJECT_NAME}"
-??ament_export_dependencies(rosidl_default_runtime)
-|2,1,1621147172,63,"ament_export_dependencies(rosidl_default_runtime)"
-? MAX
-|2,1,1621147172,,"MAX"
-??root
-|2,1,1621147172,63,"root"
-? \<small_rotation\>
-|2,1,1621147172,,"\\<small_rotation\\>"
-? \<update\>
-|2,1,1621147172,,"\\<update\\>"
-??Vertex
-|2,1,1621147172,63,"Vertex"
-? >
-|2,1,1621147172,,">"
-??printf
-|2,1,1621147172,63,"printf"
-? \<Makes\>
-|2,1,1621147172,,"\\<Makes\\>"
-?/root
-|2,1,1621147172,47,"root"
-? R
-|2,1,1621147172,,"R"
-? \<new\>
-|2,1,1621147172,,"\\<new\\>"
-? v
-|2,1,1621147172,,"v"
-? \<fromString\>
-|2,1,1621147172,,"\\<fromString\\>"
-??size()
-|2,1,1621147172,63,"size()"
-? \<debugger\>
-|2,1,1621147172,,"\\<debugger\\>"
-??fromSt
-|2,1,1621147172,63,"fromSt"
-? \<cassert\>
-|2,1,1621147172,,"\\<cassert\\>"
-??split19k
-|2,1,1621147172,63,"split19k"
-? \<orderStats\>
-|2,1,1621147172,,"\\<orderStats\\>"
-??left
-|2,1,1621147172,63,"left"
-??left->in
-|2,1,1621147172,63,"left->in"
-??SplayTree
-|2,1,1621147172,63,"SplayTree"
-??inOrder
-|2,1,1621147172,63,"inOrder"
-??merged
-|2,1,1621147172,63,"merged"
-??process
-|2,1,1621147172,63,"process"
-??end
-|2,1,1621147172,63,"end"
-??merge
-|2,1,1621147172,63,"merge"
-??splay
-|2,1,1621147172,63,"splay"
-??fn
-|2,1,1621147172,63,"fn"
-??orderStats
-|2,1,1621147172,63,"orderStats"
-??T
-|2,1,1621147172,63,"T"
-??fromString
-|2,1,1621147172,63,"fromString"
-? \<SplayTree\>
-|2,1,1621147172,,"\\<SplayTree\\>"
-??delete
-|2,1,1621147172,63,"delete"
-??split
-|2,1,1621147172,63,"split"
-? \<split\>
-|2,1,1621147172,,"\\<split\\>"
-??delete(this)
-|2,1,1621147172,63,"delete(this)"
-??delete this
-|2,1,1621147172,63,"delete this"
-??DFS
-|2,1,1621147172,63,"DFS"
-? \<explore\>
-|2,1,1621147172,,"\\<explore\\>"
-??vector<list
-|2,1,1621147172,63,"vector<list"
-? vector<list
-|2,1,1621147172,,"vector<list"
-??explore
-|2,1,1621147172,63,"explore"
-??push_back
-|2,1,1621147172,63,"push_back"
-??filter
-|2,1,1621147172,63,"filter"
-? \<filter\>
-|2,1,1621147172,,"\\<filter\\>"
-? std::pair<long long, int>
-|2,1,1621147172,,"std::pair<long long, int>"
-??std::pair
-|2,1,1621147172,63,"std::pair"
-??continue
-|2,1,1621147172,63,"continue"
-?/h
-|2,1,1621147172,47,"h"
-?/incremen
-|2,1,1621147172,47,"incremen"
-? \<:Next\>
-|2,1,1621147172,,"\\<:Next\\>"
-? \<:next\>
-|2,1,1621147172,,"\\<:next\\>"
-? ;
-|2,1,1621147172,,";"
-??back
-|2,1,1621147172,63,"back"
-??int
-|2,1,1621147172,63,"int"
-??new
-|2,1,1621147172,63,"new"
-? \<back\>
-|2,1,1621147172,,"\\<back\\>"
-? \<tail\>
-|2,1,1621147172,,"\\<tail\\>"
-??Enter
-|2,1,1621147172,63,"Enter"
-? \<s\>
-|2,1,1621147172,,"\\<s\\>"
-??const
-|2,1,1621147172,63,"const"
-? \<sort\>
-|2,1,1621147172,,"\\<sort\\>"
-??key
-|2,1,1621147172,63,"key"
-? \<partition\>
-|2,1,1621147172,,"\\<partition\\>"
-??assert
-|2,1,1621147172,63,"assert"
-? \<swap\>
-|2,1,1621147172,,"\\<swap\\>"
-??std::cout 
-|2,1,1621147172,63,"std::cout "
-??partition
-|2,1,1621147172,63,"partition"
-??yo
-|2,1,1621147172,63,"yo"
-??sort
-|2,1,1621147172,63,"sort"
-??loop
-|2,1,1621147172,63,"loop"
-??9
-|2,1,1621147172,63,"9"
-??counter
-|2,1,1621147172,63,"counter"
-??parti
-|2,1,1621147172,63,"parti"
-??swap
-|2,1,1621147172,63,"swap"
-??data
-|2,1,1621147172,63,"data"
-??std::cout
-|2,1,1621147172,63,"std::cout"
-? \<clustering\>
-|2,1,1621147172,,"\\<clustering\\>"
-? \\
-|2,1,1621147172,,"\\\\"
-??D2
-|2,1,1621147172,63,"D2"
-? bfs
-|2,1,1621147172,,"bfs"
-??export
-|2,1,1621147172,63,"export"
-? s
-|2,1,1621147172,,"s"
-? sel
-|2,1,1621147172,,"sel"
-? And
-|2,1,1621147172,,"And"
-? x
-|2,1,1621147172,,"x"
-? zx
-|2,1,1621147172,,"zx"
-??Add16
-|2,1,1621147172,63,"Add16"
-? \<ng\>
-|2,1,1621147172,,"\\<ng\\>"
-? a.out: main.cpp
-|2,1,1621147172,,"a.out: main.cpp"
-??size_t
-|2,1,1621147172,63,"size_t"
-? \<Heap\>
-|2,1,1621147172,,"\\<Heap\\>"
-? \<heap\>
-|2,1,1621147172,,"\\<heap\\>"
-? \<getInput\>
-|2,1,1621147172,,"\\<getInput\\>"
-? \<verbose\>
-|2,1,1621147172,,"\\<verbose\\>"
-? size
-|2,1,1621147172,,"size"
-? SortedHeap
-|2,1,1621147172,,"SortedHeap"
-??size
-|2,1,1621147172,63,"size"
-??heapn
-|2,1,1621147172,63,"heapn"
-??heap
-|2,1,1621147172,63,"heap"
-??sifDown
-|2,1,1621147172,63,"sifDown"
-??siftDown
-|2,1,1621147172,63,"siftDown"
-??siftup
-|2,1,1621147172,63,"siftup"
-??debugger
-|2,1,1621147172,63,"debugger"
-??ChangePr
-|2,1,1621147172,63,"ChangePr"
-?/main
-|2,1,1621147172,47,"main"
-??visited
-|2,1,1621147172,63,"visited"
-? visited
-|2,1,1621147172,,"visited"
-? \<ChangePriority\>
-|2,1,1621147172,,"\\<ChangePriority\\>"
-? \<changePriority\>
-|2,1,1621147172,,"\\<changePriority\\>"
-??debugg
-|2,1,1621147172,63,"debugg"
-??deb
-|2,1,1621147172,63,"deb"
-??de
-|2,1,1621147172,63,"de"
-??max
-|2,1,1621147172,63,"max"
-??extract
-|2,1,1621147172,63,"extract"
-? \<pc\>
-|2,1,1621147172,,"\\<pc\\>"
-? \<PC\>
-|2,1,1621147172,,"\\<PC\\>"
-??loadA
-|2,1,1621147172,63,"loadA"
-??loadD
-|2,1,1621147172,63,"loadD"
-??jtl
-|2,1,1621147172,63,"jtl"
-? Hash
-|2,1,1621147172,,"Hash"
-??<
-|2,1,1621147172,63,"<"
-??>=
-|2,1,1621147172,63,">="
-??s
-|2,1,1621147172,63,"s"
-?/hash
-|2,1,1621147172,47,"hash"
-? \<hashtable\>
-|2,1,1621147172,,"\\<hashtable\\>"
-? \<HashTable\>
-|2,1,1621147172,,"\\<HashTable\\>"
-??class Hash
-|2,1,1621147172,63,"class Hash"
-??hash(
-|2,1,1621147172,63,"hash("
-? \<precompute\>
-|2,1,1621147172,,"\\<precompute\\>"
-??precompute
-|2,1,1621147172,63,"precompute"
-??ez_l
-|2,1,1621147172,63,"ez_l"
-??ez-life
-|2,1,1621147172,63,"ez-life"
-??file_list
-|2,1,1621147172,63,"file_list"
-? \<ConvertSymbols\>
-|2,1,1621147172,,"\\<ConvertSymbols\\>"
-??"M"
-|2,1,1621147172,63,"\"M\""
-??[1]
-|2,1,1621147172,63,"[1]"
-? \<file_name\>
-|2,1,1621147172,,"\\<file_name\\>"
-??hack
-|2,1,1621147172,63,"hack"
-??Handle
-|2,1,1621147172,63,"Handle"
-??hash
-|2,1,1621147172,63,"hash"
-??x_l
-|2,1,1621147172,63,"x_l"
-??getPow
-|2,1,1621147172,63,"getPow"
-? \<getPow\>
-|2,1,1621147172,,"\\<getPow\\>"
-??getHash
-|2,1,1621147172,63,"getHash"
-??Command
-|2,1,1621147172,63,"Command"
-? sp
-|2,1,1621147172,,"sp"
-??__init__
-|2,1,1621147172,63,"__init__"
-? \<write\>
-|2,1,1621147172,,"\\<write\\>"
-??else if
-|2,1,1621147172,63,"else if"
-??Aritm
-|2,1,1621147172,63,"Aritm"
-??PopCon
-|2,1,1621147172,63,"PopCon"
-?/temp
-|2,1,1621147172,47,"temp"
-??push
-|2,1,1621147172,63,"push"
-??main
-|2,1,1621147172,63,"main"
-??input_file_name
-|2,1,1621147172,63,"input_file_name"
-??os
-|2,1,1621147172,63,"os"
-??parser.
-|2,1,1621147172,63,"parser."
-??parser\.
-|2,1,1621147172,63,"parser\\."
-??commands
-|2,1,1621147172,63,"commands"
-? \<CommandPreprocessor\>
-|2,1,1621147172,,"\\<CommandPreprocessor\\>"
-? \<line\>
-|2,1,1621147172,,"\\<line\\>"
-??self.parser
-|2,1,1621147172,63,"self.parser"
-??current_file_full
-|2,1,1621147172,63,"current_file_full"
-??cmd2type
-|2,1,1621147172,63,"cmd2type"
-??current_filename
-|2,1,1621147172,63,"current_filename"
-??Parse
-|2,1,1621147172,63,"Parse"
-??directory
-|2,1,1621147172,63,"directory"
-??full_directory_
-|2,1,1621147172,63,"full_directory_"
-??rsplit
-|2,1,1621147172,63,"rsplit"
-??full_directory_path
-|2,1,1621147172,63,"full_directory_path"
-??full_path
-|2,1,1621147172,63,"full_path"
-??path_is_file
-|2,1,1621147172,63,"path_is_file"
-??full_out_filename
-|2,1,1621147172,63,"full_out_filename"
-??self.full_directory
-|2,1,1621147172,63,"self.full_directory"
-? \<cmd2type\>
-|2,1,1621147172,,"\\<cmd2type\\>"
-??'r'
-|2,1,1621147172,63,"'r'"
-??tst
-|2,1,1621147172,63,"tst"
-? \<full_file_path\>
-|2,1,1621147172,,"\\<full_file_path\\>"
-? \<commands\>
-|2,1,1621147172,,"\\<commands\\>"
-??po
-|2,1,1621147172,63,"po"
-??classmethod
-|2,1,1621147172,63,"classmethod"
-??foo
-|2,1,1621147172,63,"foo"
-??writePush
-|2,1,1621147172,63,"writePush"
-??write
-|2,1,1621147172,63,"write"
-??foldmethod
-|2,1,1621147172,63,"foldmethod"
-??Ad12
-|2,1,1621147172,63,"Ad12"
-??add12
-|2,1,1621147172,63,"add12"
-??call
-|2,1,1621147172,63,"call"
-? \<BasicLoop\>
-|2,1,1621147172,,"\\<BasicLoop\\>"
-??function
-|2,1,1621147172,63,"function"
-??Arith
-|2,1,1621147172,63,"Arith"
-??temp
-|2,1,1621147172,63,"temp"
-??this.func
-|2,1,1621147172,63,"this.func"
-? \<writeGoto\>
-|2,1,1621147172,,"\\<writeGoto\\>"
-??convertLabel
-|2,1,1621147172,63,"convertLabel"
-? \<convertLabel\>
-|2,1,1621147172,,"\\<convertLabel\\>"
-? \<convertIf\>
-|2,1,1621147172,,"\\<convertIf\\>"
-? \<convertGoto\>
-|2,1,1621147172,,"\\<convertGoto\\>"
-??rect
-|2,1,1621147172,63,"rect"
-??ret
-|2,1,1621147172,63,"ret"
-? \<return_address\>
-|2,1,1621147172,,"\\<return_address\\>"
-??Return
-|2,1,1621147172,63,"Return"
-??convertReturn
-|2,1,1621147172,63,"convertReturn"
-??Branch
-|2,1,1621147172,63,"Branch"
-??n_var
-|2,1,1621147172,63,"n_var"
-??Sys
-|2,1,1621147172,63,"Sys"
-??{
-|2,1,1621147172,63,"{"
-??}
-|2,1,1621147172,63,"}"
-??push n
-|2,1,1621147172,63,"push n"
-??/#
-|2,1,1621147172,63,"/#"
-??argument
-|2,1,1621147172,63,"argument"
-??Sys.init
-|2,1,1621147172,63,"Sys.init"
-??sys
-|2,1,1621147172,63,"sys"
-??function Sys.init 0
-|2,1,1621147172,63,"function Sys.init 0"
-??goto while
-|2,1,1621147172,63,"goto while"
-?/function sys
-|2,1,1621147172,47,"function sys"
-??0;JMP
-|2,1,1621147172,63,"0;JMP"
-??label
-|2,1,1621147172,63,"label"
-??pop
-|2,1,1621147172,63,"pop"
-?//
-|2,1,1621147172,47,"/"
-??convertCall
-|2,1,1621147172,63,"convertCall"
-? \<convertCall\>
-|2,1,1621147172,,"\\<convertCall\\>"
-? \<writeBootStrap\>
-|2,1,1621147172,,"\\<writeBootStrap\\>"
-?/sys.init$ret
-|2,1,1621147172,47,"sys.init$ret"
-??@sysinit
-|2,1,1621147172,63,"@sysinit"
-??sys.init
-|2,1,1621147172,63,"sys.init"
-? \<init\>
-|2,1,1621147172,,"\\<init\\>"
-? \<sys\>
-|2,1,1621147172,,"\\<sys\\>"
-? \<Sys\>
-|2,1,1621147172,,"\\<Sys\\>"
-??4
-|2,1,1621147172,63,"4"
-??Main.fibonacci
-|2,1,1621147172,63,"Main.fibonacci"
-??@Main.fibonacci$IF
-|2,1,1621147172,63,"@Main.fibonacci$IF"
-??@Main.fibonacci$IF_F
-|2,1,1621147172,63,"@Main.fibonacci$IF_F"
-??IF_FALSE
-|2,1,1621147172,63,"IF_FALSE"
-??.pop()
-|2,1,1621147172,63,".pop()"
-? \<fromCmd\>
-|2,1,1621147172,,"\\<fromCmd\\>"
-? \<CodeWriter\>
-|2,1,1621147172,,"\\<CodeWriter\\>"
-? circle
-|2,1,1621147172,,"circle"
-??static
-|2,1,1621147172,63,"static"
-??10
-|2,1,1621147172,63,"10"
-??100
-|2,1,1621147172,63,"100"
-??state
-|2,1,1621147172,63,"state"
-??initArray
-|2,1,1621147172,63,"initArray"
-?/setState
-|2,1,1621147172,47,"setState"
-??draw()
-|2,1,1621147172,63,"draw()"
-? \<setPos\>
-|2,1,1621147172,,"\\<setPos\\>"
-??changePos
-|2,1,1621147172,63,"changePos"
-? \<changePos\>
-|2,1,1621147172,,"\\<changePos\\>"
-??fill
-|2,1,1621147172,63,"fill"
-??get
-|2,1,1621147172,63,"get"
-??setPos
-|2,1,1621147172,63,"setPos"
-??getState
-|2,1,1621147172,63,"getState"
-??clear()
-|2,1,1621147172,63,"clear()"
-??clear
-|2,1,1621147172,63,"clear"
-??reset
-|2,1,1621147172,63,"reset"
-??checkSolved
-|2,1,1621147172,63,"checkSolved"
-? \<iostream\>
-|2,1,1621147172,,"\\<iostream\\>"
-? string
-|2,1,1621147172,,"string"
-?/string
-|2,1,1621147172,47,"string"
-??comp
-|2,1,1621147172,63,"comp"
-??ans
-|2,1,1621147172,63,"ans"
-??hou
-|2,1,1621147172,63,"hou"
-? \<comp\>
-|2,1,1621147172,,"\\<comp\\>"
-? var
-|2,1,1621147172,,"var"
-??Parser
-|2,1,1621147172,63,"Parser"
-??Node
-|2,1,1621147172,63,"Node"
-? \<inNode\>
-|2,1,1621147172,,"\\<inNode\\>"
-??top
-|2,1,1621147172,63,"top"
-??revers
-|2,1,1621147172,63,"revers"
-??store
-|2,1,1621147172,63,"store"
-? 0
-|2,1,1621147172,,"0"
-? \<bfs\>
-|2,1,1621147172,,"\\<bfs\\>"
-??q.end()
-|2,1,1621147172,63,"q.end()"
-??dfs
-|2,1,1621147172,63,"dfs"
-??parent
-|2,1,1621147172,63,"parent"
-??inNode
-|2,1,1621147172,63,"inNode"
-??disp
-|2,1,1621147172,63,"disp"
-? \<next\>
-|2,1,1621147172,,"\\<next\\>"
-??right
-|2,1,1621147172,63,"right"
-??find
-|2,1,1621147172,63,"find"
-??bfs
-|2,1,1621147172,63,"bfs"
-??insert
-|2,1,1621147172,63,"insert"
-??m
-|2,1,1621147172,63,"m"
-??game
-|2,1,1621147172,63,"game"
-??input
-|2,1,1621147172,63,"input"
-??string constant
-|2,1,1621147172,63,"string constant"
-??&lt
-|2,1,1621147172,63,"&lt"
-??let length
-|2,1,1621147172,63,"let length"
-? a
-|2,1,1621147172,,"a"
-??solve
-|2,1,1621147172,63,"solve"
-??\a
-|2,1,1621147172,63,"\\a"
-??list
-|2,1,1621147172,63,"list"
-??ipair
-|2,1,1621147172,63,"ipair"
-??wh
-|2,1,1621147172,63,"wh"
-??who
-|2,1,1621147172,63,"who"
-? long long
-|2,1,1621147172,,"long long"
-??long long
-|2,1,1621147172,63,"long long"
-??cout 
-|2,1,1621147172,63,"cout "
-??auto
-|2,1,1621147172,63,"auto"
-??open
-|2,1,1621147172,63,"open"
-? [nx][ny]
-|2,1,1621147172,,"[nx][ny]"
-? >>
-|2,1,1621147172,,">>"
-? ull
-|2,1,1621147172,,"ull"
-? \<comb\>
-|2,1,1621147172,,"\\<comb\\>"
-? );
-|2,1,1621147172,,");"
-? \<power\>
-|2,1,1621147172,,"\\<power\\>"
-?  
-|2,1,1621147172,," "
-??C
-|2,1,1621147172,63,"C"
-? 3
-|2,1,1621147172,,"3"
-? _3
-|2,1,1621147172,,"_3"
-? M
-|2,1,1621147172,,"M"
-??modInverse
-|2,1,1621147172,63,"modInverse"
-??comb
-|2,1,1621147172,63,"comb"
-??min
-|2,1,1621147172,63,"min"
-??eval
-|2,1,1621147172,63,"eval"
-? \<eval\>
-|2,1,1621147172,,"\\<eval\\>"
-? char * str
-|2,1,1621147172,,"char * str"
-? \<lower\>
-|2,1,1621147172,,"\\<lower\\>"
-? str[i]
-|2,1,1621147172,,"str[i]"
-? str\[i\]
-|2,1,1621147172,,"str\\[i\\]"
-??&str
-|2,1,1621147172,63,"&str"
-? &str
-|2,1,1621147172,,"&str"
-? void
-|2,1,1621147172,,"void"
-??origin
-|2,1,1621147172,63,"origin"
-??cout
-|2,1,1621147172,63,"cout"
-? 2
-|2,1,1621147172,,"2"
-? .\/a.out
-|2,1,1621147172,,".\\/a.out"
-? \<solve\>
-|2,1,1621147172,,"\\<solve\\>"
-? \<c\>
-|2,1,1621147172,,"\\<c\\>"
-? \<disp\>
-|2,1,1621147172,,"\\<disp\\>"
-? ,
-|2,1,1621147172,,","
-? big
-|2,1,1621147172,,"big"
-? small
-|2,1,1621147172,,"small"
-? '
-|2,1,1621147172,,"'"
-? \'
-|2,1,1621147172,,"\\'"
-? \â€˜
-|2,1,1621147172,,"\\â€˜"
-? â€˜
-|2,1,1621147172,,"â€˜"
-? â€™
-|2,1,1621147172,,"â€™"
-? convert
-|2,1,1621147172,,"convert"
-? \<convert\>
-|2,1,1621147172,,"\\<convert\\>"
-??print
-|2,1,1621147172,63,"print"
-? \<include\>
-|2,1,1621147172,,"\\<include\\>"
-? makepair
-|2,1,1621147172,,"makepair"
-? \<ull\>
-|2,1,1621147172,,"\\<ull\\>"
-? \.\/a\.out
-|2,1,1621147172,,"\\.\\/a\\.out"
-??emplace
-|2,1,1621147172,63,"emplace"
-? \<extractMin\>
-|2,1,1621147172,,"\\<extractMin\\>"
-??t
-|2,1,1621147172,63,"t"
-? \<array\>
-|2,1,1621147172,,"\\<array\\>"
-? \<find\>
-|2,1,1621147172,,"\\<find\\>"
-? \<count\>
-|2,1,1621147172,,"\\<count\\>"
-? j
-|2,1,1621147172,,"j"
-? \<countP\>
-|2,1,1621147172,,"\\<countP\\>"
-? i
-|2,1,1621147172,,"i"
-? \<n\>
-|2,1,1621147172,,"\\<n\\>"
-? \<quickSort\>
-|2,1,1621147172,,"\\<quickSort\\>"
-? \<mergeSort\>
-|2,1,1621147172,,"\\<mergeSort\\>"
-? prims
-|2,1,1621147172,,"prims"
-? Prims
-|2,1,1621147172,,"Prims"
-??count
-|2,1,1621147172,63,"count"
-??for
-|2,1,1621147172,63,"for"
-??while
-|2,1,1621147172,63,"while"
-??i++
-|2,1,1621147172,63,"i++"
-?/++
-|2,1,1621147172,47,"++"
-??unsigned
-|2,1,1621147172,63,"unsigned"
-??keywords
-|2,1,1621147172,63,"keywords"
-??keyword
-|2,1,1621147172,63,"keyword"
-??return
-|2,1,1621147172,63,"return"
-??dynamic
-|2,1,1621147172,63,"dynamic"
-? \<nsol\>
-|2,1,1621147172,,"\\<nsol\\>"
-? queue
-|2,1,1621147172,,"queue"
-??aho
-|2,1,1621147172,63,"aho"
-? 1
-|2,1,1621147172,,"1"
-? \<cp\>
-|2,1,1621147172,,"\\<cp\\>"
-? \<f\>
-|2,1,1621147172,,"\\<f\\>"
-? \<I\>
-|2,1,1621147172,,"\\<I\\>"
-? \<pow\>
-|2,1,1621147172,,"\\<pow\\>"
-??cp
-|2,1,1621147172,63,"cp"
-??exit
-|2,1,1621147172,63,"exit"
-??Aho-Corasick
-|2,1,1621147172,63,"Aho-Corasick"
-??>
-|2,1,1621147172,63,">"
-? data
-|2,1,1621147172,,"data"
-? \<testRabinKarpPatternSearch\>
-|2,1,1621147172,,"\\<testRabinKarpPatternSearch\\>"
-? \<parse\>
-|2,1,1621147172,,"\\<parse\\>"
-? \<i\>
-|2,1,1621147172,,"\\<i\\>"
-??tabs
-|2,1,1621147172,63,"tabs"
-??tab
-|2,1,1621147172,63,"tab"
-? \<.\>
-|2,1,1621147172,,"\\<.\\>"
-? .
-|2,1,1621147172,,"."
-?/*
-|2,1,1621147172,47,"*"
-? @$
-|2,1,1621147172,,"@$"
-??wv
-|2,1,1621147172,63,"wv"
-? \<:autocmd\>
-|2,1,1621147172,,"\\<:autocmd\\>"
-??jkkkkkkkkkk
-|2,1,1621147172,63,"jkkkkkkkkkk"
-??registers
-|2,1,1621147172,63,"registers"
-??:rv
-|2,1,1621147172,63,":rv"
-? eqns
-|2,1,1621147172,,"eqns"
-??-rv
-|2,1,1621147172,63,"-rv"
-??rv
-|2,1,1621147172,63,"rv"
-? \<-rv\>
-|2,1,1621147172,,"\\<-rv\\>"
-??bufnew
-|2,1,1621147172,63,"bufnew"
-??buff
-|2,1,1621147172,63,"buff"
-? \<viminfo-file\>
-|2,1,1621147172,,"\\<viminfo-file\\>"
-? \<session-file\>
-|2,1,1621147172,,"\\<session-file\\>"
-? \<k\>
-|2,1,1621147172,,"\\<k\\>"
-??help tabf
-|2,1,1621147172,63,"help tabf"
-??buffer
-|2,1,1621147172,63,"buffer"
-? \<ans\>
-|2,1,1621147172,,"\\<ans\\>"
 ? \<world\>
-|2,1,1621147172,,"\\<world\\>"
+|2,1,1621163878,,"\\<world\\>"
+? \<ans\>
+|2,1,1621163878,,"\\<ans\\>"
+??buffer
+|2,1,1621163878,63,"buffer"
+??help tabf
+|2,1,1621163878,63,"help tabf"
+? \<k\>
+|2,1,1621163878,,"\\<k\\>"
+? \<session-file\>
+|2,1,1621163878,,"\\<session-file\\>"
+? \<viminfo-file\>
+|2,1,1621163878,,"\\<viminfo-file\\>"
+??buff
+|2,1,1621163878,63,"buff"
+??bufnew
+|2,1,1621163878,63,"bufnew"
+? \<-rv\>
+|2,1,1621163878,,"\\<-rv\\>"
+??rv
+|2,1,1621163878,63,"rv"
+??-rv
+|2,1,1621163878,63,"-rv"
+? eqns
+|2,1,1621163878,,"eqns"
+??:rv
+|2,1,1621163878,63,":rv"
+??registers
+|2,1,1621163878,63,"registers"
+??jkkkkkkkkkk
+|2,1,1621163878,63,"jkkkkkkkkkk"
+? \<:autocmd\>
+|2,1,1621163878,,"\\<:autocmd\\>"
+??wv
+|2,1,1621163878,63,"wv"
+? @$
+|2,1,1621163878,,"@$"
+?/*
+|2,1,1621163878,47,"*"
+? .
+|2,1,1621163878,,"."
+? \<.\>
+|2,1,1621163878,,"\\<.\\>"
+??tab
+|2,1,1621163878,63,"tab"
+??tabs
+|2,1,1621163878,63,"tabs"
+? \<i\>
+|2,1,1621163878,,"\\<i\\>"
+? \<parse\>
+|2,1,1621163878,,"\\<parse\\>"
+? \<testRabinKarpPatternSearch\>
+|2,1,1621163878,,"\\<testRabinKarpPatternSearch\\>"
+? data
+|2,1,1621163878,,"data"
+??>
+|2,1,1621163878,63,">"
+??Aho-Corasick
+|2,1,1621163878,63,"Aho-Corasick"
+??exit
+|2,1,1621163878,63,"exit"
+??cp
+|2,1,1621163878,63,"cp"
+? \<pow\>
+|2,1,1621163878,,"\\<pow\\>"
+? \<I\>
+|2,1,1621163878,,"\\<I\\>"
+? \<f\>
+|2,1,1621163878,,"\\<f\\>"
+? \<cp\>
+|2,1,1621163878,,"\\<cp\\>"
+? 1
+|2,1,1621163878,,"1"
+??aho
+|2,1,1621163878,63,"aho"
+? queue
+|2,1,1621163878,,"queue"
+? \<nsol\>
+|2,1,1621163878,,"\\<nsol\\>"
+??dynamic
+|2,1,1621163878,63,"dynamic"
+??return
+|2,1,1621163878,63,"return"
+??keyword
+|2,1,1621163878,63,"keyword"
+??keywords
+|2,1,1621163878,63,"keywords"
+??unsigned
+|2,1,1621163878,63,"unsigned"
+?/++
+|2,1,1621163878,47,"++"
+??i++
+|2,1,1621163878,63,"i++"
+??while
+|2,1,1621163878,63,"while"
+??for
+|2,1,1621163878,63,"for"
+??count
+|2,1,1621163878,63,"count"
+? Prims
+|2,1,1621163878,,"Prims"
+? prims
+|2,1,1621163878,,"prims"
+? \<mergeSort\>
+|2,1,1621163878,,"\\<mergeSort\\>"
+? \<quickSort\>
+|2,1,1621163878,,"\\<quickSort\\>"
+? \<n\>
+|2,1,1621163878,,"\\<n\\>"
+? i
+|2,1,1621163878,,"i"
+? \<countP\>
+|2,1,1621163878,,"\\<countP\\>"
+? j
+|2,1,1621163878,,"j"
+? \<count\>
+|2,1,1621163878,,"\\<count\\>"
+? \<find\>
+|2,1,1621163878,,"\\<find\\>"
+? \<array\>
+|2,1,1621163878,,"\\<array\\>"
+??t
+|2,1,1621163878,63,"t"
+? \<extractMin\>
+|2,1,1621163878,,"\\<extractMin\\>"
+??emplace
+|2,1,1621163878,63,"emplace"
+? \.\/a\.out
+|2,1,1621163878,,"\\.\\/a\\.out"
+? \<ull\>
+|2,1,1621163878,,"\\<ull\\>"
+? makepair
+|2,1,1621163878,,"makepair"
+? \<include\>
+|2,1,1621163878,,"\\<include\\>"
+??print
+|2,1,1621163878,63,"print"
+? \<convert\>
+|2,1,1621163878,,"\\<convert\\>"
+? convert
+|2,1,1621163878,,"convert"
+? â€™
+|2,1,1621163878,,"â€™"
+? â€˜
+|2,1,1621163878,,"â€˜"
+? \â€˜
+|2,1,1621163878,,"\\â€˜"
+? \'
+|2,1,1621163878,,"\\'"
+? '
+|2,1,1621163878,,"'"
+? small
+|2,1,1621163878,,"small"
+? big
+|2,1,1621163878,,"big"
+? ,
+|2,1,1621163878,,","
+? \<disp\>
+|2,1,1621163878,,"\\<disp\\>"
+? \<c\>
+|2,1,1621163878,,"\\<c\\>"
+? \<solve\>
+|2,1,1621163878,,"\\<solve\\>"
+? .\/a.out
+|2,1,1621163878,,".\\/a.out"
+? 2
+|2,1,1621163878,,"2"
+??cout
+|2,1,1621163878,63,"cout"
+??origin
+|2,1,1621163878,63,"origin"
+? void
+|2,1,1621163878,,"void"
+? &str
+|2,1,1621163878,,"&str"
+??&str
+|2,1,1621163878,63,"&str"
+? str\[i\]
+|2,1,1621163878,,"str\\[i\\]"
+? str[i]
+|2,1,1621163878,,"str[i]"
+? \<lower\>
+|2,1,1621163878,,"\\<lower\\>"
+? char * str
+|2,1,1621163878,,"char * str"
+? \<eval\>
+|2,1,1621163878,,"\\<eval\\>"
+??eval
+|2,1,1621163878,63,"eval"
+??min
+|2,1,1621163878,63,"min"
+??comb
+|2,1,1621163878,63,"comb"
+??modInverse
+|2,1,1621163878,63,"modInverse"
+? M
+|2,1,1621163878,,"M"
+? _3
+|2,1,1621163878,,"_3"
+? 3
+|2,1,1621163878,,"3"
+??C
+|2,1,1621163878,63,"C"
+?  
+|2,1,1621163878,," "
+? \<power\>
+|2,1,1621163878,,"\\<power\\>"
+? );
+|2,1,1621163878,,");"
+? \<comb\>
+|2,1,1621163878,,"\\<comb\\>"
+? ull
+|2,1,1621163878,,"ull"
+? >>
+|2,1,1621163878,,">>"
+? [nx][ny]
+|2,1,1621163878,,"[nx][ny]"
+??open
+|2,1,1621163878,63,"open"
+??auto
+|2,1,1621163878,63,"auto"
+??cout 
+|2,1,1621163878,63,"cout "
+??long long
+|2,1,1621163878,63,"long long"
+? long long
+|2,1,1621163878,,"long long"
+??who
+|2,1,1621163878,63,"who"
+??wh
+|2,1,1621163878,63,"wh"
+??ipair
+|2,1,1621163878,63,"ipair"
+??list
+|2,1,1621163878,63,"list"
+??\a
+|2,1,1621163878,63,"\\a"
+??solve
+|2,1,1621163878,63,"solve"
+? a
+|2,1,1621163878,,"a"
+??let length
+|2,1,1621163878,63,"let length"
+??&lt
+|2,1,1621163878,63,"&lt"
+??string constant
+|2,1,1621163878,63,"string constant"
+??input
+|2,1,1621163878,63,"input"
+??game
+|2,1,1621163878,63,"game"
+??m
+|2,1,1621163878,63,"m"
+??insert
+|2,1,1621163878,63,"insert"
+??bfs
+|2,1,1621163878,63,"bfs"
+??find
+|2,1,1621163878,63,"find"
+??right
+|2,1,1621163878,63,"right"
+? \<next\>
+|2,1,1621163878,,"\\<next\\>"
+??disp
+|2,1,1621163878,63,"disp"
+??inNode
+|2,1,1621163878,63,"inNode"
+??parent
+|2,1,1621163878,63,"parent"
+??dfs
+|2,1,1621163878,63,"dfs"
+??q.end()
+|2,1,1621163878,63,"q.end()"
+? \<bfs\>
+|2,1,1621163878,,"\\<bfs\\>"
+? 0
+|2,1,1621163878,,"0"
+??store
+|2,1,1621163878,63,"store"
+??revers
+|2,1,1621163878,63,"revers"
+??top
+|2,1,1621163878,63,"top"
+? \<inNode\>
+|2,1,1621163878,,"\\<inNode\\>"
+??Node
+|2,1,1621163878,63,"Node"
+??Parser
+|2,1,1621163878,63,"Parser"
+? var
+|2,1,1621163878,,"var"
+? \<comp\>
+|2,1,1621163878,,"\\<comp\\>"
+??hou
+|2,1,1621163878,63,"hou"
+??ans
+|2,1,1621163878,63,"ans"
+??comp
+|2,1,1621163878,63,"comp"
+?/string
+|2,1,1621163878,47,"string"
+? string
+|2,1,1621163878,,"string"
+? \<iostream\>
+|2,1,1621163878,,"\\<iostream\\>"
+??checkSolved
+|2,1,1621163878,63,"checkSolved"
+??reset
+|2,1,1621163878,63,"reset"
+??clear
+|2,1,1621163878,63,"clear"
+??clear()
+|2,1,1621163878,63,"clear()"
+??getState
+|2,1,1621163878,63,"getState"
+??setPos
+|2,1,1621163878,63,"setPos"
+??get
+|2,1,1621163878,63,"get"
+??fill
+|2,1,1621163878,63,"fill"
+? \<changePos\>
+|2,1,1621163878,,"\\<changePos\\>"
+??changePos
+|2,1,1621163878,63,"changePos"
+? \<setPos\>
+|2,1,1621163878,,"\\<setPos\\>"
+??draw()
+|2,1,1621163878,63,"draw()"
+?/setState
+|2,1,1621163878,47,"setState"
+??initArray
+|2,1,1621163878,63,"initArray"
+??state
+|2,1,1621163878,63,"state"
+??100
+|2,1,1621163878,63,"100"
+??10
+|2,1,1621163878,63,"10"
+??static
+|2,1,1621163878,63,"static"
+? circle
+|2,1,1621163878,,"circle"
+? \<CodeWriter\>
+|2,1,1621163878,,"\\<CodeWriter\\>"
+? \<fromCmd\>
+|2,1,1621163878,,"\\<fromCmd\\>"
+??.pop()
+|2,1,1621163878,63,".pop()"
+??IF_FALSE
+|2,1,1621163878,63,"IF_FALSE"
+??@Main.fibonacci$IF_F
+|2,1,1621163878,63,"@Main.fibonacci$IF_F"
+??@Main.fibonacci$IF
+|2,1,1621163878,63,"@Main.fibonacci$IF"
+??Main.fibonacci
+|2,1,1621163878,63,"Main.fibonacci"
+??4
+|2,1,1621163878,63,"4"
+? \<Sys\>
+|2,1,1621163878,,"\\<Sys\\>"
+? \<sys\>
+|2,1,1621163878,,"\\<sys\\>"
+? \<init\>
+|2,1,1621163878,,"\\<init\\>"
+??sys.init
+|2,1,1621163878,63,"sys.init"
+??@sysinit
+|2,1,1621163878,63,"@sysinit"
+?/sys.init$ret
+|2,1,1621163878,47,"sys.init$ret"
+? \<writeBootStrap\>
+|2,1,1621163878,,"\\<writeBootStrap\\>"
+? \<convertCall\>
+|2,1,1621163878,,"\\<convertCall\\>"
+??convertCall
+|2,1,1621163878,63,"convertCall"
+?//
+|2,1,1621163878,47,"/"
+??pop
+|2,1,1621163878,63,"pop"
+??label
+|2,1,1621163878,63,"label"
+??0;JMP
+|2,1,1621163878,63,"0;JMP"
+?/function sys
+|2,1,1621163878,47,"function sys"
+??goto while
+|2,1,1621163878,63,"goto while"
+??function Sys.init 0
+|2,1,1621163878,63,"function Sys.init 0"
+??sys
+|2,1,1621163878,63,"sys"
+??Sys.init
+|2,1,1621163878,63,"Sys.init"
+??argument
+|2,1,1621163878,63,"argument"
+??/#
+|2,1,1621163878,63,"/#"
+??push n
+|2,1,1621163878,63,"push n"
+??}
+|2,1,1621163878,63,"}"
+??{
+|2,1,1621163878,63,"{"
+??Sys
+|2,1,1621163878,63,"Sys"
+??n_var
+|2,1,1621163878,63,"n_var"
+??Branch
+|2,1,1621163878,63,"Branch"
+??convertReturn
+|2,1,1621163878,63,"convertReturn"
+??Return
+|2,1,1621163878,63,"Return"
+? \<return_address\>
+|2,1,1621163878,,"\\<return_address\\>"
+??ret
+|2,1,1621163878,63,"ret"
+??rect
+|2,1,1621163878,63,"rect"
+? \<convertGoto\>
+|2,1,1621163878,,"\\<convertGoto\\>"
+? \<convertIf\>
+|2,1,1621163878,,"\\<convertIf\\>"
+? \<convertLabel\>
+|2,1,1621163878,,"\\<convertLabel\\>"
+??convertLabel
+|2,1,1621163878,63,"convertLabel"
+? \<writeGoto\>
+|2,1,1621163878,,"\\<writeGoto\\>"
+??this.func
+|2,1,1621163878,63,"this.func"
+??temp
+|2,1,1621163878,63,"temp"
+??Arith
+|2,1,1621163878,63,"Arith"
+??function
+|2,1,1621163878,63,"function"
+? \<BasicLoop\>
+|2,1,1621163878,,"\\<BasicLoop\\>"
+??call
+|2,1,1621163878,63,"call"
+??add12
+|2,1,1621163878,63,"add12"
+??Ad12
+|2,1,1621163878,63,"Ad12"
+??foldmethod
+|2,1,1621163878,63,"foldmethod"
+??write
+|2,1,1621163878,63,"write"
+??writePush
+|2,1,1621163878,63,"writePush"
+??foo
+|2,1,1621163878,63,"foo"
+??classmethod
+|2,1,1621163878,63,"classmethod"
+??po
+|2,1,1621163878,63,"po"
+? \<commands\>
+|2,1,1621163878,,"\\<commands\\>"
+? \<full_file_path\>
+|2,1,1621163878,,"\\<full_file_path\\>"
+??tst
+|2,1,1621163878,63,"tst"
+??'r'
+|2,1,1621163878,63,"'r'"
+? \<cmd2type\>
+|2,1,1621163878,,"\\<cmd2type\\>"
+??self.full_directory
+|2,1,1621163878,63,"self.full_directory"
+??full_out_filename
+|2,1,1621163878,63,"full_out_filename"
+??path_is_file
+|2,1,1621163878,63,"path_is_file"
+??full_path
+|2,1,1621163878,63,"full_path"
+??full_directory_path
+|2,1,1621163878,63,"full_directory_path"
+??rsplit
+|2,1,1621163878,63,"rsplit"
+??full_directory_
+|2,1,1621163878,63,"full_directory_"
+??directory
+|2,1,1621163878,63,"directory"
+??Parse
+|2,1,1621163878,63,"Parse"
+??current_filename
+|2,1,1621163878,63,"current_filename"
+??cmd2type
+|2,1,1621163878,63,"cmd2type"
+??current_file_full
+|2,1,1621163878,63,"current_file_full"
+??self.parser
+|2,1,1621163878,63,"self.parser"
+? \<line\>
+|2,1,1621163878,,"\\<line\\>"
+? \<CommandPreprocessor\>
+|2,1,1621163878,,"\\<CommandPreprocessor\\>"
+??commands
+|2,1,1621163878,63,"commands"
+??parser\.
+|2,1,1621163878,63,"parser\\."
+??parser.
+|2,1,1621163878,63,"parser."
+??os
+|2,1,1621163878,63,"os"
+??input_file_name
+|2,1,1621163878,63,"input_file_name"
+??main
+|2,1,1621163878,63,"main"
+??push
+|2,1,1621163878,63,"push"
+?/temp
+|2,1,1621163878,47,"temp"
+??PopCon
+|2,1,1621163878,63,"PopCon"
+??Aritm
+|2,1,1621163878,63,"Aritm"
+??else if
+|2,1,1621163878,63,"else if"
+? \<write\>
+|2,1,1621163878,,"\\<write\\>"
+??__init__
+|2,1,1621163878,63,"__init__"
+? sp
+|2,1,1621163878,,"sp"
+??Command
+|2,1,1621163878,63,"Command"
+??getHash
+|2,1,1621163878,63,"getHash"
+? \<getPow\>
+|2,1,1621163878,,"\\<getPow\\>"
+??getPow
+|2,1,1621163878,63,"getPow"
+??x_l
+|2,1,1621163878,63,"x_l"
+??hash
+|2,1,1621163878,63,"hash"
+??Handle
+|2,1,1621163878,63,"Handle"
+??hack
+|2,1,1621163878,63,"hack"
+? \<file_name\>
+|2,1,1621163878,,"\\<file_name\\>"
+??[1]
+|2,1,1621163878,63,"[1]"
+??"M"
+|2,1,1621163878,63,"\"M\""
+? \<ConvertSymbols\>
+|2,1,1621163878,,"\\<ConvertSymbols\\>"
+??file_list
+|2,1,1621163878,63,"file_list"
+??ez-life
+|2,1,1621163878,63,"ez-life"
+??ez_l
+|2,1,1621163878,63,"ez_l"
+??precompute
+|2,1,1621163878,63,"precompute"
+? \<precompute\>
+|2,1,1621163878,,"\\<precompute\\>"
+??hash(
+|2,1,1621163878,63,"hash("
+??class Hash
+|2,1,1621163878,63,"class Hash"
+? \<HashTable\>
+|2,1,1621163878,,"\\<HashTable\\>"
+? \<hashtable\>
+|2,1,1621163878,,"\\<hashtable\\>"
+?/hash
+|2,1,1621163878,47,"hash"
+??s
+|2,1,1621163878,63,"s"
+??>=
+|2,1,1621163878,63,">="
+??<
+|2,1,1621163878,63,"<"
+? Hash
+|2,1,1621163878,,"Hash"
+??jtl
+|2,1,1621163878,63,"jtl"
+??loadD
+|2,1,1621163878,63,"loadD"
+??loadA
+|2,1,1621163878,63,"loadA"
+? \<PC\>
+|2,1,1621163878,,"\\<PC\\>"
+? \<pc\>
+|2,1,1621163878,,"\\<pc\\>"
+??extract
+|2,1,1621163878,63,"extract"
+??max
+|2,1,1621163878,63,"max"
+??de
+|2,1,1621163878,63,"de"
+??deb
+|2,1,1621163878,63,"deb"
+??debugg
+|2,1,1621163878,63,"debugg"
+? \<changePriority\>
+|2,1,1621163878,,"\\<changePriority\\>"
+? \<ChangePriority\>
+|2,1,1621163878,,"\\<ChangePriority\\>"
+? visited
+|2,1,1621163878,,"visited"
+??visited
+|2,1,1621163878,63,"visited"
+?/main
+|2,1,1621163878,47,"main"
+??ChangePr
+|2,1,1621163878,63,"ChangePr"
+??debugger
+|2,1,1621163878,63,"debugger"
+??siftup
+|2,1,1621163878,63,"siftup"
+??siftDown
+|2,1,1621163878,63,"siftDown"
+??sifDown
+|2,1,1621163878,63,"sifDown"
+??heap
+|2,1,1621163878,63,"heap"
+??heapn
+|2,1,1621163878,63,"heapn"
+??size
+|2,1,1621163878,63,"size"
+? SortedHeap
+|2,1,1621163878,,"SortedHeap"
+? size
+|2,1,1621163878,,"size"
+? \<verbose\>
+|2,1,1621163878,,"\\<verbose\\>"
+? \<getInput\>
+|2,1,1621163878,,"\\<getInput\\>"
+? \<heap\>
+|2,1,1621163878,,"\\<heap\\>"
+? \<Heap\>
+|2,1,1621163878,,"\\<Heap\\>"
+??size_t
+|2,1,1621163878,63,"size_t"
+? a.out: main.cpp
+|2,1,1621163878,,"a.out: main.cpp"
+? \<ng\>
+|2,1,1621163878,,"\\<ng\\>"
+??Add16
+|2,1,1621163878,63,"Add16"
+? zx
+|2,1,1621163878,,"zx"
+? x
+|2,1,1621163878,,"x"
+? And
+|2,1,1621163878,,"And"
+? sel
+|2,1,1621163878,,"sel"
+? s
+|2,1,1621163878,,"s"
+??export
+|2,1,1621163878,63,"export"
+? bfs
+|2,1,1621163878,,"bfs"
+??D2
+|2,1,1621163878,63,"D2"
+? \\
+|2,1,1621163878,,"\\\\"
+? \<clustering\>
+|2,1,1621163878,,"\\<clustering\\>"
+??std::cout
+|2,1,1621163878,63,"std::cout"
+??data
+|2,1,1621163878,63,"data"
+??swap
+|2,1,1621163878,63,"swap"
+??parti
+|2,1,1621163878,63,"parti"
+??counter
+|2,1,1621163878,63,"counter"
+??9
+|2,1,1621163878,63,"9"
+??loop
+|2,1,1621163878,63,"loop"
+??sort
+|2,1,1621163878,63,"sort"
+??yo
+|2,1,1621163878,63,"yo"
+??partition
+|2,1,1621163878,63,"partition"
+??std::cout 
+|2,1,1621163878,63,"std::cout "
+? \<swap\>
+|2,1,1621163878,,"\\<swap\\>"
+??assert
+|2,1,1621163878,63,"assert"
+? \<partition\>
+|2,1,1621163878,,"\\<partition\\>"
+??key
+|2,1,1621163878,63,"key"
+? \<sort\>
+|2,1,1621163878,,"\\<sort\\>"
+??const
+|2,1,1621163878,63,"const"
+? \<s\>
+|2,1,1621163878,,"\\<s\\>"
+??Enter
+|2,1,1621163878,63,"Enter"
+? \<tail\>
+|2,1,1621163878,,"\\<tail\\>"
+? \<back\>
+|2,1,1621163878,,"\\<back\\>"
+??new
+|2,1,1621163878,63,"new"
+??int
+|2,1,1621163878,63,"int"
+??back
+|2,1,1621163878,63,"back"
+? ;
+|2,1,1621163878,,";"
+? \<:next\>
+|2,1,1621163878,,"\\<:next\\>"
+? \<:Next\>
+|2,1,1621163878,,"\\<:Next\\>"
+?/incremen
+|2,1,1621163878,47,"incremen"
+?/h
+|2,1,1621163878,47,"h"
+??continue
+|2,1,1621163878,63,"continue"
+??std::pair
+|2,1,1621163878,63,"std::pair"
+? std::pair<long long, int>
+|2,1,1621163878,,"std::pair<long long, int>"
+? \<filter\>
+|2,1,1621163878,,"\\<filter\\>"
+??filter
+|2,1,1621163878,63,"filter"
+??push_back
+|2,1,1621163878,63,"push_back"
+??explore
+|2,1,1621163878,63,"explore"
+? vector<list
+|2,1,1621163878,,"vector<list"
+??vector<list
+|2,1,1621163878,63,"vector<list"
+? \<explore\>
+|2,1,1621163878,,"\\<explore\\>"
+??DFS
+|2,1,1621163878,63,"DFS"
+??delete this
+|2,1,1621163878,63,"delete this"
+??delete(this)
+|2,1,1621163878,63,"delete(this)"
+? \<split\>
+|2,1,1621163878,,"\\<split\\>"
+??split
+|2,1,1621163878,63,"split"
+??delete
+|2,1,1621163878,63,"delete"
+? \<SplayTree\>
+|2,1,1621163878,,"\\<SplayTree\\>"
+??fromString
+|2,1,1621163878,63,"fromString"
+??T
+|2,1,1621163878,63,"T"
+??orderStats
+|2,1,1621163878,63,"orderStats"
+??fn
+|2,1,1621163878,63,"fn"
+??splay
+|2,1,1621163878,63,"splay"
+??merge
+|2,1,1621163878,63,"merge"
+??end
+|2,1,1621163878,63,"end"
+??process
+|2,1,1621163878,63,"process"
+??merged
+|2,1,1621163878,63,"merged"
+??inOrder
+|2,1,1621163878,63,"inOrder"
+??SplayTree
+|2,1,1621163878,63,"SplayTree"
+??left->in
+|2,1,1621163878,63,"left->in"
+??left
+|2,1,1621163878,63,"left"
+? \<orderStats\>
+|2,1,1621163878,,"\\<orderStats\\>"
+??split19k
+|2,1,1621163878,63,"split19k"
+? \<cassert\>
+|2,1,1621163878,,"\\<cassert\\>"
+??fromSt
+|2,1,1621163878,63,"fromSt"
+? \<debugger\>
+|2,1,1621163878,,"\\<debugger\\>"
+??size()
+|2,1,1621163878,63,"size()"
+? \<fromString\>
+|2,1,1621163878,,"\\<fromString\\>"
+? v
+|2,1,1621163878,,"v"
+? \<new\>
+|2,1,1621163878,,"\\<new\\>"
+? R
+|2,1,1621163878,,"R"
+?/root
+|2,1,1621163878,47,"root"
+? \<Makes\>
+|2,1,1621163878,,"\\<Makes\\>"
+??printf
+|2,1,1621163878,63,"printf"
+? >
+|2,1,1621163878,,">"
+??Vertex
+|2,1,1621163878,63,"Vertex"
+? \<update\>
+|2,1,1621163878,,"\\<update\\>"
+? \<small_rotation\>
+|2,1,1621163878,,"\\<small_rotation\\>"
+??root
+|2,1,1621163878,63,"root"
+? MAX
+|2,1,1621163878,,"MAX"
+??ament_export_dependencies(rosidl_default_runtime)
+|2,1,1621163878,63,"ament_export_dependencies(rosidl_default_runtime)"
+??rosidl_generate_interfaces(${PROJECT_NAME}
+|2,1,1621163878,63,"rosidl_generate_interfaces(${PROJECT_NAME}"
+??"msg/AddressBook.msg
+|2,1,1621163878,63,"\"msg/AddressBook.msg"
+??set(msg_files
+|2,1,1621163878,63,"set(msg_files"
+??find_package(rosidl_default_generators R
+|2,1,1621163878,63,"find_package(rosidl_default_generators R"
+??shiftwidth
+|2,1,1621163878,63,"shiftwidth"
+??plugged
+|2,1,1621163878,63,"plugged"
+??family
+|2,1,1621163878,63,"family"
+? \<flags\>
+|2,1,1621163878,,"\\<flags\\>"
+??set
+|2,1,1621163878,63,"set"
+??setting
+|2,1,1621163878,63,"setting"
+??def Settings
+|2,1,1621163878,63,"def Settings"
+? \<add_newdoc_ufunc\>
+|2,1,1621163878,,"\\<add_newdoc_ufunc\\>"
+??std_
+|2,1,1621163878,63,"std_"
+??std_msgs
+|2,1,1621163878,63,"std_msgs"
+??std::m
+|2,1,1621163878,63,"std::m"
+??kkkk
+|2,1,1621163878,63,"kkkk"
+??tur
+|2,1,1621163878,63,"tur"
+??String
+|2,1,1621163878,63,"String"
+??private
+|2,1,1621163878,63,"private"
+??subscription
+|2,1,1621163878,63,"subscription"
+??turt
+|2,1,1621163878,63,"turt"
+??find_package
+|2,1,1621163878,63,"find_package"
+??timer_call
+|2,1,1621163878,63,"timer_call"
+??build_depend
+|2,1,1621163878,63,"build_depend"
+??install
+|2,1,1621163878,63,"install"
+??request
+|2,1,1621163878,63,"request"
+??add_executable
+|2,1,1621163878,63,"add_executable"
+??add_execu
+|2,1,1621163878,63,"add_execu"
+??Add
+|2,1,1621163878,63,"Add"
+??AddTwoInts
+|2,1,1621163878,63,"AddTwoInts"
+??memory
+|2,1,1621163878,63,"memory"
+??add_exe
+|2,1,1621163878,63,"add_exe"
+? \<w\>
+|2,1,1621163878,,"\\<w\\>"
+??plugin
+|2,1,1621163878,63,"plugin"
+??filetype
+|2,1,1621163878,63,"filetype"
+? hey
+|2,1,1621163878,,"hey"
+? \<ab\>
+|2,1,1621163878,,"\\<ab\\>"
+? \<cd\>
+|2,1,1621163878,,"\\<cd\\>"
+? \<b\>
+|2,1,1621163878,,"\\<b\\>"
+?/hello
+|2,1,1621163878,47,"hello"
+? hello
+|2,1,1621163878,,"hello"
+? \<main\>
+|2,1,1621163878,,"\\<main\\>"
+? \<j\>
+|2,1,1621163878,,"\\<j\\>"
 
 # Expression History (newest to oldest):
-=100 * 50 + 10
-|2,2,1621147172,,"100 * 50 + 10"
-=100 * 50 + 20
-|2,2,1621147172,,"100 * 50 + 20"
-=10 * 20 + 5
-|2,2,1621147172,,"10 * 20 + 5"
 =p
-|2,2,1621147172,,"p"
+|2,2,1621163878,,"p"
+=10 * 20 + 5
+|2,2,1621163878,,"10 * 20 + 5"
+=100 * 50 + 20
+|2,2,1621163878,,"100 * 50 + 20"
+=100 * 50 + 10
+|2,2,1621163878,,"100 * 50 + 10"
 
 # Input Line History (newest to oldest):
-@printf
-|2,3,1621147172,,"printf"
-@p class = root>
-|2,3,1621147172,,"p class = root>"
-@print
-|2,3,1621147172,,"print"
-@p class="hello world">
-|2,3,1621147172,,"p class=\"hello world\">"
-@depend
-|2,3,1621147172,,"depend"
-@build_depend>
-|2,3,1621147172,,"build_depend>"
-@exev_depend>
-|2,3,1621147172,,"exev_depend>"
-@depend>
-|2,3,1621147172,,"depend>"
-@buildtool_depend>
-|2,3,1621147172,,"buildtool_depend>"
-@exec_depend>
-|2,3,1621147172,,"exec_depend>"
-@member_of_group>
-|2,3,1621147172,,"member_of_group>"
-@p>
-|2,3,1621147172,,"p>"
-@[{y(es)},n(o),a(ll),q(uit)] y
-|2,3,1621147172,,"[{y(es)},n(o),a(ll),q(uit)] y"
-@dict
-|2,3,1621147172,,"dict"
 @list
-|2,3,1621147172,,"list"
+|2,3,1621163878,,"list"
+@dict
+|2,3,1621163878,,"dict"
+@[{y(es)},n(o),a(ll),q(uit)] y
+|2,3,1621163878,,"[{y(es)},n(o),a(ll),q(uit)] y"
+@p>
+|2,3,1621163878,,"p>"
+@member_of_group>
+|2,3,1621163878,,"member_of_group>"
+@exec_depend>
+|2,3,1621163878,,"exec_depend>"
+@buildtool_depend>
+|2,3,1621163878,,"buildtool_depend>"
+@depend>
+|2,3,1621163878,,"depend>"
+@exev_depend>
+|2,3,1621163878,,"exev_depend>"
+@build_depend>
+|2,3,1621163878,,"build_depend>"
+@depend
+|2,3,1621163878,,"depend"
+@p class="hello world">
+|2,3,1621163878,,"p class=\"hello world\">"
+@print
+|2,3,1621163878,,"print"
+@p class = root>
+|2,3,1621163878,,"p class = root>"
+@printf
+|2,3,1621163878,,"printf"
 
 # Debug Line History (newest to oldest):
 
 # Registers:
 "0	CHAR	0
-	solve.py
-|3,0,0,0,1,0,1621079992,"solve.py"
-""1	LINE	0
-	:wv! ~/.vim/info/.pyinfo.vim
-|3,1,1,1,1,0,1621147161,":wv! ~/.vim/info/.pyinfo.vim"
-"2	LINE	0
+	main.py
+|3,0,0,0,1,0,1621163883,"main.py"
+"1	LINE	0
+	# =====================================================
+	#
+	# File Name: main.py
+	# Date of Creation: Sun 16 May 2021 10:43:58
+	# Author: Josiah Tan
+	# Description:
+	#
+	# =====================================================
+	# =====================================================
 	
-|3,0,2,1,1,0,1621081530,""
+	
+	
+	if __name__ == '__main__':
+	    a = 10;
+	    b = 5;
+	
+	    print(f"a = {a}");
+	    print(f"b = {b}");
+	
+	    a, b = b, a;
+	
+	    print(f"a = {a}");
+	    print(f"b = {b}");
+|3,0,1,1,23,0,1621163882,"# =====================================================","#","# File Name: main.py","# Date of Creation: Sun 16 May 2021 10:43:58","# Author: Josiah Tan","# Description:","#","# =====================================================","# =====================================================","","","","if __name__ == '__main__':","    a = 10;","    b = 5;","","    print(f\"a = {a}\");","    print(f\"b = {b}\");","","    a, b = b, a;","",>26
+|<"    print(f\"a = {a}\");","    print(f\"b = {b}\");"
+"2	LINE	0
+	:wv! ~/.vim/info/.pyinfo.vim
+|3,0,2,1,1,0,1621147161,":wv! ~/.vim/info/.pyinfo.vim"
 "3	LINE	0
-	print(f"hello = {hello}");
-|3,0,3,1,1,0,1621081526,"print(f\"hello = {hello}\");"
+	
+|3,0,3,1,1,0,1621081530,""
 "4	LINE	0
-	print(f"this  = {this }");
-|3,0,4,1,1,0,1621081525,"print(f\"this  = {this }\");"
-"5	LINE	0
-	print(f"very = {very}");
-|3,0,5,1,1,0,1621081524,"print(f\"very = {very}\");"
-"6	LINE	0
-	^d$aprint(f"€ýapa = {€ýapf)i"€ýaA;€ýa
-|3,0,6,1,1,0,1621081522,"^d$aprint(f\"€ýapa = {€ýapf)i\"€ýaA;€ýa"
-"7	LINE	0
-	print(f"hello world = {hello world}");
-	print(f"hello world = {hello world}");
-|3,0,7,1,2,0,1621081433,"print(f\"hello world = {hello world}\");","print(f\"hello world = {hello world}\");"
-"8	LINE	0
-	^d$aprint(f"€ýapa = {€ýapf)i"€ýaA;€ýaj
-|3,0,8,1,1,0,1621081416,"^d$aprint(f\"€ýapa = {€ýapf)i\"€ýaA;€ýaj"
-"9	LINE	0
 	print(f"hello = {hello}");
-|3,0,9,1,1,0,1621081388,"print(f\"hello = {hello}\");"
+|3,0,4,1,1,0,1621081526,"print(f\"hello = {hello}\");"
+"5	LINE	0
+	print(f"this  = {this }");
+|3,0,5,1,1,0,1621081525,"print(f\"this  = {this }\");"
+"6	LINE	0
+	print(f"very = {very}");
+|3,0,6,1,1,0,1621081524,"print(f\"very = {very}\");"
+"7	LINE	0
+	^d$aprint(f"€ýapa = {€ýapf)i"€ýaA;€ýa
+|3,0,7,1,1,0,1621081522,"^d$aprint(f\"€ýapa = {€ýapf)i\"€ýaA;€ýa"
+"8	LINE	0
+	print(f"hello world = {hello world}");
+	print(f"hello world = {hello world}");
+|3,0,8,1,2,0,1621081433,"print(f\"hello world = {hello world}\");","print(f\"hello world = {hello world}\");"
+"9	LINE	0
+	^d$aprint(f"€ýapa = {€ýapf)i"€ýaA;€ýaj
+|3,0,9,1,1,0,1621081416,"^d$aprint(f\"€ýapa = {€ýapf)i\"€ýaA;€ýaj"
 "a	CHAR	0
 	i €ýak
 |3,0,10,0,1,0,1612342066,"i €ýak"
@@ -2449,9 +2484,9 @@ $eqs
 "w	CHAR	0
 	thii€kbti€kb€kbthis is a program that copies registtakprints what is in register w t€kb€kb€kbq twice€ýa@w@q@q
 |3,0,32,0,1,0,1620987224,"thii€kbti€kb€kbthis is a program that copies registtakprints what is in register w t€kb€kb€kbq twice€ýa@w@q@q"
-"-	CHAR	0
-	nice
-|3,0,36,0,1,0,1621081538,"nice"
+""-	CHAR	0
+	,
+|3,1,36,0,1,0,1621163929,","
 
 # global variables:
 
@@ -2460,40 +2495,82 @@ $eqs
 |4,80,2,20,1613618169,"~/Desktop/josiah_folder/nand2tetris/projects/07/StackArithmetic/SimpleAdd/SimpleAdd.asm"
 'V  43  0  ~/.vimrc
 |4,86,43,0,1612532244,"~/.vimrc"
-'0  1  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
-|4,48,1,0,1621147175,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
-'1  27  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
-|4,49,27,0,1621147164,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
-'2  27  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
-|4,50,27,0,1621147164,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
-'3  12  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
-|4,51,12,0,1621147016,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
-'4  12  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
-|4,52,12,0,1621147016,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
-'5  13  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
-|4,53,13,0,1621146992,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
-'6  13  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
-|4,54,13,0,1621146992,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
-'7  13  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
-|4,55,13,0,1621146992,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
-'8  13  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
-|4,56,13,0,1621146992,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
-'9  2  0  ~/Desktop/josiah_folder/vim/vimvscode/main.c
-|4,57,2,0,1621146846,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
+'0  14  9  ~/Desktop/josiah_folder/vim/vimvscode/main.py
+|4,48,14,9,1621163940,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
+'1  9  5  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,49,9,5,1621163530,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+'2  9  5  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,50,9,5,1621163188,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+'3  9  5  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,51,9,5,1621163136,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+'4  9  5  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,52,9,5,1621163136,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+'5  9  5  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,53,9,5,1621163016,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+'6  9  5  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,54,9,5,1621163016,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+'7  9  5  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,55,9,5,1621163016,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+'8  9  5  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,56,9,5,1621163016,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+'9  9  5  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,57,9,5,1621162922,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
 
 # Jumplist (newest first):
--'  1  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
-|4,39,1,0,1621147175,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
+-'  14  9  ~/Desktop/josiah_folder/vim/vimvscode/main.py
+|4,39,14,9,1621163940,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
+-'  11  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
+|4,39,11,0,1621163883,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
+-'  12  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
+|4,39,12,0,1621163883,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
+-'  14  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
+|4,39,14,0,1621163878,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
+-'  8  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
+|4,39,8,0,1621163869,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
+-'  13  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
+|4,39,13,0,1621163869,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
+-'  11  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
+|4,39,11,0,1621163868,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
+-'  9  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
+|4,39,9,0,1621163865,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
+-'  20  0  ~/Desktop/josiah_folder/vim/vimvscode/main.c
+|4,39,20,0,1621163855,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
+-'  17  0  ~/Desktop/josiah_folder/vim/vimvscode/main.c
+|4,39,17,0,1621163845,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
+-'  8  0  ~/Desktop/josiah_folder/vim/vimvscode/main.c
+|4,39,8,0,1621163824,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
+-'  9  0  ~/Desktop/josiah_folder/vim/vimvscode/main.c
+|4,39,9,0,1621163824,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
+-'  21  5  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,39,21,5,1621163819,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+-'  8  0  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,39,8,0,1621163807,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+-'  9  0  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,39,9,0,1621163807,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+-'  1  0  ~/.vim/.gitmodules
+|4,39,1,0,1621162793,"~/.vim/.gitmodules"
+-'  1  4  ~/.vim/.gitignore
+|4,39,1,4,1621158883,"~/.vim/.gitignore"
+-'  1  0  ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+|4,39,1,0,1621147446,"~/Desktop/josiah_folder/vim/vimvscode/main.cpp"
+-'  69  0  ~/.vim/vimrc
+|4,39,69,0,1621147339,"~/.vim/vimrc"
 -'  27  0  ~/Desktop/josiah_folder/vim/vimvscode/main.c
-|4,39,27,0,1621147172,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
--'  27  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
-|4,39,27,0,1621147164,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
--'  28  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
-|4,39,28,0,1621147132,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
--'  2  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
-|4,39,2,0,1621147115,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
--'  23  21  ~/Desktop/josiah_folder/vim/vimvscode/main.py
-|4,39,23,21,1621146898,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
+|4,39,27,0,1621147269,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
+-'  10  0  ~/Desktop/josiah_folder/vim/vimvscode/main.c
+|4,39,10,0,1621147258,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
+-'  30  0  ~/Desktop/josiah_folder/vim/vimvscode/main.c
+|4,39,30,0,1621147258,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
+-'  16  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
+|4,39,16,0,1621147164,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
+-'  17  0  ~/Desktop/josiah_folder/vim/vimvscode/main.py
+|4,39,17,0,1621147132,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
+-'  12  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
+|4,39,12,0,1621147016,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
+-'  1  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
+|4,39,1,0,1621146915,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
+-'  22  0  ~/Desktop/josiah_folder/vim/vimvscode/module.h
+|4,39,22,0,1621146913,"~/Desktop/josiah_folder/vim/vimvscode/module.h"
 -'  2  0  ~/Desktop/josiah_folder/vim/vimvscode/main.c
 |4,39,2,0,1621146848,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
 -'  1  0  ~/Desktop/josiah_folder/vim/vimvscode/mian.c
@@ -2506,21 +2583,110 @@ $eqs
 |4,39,22,4,1621146811,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
 -'  21  5  ~/Desktop/josiah_folder/vim/vimvscode/main.c
 |4,39,21,5,1621146808,"~/Desktop/josiah_folder/vim/vimvscode/main.c"
--'  69  0  ~/.vim/vimrc
-|4,39,69,0,1621146794,"~/.vim/vimrc"
 -'  59  0  ~/.vim/vimrc
 |4,39,59,0,1621146785,"~/.vim/vimrc"
 -'  1  0  ~/.vim/vimrc
 |4,39,1,0,1621146743,"~/.vim/vimrc"
--'  14  10  ~/Desktop/josiah_folder/vim/vimvscode/main.py
-|4,39,14,10,1621125859,"~/Desktop/josiah_folder/vim/vimvscode/main.py"
+-'  54  0  ~/Desktop/josiah_folder/py3/solve_sim/solve.py
+|4,39,54,0,1621081543,"~/Desktop/josiah_folder/py3/solve_sim/solve.py"
+-'  51  37  ~/Desktop/josiah_folder/py3/solve_sim/solve.py
+|4,39,51,37,1621081430,"~/Desktop/josiah_folder/py3/solve_sim/solve.py"
+-'  1  0  ~/Desktop/josiah_folder/py3/solve_sim/solve.py
+|4,39,1,0,1621081352,"~/Desktop/josiah_folder/py3/solve_sim/solve.py"
+-'  21  0  ~/Desktop/josiah_folder/py3/solve_sim/main.c
+|4,39,21,0,1621081346,"~/Desktop/josiah_folder/py3/solve_sim/main.c"
+-'  26  9  ~/Desktop/josiah_folder/py3/solve_sim/main.cpp
+|4,39,26,9,1621081331,"~/Desktop/josiah_folder/py3/solve_sim/main.cpp"
+-'  25  1  ~/Desktop/josiah_folder/py3/solve_sim/main.cpp
+|4,39,25,1,1621081328,"~/Desktop/josiah_folder/py3/solve_sim/main.cpp"
+-'  23  23  ~/Desktop/josiah_folder/py3/solve_sim/main.cpp
+|4,39,23,23,1621081280,"~/Desktop/josiah_folder/py3/solve_sim/main.cpp"
 
 # History of marks within files (newest to oldest):
 
+> ~/Desktop/josiah_folder/vim/vimvscode/main.cpp
+	*	1621147446	0
+	"	21	5
+	^	21	6
+	.	2	0
+	+	9	0
+	+	9	1
+	+	9	13
+	+	9	0
+	+	9	3
+	+	9	0
+	+	9	19
+	+	12	5
+	+	12	0
+	+	11	0
+	+	9	0
+	+	9	19
+	+	9	5
+	+	9	0
+	+	9	22
+	+	9	0
+	+	7	0
+	+	11	19
+	+	21	5
+	+	2	0
+
 > ~/Desktop/josiah_folder/vim/vimvscode/main.c
-	*	1621147169	0
-	"	27	0
-	.	1	0
+	*	1621147269	0
+	"	20	0
+	^	20	0
+	.	31	0
+	+	9	9
+	+	9	0
+	+	9	17
+	+	9	23
+	+	9	24
+	+	9	25
+	+	9	26
+	+	9	0
+	+	9	27
+	+	9	0
+	+	11	0
+	+	9	9
+	+	9	0
+	+	9	17
+	+	9	23
+	+	9	24
+	+	9	25
+	+	9	26
+	+	9	0
+	+	9	27
+	+	9	0
+	+	11	0
+	+	9	9
+	+	9	0
+	+	9	17
+	+	9	23
+	+	9	24
+	+	9	25
+	+	9	26
+	+	9	0
+	+	9	27
+	+	9	0
+	+	11	0
+	+	9	9
+	+	9	0
+	+	9	17
+	+	9	23
+	+	9	24
+	+	9	25
+	+	9	26
+	+	9	0
+	+	9	27
+	+	9	0
+	+	11	0
+	+	9	22
+	+	9	0
+	+	7	0
+	+	24	9
+	+	17	23
+	+	18	24
+	+	19	25
+	+	20	0
 	+	26	9
 	+	16	0
 	+	7	0
@@ -2533,40 +2699,157 @@ $eqs
 	+	20	0
 	+	21	27
 	+	1	0
+	+	29	0
+	+	31	0
+	+	26	9
+	+	16	0
+	+	7	0
+	+	16	17
+	+	17	23
+	+	18	24
+	+	19	25
+	+	20	26
+	+	21	0
+	+	20	0
+	+	21	27
+	+	1	0
+	+	29	0
+	+	31	0
 
 > ~/Desktop/josiah_folder/vim/vimvscode/main.py
-	*	1621147175	0
-	"	1	0
-	.	28	0
+	*	1621163940	0
+	"	14	9
+	^	14	10
+	.	14	9
+	+	12	16
+	+	12	0
+	+	12	4
+	+	12	21
+	+	12	0
+	+	14	0
+	+	17	0
+	+	12	0
+	+	12	9
+	+	12	10
+	+	12	4
+	+	12	21
+	+	12	16
+	+	12	0
+	+	12	4
+	+	12	21
+	+	12	0
+	+	14	0
+	+	17	0
+	+	12	0
+	+	12	9
+	+	12	10
+	+	12	4
+	+	12	21
+	+	12	16
+	+	12	0
+	+	12	4
+	+	12	21
+	+	12	0
+	+	14	0
+	+	17	0
+	+	12	0
+	+	12	9
+	+	12	10
+	+	12	4
+	+	12	21
+	+	12	16
+	+	12	0
+	+	12	4
+	+	12	21
+	+	12	0
+	+	14	0
+	+	17	0
+	+	12	0
+	+	12	9
+	+	12	10
+	+	12	4
+	+	12	21
+	+	12	16
+	+	12	0
+	+	12	4
+	+	12	21
+	+	12	0
+	+	14	0
+	+	17	0
+	+	12	0
+	+	12	9
+	+	12	10
+	+	12	4
+	+	12	21
+	+	12	16
+	+	12	0
+	+	12	4
+	+	12	21
+	+	12	0
+	+	14	0
+	+	17	0
+	+	12	0
+	+	12	9
+	+	12	10
+	+	12	4
+	+	12	21
+	+	12	16
+	+	12	0
+	+	12	4
+	+	12	21
+	+	12	0
+	+	14	0
+	+	17	0
+	+	12	0
+	+	12	9
+	+	12	10
+	+	12	4
+	+	12	21
+	+	12	16
+	+	12	0
+	+	12	4
+	+	12	21
+	+	12	0
+	+	14	0
+	+	17	0
+	+	12	0
 	+	10	0
-	+	15	9
-	+	14	10
 	+	18	4
 	+	18	21
-	+	20	16
+	+	20	15
 	+	21	0
 	+	23	4
 	+	23	21
-	+	1	0
-	+	26	0
-	+	28	0
-	+	10	0
-	+	15	9
-	+	14	10
-	+	18	4
-	+	18	21
-	+	20	16
-	+	21	0
-	+	23	4
-	+	23	21
-	+	1	0
-	+	26	0
-	+	28	0
+	+	14	9
 
 > ~/Desktop/josiah_folder/vim/vimvscode/module.h
-	*	1621147020	0
-	"	13	0
+	*	1621147016	0
+	"	14	0
+	^	8	0
 	.	13	0
+	+	9	8
+	+	9	5
+	+	9	0
+	+	9	8
+	+	9	0
+	+	9	8
+	+	9	5
+	+	9	0
+	+	9	8
+	+	9	0
+	+	9	8
+	+	9	5
+	+	9	0
+	+	9	8
+	+	9	0
+	+	9	8
+	+	9	5
+	+	9	0
+	+	9	8
+	+	9	0
+	+	9	8
+	+	22	5
+	+	7	0
 	+	1	8
 	+	1	5
 	+	1	0
