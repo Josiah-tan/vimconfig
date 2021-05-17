@@ -17,6 +17,10 @@ def sv(eqs, exact = False):
     if type(eqs) == str:
         eqs =  eqs.split(",");
 
+    # adding an =0, in case we forget to put it in
+    eqs = [eq if ("=" in eq) else eq + '= 0' for eq in eqs];
+
+
     # fancy math stuff from stack overflow
     transformations=(standard_transformations + (implicit_multiplication_application,))
     eqs_sympy = [Eq(parse_expr(e.split('=')[0], transformations=transformations),
@@ -47,7 +51,11 @@ if __name__ == '__main__':
     #print(f"sv(eqs3, True) = {sv(eqs3, True)}");
     #print(f"sv(eqs3, False) = {sv(eqs3, False)}");
     #print(f"sv(eqs4) = {sv(eqs4)}");
+    
+    R1, R2, L, C = 1, 4, 1/2, 1/8;
+    v_cp = 20 * R2/(R1 + R2);
+    print(f"v_cp = {v_cp}");
 
-    i = '1/(RC) = 5000, 1/(CL) = 4*10**6,L=10*10**-3'
-    #C: 400000000.000000}, {L: 0.0100000000000000}, {R: 80000.0000000000}]
-    print(f"sv(i) = {sv(i)}");
+    v = f'v ** 2 + {1/(R2 * C) + R1 /L} * v + {(R1 + R2)/(L * C * R2)}'
+    print(f"v = {v}");
+    print(f"sv(v) = {sv(v)}");
