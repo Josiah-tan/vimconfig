@@ -14,3 +14,16 @@
 
 
 
+# Directory Layout
+
+- autoload:
+	- Contains the pathogen.vim package required to manage all the plugins
+- bundle:
+	- Contains all the submodules (other repositories) required for the full vim experience
+- info:
+	- Contains all the info files to store all the registers for each .c file type
+- view:
+	- TODO
+
+- templates:
+	- solve.py - ultimate linear algebra solving script
