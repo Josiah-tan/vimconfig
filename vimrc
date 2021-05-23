@@ -69,6 +69,9 @@ if executable(s:clip)
     augroup END
 endif
 
+
+
+
 " viminfo setting for customised prerecorded macros for registers to specific files (*.c, *.py, etc)
 autocmd BufnewFile,BufRead,TabEnter *.py :rv! ~/.vim/info/.pyinfo.vim
 autocmd BufnewFile,BufRead,TabEnter *.c :rv! ~/.vim/info/.cinfo.vim
@@ -90,3 +93,28 @@ autocmd BufnewFile,BufRead,TabEnter *.h :rv! ~/.vim/info/.hinfo.vim
 
 "switch.vim plugin settings
 let g:switch_mapping = "-"
+
+
+
+"NERDTree plugin settings
+"
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
+
+"re/opens nerdtree + mv cursor to the nerdtree
+nnoremap <leader>n :NERDTreeFocus<CR>
+"
+"creates a nerd tree for the current directory as root (may not neccesarily be
+"the directory of the file opened up by the tab)
+nnoremap <C-n> :NERDTree<CR> 
+"
+" If the nerdtree already exists, it is reopened and rendered again. If no
+" nerdtree exists, runs same as :NERDTree command
+" already mapped to creating new tabs in linux (notice this)
+nnoremap <C-t> :NERDTreeToggle<CR> 
+"
+" find and reveal the file for the active buffer in the nerdtree window as
+" spec path (superior to the :NERDTree command)
+nnoremap <C-f> :NERDTreeFind<CR>
