@@ -84,3 +84,9 @@ autocmd BufnewFile,BufRead,TabEnter *.h :rv! ~/.vim/info/.hinfo.vim
 " for loops <= (t, i, j, k )
 "
 " ~/.hinfo.vim: h => heading, g = guard headers, d => default setup (h and g);
+"
+
+
+
+"switch.vim plugin settings
+let g:switch_mapping = "-"

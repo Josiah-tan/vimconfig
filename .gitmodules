@@ -19,3 +19,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe
+[submodule "bundle/switch.vim"]
+	path = bundle/switch.vim
+	url = https://github.com/AndrewRadev/switch.vim
