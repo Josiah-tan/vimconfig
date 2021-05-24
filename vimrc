@@ -118,3 +118,8 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 " find and reveal the file for the active buffer in the nerdtree window as
 " spec path (superior to the :NERDTree command)
 nnoremap <C-f> :NERDTreeFind<CR>
+
+
+
+"tpope/vim-commentary
+autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
