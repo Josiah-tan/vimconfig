@@ -28,3 +28,6 @@
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/jupyter-vim"]
+	path = bundle/jupyter-vim
+	url = https://github.com/jupyter-vim/jupyter-vim.git

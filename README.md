@@ -16,6 +16,8 @@
 
 # Directory Layout
 
+- pack:
+	- Contains some configs for kite
 - autoload:
 	- Contains the pathogen.vim package required to manage all the plugins
 - bundle:

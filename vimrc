@@ -50,6 +50,13 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_global_ycm_extra_conf = '/home/josiah/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+" disable ycm for python when using kite instead
+let g:ycm_filetype_blacklist = {
+			\ 'python' : 1,
+			\}
+
+"kite settings
+let g:kite_supported_languages = ['python']
 
 " WSL yank support - also this if statement below is used to store all the WSL configs (seperate from my linux virtual machine)
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
@@ -81,12 +88,12 @@ autocmd BufnewFile,BufRead,TabEnter *.h :rv! ~/.vim/info/.hinfo.vim
 " vim info documentation
 " General: v => overwrite the original vim file
 "
-" ~/.pyinfo.vim: h => heading, r => run python, p => print, b = code body, d => default setup 
+" ~/.pyinfo.vim: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks
 "
-" ~/.cinfo.vim: h => heading, r => run (g++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body,  d => default setup (b and h)
+" ~/.cinfo.vim: h => heading, r => run (g++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body 
 " for loops <= (t, i, j, k )
 "
-" ~/.hinfo.vim: h => heading, g = guard headers, d => default setup (h and g);
+" ~/.hinfo.vim: h => heading, g = guard headers
 "
 
 
@@ -122,4 +129,16 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 
 "tpope/vim-commentary
+" makes the commentary for c, cpp, css and java be automatically // instead of
+" the default /* and */
 autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
+
+
+
+"jupyter-vim/jupyter-vim
+" Package that connects the power of jupyter and vim together
+" ':!jupyter qtconsole &'  starts the qtconsole
+" ':JupyterConnect' connects to the qtconsole
+" \e makes visual select works
+" \x runs code between ## and ##
+" \r runs the entire code file

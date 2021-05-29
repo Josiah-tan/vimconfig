@@ -9,7 +9,7 @@
 # =====================================================
 
 
-from sympy import Eq, solve
+from sympy import Eq, solve, pi, integrate, symbols, simplify, inverse_laplace_transform
 from sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication_application
 
 def sv(eqs, exact = False):
@@ -36,6 +36,13 @@ def sv(eqs, exact = False):
 
     return sol;
 
+def P2R(radii, angles, deg = False):
+    #polar to rectangular coordinates
+    return radii * np.exp(1j*angles * (1 + deg * (np.pi / 180 - 1)))
+
+def R2P(x, deg = False):
+    #rectangular to polar coordinates
+    return abs(x), np.angle(x, deg)
 
 if __name__ == '__main__':
     #eqs = 'x + y = 4, x + 2y = 5'
@@ -59,3 +66,15 @@ if __name__ == '__main__':
     v = f'v ** 2 + {1/(R2 * C) + R1 /L} * v + {(R1 + R2)/(L * C * R2)}'
     print(f"v = {v}");
     print(f"sv(v) = {sv(v)}");
+
+    print(f"sv('cos(x) = 5') = {sv('cos(x) = 1')}");
+    print(f"sv('theta ** 2 + theta  = 4') = {sv('theta ** 2 + theta  = 4')}");
+    print(f"sv('x = conjugate(1+4j)') = {sv('x = conjugate(1+4j)')}");
+    print(f"sv('x = re(1 + 5j) + im(1+ 5j)') = {sv('x = re(1 + 5j) + im(1+ 5j)')}");
+    
+    print(f"sv('conjugate(x) + 1 + 2j') = {sv('conjugate(x) + 1 + 2j')}");
+    print(f"sv('x = sin(x)') = {sv('x = sin(x)')}");
+    
+
+
+
