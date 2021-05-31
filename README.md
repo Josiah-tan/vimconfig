@@ -13,6 +13,13 @@
 - ./install.py --clang-completer
 
 
+# vim+python+jupyter integration
+- pip3 install jupyter
+- If the config files don't exist yet:
+	- jupyter console --generate-config
+	- jupyter qtconsole --generate-config
+
+
 
 # Directory Layout
 
@@ -29,3 +36,4 @@
 
 - templates:
 	- solve.py - ultimate linear algebra solving script
+	- markdown.py - for markdown and latex code
