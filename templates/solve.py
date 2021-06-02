@@ -11,6 +11,7 @@
 
 from sympy import Eq, solve, pi, integrate, symbols, simplify, inverse_laplace_transform
 from sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication_application
+import numpy as np
 
 def sv(eqs, exact = False):
     # if the eqs passed in is comma separated then split into list by the commas

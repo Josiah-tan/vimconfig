@@ -88,7 +88,7 @@ autocmd BufnewFile,BufRead,TabEnter *.h :rv! ~/.vim/info/.hinfo.vim
 " vim info documentation
 " General: v => overwrite the original vim file
 "
-" ~/.pyinfo.vim: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks
+" ~/.pyinfo.vim: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks, s => symbols conversion
 "
 " ~/.cinfo.vim: h => heading, r => run (g++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body 
 " for loops <= (t, i, j, k )
