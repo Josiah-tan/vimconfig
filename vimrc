@@ -91,9 +91,9 @@ autocmd BufnewFile,BufRead,TabEnter *.h :rv! ~/.vim/info/.hinfo.vim
 " ~/.pyinfo.vim: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks, s => symbols conversion
 "
 " ~/.cinfo.vim: h => heading, r => run (g++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body 
-" for loops <= (t, i, j, k )
+" for loops <= (t, i, j, k ), f => function commentary
 "
-" ~/.hinfo.vim: h => heading, g = guard headers
+" ~/.hinfo.vim: h => heading, g = guard headers, f => function commentary
 "
 
 
@@ -142,3 +142,10 @@ autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 " \e makes visual select works
 " \x runs code between ## and ##
 " \r runs the entire code file
+
+
+
+"vim-calc
+" now you can press \a to evaluate an expession
+nnoremap <LEADER>a :call Calc()<CR>
+
