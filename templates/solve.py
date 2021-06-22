@@ -9,7 +9,7 @@
 # =====================================================
 
 
-from sympy import Eq, solve, pi, integrate, symbols, simplify, inverse_laplace_transform
+from sympy import Eq, solve, pi, integrate, symbols, simplify, inverse_laplace_transform, laplace_transform
 from sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication_application
 import numpy as np
 
@@ -44,6 +44,16 @@ def P2R(radii, angles, deg = False):
 def R2P(x, deg = False):
     #rectangular to polar coordinates
     return abs(x), np.angle(x, deg)
+
+def L(f):
+    # laplace transform of a function (t)
+    t, s = symbols("t s")
+    return laplace_transform(f, t, s, noconds=True)
+
+def invL(F):
+    # inverse laplace transform of a function (s)
+    t, s = symbols("t s")
+    return inverse_laplace_transform(F, s, t)
 
 if __name__ == '__main__':
     #eqs = 'x + y = 4, x + 2y = 5'
