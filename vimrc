@@ -139,7 +139,7 @@ autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 " Package that connects the power of jupyter and vim together
 " ':!jupyter qtconsole &'  starts the qtconsole
 " ':JupyterConnect' connects to the qtconsole
-" \e makes visual select works
+" \e makes visual select work :JupyterSendCell
 " \x runs code between ## and ##
 " \r runs the entire code file
 

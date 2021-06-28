@@ -55,6 +55,10 @@ def invL(F):
     t, s = symbols("t s")
     return inverse_laplace_transform(F, s, t)
 
+
+def ll(*args):
+    return 1/sum(1/i for i in args);
+
 if __name__ == '__main__':
     #eqs = 'x + y = 4, x + 2y = 5'
     #eqs1 = ['2w + x + 4y + 3z = 5x + 5y', 'w - 2x + 3z = 3x + 5y + 5x**2/5', '3w + 2x - y + z = -1', '4x - 5z = -3']
