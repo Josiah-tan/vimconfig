@@ -80,7 +80,20 @@ endif
 
 
 " viminfo setting for customised prerecorded macros for registers to specific files (*.c, *.py, etc)
-autocmd BufnewFile,BufRead,TabEnter *.py :rv! ~/.vim/info/.pyinfo.vim
+" autocmd BufnewFile,BufRead,TabEnter *.py :rv! ~/.vim/info/.pyinfo.vim
+autocmd BufnewFile,BufRead,TabEnter *.py call SetPythonOptions()
+function SetPythonOptions()
+	let @h = 'ggO# ++€kb€kb=======================================================€kb€kb# File€ýaO€ýajki#€ýajA Name: €ýa:let %€kb@" = expand("%")po#d€kb Date of Creation: €ýa:put = defstrtimefstrtftimstrftime(\"%c\")kJo# Author: Josiah Tan# Description:3€kb€kb## =====================================================# =====================================================€ýa'
+	let @r = ":!python3 %\n"
+	let @p = '^d$aprint(f"€ýapa = {€ýapf)i"€ýaA;€ýa'
+	let @b = "oif __name__ == '__main__':\n"
+	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as plt€ýa"
+	let @q = ":!jupyter qtconsole &:JupyterConnect"
+	let @t = 'O%run -n "~/.vim/templates/markdown"%run -n "~/.vim/templates/solve"€ý'
+	let @n = 'o##€ý'
+	let @s = '^v$hy:s/ /, /geA = symbols("€ýap'
+endfunction
+
 autocmd BufnewFile,BufRead,TabEnter *.c :rv! ~/.vim/info/.cinfo.vim
 autocmd BufnewFile,BufRead,TabEnter *.cpp :rv! ~/.vim/info/.cppinfo.vim
 autocmd BufnewFile,BufRead,TabEnter *.h :rv! ~/.vim/info/.hinfo.vim
