@@ -78,13 +78,6 @@ endif
 
 
 
-
-" (note that this is outdated) viminfo setting for customised prerecorded macros for registers to specific files (*.c, *.py, etc)
-" autocmd BufnewFile,BufRead,TabEnter *.py :rv! ~/.vim/info/.pyinfo.vim
-" autocmd BufnewFile,BufRead,TabEnter *.c :rv! ~/.vim/info/.cinfo.vim
-" autocmd BufnewFile,BufRead,TabEnter *.cpp :rv! ~/.vim/info/.cppinfo.vim
-" autocmd BufnewFile,BufRead,TabEnter *.h :rv! ~/.vim/info/.hinfo.vim
-
 " Prerecorded macro settings for registers
 " Python macro settings
 autocmd BufnewFile,BufRead,TabEnter *.py call SetPythonOptions()
@@ -111,11 +104,6 @@ function SetCFamGlobalOptions()
 	let @f = '$F(yi)O/*Description: 	p€kbParameters:	€ýap:s/, /:  *		/geA:€kbReturns:€ýajf€ýa$F(Bhy^kA		€ýapA: €kb€kb€kb€kb*/€ýao€ýa?DescriptionA€ýa'
 endfunction
 
-" commented out because everything that you can do here should also be in the .h file
-" autocmd BufnewFile,BufRead,TabEnter *.c,*.cpp call SetCFamOptions()
-" function SetCFamOptions()
-" endfunction
-
 " c settings
 autocmd BufnewFile,BufRead,TabEnter *.c call SetCOptions()
 function SetCOptions()
@@ -139,7 +127,7 @@ endfunction
 "
 " Python: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks, s => symbols conversion
 "
-" CFam: h => heading, r => run (gcc main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body 
+" CFam: h => heading, r => run (gcc/++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body , p => print (only for c++)
 " for loops <= (t, i, j, k), f => function commentary
 "
 " Header: g = guard headers
