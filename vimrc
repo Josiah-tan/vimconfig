@@ -82,7 +82,7 @@ endif
 " Python macro settings
 autocmd BufnewFile,BufRead,TabEnter *.py call SetPythonOptions()
 function SetPythonOptions()
-	let @h = 'ggO# ++€kb€kb=======================================================€kb€kb# File€ýaO€ýajki#€ýajA Name: €ýa:let %€kb@" = expand("%")po#d€kb Date of Creation: €ýa:put = defstrtimefstrtftimstrftime(\"%c\")kJo# Author: Josiah Tan# Description:3€kb€kb## =====================================================# =====================================================€ýa'
+	let @h = 'ggO# =====================================================# File€ýaO€ýajki#€ýajA Name: €ýa:let @" = expand("%")po# Date of Creation: €ýa:put = strftime(\"%c\")kJo# Author: Josiah Tan# Description:## =====================================================# =====================================================€ýa'
 	let @r = ":!python3 %\n"
 	let @p = '^d$aprint(f"€ýapa = {€ýapf)i"€ýaA;€ýa'
 	let @b = "oif __name__ == '__main__':\n"
@@ -96,8 +96,8 @@ endfunction
 " Global C family settings for header, c and cpp files
 autocmd BufnewFile,BufRead,TabEnter *.c,*.cpp,*.h call SetCFamGlobalOptions()
 function SetCFamGlobalOptions()
-	let @h ='ggO/*File Name: €ýa:let @l€kb" = expand("%")poDatw€kbe of Cration€kl€kl€kl€kl€kle€ýaA: €ýa:put = strftime(''%c'')kJoAuthor: Josiah TanDescription: €kb€kb€kb*/€ýa'
-	let @t = 'Sfor(€kb (int t-0€kb€kb=0;t<T;t++){€ýaO€ýa'
+	let @h = 'ggO/* File Name: €ýa:let @" = expand("%")po Date of Creation: €ýa:put = strftime(\"%c\")kJoAuthor: Josiah TanDescription: €kb€kb€kb€kb€kb*/€ýa'
+	let @t = 'Sfor (int t=0;t<T;t++){€ýaO€ýa'
 	let @i = 'Sfor (int i=0;i<n;i++){€ýaO€ýa'
 	let @j = 'Sfor (int j=0;j<m;j++){€ýaO€ýa'
 	let @k = 'Sfor (int k=0;k<l;k++){€ýaO€ýa'
@@ -119,6 +119,12 @@ function SetCPPOptions()
 	let @b = 'i#include<iostream>#include<c€kbvector>#include<alsotalgorithm>@€kb#include<climits>#include<string>€kb€kb€kb€kb€kb€kb€kb€kbit €kb€kbnt main(void){€ýaOreturn 0;€ýakkOusing namespace std;€ýa3jOint T; €kbcin >> T;for (int i€kbt=1;t<=T;t++){€ýaOcout << "Case #" << t << ans << endl;€ýaOans = 0;€ýaIint €ýa'
 	" let @m = 
 	let @p = '^v$hdacout << "€ýapA << €ýapA << end;€kbl;€ýaj'
+endfunction
+
+" .h settings
+autocmd BufnewFile,BufRead,TabEnter *.h call SetHOptions()
+function SetHOptions()
+	let @g = 'i#ifndef €ýa:let @"=expand("%")pF.r_viWUviwyo#define €ýapo€ýaG10o€ýao#endif€ýa9k'
 endfunction
 
 
