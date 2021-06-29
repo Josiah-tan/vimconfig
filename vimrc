@@ -79,8 +79,14 @@ endif
 
 
 
-" viminfo setting for customised prerecorded macros for registers to specific files (*.c, *.py, etc)
+" (note that this is outdated) viminfo setting for customised prerecorded macros for registers to specific files (*.c, *.py, etc)
 " autocmd BufnewFile,BufRead,TabEnter *.py :rv! ~/.vim/info/.pyinfo.vim
+" autocmd BufnewFile,BufRead,TabEnter *.c :rv! ~/.vim/info/.cinfo.vim
+" autocmd BufnewFile,BufRead,TabEnter *.cpp :rv! ~/.vim/info/.cppinfo.vim
+" autocmd BufnewFile,BufRead,TabEnter *.h :rv! ~/.vim/info/.hinfo.vim
+
+" Prerecorded macro settings for registers
+" Python macro settings
 autocmd BufnewFile,BufRead,TabEnter *.py call SetPythonOptions()
 function SetPythonOptions()
 	let @h = 'ggO# ++€kb€kb=======================================================€kb€kb# File€ýaO€ýajki#€ýajA Name: €ýa:let %€kb@" = expand("%")po#d€kb Date of Creation: €ýa:put = defstrtimefstrtftimstrftime(\"%c\")kJo# Author: Josiah Tan# Description:3€kb€kb## =====================================================# =====================================================€ýa'
@@ -94,19 +100,49 @@ function SetPythonOptions()
 	let @s = '^v$hy:s/ /, /geA = symbols("€ýap'
 endfunction
 
-autocmd BufnewFile,BufRead,TabEnter *.c :rv! ~/.vim/info/.cinfo.vim
-autocmd BufnewFile,BufRead,TabEnter *.cpp :rv! ~/.vim/info/.cppinfo.vim
-autocmd BufnewFile,BufRead,TabEnter *.h :rv! ~/.vim/info/.hinfo.vim
+" Global C family settings for header, c and cpp files
+autocmd BufnewFile,BufRead,TabEnter *.c,*.cpp,*.h call SetCFamGlobalOptions()
+function SetCFamGlobalOptions()
+	let @h ='ggO/*File Name: €ýa:let @l€kb" = expand("%")poDatw€kbe of Cration€kl€kl€kl€kl€kle€ýaA: €ýa:put = strftime(''%c'')kJoAuthor: Josiah TanDescription: €kb€kb€kb*/€ýa'
+	let @t = 'Sfor(€kb (int t-0€kb€kb=0;t<T;t++){€ýaO€ýa'
+	let @i = 'Sfor (int i=0;i<n;i++){€ýaO€ýa'
+	let @j = 'Sfor (int j=0;j<m;j++){€ýaO€ýa'
+	let @k = 'Sfor (int k=0;k<l;k++){€ýaO€ýa'
+	let @f = '$F(yi)O/*Description: 	p€kbParameters:	€ýap:s/, /:  *		/geA:€kbReturns:€ýajf€ýa$F(Bhy^kA		€ýapA: €kb€kb€kb€kb*/€ýao€ýa?DescriptionA€ýa'
+endfunction
 
-" vim info documentation
+" commented out because everything that you can do here should also be in the .h file
+" autocmd BufnewFile,BufRead,TabEnter *.c,*.cpp call SetCFamOptions()
+" function SetCFamOptions()
+" endfunction
+
+" c settings
+autocmd BufnewFile,BufRead,TabEnter *.c call SetCOptions()
+function SetCOptions()
+	let @r = ":!gcc % && ./a.out\n"
+	let @b = 'i#include<stdio.h>#include<stdlib.h>#include<limits.h>int main(void){€ýaOretrnreturn 0;€ýak'
+	" let @m = 
+endfunction
+
+" cpp settings
+autocmd BufnewFile,BufRead,TabEnter *.cpp call SetCPPOptions()
+function SetCPPOptions()
+	let @r = ":!g++ % && ./a.out\n"
+	let @b = 'i#include<iostream>#include<c€kbvector>#include<alsotalgorithm>@€kb#include<climits>#include<string>€kb€kb€kb€kb€kb€kb€kb€kbit €kb€kbnt main(void){€ýaOreturn 0;€ýakkOusing namespace std;€ýa3jOint T; €kbcin >> T;for (int i€kbt=1;t<=T;t++){€ýaOcout << "Case #" << t << ans << endl;€ýaOans = 0;€ýaIint €ýa'
+	" let @m = 
+	let @p = '^v$hdacout << "€ýapA << €ýapA << end;€kbl;€ýaj'
+endfunction
+
+
+" vim macros documentation
 " General: v => overwrite the original vim file
 "
-" ~/.pyinfo.vim: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks, s => symbols conversion
+" Python: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks, s => symbols conversion
 "
-" ~/.cinfo.vim: h => heading, r => run (g++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body 
-" for loops <= (t, i, j, k ), f => function commentary
+" CFam: h => heading, r => run (gcc main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body 
+" for loops <= (t, i, j, k), f => function commentary
 "
-" ~/.hinfo.vim: h => heading, g = guard headers, f => function commentary
+" Header: g = guard headers
 "
 
 
