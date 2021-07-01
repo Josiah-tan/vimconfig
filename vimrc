@@ -45,6 +45,10 @@ set nrformats+=alpha
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
+" vimvscode battle settings
+" this makes it so that markdown ** for bold and * for italics are not shown
+set conceallevel=2
+" set norelativenumber
 
 "gruvbox settings
 colorscheme gruvbox
