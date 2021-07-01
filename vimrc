@@ -71,7 +71,7 @@ let g:kite_supported_languages = ['python']
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
 if executable(s:clip)
 	" make the color scheme nice
-	color industry
+	" color industry
 	" this is for disabling YCM in situations such as when using codewarrier
 	" (which uses a different compiler than clang)
 	let g:ycm_show_diagnostics_ui = 1
