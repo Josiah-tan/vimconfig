@@ -45,7 +45,16 @@ set nrformats+=alpha
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
+
+"gruvbox settings
+colorscheme gruvbox
+set background=dark
+
+
+
 "youCompleteMe settings 
+" don't call youCompleteMe when editing the vimrc file
+autocmd BufnewFile,BufRead,TabEnter vimrc let g:ycm_auto_trigger=0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_global_ycm_extra_conf = '/home/josiah/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
@@ -82,9 +91,9 @@ endif
 " Python macro settings
 autocmd BufnewFile,BufRead,TabEnter *.py call SetPythonOptions()
 function SetPythonOptions()
-	let @h = 'ggO# =====================================================# File€ýaO€ýajki#€ýajA Name: €ýa:let @" = expand("%")po# Date of Creation: €ýa:put = strftime(\"%c\")kJo# Author: Josiah Tan# Description:## =====================================================# =====================================================€ýa'
+	let @h = 'ggO# =====================================================# File€ýaO€ýajki#€ýajA Name: €ýa"%po# Date of Creation: €ýa:put = strftime(\"%c\")kJo# Author: Josiah Tan# Description:## =====================================================# =====================================================€ýa'
 	let @r = ":!python3 %\n"
-	let @p = '^d$aprint(f"€ýapa = {€ýapf)i"€ýaA;€ýa'
+	let @p = ':s/.\+/print(f"& = {&}")/j'
 	let @b = "oif __name__ == '__main__':\n"
 	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as plt€ýa"
 	let @q = ":!jupyter qtconsole &:JupyterConnect"
@@ -96,7 +105,7 @@ endfunction
 " Global C family settings for header, c and cpp files
 autocmd BufnewFile,BufRead,TabEnter *.c,*.cpp,*.h call SetCFamGlobalOptions()
 function SetCFamGlobalOptions()
-	let @h = 'ggO/* File Name: €ýa:let @" = expand("%")po Date of Creation: €ýa:put = strftime(\"%c\")kJoAuthor: Josiah TanDescription: €kb€kb€kb€kb€kb*/€ýa'
+	let @h = 'ggO/* File Name: €ýa"%po Date of Creation: €ýa:put = strftime(\"%c\")kJoAuthor: Josiah TanDescription: €kb€kb€kb€kb€kb*/€ýa'
 	let @t = 'Sfor (int t=0;t<T;t++){€ýaO€ýa'
 	let @i = 'Sfor (int i=0;i<n;i++){€ýaO€ýa'
 	let @j = 'Sfor (int j=0;j<m;j++){€ýaO€ýa'
@@ -124,7 +133,7 @@ endfunction
 " .h settings
 autocmd BufnewFile,BufRead,TabEnter *.h call SetHOptions()
 function SetHOptions()
-	let @g = 'i#ifndef €ýa:let @"=expand("%")pF.r_viWUviwyo#define €ýapo€ýaG10o€ýao#endif€ýa9k'
+	let @g = '€ýa"%p:s/\(\w\+\)\.\(\w\)/#ifndef \U\1_\U\2\e\r#define \U\1_\U\2/G10o€ýaI#endif€ýa2j'
 endfunction
 
 
@@ -142,7 +151,20 @@ endfunction
 
 
 "switch.vim plugin settings
-let g:switch_mapping = "-"
+" let g:switch_mapping = "-"
+let g:variable_style_switch_definitions = [
+      \   {
+      \     '\<[a-z0-9]\+_\k\+\>': {
+      \       '_\(.\)': '\U\1'
+      \     },
+      \     '\<[a-z0-9]\+[A-Z]\k\+\>': {
+      \       '\([A-Z]\)': '_\l\1'
+      \     },
+      \   }
+      \ ]
+nnoremap + :call switch#Switch({'definitions': g:variable_style_switch_definitions})<cr>
+nnoremap - :Switch<cr>
+
 
 
 
