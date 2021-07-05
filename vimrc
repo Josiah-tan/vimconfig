@@ -104,7 +104,7 @@ function SetPythonOptions()
 	let @t = 'O%run -n "~/.vim/templates/markdown"%run -n "~/.vim/templates/solve"€ý'
 	let @n = 'o##€ý'
 	let @s = '^v$hy:s/ /, /geA = symbols("€ýap'
-	let @e = ':s/^/solve([\rEq(/|s/ *, */), Eq(/g|s/$/)/|s/ *= */, /g|s/\(Eq([^)]*), *\)/\1\r/g|s/$/\r])/|norm vi]>'
+	let @e = ':s/ *\(^\|, \) *\([^=]\{-}\)\s*= *\([^,]\)/\1Eq(\2, \3)/g|s/^/solve([/|s/$/])/'
 endfunction
 
 " Global C family settings for header, c and cpp files
@@ -139,6 +139,7 @@ endfunction
 autocmd BufnewFile,BufRead,TabEnter *.h call SetHOptions()
 function SetHOptions()
 	let @g = '€ýa"%p:s/\(\w\+\)\.\(\w\)/#ifndef \U\1_\U\2\e\r#define \U\1_\U\2/G10o€ýaI#endif€ýa2j'
+	let @b = '@h@gi#define true 1#define false 0#define bool char€ýa'
 endfunction
 
 " .md settings
@@ -151,7 +152,7 @@ endfunction
 "
 " Python: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks, s => symbols conversion, e => solve Eq
 "
-" CFam: h => heading, r => run (gcc/++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body , p => print (only for c++)
+" CFam: h => heading, r => run (gcc/++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body/ boolean.h (.h), p => print (only for c++)
 " for loops <= (t, i, j, k), f => function commentary
 "
 " Header: g = guard headers
@@ -224,3 +225,10 @@ autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 " now you can press \a to evaluate an expession
 nnoremap <LEADER>a :call Calc()<CR>
 
+
+"tagbar
+" map a key to toggle the tagbar window
+nmap <F8> :TagbarToggle<CR>
+
+"fugitive - for git integration
+"vim-airline - for status bar and branch
