@@ -97,14 +97,14 @@ autocmd BufnewFile,BufRead,TabEnter *.py call SetPythonOptions()
 function SetPythonOptions()
 	let @h = 'ggO# =====================================================# File€ýaO€ýajki#€ýajA Name: €ýa"%po# Date of Creation: €ýa:put = strftime(\"%c\")kJo# Author: Josiah Tan# Description:## =====================================================# =====================================================€ýa'
 	let @r = ":!python3 %\n"
-	let @p = ':s/.\+/print(f"& = {&}")/j'
+	let @p = ':s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2}")/j'
 	let @b = "oif __name__ == '__main__':\n"
 	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as plt€ýa"
 	let @q = ":!jupyter qtconsole &:JupyterConnect"
 	let @t = 'O%run -n "~/.vim/templates/markdown"%run -n "~/.vim/templates/solve"€ý'
 	let @n = 'o##€ý'
-	let @s = '^v$hy:s/ /, /geA = symbols("€ýap'
-	let @e = ':s/ *\(^\|, \) *\([^=]\{-}\)\s*= *\([^,]\)/\1Eq(\2, \3)/g|s/^/solve([/|s/$/])/'
+	let @s = '^v$hy^v$h:s/\%V /, /geA = symbols("€ýap'
+	let @e = ':s/ *\(^ *\|, \) *\([^=]\{-}\)\s*= *\([^,]\)/\1Eq(\2, \3)/g|s/^\(\s*\)/\1solve([/|s/$/])/'
 endfunction
 
 " Global C family settings for header, c and cpp files
