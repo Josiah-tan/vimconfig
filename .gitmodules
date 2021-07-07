@@ -46,9 +46,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/preservim/tagbar.git
-[submodule "bundle/fzf"]
-	path = bundle/fzf
-	url = https://github.com/junegunn/fzf.git
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
