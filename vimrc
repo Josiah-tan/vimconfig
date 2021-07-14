@@ -1,12 +1,130 @@
-" put this at the beginning of the file for vim package management
-execute pathogen#infect('bundle/{}', '~/src/vim/bundle/{}') 
-"
-" turn on syntax highlighting
-syntax on 
-"file type detection
-filetype plugin indent on 
+" ################################################################ Autoinstall Vim-plug ################################################################
+" automatically installs vim-plug (for both vim and neovim)
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" tells you which line number u r at
+" ################################################################ Global Plugin Settings ################################################################
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - For vim: '~/.vim/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+let plugin_dir_plug = has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged'
+call plug#begin(plugin_dir_plug)
+
+" tpope stuff
+Plug 'tpope/vim-sensible'
+"surrounding things with things
+Plug 'tpope/vim-surround'
+" for the surround plugin repeatablility with .
+Plug 'tpope/vim-repeat'
+"git integration
+Plug 'tpope/vim-fugitive' 
+Plug 'tpope/vim-commentary'
+" makes the commentary for c, cpp, css and java be automatically // instead of
+" the default /* and */
+autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
+
+"autobracket completion
+Plug 'Raimondi/delimitMate'
+
+"python code folding
+Plug 'tmhedberg/SimpylFold'
+let g:SimpylFold_docstring_preview = 1
+
+"Andrew's plugins
+Plug 'AndrewRadev/switch.vim'
+" let g:switch_mapping = "-"
+let g:variable_style_switch_definitions = [
+	  \   {
+	  \     '\<[a-z0-9]\+_\k\+\>': {
+	  \       '_\(.\)': '\U\1'
+	  \     },
+	  \     '\<[a-z0-9]\+[A-Z]\k\+\>': {
+	  \       '\([A-Z]\)': '_\l\1'
+	  \     },
+	  \   }
+	  \ ]
+nnoremap + :call switch#Switch({'definitions': g:variable_style_switch_definitions})<cr>
+nnoremap - :Switch<cr>
+
+Plug 'andrewRadev/splitjoin.vim'
+
+"file finding
+Plug 'preservim/nerdtree'
+"
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
+
+"re/opens nerdtree + mv cursor to the nerdtree
+nnoremap <leader>n :NERDTreeFocus<CR>
+"
+"creates a nerd tree for the current directory as root (may not neccesarily be
+"the directory of the file opened up by the tab)
+nnoremap <C-n> :NERDTree<CR> 
+"
+" If the nerdtree already exists, it is reopened and rendered again. If no
+" nerdtree exists, runs same as :NERDTree command
+" already mapped to creating new tabs in linux (notice this)
+nnoremap <C-t> :NERDTreeToggle<CR> 
+"
+" find and reveal the file for the active buffer in the nerdtree window as
+" spec path (superior to the :NERDTree command)
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" colorschemes
+Plug 'morhetz/gruvbox'
+
+
+Plug 'jupyter-vim/jupyter-vim'
+" Package that connects the power of jupyter and vim together
+" ':!jupyter qtconsole &'  starts the qtconsole
+" ':JupyterConnect' connects to the qtconsole
+" \e makes visual select work :JupyterSendCell
+" \x runs code between ## and ##
+" \r runs the entire code file
+
+Plug 'theniceboy/vim-calc'
+" now you can press \a to evaluate an expession
+nnoremap <LEADER>a :call Calc()<CR>
+
+
+Plug 'preservim/tagbar'
+" map a key to toggle the tagbar window
+nmap <F8> :TagbarToggle<CR>
+
+" for status bar and branch
+Plug 'vim-airline/vim-airline'
+
+"kite settings (for some reason kite is so dodgy that it doesn't even use vim-plug
+let g:kite_supported_languages = ['python']
+
+if has('nvim')
+" ################################################################ Neovim Plugin Settings ################################################################
+	" neovim specific plugins
+
+else
+" ################################################################ Vim Plugin Settings ################################################################
+	" vim specific plugins
+
+endif
+
+" Initialize plugin system (end of plugins
+call plug#end()
+
+
+" ################################################################ Global General Configurations  ################################################################
+
+" gruvbox (for some reason it doesn't like this until after plug#end?
+colorscheme gruvbox
+set background=dark
+
+" tells you which line number 
 set number
 " tells you the relative numbers of lines above and below the cursor
 set relativenumber
@@ -50,46 +168,46 @@ autocmd BufWinEnter *.* silent loadview
 set conceallevel=2
 " set norelativenumber
 
-"gruvbox settings
-colorscheme gruvbox
-set background=dark
+if has('nvim')
+" ################################################################ Neovim General Configurations ################################################################
+	" neovim general configurations
 
+else
+" ################################################################ Vim General Configurations ################################################################
+	" vim general configurations
 
+	" turn on syntax highlighting
+	syntax on 
+	"file type detection
+	filetype plugin indent on 
 
-"youCompleteMe settings 
-" don't call youCompleteMe when editing the vimrc file
-autocmd BufnewFile,BufRead,TabEnter vimrc let g:ycm_auto_trigger=0
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_global_ycm_extra_conf = '/home/josiah/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
-" disable ycm for python when using kite instead
-let g:ycm_filetype_blacklist = {
-			\ 'python' : 1,
-			\}
+endif
 
-"kite settings
-let g:kite_supported_languages = ['python']
+" ################################################################ WSL General Configurations ################################################################
 
 " WSL yank support - also this if statement below is used to store all the WSL configs (seperate from my linux virtual machine)
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
 if executable(s:clip)
-	" make the color scheme nice
-	" color industry
-	" this is for disabling YCM in situations such as when using codewarrier
-	" (which uses a different compiler than clang)
-	let g:ycm_show_diagnostics_ui = 1
-	let g:ycm_enable_diagnostic_signs = 0 
-	let g:ycm_enable_diagnostic_highlighting = 0
-
 	" the stuff required to make yanking to the system clipboard work
-    augroup WSLYank
-        autocmd!
-        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-    augroup END
+	augroup WSLYank
+		autocmd!
+		autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+	augroup END
 endif
 
+" ################################################################ Global Macro Configurations  ################################################################
 
+" vim macros documentation
+"
+" Python: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks, s => symbols conversion, e => solve Eq
+"
+" CFam: h => heading, r => run (gcc/++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body/ boolean.h (.h), p => print (only for c++)
+" for loops <= (t, i, j, k), f => function commentary
+"
+" Header: g = guard headers
+"
+" Markdown: u = upper first letter of each word
+" vim settings 
 
 " Prerecorded macro settings for registers
 " Python macro settings
@@ -148,87 +266,8 @@ function SetMDOptions()
 	let @u = ':s/\w\+/\u&/ge'
 endfunction
 
-" vim macros documentation
-"
-" Python: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks, s => symbols conversion, e => solve Eq
-"
-" CFam: h => heading, r => run (gcc/++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body/ boolean.h (.h), p => print (only for c++)
-" for loops <= (t, i, j, k), f => function commentary
-"
-" Header: g = guard headers
-"
-" Markdown: u = upper first letter of each word
-
-
-
-"switch.vim plugin settings
-" let g:switch_mapping = "-"
-let g:variable_style_switch_definitions = [
-      \   {
-      \     '\<[a-z0-9]\+_\k\+\>': {
-      \       '_\(.\)': '\U\1'
-      \     },
-      \     '\<[a-z0-9]\+[A-Z]\k\+\>': {
-      \       '\([A-Z]\)': '_\l\1'
-      \     },
-      \   }
-      \ ]
-nnoremap + :call switch#Switch({'definitions': g:variable_style_switch_definitions})<cr>
-nnoremap - :Switch<cr>
 
 
 
 
-"NERDTree plugin settings
-"
-" enable line numbers
-let NERDTreeShowLineNumbers=1
-" make sure relative line numbers are used
-autocmd FileType nerdtree setlocal relativenumber
 
-"re/opens nerdtree + mv cursor to the nerdtree
-nnoremap <leader>n :NERDTreeFocus<CR>
-"
-"creates a nerd tree for the current directory as root (may not neccesarily be
-"the directory of the file opened up by the tab)
-nnoremap <C-n> :NERDTree<CR> 
-"
-" If the nerdtree already exists, it is reopened and rendered again. If no
-" nerdtree exists, runs same as :NERDTree command
-" already mapped to creating new tabs in linux (notice this)
-nnoremap <C-t> :NERDTreeToggle<CR> 
-"
-" find and reveal the file for the active buffer in the nerdtree window as
-" spec path (superior to the :NERDTree command)
-nnoremap <C-f> :NERDTreeFind<CR>
-
-
-
-"tpope/vim-commentary
-" makes the commentary for c, cpp, css and java be automatically // instead of
-" the default /* and */
-autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
-
-
-
-"jupyter-vim/jupyter-vim
-" Package that connects the power of jupyter and vim together
-" ':!jupyter qtconsole &'  starts the qtconsole
-" ':JupyterConnect' connects to the qtconsole
-" \e makes visual select work :JupyterSendCell
-" \x runs code between ## and ##
-" \r runs the entire code file
-
-
-
-"vim-calc
-" now you can press \a to evaluate an expession
-nnoremap <LEADER>a :call Calc()<CR>
-
-
-"tagbar
-" map a key to toggle the tagbar window
-nmap <F8> :TagbarToggle<CR>
-
-"fugitive - for git integration
-"vim-airline - for status bar and branch
