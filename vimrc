@@ -57,8 +57,22 @@ Plug 'preservim/tagbar'
 Plug 'vim-airline/vim-airline'
 
 if has('nvim')
-" ################################################################ Neovim Plugin Management ################################################################
+	" ################################################################ Neovim Plugin Management ################################################################
 	" neovim specific plugins
+
+	" This is a requirement, which implements some useful window management
+	"   items for neovim
+	Plug 'nvim-lua/popup.nvim'
+	Plug 'nvim-lua/plenary.nvim'
+
+	" fuzzy finder etc...
+	Plug 'nvim-telescope/telescope.nvim'	
+
+	" plugin for lsp configurations
+	" https://microsoft.github.io/language-server-protocol/implementors/servers/
+	Plug 'neovim/nvim-lspconfig'
+	" for autocompletion
+	Plug 'nvim-lua/completion-nvim'
 
 else
 " ################################################################ Vim Plugin Management ################################################################
@@ -70,6 +84,9 @@ endif
 call plug#end()
 
 " ################################################################ Global Plugin Settings ################################################################
+
+" map <leader> to <Space>
+let mapleader = " " 
 
 " tpope stuff
 " Plug 'tpope/vim-sensible'
@@ -136,6 +153,13 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " colorschemes
 " Plug 'morhetz/gruvbox'
 " gruvbox (for some reason it doesn't like this until after plug#end?
+
+let g:gruvbox_contrast_dark = 'hard'
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 set background=dark
 
@@ -150,7 +174,7 @@ set background=dark
 
 " Plug 'theniceboy/vim-calc'
 " now you can press \a to evaluate an expession
-nnoremap <LEADER>a :call Calc()<CR>
+nnoremap <leader>a :call Calc()<CR>
 
 
 " Plug 'preservim/tagbar'
@@ -161,11 +185,49 @@ nmap <F8> :TagbarToggle<CR>
 " Plug 'vim-airline/vim-airline'
 
 "kite settings (for some reason kite is so dodgy that it doesn't even use vim-plug
-let g:kite_supported_languages = ['python']
+" disabling kite
+let g:kite_supported_languages = []
 
 if has('nvim')
-" ################################################################ Neovim Plugin Settings ################################################################
+	" ################################################################ Neovim Plugin Settings ################################################################
 	" neovim specific plugins
+
+	" This is a requirement, which implements some useful window management
+	"   items for neovim
+	" Plug 'nvim-lua/popup.nvim'
+	" Plug 'nvim-lua/plenary.nvim'
+
+	" fuzzy finder etc...
+	" Plug 'nvim-telescope/telescope.nvim'	
+	" primeagen
+	nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+
+	" <C-c> exit telescope
+	" Using Lua functions
+	nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+	nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+	nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+	nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+
+	" Custom
+	nnoremap <leader>Gf <cmd>lua require('telescope.builtin').git_files()<cr>
+
+	nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
+	nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
+	
+	
+	" plugin for lsp configurations
+	" https://microsoft.github.io/language-server-protocol/implementors/servers/
+	" Plug 'neovim/nvim-lspconfig'
+	" pyright
+
+	" for autocompletion
+	" Plug 'nvim-lua/completion-nvim'
+
+	let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+	lua require('lspconfig').pyright.setup{on_attach=require'completion'.on_attach}
+
 
 else
 " ################################################################ Vim Plugin Settings ################################################################
