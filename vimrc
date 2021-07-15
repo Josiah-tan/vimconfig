@@ -163,15 +163,27 @@ set nrformats+=alpha
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
+" error bells, get rid of that
+set noerrorbells
+
+"for linting and lsp errors
+set signcolumn=yes
+
 " vimvscode battle settings
 " this makes it so that markdown ** for bold and * for italics are not shown
 set conceallevel=2
 " set norelativenumber
 
+
 if has('nvim')
 " ################################################################ Neovim General Configurations ################################################################
 	" neovim general configurations
-
+	" makes it so that in insert mode the cursor remains a block
+	set guicursor=
+	" makes it so that after you perform a search the highlighting turns off
+	set nohlsearch
+	" allows for fast swapping back and forth between buffers
+	set hidden
 else
 " ################################################################ Vim General Configurations ################################################################
 	" vim general configurations
