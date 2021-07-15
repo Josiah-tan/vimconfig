@@ -6,7 +6,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" ################################################################ Global Plugin Settings ################################################################
+" ################################################################ Global Plugin Management ################################################################
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -23,20 +23,76 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 "git integration
 Plug 'tpope/vim-fugitive' 
+" obviously for commentary shortcuts
 Plug 'tpope/vim-commentary'
-" makes the commentary for c, cpp, css and java be automatically // instead of
-" the default /* and */
-autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 
 "autobracket completion
 Plug 'Raimondi/delimitMate'
 
 "python code folding
 Plug 'tmhedberg/SimpylFold'
-let g:SimpylFold_docstring_preview = 1
 
 "Andrew's plugins
 Plug 'AndrewRadev/switch.vim'
+
+" toggle between multiline and single line split
+Plug 'andrewRadev/splitjoin.vim'
+
+"file finding
+Plug 'preservim/nerdtree'
+
+" best colorscheme ever
+Plug 'morhetz/gruvbox'
+
+" Package that connects the power of jupyter and vim together
+Plug 'jupyter-vim/jupyter-vim'
+
+"for performing calculations on the fly
+Plug 'theniceboy/vim-calc'
+
+"for tagbar (like table of contents)
+Plug 'preservim/tagbar'
+
+" for status bar and branch
+Plug 'vim-airline/vim-airline'
+
+if has('nvim')
+" ################################################################ Neovim Plugin Management ################################################################
+	" neovim specific plugins
+
+else
+" ################################################################ Vim Plugin Management ################################################################
+	" vim specific plugins
+
+endif
+
+" Initialize plugin system (end of plugins)
+call plug#end()
+
+" ################################################################ Global Plugin Settings ################################################################
+
+" tpope stuff
+" Plug 'tpope/vim-sensible'
+"surrounding things with things
+" Plug 'tpope/vim-surround'
+" for the surround plugin repeatablility with .
+" Plug 'tpope/vim-repeat'
+"git integration
+" Plug 'tpope/vim-fugitive' 
+" Plug 'tpope/vim-commentary'
+" makes the commentary for c, cpp, css and java be automatically // instead of
+" the default /* and */
+autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
+
+"autobracket completion
+" Plug 'Raimondi/delimitMate'
+
+"python code folding
+" Plug 'tmhedberg/SimpylFold'
+let g:SimpylFold_docstring_preview = 1
+
+"Andrew's plugins
+" Plug 'AndrewRadev/switch.vim'
 " let g:switch_mapping = "-"
 let g:variable_style_switch_definitions = [
 	  \   {
@@ -51,10 +107,10 @@ let g:variable_style_switch_definitions = [
 nnoremap + :call switch#Switch({'definitions': g:variable_style_switch_definitions})<cr>
 nnoremap - :Switch<cr>
 
-Plug 'andrewRadev/splitjoin.vim'
+" Plug 'andrewRadev/splitjoin.vim'
 
 "file finding
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 "
 " enable line numbers
 let NERDTreeShowLineNumbers=1
@@ -78,10 +134,13 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 " colorschemes
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+" gruvbox (for some reason it doesn't like this until after plug#end?
+colorscheme gruvbox
+set background=dark
 
 
-Plug 'jupyter-vim/jupyter-vim'
+" Plug 'jupyter-vim/jupyter-vim'
 " Package that connects the power of jupyter and vim together
 " ':!jupyter qtconsole &'  starts the qtconsole
 " ':JupyterConnect' connects to the qtconsole
@@ -89,17 +148,17 @@ Plug 'jupyter-vim/jupyter-vim'
 " \x runs code between ## and ##
 " \r runs the entire code file
 
-Plug 'theniceboy/vim-calc'
+" Plug 'theniceboy/vim-calc'
 " now you can press \a to evaluate an expession
 nnoremap <LEADER>a :call Calc()<CR>
 
 
-Plug 'preservim/tagbar'
+" Plug 'preservim/tagbar'
 " map a key to toggle the tagbar window
 nmap <F8> :TagbarToggle<CR>
 
 " for status bar and branch
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 
 "kite settings (for some reason kite is so dodgy that it doesn't even use vim-plug
 let g:kite_supported_languages = ['python']
@@ -114,15 +173,9 @@ else
 
 endif
 
-" Initialize plugin system (end of plugins
-call plug#end()
 
+"################################################################ Global General Configurations ############################################################### 
 
-" ################################################################ Global General Configurations  ################################################################
-
-" gruvbox (for some reason it doesn't like this until after plug#end?
-colorscheme gruvbox
-set background=dark
 
 " tells you which line number 
 set number
@@ -176,7 +229,7 @@ set conceallevel=2
 
 
 if has('nvim')
-" ################################################################ Neovim General Configurations ################################################################
+"################################################################ Neovim General Configurations ################################################################
 	" neovim general configurations
 	" makes it so that in insert mode the cursor remains a block
 	set guicursor=
