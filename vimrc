@@ -274,6 +274,10 @@ set autowrite
 " Makes increments and decrements available for letters
 set nrformats+=alpha
 
+" Makes it so that when you scroll up/down the cursor never goes to the
+" beginning of the screen, it is good for ctrl + u and ctrl + d (makes them slightly less jarring)
+set scrolloff=8
+
 " saves code folding 
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
