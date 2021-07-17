@@ -179,7 +179,7 @@ nnoremap <leader>a :call Calc()<CR>
 
 " Plug 'preservim/tagbar'
 " map a key to toggle the tagbar window
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>tb :TagbarToggle<CR>
 
 " for status bar and branch
 " Plug 'vim-airline/vim-airline'
@@ -303,6 +303,7 @@ if has('nvim')
 	set nohlsearch
 	" allows for fast swapping back and forth between buffers
 	set hidden
+
 else
 " ################################################################ Vim General Configurations ################################################################
 	" vim general configurations
