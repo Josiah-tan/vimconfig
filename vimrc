@@ -74,6 +74,8 @@ if has('nvim')
 	" for autocompletion
 	Plug 'nvim-lua/completion-nvim'
 
+	" Plugin for neovim terminals
+	Plug 'ThePrimeagen/harpoon'
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" vim specific plugins
@@ -201,7 +203,8 @@ if has('nvim')
 	" fuzzy finder etc...
 	" Plug 'nvim-telescope/telescope.nvim'	
 	" primeagen
-	nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+	" doesn't work?
+	" nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 
 	" <C-c> exit telescope
 	" Using Lua functions
@@ -212,10 +215,11 @@ if has('nvim')
 
 
 	" Custom
-	nnoremap <leader>Gf <cmd>lua require('telescope.builtin').git_files()<cr>
+	nnoremap <leader>gf <cmd>lua require('telescope.builtin').git_files()<cr>
 
 	nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
 	nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
+	nnoremap <leader>gi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
 	
 	
 	" plugin for lsp configurations
@@ -228,7 +232,15 @@ if has('nvim')
 
 	let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 	lua require('lspconfig').pyright.setup{on_attach=require'completion'.on_attach}
+	lua require('lspconfig').clangd.setup{on_attach=require'completion'.on_attach}
 
+	" Plugin for neovim terminals
+	" Plug 'ThePrimeagen/harpoon'
+	"nice little mappings for different terminals using hjkj keys for easy navigation
+	nnoremap <leader>th <cmd>lua require("harpoon.term").gotoTerminal(1)<cr>
+	nnoremap <leader>tj <cmd>lua require("harpoon.term").gotoTerminal(2)<cr>
+	nnoremap <leader>tk <cmd>lua require("harpoon.term").gotoTerminal(3)<cr>
+	nnoremap <leader>tl <cmd>lua require("harpoon.term").gotoTerminal(3)<cr>
 
 else
 " ################################################################ Vim Plugin Settings ################################################################
