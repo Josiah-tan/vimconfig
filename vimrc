@@ -67,6 +67,8 @@ if has('nvim')
 
 	" fuzzy finder etc...
 	Plug 'nvim-telescope/telescope.nvim'	
+	" compiled fzy sorter (hence faster)
+	Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 	" plugin for lsp configurations
 	" https://microsoft.github.io/language-server-protocol/implementors/servers/
@@ -208,9 +210,18 @@ if has('nvim')
 
 	" fuzzy finder etc...
 	" Plug 'nvim-telescope/telescope.nvim'	
+	" Plug 'nvim-telescope/telescope-fzy-native.nvim'
+	" override the file and generic sorter for telescope
+
+
+	lua require('telescope').setup { extensions = { fzy_native = { override_generic_sorter = false, override_file_sorter = true, } } }
+	lua require('telescope').load_extension('fzy_native')
+
+
 	" primeagen
 	" doesn't work?
 	" nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+	
 
 	" <C-c> exit telescope
 	" Using Lua functions
