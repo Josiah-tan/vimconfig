@@ -233,6 +233,7 @@ if has('nvim')
 
 	" Custom
 	nnoremap <leader>gf <cmd>lua require('telescope.builtin').git_files()<cr>
+	nnoremap <leader>vr :lua require('telescope.builtin').find_files({prompt_title = "vimrc >", cwd = "~/.vim/"})<CR>
 
 	nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
 	nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
