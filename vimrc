@@ -79,6 +79,11 @@ if has('nvim')
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" vim specific plugins
+	" for fuzzy finder etc...
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+	" for language server (lsp)
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 endif
 
@@ -243,9 +248,21 @@ if has('nvim')
 	nnoremap <leader>tl <cmd>lua require("harpoon.term").gotoTerminal(3)<cr>
 
 else
-" ################################################################ Vim Plugin Settings ################################################################
+	" ################################################################ Vim Plugin Settings ################################################################
 	" vim specific plugins
+	" for fuzzy finder etc...
+	" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	" Plug 'junegunn/fzf.vim'
+	nnoremap <leader>ff :Files<cr>
+	nnoremap <leader>fg :GFiles<cr>
+	nnoremap <leader>fb :Buffers<cr>
+	nnoremap <leader>fh :Helptags<cr>
 
+	nmap <leader>gd <Plug>(coc-definition)
+	nmap <leader>gr <Plug>(coc-references)
+
+	" for language server (lsp)
+	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
 
