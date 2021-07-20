@@ -56,6 +56,9 @@ Plug 'preservim/tagbar'
 " for status bar and branch
 Plug 'vim-airline/vim-airline'
 
+"for undo trees
+Plug 'mbbill/undotree'
+
 if has('nvim')
 	" ################################################################ Neovim Plugin Management ################################################################
 	" neovim specific plugins
@@ -179,6 +182,7 @@ set background=dark
 " Package that connects the power of jupyter and vim together
 " ':!jupyter qtconsole &'  starts the qtconsole
 " ':JupyterConnect' connects to the qtconsole
+nnoremap <leader>jc :JupyterConnect<CR>
 " \e makes visual select work :JupyterSendCell
 " \x runs code between ## and ##
 " \r runs the entire code file
@@ -194,6 +198,25 @@ nmap <leader>tb :TagbarToggle<CR>
 
 " for status bar and branch
 " Plug 'vim-airline/vim-airline'
+
+"for undo trees
+" Plug 'mbbill/undotree'
+if has("persistent_undo")
+   let target_path = expand('~/.vim/undodir')
+
+    " create the directory and any parent directories
+    " if the location does not exist.
+    if !isdirectory(target_path)
+        call mkdir(target_path, "p", 0700)
+    endif
+
+	set noswapfile
+	set nobackup
+    let &undodir=target_path
+    set undofile
+
+	nnoremap <leader>ut :UndotreeToggle<CR>
+endif
 
 "kite settings (for some reason kite is so dodgy that it doesn't even use vim-plug
 " disabling kite
