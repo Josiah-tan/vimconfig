@@ -182,6 +182,7 @@ set background=dark
 " Package that connects the power of jupyter and vim together
 " ':!jupyter qtconsole &'  starts the qtconsole
 " ':JupyterConnect' connects to the qtconsole
+
 nnoremap <leader>jc :JupyterConnect<CR>
 " \e makes visual select work :JupyterSendCell
 " \x runs code between ## and ##
