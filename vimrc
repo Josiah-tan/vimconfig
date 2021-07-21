@@ -362,6 +362,12 @@ set signcolumn=yes
 set conceallevel=2
 " set norelativenumber
 
+" easy window movement
+nnoremap <leader>l <C-w>l
+nnoremap <leader>j <C-w>j
+nnoremap <leader>h <C-w>h
+nnoremap <leader>k <C-w>k
+
 
 if has('nvim')
 "################################################################ Neovim General Configurations ################################################################
