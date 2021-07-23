@@ -187,7 +187,7 @@ set background=dark
 " ':!jupyter qtconsole &'  starts the qtconsole
 " ':JupyterConnect' connects to the qtconsole
 
-nnoremap <leader>jq :!Jupyter qtconsole &<CR>
+nnoremap <leader>jq :!jupyter qtconsole &<CR>
 nnoremap <leader>jc :JupyterConnect<CR>
 " \e makes visual select work :JupyterSendCell
 " \x runs code between ## and ##
