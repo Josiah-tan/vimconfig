@@ -292,6 +292,8 @@ if has('nvim')
 	lua require('lspconfig').pyright.setup{on_attach=require'completion'.on_attach}
 	lua require('lspconfig').clangd.setup{on_attach=require'completion'.on_attach}
 
+	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>
+
 	" Plugin for neovim terminals
 	" Plug 'ThePrimeagen/harpoon'
 	"nice little mappings for different terminals using hjkj keys for easy navigation
