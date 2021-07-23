@@ -434,7 +434,7 @@ endif
 
 " Prerecorded macro settings for registers
 " Python macro settings
-autocmd BufnewFile,BufRead,TabEnter *.py call SetPythonOptions()
+autocmd BufEnter *.py call SetPythonOptions()
 function SetPythonOptions()
 	let @h = 'ggO# =====================================================# File€ýaO€ýajki#€ýajA Name: €ýa"%po# Date of Creation: €ýa:put = strftime(\"%c\")kJo# Author: Josiah Tan# Description:## =====================================================# =====================================================€ýa'
 	let @r = ":!python3 %\n"
@@ -449,7 +449,7 @@ function SetPythonOptions()
 endfunction
 
 " Global C family settings for header, c and cpp files
-autocmd BufnewFile,BufRead,TabEnter *.c,*.cpp,*.h call SetCFamGlobalOptions()
+autocmd BufEnter *.c,*.cpp,*.h call SetCFamGlobalOptions()
 function SetCFamGlobalOptions()
 	let @h = 'ggO/* File Name: €ýa"%po Date of Creation: €ýa:put = strftime(\"%c\")kJoAuthor: Josiah TanDescription: €kb€kb€kb€kb€kb*/€ýa'
 	let @t = 'Sfor (int t=0;t<T;t++){€ýaO€ýa'
@@ -460,7 +460,7 @@ function SetCFamGlobalOptions()
 endfunction
 
 " c settings
-autocmd BufnewFile,BufRead,TabEnter *.c call SetCOptions()
+autocmd BufEnter *.c call SetCOptions()
 function SetCOptions()
 	let @r = ":!gcc % && ./a.out\n"
 	let @b = 'i#include<stdio.h>#include<stdlib.h>#include<limits.h>int main(void){€ýaOretrnreturn 0;€ýak'
@@ -468,7 +468,7 @@ function SetCOptions()
 endfunction
 
 " cpp settings
-autocmd BufnewFile,BufRead,TabEnter *.cpp call SetCPPOptions()
+autocmd BufEnter *.cpp call SetCPPOptions()
 function SetCPPOptions()
 	let @r = ":!g++ % && ./a.out\n"
 	let @b = 'i#include<iostream>#include<c€kbvector>#include<alsotalgorithm>@€kb#include<climits>#include<string>€kb€kb€kb€kb€kb€kb€kb€kbit €kb€kbnt main(void){€ýaOreturn 0;€ýakkOusing namespace std;€ýa3jOint T; €kbcin >> T;for (int i€kbt=1;t<=T;t++){€ýaOcout << "Case #" << t << ans << endl;€ýaOans = 0;€ýaIint €ýa'
@@ -477,14 +477,14 @@ function SetCPPOptions()
 endfunction
 
 " .h settings
-autocmd BufnewFile,BufRead,TabEnter *.h call SetHOptions()
+autocmd BufEnter *.h call SetHOptions()
 function SetHOptions()
 	let @g = '€ýa"%p:s/\(\w\+\)\.\(\w\)/#ifndef \U\1_\U\2\e\r#define \U\1_\U\2/G10o€ýaI#endif€ýa2j'
 	let @b = '@h@gi#define true 1#define false 0#define bool char€ýa'
 endfunction
 
 " .md settings
-autocmd BufnewFile,BufRead,TabEnter *.md call SetMDOptions()
+autocmd BufEnter *.md call SetMDOptions()
 function SetMDOptions()
 	let @u = ':s/\w\+/\u&/ge'
 endfunction
