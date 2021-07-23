@@ -59,6 +59,10 @@ Plug 'vim-airline/vim-airline'
 "for undo trees
 Plug 'mbbill/undotree'
 
+" for making aesthetic tables
+Plug 'dhruvasagar/vim-table-mode'
+
+
 if has('nvim')
 	" ################################################################ Neovim Plugin Management ################################################################
 	" neovim specific plugins
@@ -183,6 +187,7 @@ set background=dark
 " ':!jupyter qtconsole &'  starts the qtconsole
 " ':JupyterConnect' connects to the qtconsole
 
+nnoremap <leader>jq :!Jupyter qtconsole &<CR>
 nnoremap <leader>jc :JupyterConnect<CR>
 " \e makes visual select work :JupyterSendCell
 " \x runs code between ## and ##
@@ -220,6 +225,15 @@ if has("persistent_undo")
 
 	nnoremap <leader>ut :UndotreeToggle<CR>
 endif
+
+" for making aesthetic tables
+" Plug 'dhruvasagar/vim-table-mode'
+
+nnoremap <leader>tm :TableModeToggle<CR>
+nnoremap <leader>tr :TableModeRealign<CR>
+nnoremap <leader>tt :Tableize<CR>
+
+
 
 "kite settings (for some reason kite is so dodgy that it doesn't even use vim-plug
 " disabling kite
@@ -427,7 +441,6 @@ function SetPythonOptions()
 	let @p = ':s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2}")/j'
 	let @b = "oif __name__ == '__main__':\n"
 	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as plt€ýa"
-	let @q = ":!jupyter qtconsole &:JupyterConnect"
 	let @t = 'O%run -n "~/.vim/templates/markdown"%run -n "~/.vim/templates/solve"€ý'
 	let @n = 'o##€ý'
 	let @s = '^v$hy^v$h:s/\%V /, /geA = symbols("€ýap'
