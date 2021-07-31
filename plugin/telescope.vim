@@ -2,6 +2,19 @@
 if has('nvim')
 	lua require("josiah")
 
+	" This is a requirement, which implements some useful window management
+	"   items for neovim
+	" Plug 'nvim-lua/popup.nvim'
+	" Plug 'nvim-lua/plenary.nvim'
+
+	" fuzzy finder etc...
+	" Plug 'nvim-telescope/telescope.nvim'	
+	" Plug 'nvim-telescope/telescope-fzy-native.nvim'
+	" override the file and generic sorter for telescope
+
+
+	" primeagen
+	" nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 	" <C-c> exit telescope
 	" Using Lua functions
 
@@ -17,7 +30,7 @@ if has('nvim')
 
 	" Custom
 
-	nnoremap <leader>vr <cmd>lua require('josiah.telescope').search_dotfiles()<cr>
+	nnoremap <leader>rc <cmd>lua require('josiah.telescope').search_dotfiles()<cr>
 	nnoremap <leader>fb <cmd>lua require('josiah.telescope').buffers()<cr>
 	nnoremap <leader>gb <cmd>lua require('josiah.telescope').git_branches()<cr>
 
