@@ -203,6 +203,32 @@ nnoremap <leader>j <C-w>j
 nnoremap <leader>h <C-w>h
 nnoremap <leader>k <C-w>k
 
+"yank to the end of the line, not the entire line
+nnoremap Y y$
+
+"keeping it centered 
+" I don't like this one so much
+" nnoremap n nzzzv 
+" I don't like this one so much
+" nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" undo break points, everytime you type these letters you are able to undo at each of these points, rather than having something that overundos everything
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap [ [<c-g>u
+inoremap { {<c-g>u
+
+" jumplist mutations (adds to jumplist if relativenumber jump is greater than 5)
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+
+" moving text
+" end of visual selection, '>+1 move text down, gv previous highlight, = fix indent, gv highlight again
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 
 " ################################################################ WSL General Configurations ################################################################
