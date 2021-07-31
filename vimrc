@@ -254,8 +254,8 @@ if has('nvim')
 	" override the file and generic sorter for telescope
 
 
-	lua require('telescope').setup { extensions = { fzy_native = { override_generic_sorter = false, override_file_sorter = true, } } }
-	lua require('telescope').load_extension('fzy_native')
+	" lua require('telescope').setup { extensions = { fzy_native = { override_generic_sorter = false, override_file_sorter = true, } } }
+	" lua require('telescope').load_extension('fzy_native')
 
 
 	" primeagen
@@ -265,19 +265,22 @@ if has('nvim')
 
 	" <C-c> exit telescope
 	" Using Lua functions
-	nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-	nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-	nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-	nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+	" nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+	" nnoremap <leader>lg <cmd>lua require('telescope.builtin').live_grep()<cr>
+	" nnoremap <leader>gs <cmd>lua require('telescope.builtin').grep_string()<cr>
+	" nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+	" nnoremap <leader>ht <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 
 	" Custom
-	nnoremap <leader>gf <cmd>lua require('telescope.builtin').git_files()<cr>
-	nnoremap <leader>vr :lua require('telescope.builtin').find_files({prompt_title = "vimrc >", cwd = "~/.vim/"})<CR>
 
-	nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
-	nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
-	nnoremap <leader>gi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
+	" nnoremap <leader>gf <cmd>lua require('telescope.builtin').git_files()<cr>
+	" nnoremap <leader>vr :lua require('telescope.builtin').find_files({prompt_title = "vimrc >", cwd = "~/.vim/"})<CR>
+
+	" nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
+	" nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
+	" nnoremap <leader>gi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
 	
 	
 	" plugin for lsp configurations
@@ -289,7 +292,7 @@ if has('nvim')
 	" Plug 'nvim-lua/completion-nvim'
 
 	let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-	lua require('lspconfig').pyright.setup{on_attach=require'completion'.on_attach}
+	" lua require('lspconfig').pyright.setup{on_attach=require'completion'.on_attach}
 	lua require('lspconfig').clangd.setup{on_attach=require'completion'.on_attach}
 
 	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>
