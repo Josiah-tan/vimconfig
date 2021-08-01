@@ -15,47 +15,47 @@
 " Prerecorded macro settings for registers
 " Python macro settings
 function SetPythonOptions()
-	let @h = 'ggO# =====================================================# FileýaOýajki#ýajA Name: ýa"%po# Date of Creation: ýa:put = strftime(\"%c\")kJo# Author: Josiah Tan# Description:## =====================================================# =====================================================ýa'
+	let @h = 'ggO# =====================================================# File Name: "%po# Date of Creation: :put = strftime(\"%c\")kJo# Author: Josiah Tan# Description: ## =====================================================# =====================================================?Descri$'
 	let @r = ":!python3 %\n"
 	let @p = ':s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2}")/j'
 	let @b = "oif __name__ == '__main__':\n"
-	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as pltýa"
-	let @t = 'O%run -n "~/.vim/templates/markdown"%run -n "~/.vim/templates/solve"ý'
-	let @n = 'o##ý'
-	let @s = '^v$hy^v$h:s/\%V /, /geA = symbols("ýap'
+	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as plt"
+	let @t = 'O%run -n "~/.vim/templates/markdown"%run -n "~/.vim/templates/solve"'
+	let @n = 'o##'
+	let @s = '^v$hy^v$h:s/\%V /, /geA = symbols("p'
 	let @e = ':s/ *\(^ *\|, \) *\([^=]\{-}\)\s*= *\([^,]\)/\1Eq(\2, \3)/g|s/^\(\s*\)/\1solve([/|s/$/])/'
 	let @i = '^f(yi(o":s/ *\(^ *\|, \) *\([^=,]\{-}\)\s*= *\([^,]*\)/\1\2/ge^dt,:s/\(\s*\), *\([^,]\+\)/\1".\2 = \2,/g0yiw:s/,/\r"/g'
 endfunction
 
 " Global C family settings for header, c and cpp files
 function SetCFamGlobalOptions()
-	let @h = 'ggO/* File Name: ýa"%po Date of Creation: ýa:put = strftime(\"%c\")kJoAuthor: Josiah TanDescription: kbkbkbkbkb*/ýa'
-	let @t = 'Sfor (int t=0;t<T;t++){ýaOýa'
-	let @i = 'Sfor (int i=0;i<n;i++){ýaOýa'
-	let @j = 'Sfor (int j=0;j<m;j++){ýaOýa'
-	let @k = 'Sfor (int k=0;k<l;k++){ýaOýa'
-	let @f = '$F(yi)O/*Description: 	pkbParameters:	ýap:s/, /:  *		/geA:kbReturns:ýajfýa$F(Bhy^kA		ýapA: kbkbkbkb*/ýaoýa?DescriptionAýa'
+	let @h = 'ggO/* File Name: "%po Date of Creation: :put = strftime(\"%c\")kJoAuthor: Josiah TanDescription:xs*/?Descri$'
+	let @t = 'Sfor (int t=0;t<T;t++){O'
+	let @i = 'Sfor (int i=0;i<n;i++){O'
+	let @j = 'Sfor (int j=0;j<m;j++){O'
+	let @k = 'Sfor (int k=0;k<l;k++){O'
+	let @f = '$F(yi)O/*Description: 	Parameters:	p:s/, /:  *		/geA:�kbReturns:j$F(Bhy^kA		pA:xs*/?Description'
 endfunction
 
 " c settings
 function SetCOptions()
 	let @r = ":!gcc % && ./a.out\n"
-	let @b = 'i#include<stdio.h>#include<stdlib.h>#include<limits.h>int main(void){ýaOretrnreturn 0;ýak'
+	let @b = 'i#include<stdio.h>#include<stdlib.h>#include<limits.h>int main(void){Oreturn 0;k'
 	" let @m = 
 endfunction
 
 " cpp settings
 function SetCPPOptions()
 	let @r = ":!g++ % && ./a.out\n"
-	let @b = 'i#include<iostream>#include<ckbvector>#include<alsotalgorithm>@kb#include<climits>#include<string>kbkbkbkbkbkbkbkbit kbkbnt main(void){ýaOreturn 0;ýakkOusing namespace std;ýa3jOint T; kbcin >> T;for (int ikbt=1;t<=T;t++){ýaOcout << "Case #" << t << ans << endl;ýaOans = 0;ýaIint ýa'
+	let @b = 'i#include<iostream>#include<vector>#include<algorithm>#include<climits>#include<string>int main(void){Oreturn 0;kkOusing namespace std;3jOint T;cin >> T;for (int t=1;t<=T;t++){Ocout << "Case #" << t << ans << endl;Oans = 0;Iint '
 	" let @m = 
-	let @p = '^v$hdacout << "ýapA << ýapA << end;kbl;ýaj'
+	let @p = '^v$hdacout << "pA << pA << endl;j'
 endfunction
 
 " .h settings
 function SetHOptions()
-	let @g = 'ýa"%p:s/\(\w\+\)\.\(\w\)/#ifndef \U\1_\U\2\e\r#define \U\1_\U\2/G10oýaI#endifýa2j'
-	let @b = '@h@gi#define true 1#define false 0#define bool charýa'
+	let @g = '"%p:s/[\/\.]/_/geVUS#ifndef "#define "10oI#endif8k'
+	let @b = '@hG@gi#define true 1#define false 0#define bool charýa'
 endfunction
 
 " .md settings
