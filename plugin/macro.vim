@@ -23,7 +23,7 @@ function SetPythonOptions()
 	let @t = 'O%run -n "~/.vim/templates/markdown"%run -n "~/.vim/templates/solve"'
 	let @n = 'o##'
 	let @s = '^v$hy^v$h:s/\%V /, /geA = symbols("p'
-	let @e = ':s/ *\(^ *\|, \) *\([^=]\{-}\)\s*= *\([^,]\)/\1Eq(\2, \3)/g|s/^\(\s*\)/\1solve([/|s/$/])/'
+	let @e = ':s/ *\(^ *\|, \) *\([^=]\{-}\)\s*= *\([^,]\+\)/\1Eq(\2, \3)/g|s/^\(\s*\)/\1solve([/|s/$/])/'
 	let @i = '^f(yi(o":s/ *\(^ *\|, \) *\([^=,]\{-}\)\s*= *\([^,]*\)/\1\2/ge^dt,:s/\(\s*\), *\([^,]\+\)/\1".\2 = \2,/g0yiw:s/,/\r"/g'
 endfunction
 
@@ -40,14 +40,14 @@ endfunction
 " c settings
 function SetCOptions()
 	let @r = ":!gcc % && ./a.out\n"
-	let @b = 'i#include<stdio.h>#include<stdlib.h>#include<limits.h>int main(void){Oreturn 0;k'
+	let @b = 'i#include<stdio.h>#include<stdlib.h>#include<limits.h>int main(void){koreturn 0;k'
 	" let @m = 
 endfunction
 
 " cpp settings
 function SetCPPOptions()
 	let @r = ":!g++ % && ./a.out\n"
-	let @b = 'i#include<iostream>#include<vector>#include<algorithm>#include<climits>#include<string>int main(void){Oreturn 0;kkOusing namespace std;3jOint T;cin >> T;for (int t=1;t<=T;t++){Ocout << "Case #" << t << ans << endl;Oans = 0;Iint '
+	let @b = 'i#include<iostream>#include<vector>#include<algorithm>#include<climits>#include<string>int main(void){koreturn 0;kkOusing namespace std;3jOint T;cin >> T;for (int t=1;t<=T;t++){Ocout << "Case #" << t << ans << endl;Oans = 0;Iint '
 	" let @m = 
 	let @p = '^v$hdacout << "pA << pA << endl;j'
 endfunction
