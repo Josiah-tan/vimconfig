@@ -62,6 +62,11 @@ Plug 'mbbill/undotree'
 " for making aesthetic tables
 Plug 'dhruvasagar/vim-table-mode'
 
+" for syntax highlighting and refractor.nvim
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+
+
+
 
 if has('nvim')
 	" ################################################################ Neovim Plugin Management ################################################################
@@ -85,6 +90,12 @@ if has('nvim')
 
 	" Plugin for neovim terminals
 	Plug 'ThePrimeagen/harpoon'
+
+	" interesting plugin if bored
+	Plug 'ThePrimeagen/vim-be-good'
+
+	"Plugin for refractoring goodness
+	Plug 'ThePrimeagen/refactoring.nvim'
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" vim specific plugins
@@ -214,12 +225,15 @@ nnoremap Y y$
 nnoremap J mzJ`z
 
 " undo break points, everytime you type these letters you are able to undo at each of these points, rather than having something that overundos everything
+
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
-inoremap [ [<c-g>u
-inoremap { {<c-g>u
+
+" note that these break delimitmate
+" inoremap [ [<c-g>u
+" inoremap { {<c-g>u
 
 " jumplist mutations (adds to jumplist if relativenumber jump is greater than 5)
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'

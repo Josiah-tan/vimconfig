@@ -2,3 +2,6 @@ view/
 .netrwhist
 /undodir/
 /plugged
+/experimental_folder/
+/plugged/jupyter-vim
+/plugged/vim-calc
