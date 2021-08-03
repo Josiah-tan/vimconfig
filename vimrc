@@ -71,6 +71,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 if has('nvim')
 	" ################################################################ Neovim Plugin Management ################################################################
 	" neovim specific plugins
+	" cheetsheet for finding the keys that have been mapped?
+	Plug 'sudormrfbin/cheatsheet.nvim'
+
 
 	" This is a requirement, which implements some useful window management
 	"   items for neovim
