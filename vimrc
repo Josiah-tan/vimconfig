@@ -26,6 +26,9 @@ Plug 'tpope/vim-fugitive'
 " obviously for commentary shortcuts
 Plug 'tpope/vim-commentary'
 
+" for easy motion
+Plug 'easymotion/vim-easymotion'
+
 "autobracket completion
 Plug 'Raimondi/delimitMate'
 
@@ -132,6 +135,12 @@ nnoremap <leader>gp :G push<CR>
 " makes the commentary for c, cpp, css and java be automatically // instead of
 " the default /* and */
 autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
+
+" Plug 'easymotion/vim-easymotion'
+map <leader><leader>. <Plug>(easymotion-repeat)
+map <leader><leader>f <Plug>(easymotion-overwin-f)
+" map <leader><leader>j <Plug>(easymotion-overwin-line)
+" map <leader><leader>k <Plug>(easymotion-overwin-line)
 
 "autobracket completion
 " Plug 'Raimondi/delimitMate'
