@@ -55,4 +55,10 @@ M.git_branches = function()
 	})
 end
 
+M.live_grep = function()
+	require("telescope.builtin").grep_string({
+		 search = vim.fn.input("Grep For > ")
+	})
+end
+
 return M
