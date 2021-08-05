@@ -65,7 +65,8 @@ Plug 'mbbill/undotree'
 " for making aesthetic tables
 Plug 'dhruvasagar/vim-table-mode'
 
-
+" for latex
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 
 
@@ -200,7 +201,9 @@ nnoremap <leader>tm :TableModeToggle<CR>
 nnoremap <leader>tr :TableModeRealign<CR>
 nnoremap <leader>tt :Tableize<CR>
 
-
+" for latex
+" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+let g:livepreview_previewer = 'evince'
 
 
 
@@ -208,6 +211,10 @@ nnoremap <leader>tt :Tableize<CR>
 
 
 "################################################################ Global General Autocmd ############################################################### 
+function! LuaVimEnter()
+	" changes the current working directory to be that of the file
+	:cd %:h
+endfunction
 
 augroup GENERAL_CONFIG
 	autocmd!
@@ -216,6 +223,7 @@ augroup GENERAL_CONFIG
 	" saves code folding 
 	autocmd BufWinLeave *.* mkview
 	autocmd BufWinEnter *.* silent loadview
+	autocmd BufWinEnter *.lua,*.vim call LuaVimEnter()
 augroup END
 
 "################################################################ Global General Remaps ############################################################### 
@@ -256,6 +264,33 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" stuff from tjdevries, telescopic johnson devries
+" Map execute this line
+function! s:executor() abort
+	if &ft == 'lua'
+		call execute(printf(":lua %s", getline(".")))
+	elseif &ft == 'vim' || expand("%:t") == 'vimrc'
+		exe getline(".")
+		" exe getline(">")
+	endif
+endfunction
+
+nnoremap <leader>x :call <SID>executor()<CR>
+vnoremap <leader>x :<C-w>exe join(getline("'<","'>"), '<Bar>')<CR>
+
+function! s:save_and_exec() abort
+	if &filetype == 'vim' || expand("%:t") == 'vimrc'
+		:silent! write
+		:source %
+	elseif &filetype == 'lua'
+		:silent! write
+		:luafile %
+	endif
+	"note that this return statement is actually important
+	return 
+endfunction
+
+nnoremap <leader><leader>x :call <SID>save_and_exec()<CR>
 
 " ################################################################ WSL General Configurations ################################################################
 
