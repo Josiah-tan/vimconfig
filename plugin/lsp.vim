@@ -13,10 +13,12 @@ if has('nvim')
 
 	" for autocompletion
 	" Plug 'nvim-lua/completion-nvim'
+	lua require("josiah.lsp")
 
 	let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-	lua require('lspconfig').pyright.setup{on_attach=require'completion'.on_attach}
-	lua require('lspconfig').clangd.setup{on_attach=require'completion'.on_attach}
+	lua require("josiah.lsp").setupPyright()
+	lua require("josiah.lsp").setupClangd()
+	" lua RELOAD("josiah.lsp").sumnekoLua()
 
 	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>
 	nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>

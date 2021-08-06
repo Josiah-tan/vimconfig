@@ -12,8 +12,14 @@ if has('nvim')
 	" Plug 'nvim-telescope/telescope-fzy-native.nvim'
 	" override the file and generic sorter for telescope
 
+	"josiah_folder/year_2/uni/amme2500/project1
+	"ctrl + t => new terminal window
+	"josiah_folder/work/projects/project2
+	"quick projects
 
+	nnoremap <leader>qp <cmd>lua RELOAD('josiah.telescope').quick_projects()<cr>
 
+	"n = normal mode, nore = not recursive, map = mapping, <leader> = <space>
 	nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 	"note that <leader>gs collides with git status remap
 	nnoremap <leader>sg <cmd>lua require('telescope.builtin').grep_string()<cr>

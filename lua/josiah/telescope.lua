@@ -61,4 +61,60 @@ M.live_grep = function()
 	})
 end
 
+
+local function select_folder(prompt_bufnr, map)
+	local function new_terminal(use_tabs)
+		local content =
+        require('telescope.actions.state').get_selected_entry(prompt_bufnr)
+		local project_dir = content.text
+
+		if use_tabs then 
+			tab = "--tab" 
+		else
+			tab = ""
+		end
+
+		if vim.fn.isdirectory(content) then
+			make_dir = ""
+		else
+			make_dir = "mkdir -p " .. content .. ";"
+		end
+
+		local sess = content .. "Session.vim"
+
+
+		if vim.fn.filereadable(sess) then
+			nvim_open = "-s " .. sess
+		else
+			nvim_open = "."
+		end
+
+
+		vim.fn.system(
+			-- "gnome-terminal --tab -- bash -c 'echo 'h'; $SHELL'"
+			"gnome-terminal " .. tab .. " -- bash -c '".. make_dir .. " cd " .. project_dir .. "; nvim " .. nvim_open .."; $SHELL'"
+		)
+		-- P(content.text)
+		--
+	end
+
+
+	map('i', '<C-t>', function()
+		new_terminal(false)
+	end)
+end
+
+
+M.quick_projects = function()
+	require("telescope.builtin").live_grep({
+		prompt_title =  "quick projects>",
+		cwd = "~/.vim/quick_projects/",
+
+		attach_mappings = function(prompt_bufnr, map)
+			select_folder(prompt_bufnr, map)
+			return true
+		end
+	})
+end
+
 return M
