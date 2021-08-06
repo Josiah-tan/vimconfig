@@ -211,7 +211,7 @@ let g:livepreview_previewer = 'evince'
 
 
 "################################################################ Global General Autocmd ############################################################### 
-function! LuaVimEnter()
+function! s:changeWorkingDirectory() abort
 	" changes the current working directory to be that of the file
 	:cd %:h
 endfunction
@@ -222,8 +222,8 @@ augroup GENERAL_CONFIG
 	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 	" saves code folding 
 	autocmd BufWinLeave *.* mkview
-	autocmd BufWinEnter *.* silent loadview
-	autocmd BufWinEnter *.lua,*.vim call LuaVimEnter()
+	autocmd BufWinEnter *.* silent! loadview
+	" autocmd BufWinEnter *.lua,*.vim call ChangeWorkingDirectory()
 augroup END
 
 "################################################################ Global General Remaps ############################################################### 
@@ -265,12 +265,13 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " stuff from tjdevries, telescopic johnson devries
-" Map execute this line
+" s = for this script only, abort means exit function if there are any errors
 function! s:executor() abort
 	if &ft == 'lua'
 		call execute(printf(":lua %s", getline(".")))
 	elseif &ft == 'vim' || expand("%:t") == 'vimrc'
 		exe getline(".")
+		"  for some reason this one doesn't work?
 		" exe getline(">")
 	endif
 endfunction
@@ -291,6 +292,9 @@ function! s:save_and_exec() abort
 endfunction
 
 nnoremap <leader><leader>x :call <SID>save_and_exec()<CR>
+
+" just requires in some nice globals to use
+lua require("josiah.globals");
 
 " ################################################################ WSL General Configurations ################################################################
 
