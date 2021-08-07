@@ -13,10 +13,17 @@
 
 
 # vim+python+jupyter integration
-- pip3 install jupyter
-- If the config files don't exist yet:
+- sudo pip3 install jupyter
+	- note that sudo is important to make jupyter executable
+- If the config files (~/.jupyter) don't exist yet:
 	- jupyter console --generate-config
 	- jupyter qtconsole --generate-config
+		- if this doesn't work
+			- pip3 install PySide2
+- add this to jupyter_qtconsole_config.py
+	- c.ConsoleWidget.include_other_output = True
+	- c.JupyterWidget.syntax_style = "vim"
+
 
 
 
