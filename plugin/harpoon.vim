@@ -12,7 +12,7 @@ if has('nvim')
 
 	" n = normal, nore = no recursive, map just a mapping, <leader> is a predefined key, 
 	" run latex
-	nnoremap <leader>rl <cmd>lua require("josiah.primeagen").makePdf("pdflatex")<cr>
+	nnoremap <leader>rl <cmd>lua RELOAD("josiah.primeagen").makePdf("pdflatex")<cr>
 	nnoremap <leader>th <cmd>lua require("harpoon.term").gotoTerminal(1)<cr>
 	nnoremap <leader>tj <cmd>lua require("harpoon.term").gotoTerminal(2)<cr>
 	nnoremap <leader>tk <cmd>lua require("harpoon.term").gotoTerminal(3)<cr>
