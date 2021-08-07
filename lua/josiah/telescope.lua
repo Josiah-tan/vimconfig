@@ -57,31 +57,31 @@ end
 
 M.liveGrep = function()
 	require("telescope.builtin").grep_string({
-		 search = vim.fn.input("Grep For > ")
+		search = vim.fn.input("Grep For > ")
 	})
 end
 
 
 
 local function makeDir(project_dir)
-    	-- every number is "truthy" so 0 = true
+	-- every number is "truthy" so 0 = true
 	local make_dir = ""
 	if vim.fn.isdirectory(vim.fn.expand(project_dir)) == 0 then
 		make_dir = "mkdir -p " .. project_dir .. "; "
 	end
-    return make_dir
+	return make_dir
 end
 
 
 local function nvimOpenMode(open_session, project_dir)
-    	local nvim_open_mode = ""
+	local nvim_open_mode = ""
 	local sess = project_dir .. "Session.vim"
 	if vim.fn.filereadable(sess) and open_session then
 		nvim_open_mode = "-S Session.vim"
 	else
 		nvim_open_mode = "."
 	end
-    return nvim_open_mode
+	return nvim_open_mode
 end
 
 

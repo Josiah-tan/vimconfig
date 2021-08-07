@@ -5,4 +5,4 @@ view/
 /experimental_folder/
 /plugged/jupyter-vim
 /plugged/vim-calc
-/quick_projects/
+/quick_projects/*
