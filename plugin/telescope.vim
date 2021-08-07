@@ -17,7 +17,7 @@ if has('nvim')
 	"josiah_folder/work/projects/project2
 	"quick projects
 
-	nnoremap <leader>qp <cmd>lua RELOAD('josiah.telescope').quick_projects()<cr>
+	nnoremap <leader>qp <cmd>lua RELOAD('josiah.telescope').quickProjects()<cr>
 
 	"n = normal mode, nore = not recursive, map = mapping, <leader> = <space>
 	nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
@@ -31,9 +31,9 @@ if has('nvim')
 
 	" Custom
 
-	nnoremap <leader>rc <cmd>lua require('josiah.telescope').search_dotfiles()<cr>
+	nnoremap <leader>rc <cmd>lua require('josiah.telescope').searchDotfiles()<cr>
 	nnoremap <leader>fb <cmd>lua require('josiah.telescope').buffers()<cr>
-	nnoremap <leader>gb <cmd>lua require('josiah.telescope').git_branches()<cr>
+	nnoremap <leader>gb <cmd>lua require('josiah.telescope').gitBranches()<cr>
 
 	" primeagen
 	"  the problem with live_grep is that it is apparently slow in large file
@@ -41,7 +41,7 @@ if has('nvim')
 	"  wordwise grep rather than a characterwise grep which could lead to some
 	"  performance issues
 	" nnoremap <leader>lg <cmd>lua require('telescope.builtin').live_grep()<cr>
-	nnoremap <leader>lg :lua require('josiah.telescope').live_grep()<CR>
+	nnoremap <leader>lg :lua require('josiah.telescope').liveGrep()<CR>
 	" <C-c> exit telescope
 	" Using Lua functions
 

@@ -6,6 +6,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
 " ################################################################ Global Plugin Management ################################################################
 
 " Specify a directory for plugins
