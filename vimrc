@@ -122,6 +122,7 @@ call plug#end()
 
 " map <leader> to <Space>
 let mapleader = " " 
+let maplocalleader = " " 
 
 " tpope stuff
 " Plug 'tpope/vim-sensible'
@@ -177,8 +178,10 @@ nnoremap - :Switch<cr>
 " ':!jupyter qtconsole &'  starts the qtconsole
 " ':JupyterConnect' connects to the qtconsole
 
+let g:jupyter_mapkeys = 0
 nnoremap <leader>jq :!jupyter qtconsole &<CR>
 nnoremap <leader>jc :JupyterConnect<CR>
+autocmd BufEnter *.* nnoremap <leader>x :JupyterSendCell<CR>
 " \e makes visual select work :JupyterSendCell
 " \x runs code between ## and ##
 " \r runs the entire code file
