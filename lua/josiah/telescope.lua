@@ -72,11 +72,12 @@ local function makeDir(project_dir)
 	return make_dir
 end
 
+-- vim.fn.filereadable("~/Desktop/josiah/uni/elec2104/Session.vim")
 
 local function nvimOpenMode(open_session, project_dir)
 	local nvim_open_mode = ""
 	local sess = project_dir .. "Session.vim"
-	if vim.fn.filereadable(sess) and open_session then
+	if vim.fn.filereadable(vim.fn.expand(sess)) == 1 and open_session then
 		nvim_open_mode = "-S Session.vim"
 	else
 		nvim_open_mode = "."
@@ -125,7 +126,7 @@ local function selectFolder(prompt_bufnr, map)
 			print(system_cmd)
 		end
 
-		-- vim.fn.system(system_cmd)
+		vim.fn.system(system_cmd)
 	end
 
 
