@@ -72,7 +72,6 @@ local function makeDir(project_dir)
 	return make_dir
 end
 
--- vim.fn.filereadable("~/Desktop/josiah/uni/elec2104/Session.vim")
 
 local function nvimOpenMode(open_session, project_dir)
 	local nvim_open_mode = ""
