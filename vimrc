@@ -277,8 +277,9 @@ function! s:executor() abort
 	endif
 endfunction
 
-nnoremap <leader>x :call <SID>executor()<CR>
-vnoremap <leader>x :<C-w>exe join(getline("'<","'>"), '<Bar>')<CR>
+autocmd BufEnter *.vim,*.lua,vimrc nnoremap <leader>x :call <SID>executor()<CR>
+autocmd BufEnter *.vim,*.lua,vimrc vnoremap <leader>x :<C-w>exe join(getline("'<","'>"), '<Bar>')<CR>
+
 
 function! s:save_and_exec() abort
 	if &filetype == 'vim' || expand("%:t") == 'vimrc'
