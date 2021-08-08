@@ -126,6 +126,7 @@ local function selectFolder(prompt_bufnr, map)
 		end
 
 		vim.fn.system(system_cmd)
+		require('telescope.actions').close(prompt_bufnr)
 	end
 
 
