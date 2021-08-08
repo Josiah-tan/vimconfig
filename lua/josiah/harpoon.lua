@@ -39,6 +39,10 @@ M.runPythonBlock = function()
 		local line = vim.fn.getline(line_num)
 		if lineStartsWithPattern("##", line) then
 			break
+		elseif lineStartsWithPattern(" ", line) then
+			-- P(line)
+			-- P("\n")
+			require("harpoon.term").sendCommand(4, line .. "\n\n")
 		elseif not (lineStartsWithPattern("#", line) or line == "") then
 			-- P(line)
 			require("harpoon.term").sendCommand(4, line .. "\n")
