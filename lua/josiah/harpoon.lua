@@ -6,10 +6,12 @@ M.runLatex = function(compiler)
 end
 
 M.runPythonSelection = function()
-	local line_num = vim.fn.getpos("v")[2]
-	local line_num_2 = vim.fn.getpos(".")[2]
-	local lower = math.min(line_num, line_num_2)
-	local upper = math.max(line_num, line_num_2)
+	local lower = vim.fn.getpos("v")[2]
+	local upper = vim.fn.getpos(".")[2]
+	if lower > upper then
+		lower, upper = upper, lower 
+	end
+
 	while lower <= upper do
 		require("harpoon.term").sendCommand(4, vim.fn.getline(lower) .. "\n")
 		lower = lower + 1
