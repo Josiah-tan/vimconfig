@@ -11,9 +11,24 @@ end
 -- P(line)
 
 M.runPythonSelection = function()
-	P(vim.fn.getline(3))
-	P(vim.fn.getpos("v")) 
-	P(vim.fn.getpos("."))
+	-- local line = vim.fn.getline(3)
+	-- P(line)
+	local line_num = vim.fn.getpos("v")[2]
+	local line_num_2 = vim.fn.getpos(".")[2]
+	local lower = math.min(line_num, line_num_2)
+	local upper = math.max(line_num, line_num_2)
+	-- P(lower)
+	-- P(upper)
+	while lower <= upper do
+		require("harpoon.term").sendCommand(4, vim.fn.getline(lower) .. "\n")
+		-- P(vim.fn.getline(lower) .. "\n")
+		lower = lower + 1
+	end
+	-- P(line_num[2]) 
+	-- P(type(line_num[2])) 
+	-- P(vim.fn.getpos("."))
+	-- P(type(vim.fn.getpos(".")))
+
 	-- local cur_line = vim.api.nvim_exec(
 	-- [[
 	-- 	echo getline(1)
