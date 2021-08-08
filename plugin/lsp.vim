@@ -18,7 +18,7 @@ if has('nvim')
 	let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 	lua require("josiah.lsp").setupPyright()
 	lua require("josiah.lsp").setupClangd()
-	" lua RELOAD("josiah.lsp").sumnekoLua()
+	lua require("josiah.lsp").sumnekoLua()
 
 	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>
 	nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>

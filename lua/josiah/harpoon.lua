@@ -9,7 +9,7 @@ M.runPythonSelection = function()
 	local lower = vim.fn.getpos("v")[2]
 	local upper = vim.fn.getpos(".")[2]
 	if lower > upper then
-		lower, upper = upper, lower 
+		lower, upper = upper, lower
 	end
 	while lower <= upper do
 		require("harpoon.term").sendCommand(4, vim.fn.getline(lower) .. "\n")
@@ -21,7 +21,7 @@ end
 local lineStartsWithPattern = function(pattern, line)
 	local pattern_len = string.len(pattern)
 	assert(pattern_len >= 1)
-	return string.len(line) >= pattern_len and string.sub(line, 1, pattern_len) == pattern 
+	return string.len(line) >= pattern_len and string.sub(line, 1, pattern_len) == pattern
 end
 
 M.runPythonBlock = function()

@@ -17,7 +17,7 @@ if has('nvim')
 	"josiah_folder/work/projects/project2
 	"quick projects
 
-	nnoremap <leader>qp <cmd>lua RELOAD('josiah.telescope').quickProjects()<cr>
+	nnoremap <leader>qp <cmd>lua require('josiah.telescope').quickProjects()<cr>
 
 	"n = normal mode, nore = not recursive, map = mapping, <leader> = <space>
 	nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
