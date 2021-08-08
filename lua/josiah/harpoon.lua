@@ -11,11 +11,11 @@ M.runPythonSelection = function()
 	if lower > upper then
 		lower, upper = upper, lower 
 	end
-
 	while lower <= upper do
 		require("harpoon.term").sendCommand(4, vim.fn.getline(lower) .. "\n")
 		lower = lower + 1
 	end
+	require("harpoon.term").sendCommand(4, "\n")
 end
 
 local lineStartsWithPattern = function(pattern, line)
@@ -39,16 +39,13 @@ M.runPythonBlock = function()
 		local line = vim.fn.getline(line_num)
 		if lineStartsWithPattern("##", line) then
 			break
-		elseif lineStartsWithPattern(" ", line) then
-			-- P(line)
-			-- P("\n")
-			require("harpoon.term").sendCommand(4, line .. "\n\n")
 		elseif not (lineStartsWithPattern("#", line) or line == "") then
 			-- P(line)
 			require("harpoon.term").sendCommand(4, line .. "\n")
 		end
 		line_num = line_num + 1;
 	end
+	require("harpoon.term").sendCommand(4, "\n")
 end
 
 return M
