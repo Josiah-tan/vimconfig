@@ -18,9 +18,33 @@ M.runPythonSelection = function()
 	end
 end
 
+local lineStartsWithPattern = function(pattern, line)
+	local pattern_len = string.len(pattern)
+	assert(pattern_len >= 1)
+	return string.len(line) >= pattern_len and string.sub(line, 1, pattern_len) == pattern 
+end
+
 M.runPythonBlock = function()
 	local line_num = vim.fn.getpos(".")[2]
-	P(line_num)
+	while line_num > 1 do
+		if lineStartsWithPattern("##", vim.fn.getline(line_num)) then
+			line_num = line_num + 1
+			break
+		end
+		line_num = line_num - 1
+	end
+	-- P(line_num)
+	-- P(vim.fn.getpos("$")[2])
+	while line_num <= vim.fn.getpos("$")[2] do
+		local line = vim.fn.getline(line_num)
+		if lineStartsWithPattern("##", line) then
+			break
+		elseif not (lineStartsWithPattern("#", line) or line == "") then
+			-- P(line)
+			require("harpoon.term").sendCommand(4, line .. "\n")
+		end
+		line_num = line_num + 1;
+	end
 end
 
 return M
