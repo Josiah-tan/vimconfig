@@ -34,7 +34,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Raimondi/delimitMate'
 
 "python code folding
-Plug 'tmhedberg/SimpylFold'
+" Plug 'tmhedberg/SimpylFold'
 
 "Andrew's plugins
 Plug 'AndrewRadev/switch.vim'
@@ -52,10 +52,10 @@ Plug 'morhetz/gruvbox'
 Plug 'jupyter-vim/jupyter-vim'
 
 "for performing calculations on the fly
-Plug 'theniceboy/vim-calc'
+" Plug 'theniceboy/vim-calc'
 
 "for tagbar (like table of contents)
-Plug 'preservim/tagbar'
+" Plug 'preservim/tagbar'
 
 " for status bar and branch
 Plug 'vim-airline/vim-airline'
@@ -64,10 +64,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'mbbill/undotree'
 
 " for making aesthetic tables
-Plug 'dhruvasagar/vim-table-mode'
+" Plug 'dhruvasagar/vim-table-mode'
 
 " for latex
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 
 
@@ -75,7 +75,7 @@ if has('nvim')
 	" ################################################################ Neovim Plugin Management ################################################################
 	" neovim specific plugins
 	" cheetsheet for finding the keys that have been mapped?
-	Plug 'sudormrfbin/cheatsheet.nvim'
+	" Plug 'sudormrfbin/cheatsheet.nvim'
 
 	" for syntax highlighting and refractor.nvim
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
@@ -137,7 +137,11 @@ nnoremap <leader>gp :G push<CR>
 " Plug 'tpope/vim-commentary'
 " makes the commentary for c, cpp, css and java be automatically // instead of
 " the default /* and */
-autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
+
+augroup TPOPE
+	autocmd!
+	autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
+augroup END
 
 " Plug 'easymotion/vim-easymotion'
 map <leader><leader>. <Plug>(easymotion-repeat)
@@ -150,7 +154,7 @@ map <leader><leader>f <Plug>(easymotion-overwin-f)
 
 "python code folding
 " Plug 'tmhedberg/SimpylFold'
-let g:SimpylFold_docstring_preview = 1
+" let g:SimpylFold_docstring_preview = 1
 
 "Andrew's plugins
 " Plug 'AndrewRadev/switch.vim'
@@ -181,19 +185,18 @@ nnoremap - :Switch<cr>
 let g:jupyter_mapkeys = 0
 nnoremap <leader>jq :!jupyter qtconsole &<CR>
 nnoremap <leader>jc :JupyterConnect<CR>
-autocmd BufEnter *.* nnoremap <leader>x :JupyterSendCell<CR>
 " \e makes visual select work :JupyterSendCell
 " \x runs code between ## and ##
 " \r runs the entire code file
 
 " Plug 'theniceboy/vim-calc'
 " now you can press \a to evaluate an expession
-nnoremap <leader>a :call Calc()<CR>
+" nnoremap <leader>a :call Calc()<CR>
 
 
 " Plug 'preservim/tagbar'
 " map a key to toggle the tagbar window
-nnoremap <leader>tb :TagbarToggle<CR>
+" nnoremap <leader>tb :TagbarToggle<CR>
 
 " for status bar and branch
 " Plug 'vim-airline/vim-airline'
@@ -201,13 +204,13 @@ nnoremap <leader>tb :TagbarToggle<CR>
 " for making aesthetic tables
 " Plug 'dhruvasagar/vim-table-mode'
 
-nnoremap <leader>tm :TableModeToggle<CR>
-nnoremap <leader>tr :TableModeRealign<CR>
-nnoremap <leader>tt :Tableize<CR>
+" nnoremap <leader>tm :TableModeToggle<CR>
+" nnoremap <leader>tr :TableModeRealign<CR>
+" nnoremap <leader>tt :Tableize<CR>
 
 " for latex
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-let g:livepreview_previewer = 'evince'
+" let g:livepreview_previewer = 'evince'
 
 
 
@@ -215,6 +218,7 @@ let g:livepreview_previewer = 'evince'
 
 
 "################################################################ Global General Autocmd ############################################################### 
+
 function! s:changeWorkingDirectory() abort
 	" changes the current working directory to be that of the file
 	:cd %:h
@@ -233,10 +237,10 @@ augroup END
 "################################################################ Global General Remaps ############################################################### 
 
 " easy window movement
-nnoremap <leader>l <C-w>l
-nnoremap <leader>j <C-w>j
-nnoremap <leader>h <C-w>h
-nnoremap <leader>k <C-w>k
+nnoremap <leader><leader>l <C-w>l
+nnoremap <leader><leader>j <C-w>j
+nnoremap <leader><leader>h <C-w>h
+nnoremap <leader><leader>k <C-w>k
 
 "yank to the end of the line, not the entire line
 nnoremap Y y$
@@ -280,8 +284,13 @@ function! s:executor() abort
 	endif
 endfunction
 
-autocmd BufEnter *.vim,*.lua,vimrc nnoremap <leader>x :call <SID>executor()<CR>
-autocmd BufEnter *.vim,*.lua,vimrc vnoremap <leader>x :<C-w>exe join(getline("'<","'>"), '<Bar>')<CR>
+augroup GENERAL_REMAPS
+	autocmd!
+	autocmd BufEnter *.* nnoremap <leader>x :JupyterSendCell<CR>
+	autocmd BufEnter *.vim,*.lua,vimrc nnoremap <leader>x :call <SID>executor()<CR>
+	autocmd BufEnter *.vim,*.lua,vimrc vnoremap <leader>x :<C-w>exe join(getline("'<","'>"), '<Bar>')<CR>
+augroup END
+
 
 
 function! s:save_and_exec() abort

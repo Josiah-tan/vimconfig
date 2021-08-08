@@ -5,7 +5,10 @@
 " enable line numbers
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
-autocmd FileType nerdtree setlocal relativenumber
+augroup NERD_TREE
+	autocmd!
+	autocmd FileType nerdtree setlocal relativenumber
+augroup END
 
 "re/opens nerdtree + mv cursor to the nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
