@@ -237,10 +237,10 @@ augroup END
 "################################################################ Global General Remaps ############################################################### 
 
 " easy window movement
-nnoremap <leader><leader>l <C-w>l
-nnoremap <leader><leader>j <C-w>j
-nnoremap <leader><leader>h <C-w>h
-nnoremap <leader><leader>k <C-w>k
+nnoremap <leader>wl <C-w>l
+nnoremap <leader>wj <C-w>j
+nnoremap <leader>wh <C-w>h
+nnoremap <leader>wk <C-w>k
 
 "yank to the end of the line, not the entire line
 nnoremap Y y$
