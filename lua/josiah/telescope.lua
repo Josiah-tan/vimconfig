@@ -148,6 +148,23 @@ local function selectFolder(prompt_bufnr, map)
 end
 
 
+-- TODO:
+-- make into a plugin, call it quick-projects-nvim
+-- path shortener: some paths could be very long
+-- make it so that you don't start a new window and session when the window is already there
+-- make it so that you can group windows within the session, as denoted by file-directory paths within the session name
+-- 		instead of:
+-- 			project.txt
+-- 				~/Desktop/..../amme2300
+-- 				~/Desktop/..../elec1103
+-- 				~/Desktop/..../resumes
+-- 		do this:
+-- 			uni.txt
+-- 				~/Desktop/..../amme2300
+-- 				~/Desktop/..../elec1103
+-- 			work.txt
+-- 				~/Desktop/..../resumes
+
 M.quickProjects = function()
 	require("telescope.builtin").live_grep({
 		prompt_title =  "quick projects >",
