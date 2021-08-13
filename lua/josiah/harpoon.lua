@@ -1,6 +1,7 @@
 local M = {}
 
 M.runLatex = function(compiler)
+	vim.fn.execute(":w")
 	local file_name = vim.fn.expand("%:p")
 	require("harpoon.term").sendCommand(1, string.format("%s %s\n", compiler, file_name))
 end
