@@ -2,7 +2,7 @@
 
 " vim macros documentation
 "
-" Python: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks, s => symbols conversion, e => solve Eq, i => __init__ function automation
+" Python: h => heading, r => run python, p => print, b = code body, d => datascience, q => qtconsole (jupyter), t => ~/.vim/templates, n => ## code section breaks, s => symbols conversion, e => solve Eq, i => __init__ function automation, a => get value from key from ans
 "
 " CFam: h => heading, r => run (gcc/++ main.c && ./a.out), m => make (template with src and header files (todo) ), b => code body/ boolean.h (.h), p => print (only for c++)
 " for loops <= (t, i, j, k), f => function commentary
@@ -23,7 +23,8 @@ function SetPythonOptions()
 	let @t = 'O%run -n "~/.vim/templates/markdown"%run -n "~/.vim/templates/solve"'
 	let @n = 'oi##'
 	let @s = '^v$hy^v$h:s/\%V /, /geA = symbols("p'
-	let @e = ':s/ *\(^ *\|, \) *\([^=]\{-}\)\s*= *\([^,]\+\)/\1Eq(\2, \3)/g|s/^\(\s*\)/\1solve([/|s/$/])/'
+	let @e = ':s/ *\(^ *\|, \) *\([^=]\{-}\)\s*= *\([^,]\+\)/\1Eq(\2, \3)/g|s/^\(\s*\)/\1ans = solve([/|s/$/])/'
+	let @a = ':s/\(\s*\)\(\w*\)/\1\2 = ans[\2]j'
 	let @i = '^f(yi(o":s/ *\(^ *\|, \) *\([^=,]\{-}\)\s*= *\([^,]*\)/\1\2/ge^dt,:s/\(\s*\), *\([^,]\+\)/\1".\2 = \2,/g0yiw:s/,/\r"/g'
 endfunction
 
