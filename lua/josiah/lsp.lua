@@ -9,6 +9,19 @@ M.setupClangd = function()
 	require('lspconfig').clangd.setup{on_attach=require'completion'.on_attach}
 end
 
+M.texlab = function()
+	require('lspconfig').texlab.setup{
+		on_attach=require'completion'.on_attach,
+		settings={
+			texlab={
+				build={
+					executable = "luatex"
+				}
+			}
+		}
+	}
+end
+
 M.sumnekoLua = function()
 	local system_name
 	if vim.fn.has("mac") == 1 then

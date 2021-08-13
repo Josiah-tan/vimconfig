@@ -19,6 +19,7 @@ if has('nvim')
 	lua require("josiah.lsp").setupPyright()
 	lua require("josiah.lsp").setupClangd()
 	lua require("josiah.lsp").sumnekoLua()
+	lua RELOAD("josiah.lsp").texlab()
 
 	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>
 	nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>

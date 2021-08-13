@@ -8,13 +8,13 @@ if has('nvim')
 
 	" note that RELOAD is for dev purposes (allows a fresh read of the lua
 	" file everytime you call the keybinding)
-	" nnoremap <leader>rl <cmd>lua RELOAD("josiah.harpoon").runLatex("pdflatex")<cr>
+	nnoremap <leader>rl <cmd>lua RELOAD("josiah.harpoon").runLatex("lualatex")<cr>
 	" vnoremap <leader>rp <cmd>lua RELOAD("josiah.harpoon").runPythonSelection()<cr>
 	" nnoremap <leader>rp <cmd>lua RELOAD("josiah.harpoon").runPythonBlock()<cr>
 
 	" n = normal, nore = no recursive, map just a mapping, <leader> is a predefined key, 
 	" run latex
-	nnoremap <leader>rl <cmd>lua require("josiah.harpoon").runLatex("pdflatex")<cr>
+	" nnoremap <leader>rl <cmd>lua require("josiah.harpoon").runLatex("lualatex")<cr>
 	vnoremap <leader>rp <cmd>lua require("josiah.harpoon").runPythonSelection()<cr>
 	nnoremap <leader>rp <cmd>lua require("josiah.harpoon").runPythonBlock()<cr>
 
