@@ -43,7 +43,7 @@ set signcolumn=yes
 
 " vimvscode battle settings
 " this makes it so that markdown ** for bold and * for italics are not shown
-set conceallevel=2
+" set conceallevel=2
 " set norelativenumber
 
 if has('nvim')
