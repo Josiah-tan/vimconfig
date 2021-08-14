@@ -245,6 +245,15 @@ augroup END
 
 "################################################################ Global General Remaps ############################################################### 
 
+"correct spelling error from 'making your first plug-in'
+" looks backwards for spelling error corrects it and then goes back to the original position
+function! CorrectSpellingError()
+	setlocal spell spelllang=en_au
+	normal! mm[s1z=`m
+	setlocal nospell spelllang=en_au
+endfunction
+nnoremap <leader>sp  :call CorrectSpellingError()<cr>
+
 " easy window movement
 nnoremap <leader>wl <C-w>l
 nnoremap <leader>wj <C-w>j
