@@ -328,6 +328,7 @@ if executable(s:clip)
 		autocmd!
 		autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
 	augroup END
+
 	" let g:netrw_browsex_viewer = 'xdg-open'
 	map gx <Nop>
 endif
