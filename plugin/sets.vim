@@ -1,4 +1,3 @@
-
 " tells you which line number 
 set number
 " tells you the relative numbers of lines above and below the cursor

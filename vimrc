@@ -104,6 +104,9 @@ if has('nvim')
 
 	"Plugin for refractoring goodness
 	Plug 'ThePrimeagen/refactoring.nvim'
+
+	"Plugin for quick_projects
+	" Plug 'Josiah-tan/quick-projects-nvim'
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" vim specific plugins
@@ -220,7 +223,6 @@ nnoremap <leader>jc :JupyterConnect<CR>
 " for latex
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 " let g:livepreview_previewer = 'evince'
-
 
 
 
