@@ -137,6 +137,7 @@ let maplocalleader = " "
 " Plug 'tpope/vim-fugitive' 
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gp :G push<CR>
+nnoremap <leader>gl :G pull<CR>
 " Plug 'tpope/vim-commentary'
 " makes the commentary for c, cpp, css and java be automatically // instead of
 " the default /* and */
