@@ -169,6 +169,14 @@ let g:variable_style_switch_definitions = [
 	  \     },
 	  \   }
 	  \ ]
+
+autocmd BufEnter *.vim,*.lua let b:switch_custom_definitions =
+	\ [
+	\ 	{
+	\ 		'RELOAD': 'require',
+	\ 		'require': 'RELOAD'
+	\	}
+	\ ]
 nnoremap + :call switch#Switch({'definitions': g:variable_style_switch_definitions})<cr>
 nnoremap - :Switch<cr>
 
