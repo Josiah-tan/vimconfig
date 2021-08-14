@@ -170,7 +170,8 @@ let g:variable_style_switch_definitions = [
 	  \   }
 	  \ ]
 
-autocmd BufEnter *.vim,*.lua let b:switch_custom_definitions =
+" for getting fresh reads from loading a module
+autocmd FileType vim,lua let b:switch_custom_definitions =
 	\ [
 	\ 	{
 	\ 		'RELOAD': 'require',
