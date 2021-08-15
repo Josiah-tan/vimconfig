@@ -1,3 +1,7 @@
+" this is for the quick projects plugin development (it doesn't source the
+" quick_projects after a terminal is made, a very unique problem to this
+" plugin!)
+" set rtp+=~/Desktop/josiah/neovim/quick_projects/
 " ################################################################ Autoinstall Vim-plug ################################################################
 " automatically installs vim-plug (for both vim and neovim)
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -106,7 +110,7 @@ if has('nvim')
 	Plug 'ThePrimeagen/refactoring.nvim'
 
 	"Plugin for quick_projects
-	" Plug 'Josiah-tan/quick-projects-nvim'
+	Plug 'Josiah-tan/quick-projects-nvim'
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" vim specific plugins
