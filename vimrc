@@ -332,8 +332,10 @@ endfunction
 
 nnoremap <leader><leader>x :call <SID>save_and_exec()<CR>
 
-" just requires in some nice globals to use
-lua require("josiah.globals");
+if has('nvim')
+	" just requires in some nice globals to use
+	lua require("josiah.globals");
+end
 
 " ################################################################ WSL General Configurations ################################################################
 
