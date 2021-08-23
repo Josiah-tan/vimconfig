@@ -55,9 +55,24 @@ def invL(F):
     t, s = symbols("t s")
     return inverse_laplace_transform(F, s, t)
 
-
 def ll(*args):
     return 1/sum(1/i for i in args);
+
+class Si:
+    """
+    k = boltzmann constant (8.62 * 10 ** -5 eV / K)
+    E_g = semiconductor bandgap energy (eV)
+    T = absolute room temperature (K)
+    B = Si, material-dependent parameter, 1.08 * 10 ** 31 K ** -3 * cm ** -6
+    q = charge of electron 1.60217662 * 10**-19
+    V_t = einstein's diffusion / mobility constant =  26e-3, room temperature # kt_q = k * T / q, note that this is in electron volts!!
+    """
+    B = 1.08 * 10 ** 31
+    E_g = 1.12
+    T = 300
+    k = 8.62 * 10 ** -5
+    q = 1.60217662 * 10**-19
+    V_t = 26e-3
 
 if __name__ == '__main__':
     #eqs = 'x + y = 4, x + 2y = 5'
@@ -88,8 +103,9 @@ if __name__ == '__main__':
     print(f"sv('x = re(1 + 5j) + im(1+ 5j)') = {sv('x = re(1 + 5j) + im(1+ 5j)')}");
     
     print(f"sv('conjugate(x) + 1 + 2j') = {sv('conjugate(x) + 1 + 2j')}");
-    print(f"sv('x = sin(x)') = {sv('x = sin(x)')}");
+    # print(f"sv('x = sin(x)') = {sv('x = sin(x)')}");
     
+    print(f"Si.B = {Si.B}")
 
 
 
