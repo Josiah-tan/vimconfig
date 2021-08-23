@@ -25,3 +25,6 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 " find and reveal the file for the active buffer in the nerdtree window as
 " spec path (superior to the :NERDTree command)
 nnoremap <C-f> :NERDTreeFind<CR>
+
+" when opening a file from nerdtree close nerdtree afterwards
+let NERDTreeQuitOnOpen=1
