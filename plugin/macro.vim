@@ -20,7 +20,7 @@ function SetPythonOptions()
 	let @p = ':s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2}")/j'
 	let @b = "oif __name__ == '__main__':\n"
 	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as plt"
-	let @t = 'O%run -n "~/.vim/templates/markdown"%run -n "~/.vim/templates/solve"'
+	let @t = 'O%run -n "~/.vim/templates/python/markdown"%run -n "~/.vim/templates/python/solve"'
 	let @n = 'oi##'
 	let @s = '^v$hy^v$h:s/\%V /, /geA = symbols("p'
 	let @e = ':s/ *\(^ *\|, \) *\([^=]\{-}\)\s*= *\([^,]\+\)/\1Eq(\2, \3)/g|s/^\(\s*\)/\1ans = solve([/|s/$/])/'
