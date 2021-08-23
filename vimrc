@@ -254,12 +254,19 @@ augroup END
 
 "correct spelling error from 'making your first plug-in'
 " looks backwards for spelling error corrects it and then goes back to the original position
-function! CorrectSpellingError()
+function! TurnOnSpelling()
 	setlocal spell spelllang=en_au
+endfunction
+
+function! CorrectSpellingError()
+	call TurnOnSpelling()
 	normal! mm[s1z=`m
 	setlocal nospell spelllang=en_au
 endfunction
 nnoremap <leader>sp  :call CorrectSpellingError()<cr>
+
+" turn on autospell checker for .tex files
+autocmd BufEnter *.tex :call TurnOnSpelling()
 
 " easy window movement
 nnoremap <leader>wl <C-w>l
