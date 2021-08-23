@@ -261,7 +261,9 @@ endfunction
 function! CorrectSpellingError()
 	call TurnOnSpelling()
 	normal! mm[s1z=`m
-	setlocal nospell spelllang=en_au
+	if &ft != 'tex'
+		setlocal nospell spelllang=en_au
+	endif
 endfunction
 nnoremap <leader>sp  :call CorrectSpellingError()<cr>
 
