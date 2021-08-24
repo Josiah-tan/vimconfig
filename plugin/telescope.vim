@@ -46,5 +46,9 @@ if has('nvim')
 	nnoremap <leader>lg :lua require('josiah.telescope').liveGrep()<CR>
 	" <C-c> exit telescope
 	" Using Lua functions
+	" require("telescope.previewers").vim_buffer_vimgrep.new
+	" previewers.vim_buffer_vimgrep.new
+	
+	" autocmd User vim_buffer_vimgrep setlocal wrap
 
 endif
