@@ -159,6 +159,7 @@ map <leader><leader>f <Plug>(easymotion-overwin-f)
 
 "autobracket completion
 " Plug 'Raimondi/delimitMate'
+au FileType tex let b:delimitMate_quotes = "\" ' $"
 
 "python code folding
 " Plug 'tmhedberg/SimpylFold'
@@ -292,6 +293,7 @@ inoremap , ,<c-g>u
 inoremap . .<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
+
 
 " note that these break delimitmate
 " inoremap [ [<c-g>u
