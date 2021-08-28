@@ -5,7 +5,7 @@ M.runLatex = function(compiler)
 	local file_name = vim.fn.expand("%:r")
 	compile_string = string.format("%s %s", compiler, file_name)
 	combile_bib_string = string.format("bibtex %s", file_name)
-	require("harpoon.term").sendCommand(1, "%s && %s && %s && %s", compile_string, combile_bib_string, compile_string, compile_string)
+	require("harpoon.term").sendCommand(1, "%s && %s && %s && %s\n", compile_string, combile_bib_string, compile_string, compile_string)
 end
 
 M.runPythonSelection = function()
