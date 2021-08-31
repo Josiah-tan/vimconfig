@@ -74,6 +74,47 @@ class Si:
     q = 1.60217662 * 10**-19
     V_t = 26e-3
 
+class Member:
+    def __init__(self, name, P, P_val, AE = None, A = None, E = None):
+        self.n = Symbol(name)
+        self.l = None
+        self.P = P
+        self.P_val = P_val
+        self.AE = AE
+        self.E = E
+        self.A = A
+
+    @classmethod
+    def fromNames(cls, names, P, P_val, AE = None, A = None, E = None):
+        return [cls(name, P, P_val, AE, A, E) for name in names.split(' ')]
+    
+    @property
+    def delta_n_delta_p(self):
+        return diff(self.n, self.P)
+
+    @property
+    def n_p(self):
+        try:
+            return self.n.subs(self.P, self.P_val) 
+        except:
+            return self.n
+
+    @property
+    def delta(self):
+        if self.AE:
+            return (self.n_p * self.delta_n_delta_p * self.l / self.AE)
+        else:
+            return (self.n_p * self.delta_n_delta_p * self.l / (self.A * self.E))
+
+    def __add__(self, other):
+        try:
+            return self.delta + self.other
+        except:
+            return self.delta + other
+    
+    def __radd__(self, other):
+        return self.__add__(other)
+
 if __name__ == '__main__':
     #eqs = 'x + y = 4, x + 2y = 5'
     #eqs1 = ['2w + x + 4y + 3z = 5x + 5y', 'w - 2x + 3z = 3x + 5y + 5x**2/5', '3w + 2x - y + z = -1', '4x - 5z = -3']
