@@ -24,7 +24,7 @@ function SetPythonOptions()
 	let @n = 'oi##'
 	let @s = '^v$hy^v$h:s/\%V /, /geA = symbols("p'
 	let @e = ':s/ *\(^ *\|, \) *\([^=]\{-}\)\s*= *\([^,]\+\)/\1Eq(\2, \3)/g|s/^\(\s*\)/\1ans = solve([/|s/\(\s*\)\(.*\)/\1\2])\r\1print(f"ans = {ans}")/'
-	let @a = ':s/\(\s*\)\(\w*\)/\1\2 = ans[\2]j'
+	let @a = ':s/\(\s*\)\(.*\)/\1\2 = ans[\2]j'
 	let @i = '^f(yi(o":s/ *\(^ *\|, \) *\([^=,]\{-}\)\s*= *\([^,]*\)/\1\2/ge^dt,:s/\(\s*\), *\([^,]\+\)/\1".\2 = \2,/g0yiw:s/,/\r"/g'
 endfunction
 
