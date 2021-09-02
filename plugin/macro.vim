@@ -17,7 +17,7 @@
 function SetPythonOptions()
 	let @h = 'ggO# =====================================================# File Name: "%po# Date of Creation: :put = strftime(\"%c\")kJo# Author: Josiah Tan# Description: ## =====================================================# =====================================================?Descri$'
 	let @r = ":!python3 %\n"
-	let @p = ':s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2}")/j'
+	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2}")/j'
 	let @b = "oif __name__ == '__main__':\n"
 	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as plt"
 	let @t = 'O%run -n "~/.vim/templates/python/markdown"%run -n "~/.vim/templates/python/solve"'
