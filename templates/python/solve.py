@@ -58,6 +58,40 @@ def invL(F):
 def ll(*args):
     return 1/sum(1/i for i in args);
 
+class Materials:
+    """
+    NA is the avogrados number (atoms / mol)
+    """
+    NA = 6.023 * 10**23
+
+class Crystal:
+    R = symbols("R")
+    a = None
+    n = None
+    R = None
+
+class FCC(Crystal):
+    R = symbols("R")
+    a = 2 * np.sqrt(2) * R
+    n = 4
+    V = a ** 3
+
+class BCC(Crystal):
+    R = symbols("R")
+    a = 4 / np.sqrt(3) * R
+    n = 2
+    V = a ** 3
+    # V = 12.31 * R ** 3 # note that this is exactly correct as well
+
+class HCP(Crystal):
+    R = symbols("R")
+    a = 2 * R
+    c = 1.623 * a # note that this constant is fixed
+    n = 6
+    V = 3 * np.sqrt(3) / 2 * a ** 2 * c
+
+
+
 class Si:
     """
     k = boltzmann constant (8.62 * 10 ** -5 eV / K)
@@ -66,6 +100,7 @@ class Si:
     B = Si, material-dependent parameter, 1.08 * 10 ** 31 K ** -3 * cm ** -6
     q = charge of electron 1.60217662 * 10**-19
     V_t = einstein's diffusion / mobility constant =  26e-3, room temperature # kt_q = k * T / q, note that this is in electron volts!!
+    epsilon_s = dielectric constant of Si
     """
     B = 1.08 * 10 ** 31
     E_g = 1.12
@@ -73,6 +108,7 @@ class Si:
     k = 8.62 * 10 ** -5
     q = 1.60217662 * 10**-19
     V_t = 26e-3
+    epsilon_s = 11.7 * 8.85 * 10 ** -14
 
 class Member:
     def __init__(self, name, P, P_val, AE = None, A = None, E = None):
