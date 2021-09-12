@@ -1,9 +1,0 @@
-~/Desktop/josiah/neovim/quick_projects/
-~/Desktop/josiah/uni/amme2301_solids/
-~/Desktop/josiah/uni/amme3162_materials/2_assignment/
-~/Desktop/josiah/uni/amme3162_materials/1_lab/
-~/Desktop/josiah/uni/amme3162_materials/1_assignment/
-~/Desktop/josiah/uni/amme3162_materials/
-~/Desktop/josiah/uni/elec2104/
-~/Desktop/josiah/uni/mech2400_design/
-~/Desktop/josiah/plover/
