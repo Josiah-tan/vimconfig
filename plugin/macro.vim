@@ -65,6 +65,10 @@ function SetMDOptions()
 endfunction
 
 
+" .sh settings
+function SetSHOptions()
+	let @r = ':!%:p'
+endfunction
 
 " setting the macros for the file types
 
@@ -76,4 +80,5 @@ augroup MACROS
 	autocmd BufEnter *.cpp call SetCPPOptions()
 	autocmd BufEnter *.h call SetHOptions()
 	autocmd BufEnter *.md call SetMDOptions()
+	autocmd BufEnter *.sh call SetSHOptions()
 augroup END
