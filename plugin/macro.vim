@@ -19,7 +19,7 @@ function SetPythonOptions()
 	let @r = ":!python3 %\n"
 	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2}")/j'
 	let @b = "oif __name__ == '__main__':\n"
-	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as plt"
+	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as pltfrom sympy import symbols, Symbol, Eq, dsolve, sin, cos, tan, sqrt, asin, atan, acosfrom sympy import *"
 	let @t = 'O%run -n "~/.vim/templates/python/markdown"%run -n "~/.vim/templates/python/solve"'
 	let @n = 'oi##'
 	let @s = '^v$hy^v$h:s/\%V /, /geA = symbols("p'

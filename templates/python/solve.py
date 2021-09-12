@@ -111,6 +111,9 @@ class Si:
     epsilon_s = 11.7 * 8.85 * 10 ** -14
 
 class Member:
+    def __repr__(self):
+        return f"n = {self.n}, dndp = {self.dndp}, n_p = {self.n_p}, l = {self.l}, ndndpl = {self.ndndpl}, delta = {self.delta}"
+
     def __init__(self, name, P, P_val, AE = None, A = None, E = None):
         self.n = Symbol(name)
         self.l = None
@@ -125,7 +128,7 @@ class Member:
         return [cls(name, P, P_val, AE, A, E) for name in names.split(' ')]
     
     @property
-    def delta_n_delta_p(self):
+    def dndp(self):
         return diff(self.n, self.P)
 
     @property
@@ -136,11 +139,15 @@ class Member:
             return self.n
 
     @property
+    def ndndpl(self):
+        return self.n_p * self.dndp * self.l 
+
+    @property
     def delta(self):
         if self.AE:
-            return (self.n_p * self.delta_n_delta_p * self.l / self.AE)
+            return (self.ndndpl/ self.AE)
         else:
-            return (self.n_p * self.delta_n_delta_p * self.l / (self.A * self.E))
+            return (self.ndndpl/ (self.A * self.E))
 
     def __add__(self, other):
         try:
