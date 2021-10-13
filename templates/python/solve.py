@@ -13,6 +13,20 @@ from sympy import Eq, solve, pi, integrate, symbols, simplify, inverse_laplace_t
 from sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication_application
 import numpy as np
 
+def nsv(f, x, x_0, uncertainty = 10e-10):
+    # f = sympy function in terms of x
+    # x = sympy variable
+    # x_0 = number
+
+    f_ = diff(f, x)
+    x_diff = 1 / uncertainty
+    x_n = x_0
+    newton = f / f_
+    while abs(x_diff) > uncertainty:
+        x_diff = newton.subs(x, x_n)
+        x_n -= x_diff
+    return x_n
+
 def sv(eqs, exact = False):
     # if the eqs passed in is comma separated then split into list by the commas
     if type(eqs) == str:
