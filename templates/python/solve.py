@@ -9,7 +9,7 @@
 # =====================================================
 
 
-from sympy import Eq, solve, pi, integrate, symbols, simplify, inverse_laplace_transform, laplace_transform
+from sympy import Eq, solve, pi, integrate, symbols, simplify, inverse_laplace_transform, laplace_transform, diff
 from sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication_application
 import numpy as np
 
