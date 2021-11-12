@@ -18,6 +18,8 @@ function SetPythonOptions()
 	let @h = 'ggO# =====================================================# File Name: "%po# Date of Creation: :put = strftime(\"%c\")kJo# Author: Josiah Tan# Description: ## =====================================================# =====================================================?Descri$'
 	let @r = ":!python3 %\n"
 	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2}")/j'
+	let @m = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2* 1e-6} 10^6")/j'
+	let @g = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2* 1e-9} 10^9")/j'
 	let @b = "oif __name__ == '__main__':\n"
 	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as pltfrom sympy import symbols, Symbol, Eq, dsolve, sin, cos, tan, sqrt, asin, atan, acosfrom sympy import *"
 	let @t = 'O%run -n "~/.vim/templates/python/markdown"%run -n "~/.vim/templates/python/solve"'
@@ -70,6 +72,15 @@ function SetSHOptions()
 	let @r = ':!%:p'
 endfunction
 
+" .tex settings
+function SetTexOptions()
+	let @m = "ysiW$"
+	let @w = "ysiw$"
+	let @b = "ysib$"
+	let @f = 'f}vF\S)aFigure '
+	let @v = 'ysiw}i\getVariable'
+endfunction
+
 " setting the macros for the file types
 
 augroup MACROS
@@ -81,4 +92,5 @@ augroup MACROS
 	autocmd BufEnter *.h call SetHOptions()
 	autocmd BufEnter *.md call SetMDOptions()
 	autocmd BufEnter *.sh call SetSHOptions()
+	autocmd BufEnter *.tex call SetTexOptions()
 augroup END
