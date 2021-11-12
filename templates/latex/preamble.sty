@@ -8,6 +8,7 @@
 \usepackage[final]{pdfpages}
 \usepackage{textcomp}% for the trademark / registered symbol
 
+% \usepackage{natbib} % for bibliography
 \usepackage{amsmath}
 
 \usepackage[final]{pdfpages}
@@ -290,3 +291,19 @@ showstringspaces=false            %
     format=plain,   % allowed in subfigure to save space
 }
 
+% to include variables
+\usepackage{datatool, filecontents}
+\DTLsetseparator{ = }% Set the separator between the columns. Could be
+% anything you like. Whitespaces are not trimmed, so you have to set
+%them as part of the separator.
+
+% \begin{filecontents*}{mydata.dat}
+% foo = 10
+% bar = 20
+% "x" = 30
+% \end{filecontents*}
+
+\DTLloaddb[noheader, keys={thekey,thevalue}]{mydata}{main.dat}
+% Loads mydata.dat with column headers 'thekey' and 'thevalue'
+
+\newcommand{\getVariable}[1]{\DTLfetch{mydata}{thekey}{#1}{thevalue}}
