@@ -16,7 +16,8 @@ if has('nvim')
 	lua require("josiah.lsp")
 
 	let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-	lua require("josiah.lsp").setupPyright()
+	" lua require("josiah.lsp").setupPyright()
+	lua RELOAD("josiah.lsp").setupPylsp()
 	lua require("josiah.lsp").setupClangd()
 	lua require("josiah.lsp").sumnekoLua()
 	lua RELOAD("josiah.lsp").texlab()
