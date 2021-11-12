@@ -1,6 +1,10 @@
 
 local M = {}
 
+M.setupPylsp = function()
+	require('lspconfig').pylsp.setup{on_attach=require'completion'.on_attach}
+end
+
 M.setupPyright = function()
 	require('lspconfig').pyright.setup{on_attach=require'completion'.on_attach}
 end
