@@ -170,7 +170,9 @@ class Member:
             return self.delta + other
     
     def __radd__(self, other):
+
         return self.__add__(other)
+
 
 if __name__ == '__main__':
     #eqs = 'x + y = 4, x + 2y = 5'
@@ -207,3 +209,6 @@ if __name__ == '__main__':
 
 
 
+    # for making matplotlib work in darkmode
+    plt.tick_params(axis='x', colors='red')
+    plt.tick_params(axis='y', colors='red')
