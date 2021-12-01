@@ -9,7 +9,7 @@
 # =====================================================
 
 
-from sympy import Eq, solve, pi, integrate, symbols, simplify, inverse_laplace_transform, laplace_transform, diff
+from sympy import Eq, solve, pi, integrate, symbols, simplify, inverse_laplace_transform, laplace_transform, diff, Symbol
 from sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication_application
 import numpy as np
 
@@ -124,54 +124,6 @@ class Si:
     V_t = 26e-3
     epsilon_s = 11.7 * 8.85 * 10 ** -14
 
-class Member:
-    def __repr__(self):
-        return f"n = {self.n}, dndp = {self.dndp}, n_p = {self.n_p}, l = {self.l}, ndndpl = {self.ndndpl}, delta = {self.delta}"
-
-    def __init__(self, name, P, P_val, AE = None, A = None, E = None):
-        self.n = Symbol(name)
-        self.l = None
-        self.P = P
-        self.P_val = P_val
-        self.AE = AE
-        self.E = E
-        self.A = A
-
-    @classmethod
-    def fromNames(cls, names, P, P_val, AE = None, A = None, E = None):
-        return [cls(name, P, P_val, AE, A, E) for name in names.split(' ')]
-    
-    @property
-    def dndp(self):
-        return diff(self.n, self.P)
-
-    @property
-    def n_p(self):
-        try:
-            return self.n.subs(self.P, self.P_val) 
-        except:
-            return self.n
-
-    @property
-    def ndndpl(self):
-        return self.n_p * self.dndp * self.l 
-
-    @property
-    def delta(self):
-        if self.AE:
-            return (self.ndndpl/ self.AE)
-        else:
-            return (self.ndndpl/ (self.A * self.E))
-
-    def __add__(self, other):
-        try:
-            return self.delta + self.other
-        except:
-            return self.delta + other
-    
-    def __radd__(self, other):
-
-        return self.__add__(other)
 
 
 if __name__ == '__main__':
