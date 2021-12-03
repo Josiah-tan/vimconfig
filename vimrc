@@ -258,6 +258,7 @@ function! CorrectSpellingError()
 	endif
 endfunction
 nnoremap <leader>sp  :call CorrectSpellingError()<cr>
+inoremap <C-l>  <Esc>:call CorrectSpellingError()<cr>a
 
 " turn on autospell checker for .tex files
 autocmd BufEnter *.tex :call TurnOnSpelling()
