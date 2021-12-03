@@ -34,6 +34,7 @@ if has('nvim')
 	" Custom
 
 	nnoremap <leader>rc <cmd>lua require('josiah.telescope').searchDotfiles()<cr>
+	nnoremap <leader>lc <cmd>lua require('josiah.telescope').grepDotFiles()<cr>
 	nnoremap <leader>fb <cmd>lua require('josiah.telescope').buffers()<cr>
 	nnoremap <leader>gb <cmd>lua require('josiah.telescope').gitBranches()<cr>
 

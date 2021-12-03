@@ -28,6 +28,14 @@ require('telescope').load_extension('fzy_native')
 
 local M = {}
 
+M.grepDotFiles = function()
+	require("telescope.builtin").grep_string({
+		search = vim.fn.input("vimrc grep for > "),
+		cwd = "~/.vim/",
+	})
+end
+
+
 M.searchDotfiles = function()
 	require("telescope.builtin").find_files({
 		prompt_title =  "vimrc >",
