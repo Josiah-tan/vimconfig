@@ -14,9 +14,13 @@ if has('nvim')
 	" for autocompletion
 	" Plug 'nvim-lua/completion-nvim'
 	lua require("josiah.lsp")
+	" Set completeopt to have a better completion experience
+	set completeopt=menuone,noinsert,noselect
 
+	" Avoid showing message extra message when using completion
+	set shortmess+=c
 	let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-	" lua require("josiah.lsp").setupPyright()
+	lua require("josiah.lsp").setupPyright()
 	" lua RELOAD("josiah.lsp").setupPylsp()
 	lua require("josiah.lsp").setupClangd()
 	lua require("josiah.lsp").sumnekoLua()

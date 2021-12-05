@@ -111,6 +111,8 @@ if has('nvim')
 	"Plugin for jupyter with neovim
 	Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 
+	"Plugin for neovim with org mode
+	Plug 'nvim-orgmode/orgmode'
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" vim specific plugins
