@@ -67,7 +67,8 @@ Plug 'mbbill/undotree'
 " for latex
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
-
+" for plover
+Plug 'Josiah-tan/vim-plover-clippy'
 
 if has('nvim')
 	" ################################################################ Neovim Plugin Management ################################################################
@@ -324,5 +325,4 @@ if executable(s:clip)
 	" let g:netrw_browsex_viewer = 'xdg-open'
 	map gx <Nop>
 endif
-
 
