@@ -20,13 +20,25 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require('orgmode').setup({
-  org_agenda_files = {"~/org/*"},
-  org_default_notes_file = '~/org/refile.org',
-  mappings = {
-    org = {
-      org_cycle = '<nop>',
-    },
-  }
+	org_agenda_files = {"~/org/*"},
+	org_default_notes_file = '~/org/refile.org',
+	mappings = {
+		org = {
+			org_cycle = '<nop>',
+		},
+	},
+	org_agenda_templates = {
+		t = {
+			description = 'Todo',
+			template = '* TODO %?\n %u',
+			target = '~/org/todo.org',
+		},
+		j = {
+			description = 'Journal',
+			template = '\n*** %<%Y-%m-%d> %<%A>\n**** %U\n\n%?',
+			target = '~/org/journal.org',
+		},
+	},
 })
 
 vim.g.completion_chain_complete_list = {
