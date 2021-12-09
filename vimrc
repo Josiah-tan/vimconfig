@@ -56,7 +56,8 @@ Plug 'morhetz/gruvbox'
 " Plug 'preservim/tagbar'
 
 " for status bar and branch
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 
 "for undo trees
 Plug 'mbbill/undotree'
