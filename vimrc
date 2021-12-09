@@ -158,6 +158,7 @@ augroup TPOPE
 augroup END
 
 " Plug 'easymotion/vim-easymotion'
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
 map <leader><leader>. <Plug>(easymotion-repeat)
 map <leader><leader>f <Plug>(easymotion-overwin-f)
 " map <leader><leader>j <Plug>(easymotion-overwin-line)
