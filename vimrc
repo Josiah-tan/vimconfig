@@ -24,8 +24,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 "git integration
 Plug 'tpope/vim-fugitive' 
-" obviously for commentary shortcuts
-Plug 'tpope/vim-commentary'
 
 " for easy motion
 Plug 'easymotion/vim-easymotion'
@@ -95,8 +93,10 @@ if has('nvim')
 	" plugin for lsp configurations
 	" https://microsoft.github.io/language-server-protocol/implementors/servers/
 	Plug 'neovim/nvim-lspconfig'
+	
 	" for autocompletion
 	Plug 'nvim-lua/completion-nvim'
+	" Plug 'hrsh7th/nvim-cmp'
 
 	" Plugin for neovim terminals
 	Plug 'ThePrimeagen/harpoon'
@@ -118,9 +118,13 @@ if has('nvim')
 
 	" presenting slides
 	" Plug 'sotte/presenting.vim'
+	
+	Plug 'numToStr/Comment.nvim'
 
 else
 " ################################################################ Vim Plugin Management ################################################################
+	" obviously for commentary shortcuts
+	Plug 'tpope/vim-commentary'
 	" vim specific plugins
 	" for fuzzy finder etc...
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -155,11 +159,6 @@ nnoremap <leader>gl :G pull<CR>
 " Plug 'tpope/vim-commentary'
 " makes the commentary for c, cpp, css and java be automatically // instead of
 " the default /* and */
-
-augroup TPOPE
-	autocmd!
-	autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
-augroup END
 
 " Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
