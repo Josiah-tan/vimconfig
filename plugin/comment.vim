@@ -1,6 +1,6 @@
 
 if has('nvim')
-	lua require("Comment").setup()
+	lua require("Comment").setup() 
 else
 	augroup TPOPE
 		autocmd!
