@@ -94,9 +94,30 @@ if has('nvim')
 	" https://microsoft.github.io/language-server-protocol/implementors/servers/
 	Plug 'neovim/nvim-lspconfig'
 	
-	" for autocompletion
-	Plug 'nvim-lua/completion-nvim'
-	" Plug 'hrsh7th/nvim-cmp'
+	" for autocompletion (thank you TJDevries from take tuesday ep 1)
+	Plug 'onsails/lspkind-nvim'
+	Plug 'tjdevries/colorbuddy.nvim'
+	Plug 'tjdevries/gruvbuddy.nvim'
+
+	" function! s:local_plug(package_name) abort 
+	"   if isdirectory(expand("~/plugins/" . a:package_name))
+	" 	execute "Plug '~/plugins/".a:package_name."'"
+	"   else
+	" 	execute "Plug 'tjdevries/" .a:package_name."'"
+	"   endif
+	" endfunction
+	" call s:local_plug('colorbuddy.vim')
+	"
+	Plug 'hrsh7th/nvim-cmp'
+	Plug 'hrsh7th/cmp-buffer'  " completes words from the buffer that you are in, don't have autocomplete (good for markdown)
+	Plug 'hrsh7th/cmp-path' " for files
+	Plug 'hrsh7th/cmp-nvim-lua' " for lua development special neovim knowledge
+	Plug 'hrsh7th/cmp-nvim-lsp' "for builtin lsp super easy autoimport on complete, moving between snippets
+	Plug 'hrsh7th/cmp-cmdline'
+
+	Plug 'saadparwaiz1/cmp_luasnip' " depends on what snippets plugin you use, he uses luasnips
+	
+	" Plug 'nvim-lua/completion-nvim' "deprecated
 
 	" Plugin for neovim terminals
 	Plug 'ThePrimeagen/harpoon'

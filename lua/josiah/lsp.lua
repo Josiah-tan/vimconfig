@@ -1,21 +1,26 @@
 
 local M = {}
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 M.setupPylsp = function()
-	require('lspconfig').pylsp.setup{on_attach=require'completion'.on_attach}
+	require('lspconfig').pylsp.setup{capabilities = capabilities}
 end
 
 M.setupPyright = function()
-	require('lspconfig').pyright.setup{on_attach=require'completion'.on_attach}
+	require('lspconfig').pyright.setup{capabilities = capabilities}
 end
 
 M.setupClangd = function()
-	require('lspconfig').clangd.setup{on_attach=require'completion'.on_attach}
+	-- require('lspconfig').clangd.setup{on_attach=require'completion'.on_attach}
+	require('lspconfig')['clangd'].setup {
+		capabilities = capabilities
+	}
 end
 
 M.texlab = function()
 	require('lspconfig').texlab.setup{
-		on_attach=require'completion'.on_attach,
+		-- on_attach=require'completion'.on_attach,
+		capabilities = capabilities,
 		settings={
 			texlab={
 				build={
@@ -51,7 +56,8 @@ M.sumnekoLua = function()
 	table.insert(runtime_path, "lua/?/init.lua")
 
 	require'lspconfig'.sumneko_lua.setup {
-		on_attach=require'completion'.on_attach,
+		capabilities = capabilities,
+		-- on_attach=require'completion'.on_attach,
 		cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
 		settings = {
 			Lua = {
