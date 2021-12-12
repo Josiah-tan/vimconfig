@@ -81,6 +81,11 @@ function SetTexOptions()
 	let @v = 'ysiw}i\getVariable'
 endfunction
 
+" .lua settings
+function SetLuaOptions()
+	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/local //e|s/\(\s*\)\(.\+\)/\1P("\2: ", \2)/j'
+endfunction
+
 " setting the macros for the file types
 
 augroup MACROS
@@ -93,4 +98,5 @@ augroup MACROS
 	autocmd BufEnter *.md call SetMDOptions()
 	autocmd BufEnter *.sh call SetSHOptions()
 	autocmd BufEnter *.tex call SetTexOptions()
+	autocmd BufEnter *.lua call SetLuaOptions()
 augroup END

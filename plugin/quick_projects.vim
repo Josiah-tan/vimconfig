@@ -6,6 +6,7 @@
 " set rtp+=~/Desktop/josiah/neovim/quick_projects/
 
 if has('nvim')
-	nnoremap <leader>qp <cmd>lua RELOAD('quick_projects.builtins').quickProjects()<cr>
-end
+	" nnoremap <leader>qp <cmd>lua RELOAD('quick_projects.builtins').quickProjects()<cr>
+	lua require('josiah.quick_projects')
 
+end

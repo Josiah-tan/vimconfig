@@ -1,3 +1,6 @@
+" turn off cursor blinking
+set guicursor+=a:blinkon0
+
 " turn on wrap mode
 set wrap
 

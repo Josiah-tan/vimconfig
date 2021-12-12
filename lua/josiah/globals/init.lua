@@ -1,8 +1,8 @@
 -- for printing lua tables
-P = function(v)
-	print(vim.inspect(v))
-	return v
-end
+-- P = function(v)
+-- 	print(vim.inspect(v))
+-- 	return v
+-- end
 
 -- re sources luafiles
 RELOAD = function(package_reload)

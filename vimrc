@@ -115,6 +115,10 @@ if has('nvim')
 
 	"Plugin for neovim with org mode
 	Plug 'nvim-orgmode/orgmode'
+
+	" presenting slides
+	" Plug 'sotte/presenting.vim'
+
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" vim specific plugins
