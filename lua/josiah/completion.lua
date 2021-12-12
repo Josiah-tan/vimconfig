@@ -58,14 +58,16 @@ cmp.setup {
 
 }
 
+-- autocompletion for command line paths, and commands
 cmp.setup.cmdline(':', {
-sources = cmp.config.sources({
-  { name = 'path' }
-}, {
-  { name = 'cmdline' }
-})
+	sources = cmp.config.sources({
+		{ name = 'path' }
+	}, {
+		{ name = 'cmdline' }
+	})
 })
 
+-- when performing a search do some autocompletion
 cmp.setup.cmdline('/', {
   sources = {
     { name = 'buffer' }
