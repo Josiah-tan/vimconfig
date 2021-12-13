@@ -14,14 +14,15 @@ let g:lightline = {
 					\ ],
 				\ 'left': [ 
 					\[ 'mode', 'paste' ],
-					\ [ 'gitbranch', 'readonly', 'filename', 'modified', 'funmessage']],
+					\ [ 'gitbranch', 'readonly', 'modified', 'truncatedFileName', 'funmessage']],
 			\ },
 			\ 'component': {
-				\ 'funmessage': 'Best Editor = nvim',
 				\ 'charvaluehex': '0x%B'
 			\ },
 			\ 'component_function': {
-				\ 'gitbranch' : 'FugitiveHead'
+				\ 'gitbranch' : 'FugitiveHead',
+				\ 'truncatedFileName': 'LightLineTruncatedFileName',
+				\ 'funmessage': 'LightLineFunMessage'
 			\ },
 		   \ 'mode_map': {
 			 \ 'n' : 'N',
@@ -38,4 +39,18 @@ let g:lightline = {
 			 \ },
 			\ }
 
+function! LightLineTruncatedFileName()
+let l:filePath = expand('%')
+    if winwidth(0) > 100
+        return l:filePath
+    else
+        return pathshorten(l:filePath)
+    endif
+endfunction
 
+function! LightLineFunMessage()
+ if winwidth(0) > 100 
+	 return 'Best Editor = nvim'
+ else 
+	 return ''
+endfunction
