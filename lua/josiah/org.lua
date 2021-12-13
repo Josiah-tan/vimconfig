@@ -41,14 +41,27 @@ require('orgmode').setup({
 	},
 })
 
-vim.g.completion_chain_complete_list = {
-  org = {
-    { mode = 'omni'},
-  },
-}
-vim.cmd[[autocmd FileType org setlocal iskeyword+=:,#,+ | lua require'completion'.on_attach()]]
+-- vim.g.completion_chain_complete_list = {
+--   org = {
+--     { mode = 'omni'},
+--   },
+-- }
+-- vim.cmd[[autocmd FileType org setlocal iskeyword+=:,#,+ | lua require'completion'.on_attach()]]
 
+vim.cmd[[
+autocmd FileType org lua require'cmp'.setup.buffer {
+\   sources = {
+\     {name = 'orgmode'},
+\   },
+\ }
+]]
 
+-- require'cmp'.setup({
+--   sources = {
+--     { name = 'orgmode' }
+--   }
+-- })
+--
 -- require('orgmode').setup({
 --   org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
 --   org_default_notes_file = '~/Dropbox/org/refile.org',
