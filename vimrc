@@ -115,6 +115,7 @@ if has('nvim')
 	Plug 'hrsh7th/cmp-nvim-lsp' "for builtin lsp super easy autoimport on complete, moving between snippets
 	Plug 'hrsh7th/cmp-cmdline'
 
+	Plug 'L3MON4D3/LuaSnip'
 	Plug 'saadparwaiz1/cmp_luasnip' " depends on what snippets plugin you use, he uses luasnips
 	
 	" Plug 'nvim-lua/completion-nvim' "deprecated
@@ -141,6 +142,9 @@ if has('nvim')
 	" Plug 'sotte/presenting.vim'
 	
 	Plug 'numToStr/Comment.nvim'
+
+	"Plugin for git worktrees
+	Plug 'ThePrimeagen/git-worktree.nvim'
 
 else
 " ################################################################ Vim Plugin Management ################################################################
