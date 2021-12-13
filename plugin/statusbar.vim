@@ -1,4 +1,4 @@
-
+" \ [ 'fileformat', 'fileencoding', 'filetype'],
 " \ 'left': [ [ 'mode', 'paste' ],
 " \ ['readonly', 'filename', 'modified', 'funmessage']],
 " \},
@@ -10,7 +10,10 @@ let g:lightline = {
 				\ 'right': [ 
 					\[ 'lineinfo' ],
 					\ [ 'percent' ],
-					\ [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ],
+					\ ['charvaluehex' ],
+					\ ['shrinkFiletype'],
+					\ ['shrinkFileencoding'],
+					\ ['shrinkFileformat'],
 					\ ],
 				\ 'left': [ 
 					\[ 'mode', 'paste' ],
@@ -22,7 +25,10 @@ let g:lightline = {
 			\ 'component_function': {
 				\ 'gitbranch' : 'FugitiveHead',
 				\ 'truncatedFileName': 'LightLineTruncatedFileName',
-				\ 'funmessage': 'LightLineFunMessage'
+				\ 'funmessage': 'LightLineFunMessage',
+				\ 'shrinkFiletype' : 'LightLineShrinkFiletype',
+				\ 'shrinkFileencoding' : 'LightLineShrinkFileencoding',
+				\ 'shrinkFileformat' : 'LightLineShrinkFileFormat',
 			\ },
 		   \ 'mode_map': {
 			 \ 'n' : 'N',
@@ -51,6 +57,30 @@ endfunction
 function! LightLineFunMessage()
 	if winwidth(0) > 100 
 		return 'Best Editor = nvim'
+	else 
+		return ''
+	endif
+endfunction
+
+function! LightLineShrinkFiletype()
+	if winwidth(0) > 100 
+		return &filetype
+	else 
+		return ''
+	endif
+endfunction
+
+function! LightLineShrinkFileencoding()
+	if winwidth(0) > 100 
+		return &fileencoding
+	else 
+		return ''
+	endif
+endfunction
+
+function! LightLineShrinkFileFormat()
+	if winwidth(0) > 100 
+		return &fileformat
 	else 
 		return ''
 	endif
