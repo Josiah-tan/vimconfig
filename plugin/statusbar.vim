@@ -49,8 +49,9 @@ let l:filePath = expand('%')
 endfunction
 
 function! LightLineFunMessage()
- if winwidth(0) > 100 
-	 return 'Best Editor = nvim'
- else 
-	 return ''
+	if winwidth(0) > 100 
+		return 'Best Editor = nvim'
+	else 
+		return ''
+	endif
 endfunction
