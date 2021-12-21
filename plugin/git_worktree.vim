@@ -1,1 +1,3 @@
-lua require('josiah.git_worktree')
+if has('nvim')
+	lua require('josiah.git_worktree')
+endif
