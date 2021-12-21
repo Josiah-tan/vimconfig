@@ -117,3 +117,4 @@ vim.api.nvim_set_keymap("n", "<Leader>qk", [[ <Esc><Cmd>lua RELOAD('quick_projec
 vim.api.nvim_set_keymap("n", "<Leader>ql", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').navMark({idx = 3})<CR>]], {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("n", "<Leader>q;", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').navMark({idx = 4})<CR>]], {noremap = true, silent = true, expr = false})
 
+vim.cmd [[autocmd User TelescopePreviewerLoaded setlocal wrap]]
