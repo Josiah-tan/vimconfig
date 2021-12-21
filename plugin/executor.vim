@@ -13,8 +13,8 @@ endfunction
 augroup EXECUTORS
 	autocmd!
 	" autocmd BufEnter *.* nnoremap <leader>x :JupyterSendCell<CR>
-	autocmd BufEnter *.vim,*.lua,vimrc nnoremap <leader>x :call <SID>executor()<CR>
-	autocmd BufEnter *.vim,*.lua,vimrc vnoremap <leader>x :<C-w>exe join(getline("'<","'>"), '<Bar>')<CR>
+	autocmd BufEnter *.vim,*.lua,vimrc nnoremap <leader>z :call <SID>executor()<CR>
+	autocmd BufEnter *.vim,*.lua,vimrc vnoremap <leader>z :<C-w>exe join(getline("'<","'>"), '<Bar>')<CR>
 augroup END
 
 function! s:save_and_exec() abort
