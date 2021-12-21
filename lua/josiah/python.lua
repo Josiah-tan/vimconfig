@@ -42,8 +42,8 @@ local sendLine = function (line, term)
 		M.previously_indented = true
 	elseif M.previously_indented then
 		require("harpoon.term").sendCommand(term, "\n")
-		print(line)
-		print("hello")
+		-- print(line)
+		-- print("hello")
 		M.previously_indented = false
 	end
 
