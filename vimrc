@@ -133,7 +133,16 @@ if has('nvim')
 	Plug 'Josiah-tan/quick-projects-nvim'
 
 	"Plugin for jupyter with neovim
-	Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
+	let g:use_magma = 0
+	let g:use_jupyter_vim = 0
+	let g:use_josiah_jupyter = 1
+
+	if g:use_magma
+		Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
+		" Package that connects the power of jupyter and vim together
+	elseif g:use_jupyter_vim
+		Plug 'jupyter-vim/jupyter-vim'
+	endif
 
 	"Plugin for neovim with org mode
 	Plug 'nvim-orgmode/orgmode'
@@ -157,8 +166,6 @@ else
 	" for language server (lsp)
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-	" Package that connects the power of jupyter and vim together
-	Plug 'jupyter-vim/jupyter-vim'
 endif
 
 " Initialize plugin system (end of plugins)
@@ -181,6 +188,8 @@ let maplocalleader = " "
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gp :G push<CR>
 nnoremap <leader>gl :G pull<CR>
+nnoremap <leader>g; :diffget //3<CR>
+nnoremap <leader>gj :diffget //2<CR>
 " Plug 'tpope/vim-commentary'
 " makes the commentary for c, cpp, css and java be automatically // instead of
 " the default /* and */
@@ -334,11 +343,13 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 
+" Vertical split with previous file
+nnoremap <leader>vp <C-w>v<C-^>
 
 
 if has('nvim')
 	" just requires in some nice globals to use
-	lua require("josiah.globals");
+	lua require("josiah");
 end
 
 " ################################################################ WSL General Configurations ################################################################

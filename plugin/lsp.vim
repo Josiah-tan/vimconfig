@@ -19,9 +19,9 @@ if has('nvim')
 	" let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
 	" lua require("josiah.lsp").setupPyright()
-	" lua RELOAD("josiah.lsp").setupPylsp()
+	lua require("josiah.lsp").setupPylsp()
 	lua require("josiah.lsp").setupClangd()
-	" lua require("josiah.lsp").sumnekoLua()
+	lua require("josiah.lsp").sumnekoLua()
 	" lua RELOAD("josiah.lsp").texlab()
 
 	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>

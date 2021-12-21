@@ -10,7 +10,7 @@ function! s:executor() abort
 	endif
 endfunction
 
-augroup GENERAL_REMAPS
+augroup EXECUTORS
 	autocmd!
 	" autocmd BufEnter *.* nnoremap <leader>x :JupyterSendCell<CR>
 	autocmd BufEnter *.vim,*.lua,vimrc nnoremap <leader>x :call <SID>executor()<CR>

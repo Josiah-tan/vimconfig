@@ -1,7 +1,5 @@
 
 if has('nvim')
-	" lua require("josiah")
-
 	" This is a requirement, which implements some useful window management
 	"   items for neovim
 	" Plug 'nvim-lua/popup.nvim'

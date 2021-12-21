@@ -1,8 +1,25 @@
+GlobalsDebugModeOn = true
+
 -- for printing lua tables
--- P = function(v)
--- 	print(vim.inspect(v))
--- 	return v
--- end
+P = function(v1, v2)
+	local _P = function(v)
+		if type(v) == 'table' then
+			return vim.inspect(v)
+		else
+			return v
+		end
+	end
+	if GlobalsDebugModeOn then
+		if v2 then
+			print(_P(v1), _P(v2))
+			return v2
+		else
+			print(_P(v1))
+			return v1
+		end
+	end
+end
+
 
 -- re sources luafiles
 RELOAD = function(package_reload)
