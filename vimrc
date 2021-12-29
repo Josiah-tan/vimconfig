@@ -61,13 +61,14 @@ Plug 'itchyny/lightline.vim'
 Plug 'mbbill/undotree'
 
 " for making aesthetic tables
-" Plug 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode'
 
 " for latex
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " for plover
 Plug 'Josiah-tan/vim-plover-clippy'
+
 
 if has('nvim')
 	" ################################################################ Neovim Plugin Management ################################################################
@@ -130,19 +131,16 @@ if has('nvim')
 	Plug 'ThePrimeagen/refactoring.nvim'
 
 	"Plugin for quick_projects
-	Plug 'Josiah-tan/quick-projects-nvim'
+	" Plug 'Josiah-tan/quick-projects-nvim'
 
 	"Plugin for jupyter with neovim
 	let g:use_magma = 0
 	let g:use_jupyter_vim = 0
 	let g:use_josiah_jupyter = 1
 
-	if g:use_magma
-		Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
-		" Package that connects the power of jupyter and vim together
-	elseif g:use_jupyter_vim
-		Plug 'jupyter-vim/jupyter-vim'
-	endif
+	Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
+	" Package that connects the power of jupyter and vim together
+	Plug 'jupyter-vim/jupyter-vim'
 
 	"Plugin for neovim with org mode
 	Plug 'nvim-orgmode/orgmode'
@@ -255,7 +253,7 @@ nnoremap - :Switch<cr>
 " for making aesthetic tables
 " Plug 'dhruvasagar/vim-table-mode'
 
-" nnoremap <leader>tm :TableModeToggle<CR>
+nnoremap <leader>tm :TableModeToggle<CR>
 " nnoremap <leader>tr :TableModeRealign<CR>
 " nnoremap <leader>tt :Tableize<CR>
 
