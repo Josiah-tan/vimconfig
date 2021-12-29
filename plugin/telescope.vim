@@ -29,9 +29,14 @@ if has('nvim')
 	nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
 	nnoremap <leader>gi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
 	nnoremap <leader>gf <cmd>lua require('telescope.builtin').git_files()<cr>
+	nnoremap <leader>ds <cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>
+	nnoremap <leader>ws <cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>
 
 	" Custom
 
+	nnoremap <leader>fd <cmd>lua RELOAD('josiah.telescope').findFilesCurrentBufferDir()<cr>
+	nnoremap <leader>fp <cmd>lua require('josiah.telescope').findPlugins()<cr>
+	nnoremap <leader>lp <cmd>lua require('josiah.telescope').grepPlugins()<cr>
 	nnoremap <leader>rc <cmd>lua require('josiah.telescope').searchDotfiles()<cr>
 	nnoremap <leader>lc <cmd>lua require('josiah.telescope').grepDotFiles()<cr>
 	nnoremap <leader>fb <cmd>lua require('josiah.telescope').buffers()<cr>

@@ -185,4 +185,25 @@ M.quickProjects = function()
 	})
 end
 
+M.findPlugins = function()
+	require("telescope.builtin").find_files({
+		promt_title = "find plugins >",
+		cwd = "~/.local/share/nvim/plugged/",
+	})
+end
+
+M.grepPlugins = function()
+	require("telescope.builtin").grep_string({
+		search = vim.fn.input("plugin grep for > "),
+		cwd = "~/.local/share/nvim/plugged/",
+	})
+end
+
+M.findFilesCurrentBufferDir = function()
+	require("telescope.builtin").find_files({
+		search_dirs = {"%:h"},
+		path_display = { "shorten" },
+	})
+end
+
 return M
