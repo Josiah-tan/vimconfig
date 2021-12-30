@@ -3,9 +3,22 @@ local M = {
 	previously_indented = false
 }
 
+local function venvExists()
+	return vim.fn.isdirectory(vim.fn.getcwd() .. "/env") == 1 -- the == 1 here is important for lua
+end
+
+local function wrapVenvOutput(term, output)
+	if venvExists() then
+		return require("harpoon.term").sendCommand(term, "%s && %s && %s\n", "source env/bin/activate", output, "deactivate")
+	else
+		return require("harpoon.term").sendCommand(term, output .. "\n")
+	end
+end
+
 M.sourceVenv = function(term)
-	local file = vim.fn.expand("%:t")
-	return require("harpoon.term").sendCommand(term, "%s && %s %s && %s\n", "source env/bin/activate", "python3", file, "deactivate")
+	local file = vim.fn.expand("%")
+	wrapVenvOutput(term, string.format("python3 %s", file))
+	-- return require("harpoon.term").sendCommand(term, "%s && %s %s && %s\n", "source env/bin/activate", "python3", file, "deactivate")
 end
 
 M.sourceInstallModules = function(term)
@@ -13,7 +26,8 @@ M.sourceInstallModules = function(term)
 	local response = vim.trim(vim.fn.input({prompt = prompt, cancelreturn = ""}))
 	local res
 	if string.len(response) ~= 0 then
-		res = require("harpoon.term").sendCommand(term, "%s && %s %s && %s\n", "source env/bin/activate", "pip3 install", response, "deactivate")
+		res = wrapVenvOutput(term, string.format("pip3 install %s", response))
+		-- res = require("harpoon.term").sendCommand(term, "%s && %s %s && %s\n", "source env/bin/activate", "pip3 install", response, "deactivate")
 	end
 	return res
 end
@@ -38,6 +52,10 @@ local lineIsIndented = function (line)
 end
 
 local sendLine = function (line, term)
+	if line == "" then
+		return
+	end
+
 	if lineIsIndented(line) then
 		M.previously_indented = true
 	elseif M.previously_indented then
@@ -47,14 +65,15 @@ local sendLine = function (line, term)
 		M.previously_indented = false
 	end
 
-	if not (lineStartsWithPattern("#", line) or line == "") then
+	if not lineStartsWithPattern("#", line) then
 		-- P(line)
 		require("harpoon.term").sendCommand(term, line .. "\n")
 	end
 end
 
 M.PythonInit = function(term)
-	require("harpoon.term").sendCommand(term, "source env/bin/activate && python3\n")
+	wrapVenvOutput(term, "python3")
+	-- require("harpoon.term").sendCommand(term, "source env/bin/activate && python3\n")
 	M.was_init = true
 end
 
