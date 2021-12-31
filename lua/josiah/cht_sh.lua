@@ -4,7 +4,7 @@ M.temp = {}
 M.setup = function(opts)
 	opts = opts or {}
 	local defaults = {terminal = 3,
-	language_list = {"python", "c", "cpp", "bash"},
+	language_list = {"python", "c", "cpp", "bash", "makefile"},
 	search_query = {"split", "read file"}}
 	M.opts = vim.tbl_deep_extend("force", defaults, opts)
 end
@@ -12,6 +12,7 @@ end
 local function runCurl()
 	local command = string.format("curl cht.sh/%s/%s\n", M.selection, M.query)
 	require("harpoon.term").sendCommand(M.temp.opts.terminal, command)
+	require("harpoon.term").gotoTerminal(M.temp.opts.terminal)
 end
 
 local function getSelection(prompt_bufnr)

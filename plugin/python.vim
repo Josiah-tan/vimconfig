@@ -8,6 +8,7 @@ if has('nvim')
 		nnoremap <leader>jq <cmd>lua require("josiah.python").PythonInit(4)<cr>
 		vnoremap <leader>x <cmd>lua require("josiah.python").runPythonSelection(4)<cr><esc>
 		nnoremap <leader>x <cmd>lua require("josiah.python").runPythonBlock(4)<cr>
+		nnoremap <leader>xl <cmd>lua require("josiah.python").runPythonLineNoIndent(4)<cr>
 	endif
 endif
 

@@ -18,6 +18,7 @@ end
 M.sourceVenv = function(term)
 	local file = vim.fn.expand("%")
 	wrapVenvOutput(term, string.format("python3 %s", file))
+	require("harpoon.term").gotoTerminal(term)
 end
 
 M.sourceInstallModules = function(term)
@@ -112,6 +113,15 @@ M.runPythonBlock = function(term)
 		line_num = line_num + 1;
 	end
 	require("harpoon.term").sendCommand(term, "\n")
+end
+
+M.runPythonLineNoIndent = function (term)
+	if M.was_init == false then
+		M.PythonInit(term)
+	end
+	local line = vim.fn.getline(".")
+	line = vim.trim(line)
+	sendLine(line, term)
 end
 
 return M
