@@ -1,8 +1,8 @@
 
 if has('nvim')
 	lua require("josiah.python")
-	nnoremap <leader>sv <cmd>lua RELOAD("josiah.python").sourceVenv(1)<CR>
-	nnoremap <leader>si <cmd>lua RELOAD("josiah.python").sourceInstallModules(1)<CR>
+	nnoremap <leader>sv <cmd>lua require("josiah.python").sourceVenv(1)<CR>
+	nnoremap <leader>si <cmd>lua require("josiah.python").sourceInstallModules(1)<CR>
 
 	if g:use_josiah_jupyter
 		nnoremap <leader>jq <cmd>lua require("josiah.python").PythonInit(4)<cr>
