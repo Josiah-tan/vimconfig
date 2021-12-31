@@ -344,6 +344,9 @@ vnoremap K :m '<-2<CR>gv=gv
 " Vertical split with previous file
 nnoremap <leader>vp <C-w>v<C-^>
 
+" cnext and cprev
+nnoremap <leader>cp <cmd>cprev<CR>
+nnoremap <leader>cn <cmd>cnext<CR>
 
 if has('nvim')
 	" just requires in some nice globals to use
