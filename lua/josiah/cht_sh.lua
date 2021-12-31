@@ -4,7 +4,13 @@ M.temp = {}
 M.setup = function(opts)
 	opts = opts or {}
 	local defaults = {terminal = 3,
-	language_list = {"python", "c", "cpp", "bash", "makefile"},
+	language_list = {
+		["python3"] = {},
+		["c"] = {},
+		["cpp"] = {},
+		["makefile"] = {},
+		["git"] = {"set url"},
+		["lua"] = {"table concatenate"}},
 	search_query = {"split", "read file"}}
 	M.opts = vim.tbl_deep_extend("force", defaults, opts)
 end
@@ -36,12 +42,21 @@ local function selectQuery(prompt_bufnr)
 	runCurl()
 end
 
+local function tableConcat(t1,t2)
+	for i=1,#t2 do
+		t1[#t1+1] = t2[i]  --corrected bug. if t1[#t1+i] is used, indices will be skipped
+	end
+	return t1
+end
+
+
 -- schedule_wrap fixes bug where telescope doesn't load properly for the second phase
 M.searchQuery = vim.schedule_wrap(function(opts)
 	require("telescope.pickers").new(opts, {
 		prompt_title = "choose query > ",
 		finder = require("telescope.finders").new_table({
-			results = opts.search_query --[[ require("refactoring").get_refactors() ]],
+			-- results = opts.search_query --[[ require("refactoring").get_refactors() ]],
+			results = tableConcat(opts.search_query, opts.language_list[M.selection])
 		}),
 		sorter = require("telescope.config").values.generic_sorter(opts),
 		attach_mappings = function(_, map)
@@ -65,7 +80,8 @@ M.cheatSh = function(opts)
 	require("telescope.pickers").new(opts, {
 		prompt_title = "choose lang > ",
 		finder = require("telescope.finders").new_table({
-			results = M.temp.opts.language_list --[[ require("refactoring").get_refactors() ]],
+			results = vim.tbl_keys(M.temp.opts.language_list) --[[ require("refactoring").get_refactors() ]],
+			-- results = M.temp.opts.language_list --[[ require("refactoring").get_refactors() ]],
 		}),
 		sorter = require("telescope.config").values.generic_sorter(opts),
 		attach_mappings = function(_, map)
