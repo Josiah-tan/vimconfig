@@ -5,3 +5,5 @@ require("josiah.refractor") -- primeagen's refactoring
 -- require("josiah.treesitter")
 
 require("josiah.cht_sh") -- cool cheat sheet stuff
+
+require("josiah.makefile") -- cool makefile stuff
