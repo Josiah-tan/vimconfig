@@ -31,6 +31,8 @@ if has('nvim')
 	nnoremap <leader>gf <cmd>lua require('telescope.builtin').git_files()<cr>
 	nnoremap <leader>ds <cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>
 	nnoremap <leader>ws <cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>
+	nnoremap <leader>ca <cmd>lua require('telescope.builtin').lsp_code_actions()<cr>
+
 
 	" Custom
 
