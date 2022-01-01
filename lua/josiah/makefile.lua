@@ -18,6 +18,7 @@ end
 
 local function makeSelection(selection)
 	require("harpoon.term").sendCommand(M.temp.opts.term, "make %s \n", selection)
+	require("harpoon.term").gotoTerminal(M.temp.opts.term)
 end
 
 local function splitWhiteSpace(inputstr, sep)
@@ -93,7 +94,7 @@ end
 M.setup()
 
 
-vim.api.nvim_set_keymap("n", "<Leader>mtt", ':lua RELOAD("josiah.makefile").getMakeOptions()<CR>', {noremap = true, silent = true, expr = false})
+-- vim.api.nvim_set_keymap("n", "<Leader>mtt", ':lua RELOAD("josiah.makefile").getMakeOptions()<CR>', {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("n", "<Leader>mf", ':lua RELOAD("josiah.makefile").makeFile({term = 1})<CR>', {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("n", "<Leader>mt", ':lua RELOAD("josiah.makefile").makeFile({term = 1, selection = "test"})<CR>', {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("n", "<Leader>ma", ':lua RELOAD("josiah.makefile").makeFile({term = 1, selection = "all"})<CR>', {noremap = true, silent = true, expr = false})
