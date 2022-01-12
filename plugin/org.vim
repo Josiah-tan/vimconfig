@@ -1,4 +1,4 @@
-if has('nvim')
+if has('nvim') 
 	" ################################################################ Vim Plugin Settings ################################################################
 	"Plugin for neovim with org mode
 	" Plug 'nvim-orgmode/orgmode'
