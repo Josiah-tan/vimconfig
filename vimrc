@@ -26,7 +26,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive' 
 
 " for easy motion
-Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion', { 'on': '<Plug>(easymotion-overwin-f)'}
 
 "autobracket completion
 Plug 'Raimondi/delimitMate'
@@ -61,13 +61,13 @@ Plug 'itchyny/lightline.vim'
 Plug 'mbbill/undotree'
 
 " for making aesthetic tables
-Plug 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'}
 
 " for latex
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " for plover
-Plug 'Josiah-tan/vim-plover-clippy'
+Plug 'Josiah-tan/vim-plover-clippy', {'for': 'clippy.txt'}
 
 
 if has('nvim')
@@ -78,7 +78,7 @@ if has('nvim')
 
 	" for syntax highlighting and refractor.nvim
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-	Plug 'nvim-treesitter/playground'
+	Plug 'nvim-treesitter/playground', {'on': 'TSPlaygroundToggle'}
 	Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 	" This is a requirement, which implements some useful window management

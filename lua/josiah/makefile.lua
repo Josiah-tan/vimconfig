@@ -98,6 +98,7 @@ M.setup()
 vim.api.nvim_set_keymap("n", "<Leader>mf", ':lua RELOAD("josiah.makefile").makeFile({term = 1})<CR>', {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("n", "<Leader>mt", ':lua RELOAD("josiah.makefile").makeFile({term = 1, selection = "test"})<CR>', {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("n", "<Leader>ma", ':lua RELOAD("josiah.makefile").makeFile({term = 1, selection = "all"})<CR>', {noremap = true, silent = true, expr = false})
+vim.api.nvim_set_keymap("n", "<Leader>mc", ':lua RELOAD("josiah.makefile").makeFile({term = 1, selection = "clean"})<CR>', {noremap = true, silent = true, expr = false})
 
 
 return M
