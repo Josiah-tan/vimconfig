@@ -20,7 +20,7 @@ nnoremap <C-n> :NERDTree<CR>
 " If the nerdtree already exists, it is reopened and rendered again. If no
 " nerdtree exists, runs same as :NERDTree command
 " already mapped to creating new tabs in linux (notice this)
-nnoremap <C-t> :NERDTreeToggle<CR> 
+" nnoremap <C-t> :NERDTreeToggle<CR> - conflict problem, go back from definition (taglist)
 "
 " find and reveal the file for the active buffer in the nerdtree window as
 " spec path (superior to the :NERDTree command)
