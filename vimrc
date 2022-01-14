@@ -131,7 +131,7 @@ if has('nvim')
 	Plug 'ThePrimeagen/refactoring.nvim'
 
 	"Plugin for quick_projects
-	" Plug 'Josiah-tan/quick-projects-nvim'
+	Plug 'Josiah-tan/quick-projects-nvim'
 
 	"Plugin for jupyter with neovim
 	let g:use_magma = 0
