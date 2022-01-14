@@ -26,6 +26,8 @@ if has('nvim')
 
 	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>
 	nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>
+	nnoremap <leader>dn <cmd>lua vim.diagnostic.goto_next()<cr> 
+	nnoremap <leader>dp <cmd>lua vim.diagnostic.goto_prev()<cr> 
 
 
 else

@@ -33,6 +33,8 @@ if has('nvim')
 	nnoremap <leader>ws <cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>
 	nnoremap <leader>ca <cmd>lua require('telescope.builtin').lsp_code_actions()<cr>
 	nnoremap <leader>fz <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
+	nnoremap <leader>dd <cmd>lua require('telescope.builtin').diagnostics({bufnr=0})<cr>
+	nnoremap <leader>wd <cmd>lua require('telescope.builtin').diagnostics()<cr>
 
 
 	" Custom
