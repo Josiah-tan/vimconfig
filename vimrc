@@ -67,7 +67,7 @@ Plug 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'}
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " for plover
-Plug 'Josiah-tan/vim-plover-clippy', {'for': 'clippy.txt'}
+Plug 'Josiah-tan/vim-plover-clippy'
 
 
 if has('nvim')
