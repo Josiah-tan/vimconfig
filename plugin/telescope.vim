@@ -20,7 +20,7 @@ if has('nvim')
 	nnoremap <leader>tqp <cmd>lua require('josiah.telescope').quickProjects()<cr>
 
 	"n = normal mode, nore = not recursive, map = mapping, <leader> = <space>
-	nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+	nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files({no_ignore=true})<cr>
 	nnoremap <leader>bf <cmd>lua require('telescope.builtin').file_browser()<cr>
 	"note that <leader>gs collides with git status remap
 	nnoremap <leader>sg <cmd>lua require('telescope.builtin').grep_string()<cr>
@@ -35,6 +35,7 @@ if has('nvim')
 	nnoremap <leader>fz <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
 	nnoremap <leader>dd <cmd>lua require('telescope.builtin').diagnostics({bufnr=0})<cr>
 	nnoremap <leader>wd <cmd>lua require('telescope.builtin').diagnostics()<cr>
+	nnoremap <leader>km <cmd>lua require('telescope.builtin').keymaps()<cr>
 
 
 	" Custom
@@ -58,7 +59,7 @@ if has('nvim')
 	" Using Lua functions
 	" require("telescope.previewers").vim_buffer_vimgrep.new
 	" previewers.vim_buffer_vimgrep.new
-	
+
 	" autocmd User vim_buffer_vimgrep setlocal wrap
 
 endif
