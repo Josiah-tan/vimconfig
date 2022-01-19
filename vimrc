@@ -131,8 +131,12 @@ if has('nvim')
 	Plug 'ThePrimeagen/refactoring.nvim'
 
 	"Plugin for quick_projects
-	Plug 'Josiah-tan/quick-projects-nvim'
-
+	let s:quick_projects='~/Desktop/josiah/neovim/quick_projects/'
+	if isdirectory(expand(s:quick_projects))
+		set rtp+=~/Desktop/josiah/neovim/quick_projects/
+	else
+		Plug 'Josiah-tan/quick-projects-nvim'
+	endif
 	"Plugin for jupyter with neovim
 	let g:use_magma = 0
 	let g:use_jupyter_vim = 0
@@ -153,6 +157,9 @@ if has('nvim')
 	"Plugin for git worktrees
 	Plug 'ThePrimeagen/git-worktree.nvim'
 
+	Plug 'rcarriga/nvim-notify'
+
+	Plug 'AckslD/nvim-neoclip.lua'
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" obviously for commentary shortcuts
@@ -367,4 +374,3 @@ if executable(s:clip)
 	" let g:netrw_browsex_viewer = 'xdg-open'
 	map gx <Nop>
 endif
-
