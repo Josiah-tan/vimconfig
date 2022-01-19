@@ -1,0 +1,66 @@
+vim.notify = require("notify")
+vim.keymap.set("n", "<leader>tn", require('telescope').extensions.notify.notify)
+vim.keymap.set("n", "<leader>super", function() require('notify')("my super important message", "debug") end)
+-- error, warn, info, debug, trace
+
+
+-- vim.notify("This is an error message.\nSomething went wrong!", "error", {
+-- 	title = plugin,
+-- 	on_open = function()
+-- 		vim.notify("Attempting recovery.", vim.lsp.log_levels.WARN, {
+-- 			title = plugin,
+-- 		})
+-- 		local timer = vim.loop.new_timer()
+-- 		timer:start(2000, 0, function()
+-- 			vim.notify({ "Fixing problem.", "Please wait..." }, "info", {
+-- 				title = plugin,
+-- 				timeout = 3000,
+-- 				on_close = function()
+-- 					vim.notify("Problem solved", nil, { title = plugin })
+-- 					vim.notify("Error code 0x0395AF", 1, { title = plugin })
+-- 				end,
+-- 			})
+-- 		end)
+-- 	end,
+-- })
+--
+
+-- local async = require("plenary.async")
+-- local notify = require("notify").async
+-- async.run(function()
+--   notify("Let's wait for this to close", "info", {
+-- 	  title = {"title", "hello"},
+--   }).close()
+--   notify("It closed!").close()
+-- end)
+--
+-- require('orgmode').setup({
+-- 	notifications = {
+-- 		enabled = true,
+-- 		cron_enabled = false,
+-- 		repeater_reminder_time = false,
+-- 		deadline_warning_reminder_time = false,
+-- 		reminder_time = 10,
+-- 		deadline_reminder = true,
+-- 		scheduled_reminder = true,
+-- 		notifier = function(tasks)
+-- 			local result = {}
+-- 			for _, task in ipairs(tasks) do
+-- 				local task_type = string.format('%s: <%s>', task.type, task.time:to_string())
+-- 				local description = string.format('%s %s %s', string.rep('*', task.level), task.todo, task.title)
+-- 				-- require('notify')(string.format('%s\n%s', description, task_type), "info", {
+-- 				-- 	title = {task.category, task.humanized_duration},
+-- 				-- })
+-- 				--
+-- 				require('orgmode.utils').concat(result, {
+-- 					string.format('# %s (%s)', task.category, task.humanized_duration),
+-- 					description,
+-- 					task_type
+-- 				})
+-- 			end
+--       if not vim.tbl_isempty(result) then
+--         require('orgmode.notifications.notification_popup'):new({ content = result })
+--       end
+--     end
+--   },
+-- })
