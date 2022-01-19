@@ -283,9 +283,11 @@ augroup GENERAL_CONFIG
 	autocmd!
 	" Have Vim jump to the last position when reopening a file
 	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-	" saves code folding 
-	autocmd BufWinLeave *.* mkview
-	autocmd BufWinEnter *.* silent! loadview
+	" saves code folding (do not use this, this will mess up telescope's
+	" <leader>rc dotfiles thing and change the directory when you open up the
+	" file again)
+	" autocmd BufWinLeave *.* mkview
+	" autocmd BufWinEnter *.* silent! loadview
 	" autocmd BufWinEnter *.lua,*.vim call ChangeWorkingDirectory()
 augroup END
 
