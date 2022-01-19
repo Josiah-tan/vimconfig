@@ -46,12 +46,12 @@ let g:lightline = {
 			\ }
 
 function! LightLineTruncatedFileName()
-let l:filePath = expand('%')
-    if winwidth(0) > 100
-        return l:filePath
-    else
-        return pathshorten(l:filePath)
-    endif
+	let l:filePath = expand('%')
+	if winwidth(0) > 100 && len(l:filePath) < winwidth(0) / 2
+		return l:filePath
+	else
+		return pathshorten(l:filePath)
+	endif
 endfunction
 
 function! LightLineFunMessage()
