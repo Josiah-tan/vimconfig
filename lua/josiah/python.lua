@@ -74,11 +74,11 @@ end
 
 -- code for having a jupyter like experience
 M.runPythonSelection = function(term)
+	local lower = vim.fn.getpos("v")[2]
+	local upper = vim.fn.getpos(".")[2]
 	if M.was_init == false then
 		M.PythonInit(term)
 	end
-	local lower = vim.fn.getpos("v")[2]
-	local upper = vim.fn.getpos(".")[2]
 	if lower > upper then
 		lower, upper = upper, lower
 	end
