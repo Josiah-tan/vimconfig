@@ -1,3 +1,4 @@
+vim.notify = require("notify")
 GlobalsDebugModeOn = true
 
 -- for printing lua tables
@@ -11,10 +12,11 @@ P = function(v1, v2)
 	end
 	if GlobalsDebugModeOn then
 		if v2 then
-			print(_P(v1), _P(v2))
+			-- print(_P(v1), _P(v2))
+			vim.notify((_P(v2)), "debug", {title = _P(v1)})
 			return v2
 		else
-			print(_P(v1))
+			vim.notify((_P(v1)), "debug")
 			return v1
 		end
 	end

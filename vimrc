@@ -160,6 +160,12 @@ if has('nvim')
 	Plug 'rcarriga/nvim-notify'
 
 	Plug 'AckslD/nvim-neoclip.lua'
+
+	if isdirectory(expand('~/Desktop/josiah/neovim/plover/plover_live_view_nvim/'))
+		set rtp+=~/Desktop/josiah/neovim/plover/plover_live_view_nvim/
+	else
+		Plug 'Josiah-tan/plover-live-view-nvim'
+	endif
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" obviously for commentary shortcuts
@@ -274,11 +280,11 @@ nnoremap <leader>tm :TableModeToggle<CR>
 
 "################################################################ Global General Autocmd ############################################################### 
 
-function! s:changeWorkingDirectory() abort
-	" changes the current working directory to be that of the file
-	:cd %:h
-endfunction
-
+" function! s:changeWorkingDirectory() abort
+" 	" changes the current working directory to be that of the file
+" 	:cd %:h
+" endfunction
+"
 augroup GENERAL_CONFIG
 	autocmd!
 	" Have Vim jump to the last position when reopening a file
