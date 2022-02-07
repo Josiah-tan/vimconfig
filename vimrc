@@ -170,7 +170,7 @@ if has('nvim')
 	if isdirectory(expand("~/Desktop/josiah/neovim/autoread_nvim/"))
 		set rtp+=~/Desktop/josiah/neovim/autoread_nvim/
 	else
-		Plug 'Josiah-tan/plover-live-view-nvim'
+		Plug 'Josiah-tan/autoread-nvim'
 	endif
 
 else
