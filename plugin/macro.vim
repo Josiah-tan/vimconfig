@@ -29,6 +29,7 @@ function SetPythonOptions()
 	let @e = ':s/ *\(^ *\|, \) *\([^=]\{-}\)\s*= *\([^,]\+\)/\1Eq(\2, \3)/g|s/^\(\s*\)/\1ans = solve([/|s/\(\s*\)\(.*\)/\1\2])\r\1print(f"ans = {ans}")/'
 	let @a = ':s/\(\s*\)\(.*\)/\1\2 = ans[\2]j'
 	let @i = '^f(yi(o":s/ *\(^ *\|, \) *\([^=,]\{-}\)\s*= *\([^,]*\)/\1\2/ge^dt,:s/\(\s*\), *\([^,]\+\)/\1".\2 = \2,/g0yiw:s/,/\r"/g'
+	let @c = ':g/^$/norm!dd'
 endfunction
 
 " Global C family settings for header, c and cpp files
