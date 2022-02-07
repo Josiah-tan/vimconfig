@@ -88,15 +88,34 @@ local location = "~/Downloads/plover-4.0.0.dev10+120.g4394ef1-x86_64.AppImage"
 local exec = location .. " --log-level debug\n"
 local stop_exec = location ..  " -s plover_send_command quit\n"
 -- starts plover
-vim.keymap.set("n", '<leader>pr', function () require("harpoon.term").sendCommand(1, exec) end)
+vim.keymap.set("n", '<leader>pr', function () require("harpoon.term").sendCommand(2, exec) end)
 -- kills plover
-vim.keymap.set("n", '<leader>pc', function () require("harpoon.term").sendCommand(2, stop_exec) end)
+vim.keymap.set("n", '<leader>pc', function () require("harpoon.term").sendCommand(3, stop_exec) end)
 
 
+local getConfigDirectory = function ()
+	local config_directory = vim.fn.expand('/mnt/c/Users/josia/AppData/Local/plover/plover/')
+	if (vim.fn.isdirectory(config_directory) == 0) then
+		config_directory = "~/.dotfiles/plover/.config/plover/"
+	end
+	return config_directory
+end
+
+local editDictionary = function (dictionary)
+	local config_directory = getConfigDirectory()
+	dictionary = config_directory .. dictionary
+	if vim.fn.filereadable(dictionary) then
+		vim.cmd("e "..dictionary)
+	else
+		print("dictionary not readable: " .. dictionary)
+	end
+end
+
+vim.keymap.set("n", '<leader>uv', function () editDictionary("vim.json") end)
+vim.keymap.set("n", '<leader>uu', function () editDictionary("programming.json") end)
 
 
-
--- great idea but not going to work because of the fact that I might not have 
+-- great idea but not going to work because of the fact that I might not have
 -- vim.cmd[[
 -- augroup PLOVERAuto
 -- 	autocmd!
