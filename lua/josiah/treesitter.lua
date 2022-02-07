@@ -25,6 +25,20 @@ require'nvim-treesitter.configs'.setup {
 	},
 }
 
+-- local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+-- parser_config.markdown = {
+--   install_info = {
+--     url = "~/Desktop/josiah/neovim/tree-sitter-markdown", -- local path or git repo
+--     files = {"src/parser.c"},
+--     -- optional entries:
+--     branch = "main", -- default branch in case of git repo if different from master
+--     generate_requires_npm = true, -- if stand-alone parser without npm dependencies
+--     requires_generate_from_grammar = true, -- if folder contains pre-generated src/parser.c
+--   },
+--   filetype = "md", -- if filetype does not agrees with parser name
+--   -- used_by = {"bar", "baz"} -- additional filetypes that use this parser
+-- }
+
 require'nvim-treesitter.configs'.setup {
   textobjects = {
     select = {

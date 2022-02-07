@@ -187,7 +187,7 @@ end
 
 M.findPlugins = function()
 	require("telescope.builtin").find_files({
-		promt_title = "find plugins >",
+		prompt_title = "find plugins >",
 		cwd = "~/.local/share/nvim/plugged/",
 	})
 end
@@ -203,6 +203,21 @@ M.findFilesCurrentBufferDir = function()
 	require("telescope.builtin").find_files({
 		search_dirs = {"%:h"},
 		path_display = { "shorten" },
+	})
+end
+
+
+M.findPloverFiles = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "find plover >",
+		cwd = "~/.local/lib/python3.8/site-packages/plover/"
+	})
+end
+
+M.grepPloverFiles = function ()
+	require("telescope.builtin").grep_string({
+		search = vim.fn.input("grep plover > "),
+		cwd = "~/.local/lib/python3.8/site-packages/plover/"
 	})
 end
 

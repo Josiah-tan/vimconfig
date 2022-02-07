@@ -81,6 +81,7 @@ end
 M.makeFile = function(opts)
 	if MakeFileExists() then
 		M.temp.opts = vim.tbl_deep_extend("force", M.opts, opts)
+		vim.cmd[[wa]]
 		if M.temp.opts.selection then
 			makeSelection(M.temp.opts.selection)
 		else

@@ -38,7 +38,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'AndrewRadev/switch.vim'
 
 " toggle between multiline and single line split
-Plug 'andrewRadev/splitjoin.vim'
+" Plug 'andrewRadev/splitjoin.vim'
 
 "file finding
 Plug 'preservim/nerdtree'
@@ -67,7 +67,7 @@ Plug 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'}
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " for plover
-Plug 'Josiah-tan/vim-plover-clippy'
+" Plug 'Josiah-tan/vim-plover-clippy'
 
 
 if has('nvim')
@@ -166,6 +166,13 @@ if has('nvim')
 	else
 		Plug 'Josiah-tan/plover-live-view-nvim'
 	endif
+
+	if isdirectory(expand("~/Desktop/josiah/neovim/autoread_nvim/"))
+		set rtp+=~/Desktop/josiah/neovim/autoread_nvim/
+	else
+		Plug 'Josiah-tan/plover-live-view-nvim'
+	endif
+
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" obviously for commentary shortcuts
