@@ -13,3 +13,5 @@ require('josiah.plover')
 require('josiah.notifications')
 
 require('josiah.clipboard')
+
+require("josiah.snippets")
