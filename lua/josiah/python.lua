@@ -7,9 +7,28 @@ local function venvExists()
 	return vim.fn.isdirectory(vim.fn.getcwd() .. "/env") == 1 -- the == 1 here is important for lua
 end
 
+local function anacondaVenvExists()
+	return vim.fn.filereadable(vim.fn.getcwd() .. "/environment.yaml") == 1 -- the == 1 here is important for lua
+end
+
+local function getAnacondaVenv()
+	local grep = "grep 'name:' environment.yaml"
+	local phony_removal = "sed 's/name:[ ]*//'"
+	local commands = vim.trim(vim.fn.system(string.format("%s | %s", grep, phony_removal)))
+	return commands
+end
+
+
 local function wrapVenvOutput(term, output)
 	if venvExists() then
 		return require("harpoon.term").sendCommand(term, "%s && %s && %s\n", "source env/bin/activate", output, "deactivate")
+	-- else
+		-- return require("harpoon.term").sendCommand(term, output .. "\n")
+
+	-- source /root/anaconda3/bin/activate wmanalysis && conda activate wmanalysis && python3 -m automation_scripts.update_all.py && conda deactivate
+	elseif anacondaVenvExists() then
+		local name = getAnacondaVenv()
+		return require("harpoon.term").sendCommand(term, "source /root/anaconda3/bin/activate "..name.." && conda activate "..name.." && " .. output .." && conda deactivate \n")
 	else
 		return require("harpoon.term").sendCommand(term, output .. "\n")
 	end
