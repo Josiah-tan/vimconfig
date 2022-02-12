@@ -12,13 +12,13 @@ set relativenumber
 "to automatically indent newlines
 set autoindent
 "reacts to the code syntax
-set smartindent
+" set smartindent
 
 
 "sets tabs to be n number of spaces
-set shiftwidth=4
+set shiftwidth=2
 "sets number of spaces that a tab character in the file counts for
-set tabstop=4
+set tabstop=2
 " Indents word-wrapped lines as much as the 'parent' line
 set breakindent
 " Ensures word-wrap does not split words
@@ -46,6 +46,9 @@ set noerrorbells
 "for linting and lsp errors
 set signcolumn=yes
 
+"for vimnotify" This is only necessary if you use "set termguicolors".
+set termguicolors
+
 " vimvscode battle settings
 " this makes it so that markdown ** for bold and * for italics are not shown
 " set conceallevel=2
@@ -61,7 +64,7 @@ if has('nvim')
 	" allows for fast swapping back and forth between buffers
 	set hidden
 
-	set clipboard+=unnamedplus
+	" set clipboard+=unnamedplus
 
 else
 " ################################################################ Vim General Configurations ################################################################

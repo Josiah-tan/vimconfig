@@ -30,7 +30,7 @@ vim.keymap.set({"i", "s"}, "<M-k>", function ()
 end, {silent = true})
 
 -- jump backwards, to the previous item within the snippet
--- (note that <c-j> by defaul does a newline, kinda useless lol)
+-- (note that <c-j> by default does a newline, kinda useless lol)
 vim.keymap.set({"i", "s"}, "<M-j>", function ()
 	if ls.jumpable(-1) then
 		ls.jump(-1)

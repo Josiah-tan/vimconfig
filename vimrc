@@ -26,7 +26,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive' 
 
 " for easy motion
-Plug 'easymotion/vim-easymotion', { 'on': '<Plug>(easymotion-overwin-f)'}
+Plug 'easymotion/vim-easymotion'
 
 "autobracket completion
 Plug 'Raimondi/delimitMate'
