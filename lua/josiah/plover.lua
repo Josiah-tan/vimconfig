@@ -68,6 +68,9 @@ local function pp()
 	end
 end
 
+local getSize = function()
+	return vim.api.nvim_win_get_height(0) / 4
+end
 vim.keymap.set('n', '<leader>pp', function () RELOAD("plover_viewer.builtin").splitToggle(pp()) end)
 vim.keymap.set('n', '<leader>ps', function () RELOAD("plover_viewer.builtin").splitToggle({
 	file_name = "clippy_2.org",
@@ -76,8 +79,13 @@ vim.keymap.set('n', '<leader>ps', function () RELOAD("plover_viewer.builtin").sp
 		choose = "terminal",
 		terminal = {
 			number = 6
-		}
+		},
 	},
+	split = {
+		horizontal = {
+			size = getSize()
+		}
+	}
 	-- hooks = {
 	-- 	bufWinEnter = function () require("autoread.builtin").autoReadStart({
 	-- 		cwd = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"},
