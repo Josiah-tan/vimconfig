@@ -69,7 +69,7 @@ local function pp()
 end
 
 local getSize = function()
-	return vim.api.nvim_win_get_height(0) / 4
+	return math.floor(vim.api.nvim_win_get_height(0) / 4)
 end
 vim.keymap.set('n', '<leader>pp', function () RELOAD("plover_viewer.builtin").splitToggle(pp()) end)
 vim.keymap.set('n', '<leader>ps', function () RELOAD("plover_viewer.builtin").splitToggle({
