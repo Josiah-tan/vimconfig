@@ -36,26 +36,58 @@ require("plover_viewer").setup({
 })
 
 
-vim.keymap.set('n', '<leader>pp', function () RELOAD("plover_viewer.builtin").view({viewer = {choose = "buf"}}) end)
+local function pp()
+	if vim.api.nvim_win_get_width(0) <= 85 then
+		return {
+			file_name = "tapey_tape.txt",
+			-- file_name = "clippy.txt",
+			viewer = {
+				choose = "terminal",
+				terminal = {
+					number = 5
+				}
+			},
+			split = {
+				choose = "horizontal"
+			},
+		}
+	else
+		return {
+			file_name = "tapey_tape.txt",
+			-- file_name = "clippy.txt",
+			viewer = {
+				choose = "terminal",
+				terminal = {
+					number = 5
+				}
+			},
+			split = {
+				choose = "vertical"
+			},
+		}
+	end
+end
+
+vim.keymap.set('n', '<leader>pp', function () RELOAD("plover_viewer.builtin").splitToggle(pp()) end)
 vim.keymap.set('n', '<leader>ps', function () RELOAD("plover_viewer.builtin").splitToggle({
 	file_name = "clippy_2.org",
 	-- file_name = "clippy.txt",
 	viewer = {
-		choose = "buf",
+		choose = "terminal",
 		terminal = {
 			number = 6
 		}
 	},
-	hooks = {
-		bufWinEnter = function () require("autoread.builtin").autoReadStart({
-			cwd = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"},
-			file_name = "clippy_2.org"
-		}) end,
-		bufWinLeave = function () require("autoread.builtin").autoReadStop({
-			cwd = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"},
-			file_name = "clippy_2.org"
-		}) end
-	}
+	-- hooks = {
+	-- 	bufWinEnter = function () require("autoread.builtin").autoReadStart({
+	-- 		cwd = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"},
+	-- 		file_name = "clippy_2.org"
+	-- 	}) end,
+	-- 	bufWinLeave = function () require("autoread.builtin").autoReadStop({
+	-- 		cwd = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"},
+	-- 		file_name = "clippy_2.org"
+	-- 	}) end
+	-- }
 }) end)
 
 
@@ -68,23 +100,24 @@ vim.keymap.set('n', '<leader>pv', function () RELOAD("plover_viewer.builtin").sp
 		}
 	},
 	split = {
-		choose = "vertical"
-	},
-	hooks = {
-		bufWinEnter = function () require("autoread.builtin").autoReadStart({
-			cwd = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"},
-			file_name = "clippy.txt"
-		}) end,
-		bufWinLeave = function () require("autoread.builtin").autoReadStop({
-			cwd = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"},
-			file_name = "clippy.txt"
-		}) end
-	}
+		choose = "horizontal"
+},
+	-- hooks = {
+	-- 	bufWinEnter = function () require("autoread.builtin").autoReadStart({
+	-- 		cwd = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"},
+	-- 		file_name = "clippy.txt"
+	-- 	}) end,
+	-- 	bufWinLeave = function () require("autoread.builtin").autoReadStop({
+	-- 		cwd = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"},
+	-- 		file_name = "clippy.txt"
+	-- 	}) end
+	-- }
 }) end)
 
 
 -- for plover debuggin
 local location = "~/Downloads/plover-4.0.0.dev10+120.g4394ef1-x86_64.AppImage"
+-- local location = "source /home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/activate && plover"
 local exec = location .. " --log-level debug\n"
 local stop_exec = location ..  " -s plover_send_command quit\n"
 -- starts plover

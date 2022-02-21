@@ -12,7 +12,7 @@ set relativenumber
 "to automatically indent newlines
 set autoindent
 "reacts to the code syntax
-" set smartindent
+set smartindent
 
 
 "sets tabs to be n number of spaces
@@ -46,8 +46,9 @@ set noerrorbells
 "for linting and lsp errors
 set signcolumn=yes
 
-"for vimnotify" This is only necessary if you use "set termguicolors".
-set termguicolors
+"for vimnotify" This is only necessary if you use "set termguicolors". I put
+"this in "colors"
+" set termguicolors
 
 " vimvscode battle settings
 " this makes it so that markdown ** for bold and * for italics are not shown

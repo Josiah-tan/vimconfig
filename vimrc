@@ -146,6 +146,12 @@ if has('nvim')
 	" Package that connects the power of jupyter and vim together
 	Plug 'jupyter-vim/jupyter-vim'
 
+	if isdirectory(expand("~/Desktop/josiah/neovim/python_nvim/"))
+		set rtp+=~/Desktop/josiah/neovim/python_nvim/
+	else
+		Plug 'Josiah-tan/python-nvim'
+	endif
+
 	"Plugin for neovim with org mode
 	Plug 'nvim-orgmode/orgmode'
 
@@ -161,6 +167,9 @@ if has('nvim')
 
 	Plug 'AckslD/nvim-neoclip.lua'
 
+	"for colorcoding hexcodes
+	Plug 'norcalli/nvim-colorizer.lua'
+
 	if isdirectory(expand('~/Desktop/josiah/neovim/plover/plover_live_view_nvim/'))
 		set rtp+=~/Desktop/josiah/neovim/plover/plover_live_view_nvim/
 	else
@@ -171,6 +180,12 @@ if has('nvim')
 		set rtp+=~/Desktop/josiah/neovim/autoread_nvim/
 	else
 		Plug 'Josiah-tan/autoread-nvim'
+	endif
+
+	if isdirectory(expand("~/Desktop/josiah/neovim/makefile_nvim/"))
+		set rtp+=~/Desktop/josiah/neovim/makefile_nvim/
+	else
+		Plug 'Josiah-tan/makefile-nvim'
 	endif
 
 else
@@ -252,7 +267,7 @@ autocmd FileType vim,lua let b:switch_custom_definitions =
 nnoremap + :call switch#Switch({'definitions': g:variable_style_switch_definitions})<cr>
 nnoremap - :Switch<cr>
 
-" Plug 'andrewRadev/splitjoin.vim'
+Plug 'andrewRadev/splitjoin.vim'
 
 
 

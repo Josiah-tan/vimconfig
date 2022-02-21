@@ -22,7 +22,7 @@ require'nvim-treesitter.configs'.setup {
 require('orgmode').setup({
 	org_todo_keywords = {"TODO(t)", "|", "DONE(d)", "CANCELLED(c)"},
 	org_indent_mode = "noindent",
-	org_agenda_files = {"~/org/*"},
+	org_agenda_files = {"~/org/*","~/org/uni/3_1/*"},
 	org_default_notes_file = '~/org/refile.org',
 	mappings = {
 		org = {

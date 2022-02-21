@@ -2,7 +2,7 @@
 " s = for this script only, abort means exit function if there are any errors
 function! s:executor() abort
 	if &ft == 'lua'
-		call execute(printf(":lua %s", getline(".")))
+		echo execute(printf(":lua %s", getline(".")))
 	elseif &ft == 'vim' || expand("%:t") == 'vimrc'
 		exe getline(".")
 		"  for some reason this one doesn't work?
@@ -30,3 +30,4 @@ function! s:save_and_exec() abort
 endfunction
 
 nnoremap <leader><leader>x :call <SID>save_and_exec()<CR>
+nmap <leader>tp <Plug>PlenaryTestFile

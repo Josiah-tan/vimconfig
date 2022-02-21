@@ -68,6 +68,11 @@ function SetMDOptions()
 	let @u = ':s/\w\+/\u&/ge'
 endfunction
 
+" .org settings
+function SetOrgOptions()
+	" let @p = 'omm{yy`mP$o'
+	let @p = 'omm{yy`mP$'
+endfunction
 
 " .sh settings
 function SetSHOptions()
@@ -101,4 +106,5 @@ augroup MACROS
 	autocmd BufEnter *.sh call SetSHOptions()
 	autocmd BufEnter *.tex call SetTexOptions()
 	autocmd BufEnter *.lua call SetLuaOptions()
+	autocmd BufEnter *.org call SetOrgOptions()
 augroup END
