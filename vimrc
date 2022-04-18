@@ -354,7 +354,11 @@ nnoremap Y y$
 " nnoremap n nzzzv 
 " I don't like this one so much
 " nnoremap N Nzzzv
-nnoremap J mzJ`z
+function! LineJoin()
+	norm! mzJ`z
+endfunction
+nnoremap J :call LineJoin()<cr>
+" nnoremap J mzJ`z
 
 " undo break points, everytime you type these letters you are able to undo at each of these points, rather than having something that overundos everything
 
