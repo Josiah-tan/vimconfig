@@ -59,7 +59,15 @@ ls.snippets = {
 	lua = {
 		-- filetype lua
 		ls.parser.parse_snippet("local function", "-- defined in $TM_FILENAME\nlocal $1 = function($2)\n	$0\nend"),
-		ls.parser.parse_snippet("method function", "$1.$2 = function($3)\n	$0\nend"),
-		s('require', fmt("local {} = require('{}')", {i(1, "default"), rep(1)})),
-		},
-	}
+			ls.parser.parse_snippet("method function", "$1.$2 = function($3)\n	$0\nend"),
+				s('require', fmt("local {} = require('{}')", {i(1, "default"), rep(1)})),
+			},
+			org = {
+				-- filetype org
+				s('figure', fmt("#+BEGIN_SRC latex\n\\begin{{figure}}[H]\\centering\\includegraphics[width=0.7\\textwidth]{{TEK000{}.png}}\\caption{{graph}}\\label{{fig:{}}}\\end{{figure}}\n#+END_SRC", {i(1, "number"), rep(1)})),
+			},
+			tex = {
+				s('fig', fmt("\\begin{{figure}}[H]\\centering\\includegraphics[width=0.7\\textwidth]{{{}.png}}\\caption{{graph}}\\label{{fig:{}}}\\end{{figure}}\n#+END_SRC", {i(1, "image"), rep(1)})),
+				-- ls.parser.parse_snippet("expand", "testing if this works in org"),
+			}
+		}
