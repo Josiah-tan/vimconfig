@@ -392,6 +392,10 @@ nnoremap <leader>cn <cmd>cnext<CR>
 if has('nvim')
 	" just requires in some nice globals to use
 	lua require("josiah");
+	
+	function! CustomLog()
+		lua require("josiah.org").customLog();
+	endfunction
 end
 
 " ################################################################ WSL General Configurations ################################################################

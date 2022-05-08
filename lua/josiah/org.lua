@@ -91,3 +91,38 @@ autocmd FileType org lua require'cmp'.setup.buffer {
 --   org_default_notes_file = '~/Dropbox/org/refile.org',
 -- })
 
+-- just an idea for writing new logs (and have them save without having to look into temp)
+-- defined in org.lua
+-- defined in org.lua
+local tmuxSplit = function()
+	-- vim.cmd([[!tmux split-window -v -p 20 "nvim -c 'lua require("josiah.org").customLog()' .; $SHELL"]])  -- I wish this one works
+	-- vim.cmd([[!tmux split-window -v -p 20 "nvim -c 'vsplit'; $SHELL"]]) -- this one works but not what I want
+	vim.fn.system([[tmux split-window -v -p 20 "nvim .; $SHELL"]])  -- finally something that actually works
+end
+local captionSplit = function()
+	vim.fn.system([[tmux split-window -v -p 20 "nvim -c 'call CustomLog()' .; $SHELL"]])  -- finally something that actually works
+end
+
+M = {}
+M.customLog = function()
+	local folder = '~/org/cap/'
+	local time = vim.fn.strftime("%Y/%b/%d")
+	-- print(time)
+	-- print("edit "..folder..time..".org")
+	vim.cmd("edit "..folder..time..".org")
+	vim.fn.system("mkdir -p %:h")
+end
+
+vim.keymap.set("n", "<leader>og", function ()
+	customLog()
+end)
+
+vim.keymap.set("n", "<leader>ts", function ()
+	tmuxSplit()
+end)
+
+vim.keymap.set("n", "<leader>tc", function ()
+	captionSplit()
+end)
+return M
+
