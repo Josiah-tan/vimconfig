@@ -88,7 +88,7 @@ M.customLog = function()
 	-- print(time)
 	-- print("edit "..folder..time..".org")
 	vim.cmd("edit "..folder..time..".org")
-	vim.fn.system("mkdir -p %:h")
+	vim.cmd("!mkdir -p %:h")
 end
 
 vim.keymap.set("n", "<leader>og", function ()
