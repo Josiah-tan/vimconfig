@@ -17,7 +17,7 @@ let g:PloverDisableRemaps = 0
 nore <c-j> <nop>
 inore <c-j> <c-\><c-o>
 " make undo work in insert mode
-inore <c-j>u <esc>u
+" inore <c-j>u <esc>u
 " does not work for some reason
 " inore <c-j>. <esc>.
 cnoremap <c-j> <esc>

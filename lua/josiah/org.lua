@@ -100,7 +100,7 @@ local tmuxSplit = function()
 	vim.fn.system([[tmux split-window -v -p 20 "nvim .; $SHELL"]])  -- finally something that actually works
 end
 local captionSplit = function()
-	vim.fn.system([[tmux split-window -v -p 20 "nvim -c 'call CustomLog()' .; $SHELL"]])  -- finally something that actually works
+	vim.fn.system([[tmux split-window -v -p 20 "nvim -c 'call CustomLog()' -c 'set laststatus=0' .; $SHELL"]])  -- finally something that actually works
 end
 
 M = {}

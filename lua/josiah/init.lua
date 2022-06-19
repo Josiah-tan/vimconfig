@@ -15,3 +15,5 @@ require('josiah.notifications')
 require('josiah.clipboard')
 
 require("josiah.snippets")
+
+require("josiah.arduino")

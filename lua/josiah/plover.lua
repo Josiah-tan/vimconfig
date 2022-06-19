@@ -154,6 +154,7 @@ end
 
 vim.keymap.set("n", '<leader>uv', function () editDictionary("vim.json") end)
 vim.keymap.set("n", '<leader>uu', function () editDictionary("programming.json") end)
+vim.keymap.set("n", '<leader>uc', function () editDictionary("caption.json") end)
 
 
 -- great idea but not going to work because of the fact that I might not have
