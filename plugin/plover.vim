@@ -28,5 +28,6 @@ else
 	tnoremap <c-j> <C-\><C-n>
 endif
 
-let g:EasyMotion_keys = 'bdfgjklmnprstxz'
+" let g:EasyMotion_keys = 'bdfgjklmnprstxz'
+let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
 

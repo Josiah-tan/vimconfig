@@ -5,6 +5,7 @@ M.setup = function(opts)
 	opts = opts or {}
 	local defaults = {terminal = 3,
 	language_list = {
+		["python"] = {},
 		["python3"] = {},
 		["c"] = {},
 		["cpp"] = {},

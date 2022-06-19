@@ -67,7 +67,10 @@ ls.snippets = {
 				s('figure', fmt("#+BEGIN_SRC latex\n\\begin{{figure}}[H]\\centering\\includegraphics[width=0.7\\textwidth]{{TEK000{}.png}}\\caption{{graph}}\\label{{fig:{}}}\\end{{figure}}\n#+END_SRC", {i(1, "number"), rep(1)})),
 			},
 			tex = {
-				s('fig', fmt("\\begin{{figure}}[H]\\centering\\includegraphics[width=0.7\\textwidth]{{{}.png}}\\caption{{graph}}\\label{{fig:{}}}\\end{{figure}}\n#+END_SRC", {i(1, "image"), rep(1)})),
+				s('fig', fmt("\\begin{{figure}}[H]\\centering\\includegraphics[width=0.7\\textwidth]{{photos/{}.png}}\\caption{{graph}}\\label{{fig:{}}}\\end{{figure}}", {i(1, "image"), rep(1)})),
 				-- ls.parser.parse_snippet("expand", "testing if this works in org"),
+				s('matrix', fmt("\\begin{{bmatrix}}\n\t{}\n\\end{{bmatrix}}", {i(1, "1 & 2 & 3 \\\\")})),
+				s('align', fmt("\\begin{{align*}}\n\t{}\n\\end{{align*}}", {i(1, "a + b &= c \\\\")})),
+				s('itemize', fmt("\\begin{{itemize}}\n\t\\item {}\n\\end{{itemize}}", {i(1, "item here")}))
 			}
 		}

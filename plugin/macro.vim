@@ -72,6 +72,7 @@ endfunction
 function SetOrgOptions()
 	" let @p = 'omm{yy`mP$o'
 	let @p = 'omm{yy`mP$'
+	let @u = ':s/\w\+/\u&/ge'
 endfunction
 
 " .sh settings
@@ -97,6 +98,16 @@ endfunction
 
 augroup MACROS
 	autocmd!
+	" autocmd BufEnter *.py call SetPythonOptions()
+	" autocmd BufEnter *.c,*.cpp,*.h call SetCFamGlobalOptions()
+	" autocmd BufEnter *.c call SetCOptions()
+	" autocmd BufEnter *.cpp call SetCPPOptions()
+	" autocmd BufEnter *.h call SetHOptions()
+	" autocmd BufEnter *.md call SetMDOptions()
+	" autocmd BufEnter *.sh call SetSHOptions()
+	" autocmd BufEnter *.tex call SetTexOptions()
+	" autocmd BufEnter *.lua call SetLuaOptions()
+	" autocmd BufEnter *.org call SetOrgOptions()
 	autocmd BufEnter *.py call SetPythonOptions()
 	autocmd BufEnter *.c,*.cpp,*.h call SetCFamGlobalOptions()
 	autocmd BufEnter *.c call SetCOptions()

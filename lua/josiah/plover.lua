@@ -124,8 +124,8 @@ vim.keymap.set('n', '<leader>pv', function () RELOAD("plover_viewer.builtin").sp
 
 
 -- for plover debuggin
-local location = "~/Downloads/plover-4.0.0.dev10+120.g4394ef1-x86_64.AppImage"
--- local location = "source /home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/activate && plover"
+-- local location = "~/Downloads/plover-4.0.0.dev10+120.g4394ef1-x86_64.AppImage"
+local location = "source /home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/activate && plover"
 local exec = location .. " --log-level debug\n"
 local stop_exec = location ..  " -s plover_send_command quit\n"
 -- starts plover

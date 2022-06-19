@@ -1,0 +1,51 @@
+% to get variables
+% $1 + 2 = \getVariable{HelloWorld_c}$
+% \getVariable{TestWriting_b}
+% \getVariable{HelloWorld_c}
+
+% to do the list
+% There are many structural features that can influence mechanical properties of polymers.
+% \begin{itemize}
+% 	\item Side Groups
+% 		Can be single atoms (H, O, F, Cl), branched carbon chains or an aromatic benzene ring.
+% 	\item Polymer Chain Shape 
+% 		Double bonding can restrict the ability of the polymer to rotate, thus affecting the mechanical properties
+% \end{itemize}
+
+% for two images
+% \begin{figure}[H]%
+%     \centering
+%     \subfloat[\centering Horizontal]{{\includegraphics[width=0.475\textwidth]{photos/free_body_horizontal.png} }}%
+%     \qquad
+%     \subfloat[\centering Vertical]{{\includegraphics[width=0.475\textwidth]{photos/free_body_vertical.png} }}%
+%     \caption{Free body, shear force and bending moment diagrams for two planes, the vertical is aligned in the direction of gravity, and the horizontal is aligned in the direction perpendicular to gravity}%
+%     \label{fig:free_body}%
+% \end{figure}
+
+% for a single image
+% \begin{figure}[h!]
+% 	\centering
+% 	\includegraphics[width=0.75\textwidth]{photos/materials.png}
+% 	\caption{Diagrams for totally elastic (top right), viscous (bottom right) and viscoelastic (bottom left)}
+% 	\label{fig:al_li}
+% \end{figure}
+
+\begin{table}[H]
+	\begin{center}
+		\caption{Chemical composition for LM6, and LM25 aluminium alloys}
+		\label{table:chemical_composition}
+		\begin{tabular}{|l|r|r|}
+			\hline
+			& LM6 & LM25\\
+			\hline
+			copper & 0.1 & 0.2\\
+			iron & 0.6 & 0.5\\
+			zinc & 0.1 & 0.1\\
+			titanium & 0.2 & 0.2\\
+			silicon & 10-13 & 6.5-7.5\\
+			nickel & 0.1 & 0.1\\
+			tin & 0.1 & 0.05\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}

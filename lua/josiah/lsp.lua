@@ -7,7 +7,14 @@ M.setupPylsp = function()
 end
 
 M.setupPyright = function()
-	require('lspconfig').pyright.setup{capabilities = capabilities}
+	require('lspconfig').pyright.setup{
+		capabilities = capabilities,
+		settings = {
+			python = {
+				pythonPath = require("josiah.python").getSourceAppend("python") --[[  "/home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/python" ]],
+			}
+		}
+	}
 end
 
 M.setupClangd = function()

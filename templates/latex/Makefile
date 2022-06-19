@@ -1,6 +1,10 @@
 .PHONY: clean all
 
 all: main.tex
+	lualatex main
+	bibtex main
+	lualatex main
+	bibtex main
 	cp main.pdf output.pdf
 
 clean:

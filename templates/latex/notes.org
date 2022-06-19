@@ -1,0 +1,61 @@
+* week 6 casting
+allowance for shrinkage make a patent makers, form a different material, use a ruler for different materials
+permanent molds or not?
+cope on the top, and drag on the bottom
+sand: green sand (it's kind of green black)
+go to Bunnings
+roughness it's be probably the sand casting
+3D printing can be used for the molds
+don't want transition or turbulent flows: low Renold's number?
+runners provide air passage
+pouring cups shouldn't be round, should be square, because the round entrance cause vortex to form
+riser should be the last thing to solidify, that is the last function to make sure fill the void as completely as possible, simple, mostly circular
+core: can save on cost clever pattern maker can save some money (not much a machinist will have to do)
+his experience: to expensive, and porosity, and (inclusions) rubbish thrown into the liquid, stress concentration factor (regular steel sections: fabrication to replace)
+Chvorinov's rule, V Solidworks will tell you, A, surface area, n for conducting (steel mold for example), not industrialing one or two, and then there's the infamous B (trial and error in the past, the numerical guise will need to know all these values)
+tutorial? bearing cap design I see
+leave the holes for the machining (cause still have to widen the holes for machining anyway)
+* week 7 casting (gating system)
+aluminium:
+magnesium: good for it (make sure that the grade is good for this)
+- only two places in Australia make this one is Queensland
+fluidity:
+Bernoulli's equation?
+continuium theorem?
+no turbulence is good, laminar flow is important
+want an Re of 2000
+gating system: make square, minimize that effect (rotation), any rubbish is collected
+- something to be improved? the distance, and hence different temperatures might be a problem (for the molten material varying quality)
+moody diagram? laminar flow (want your design to be in the left,)
+volumetric contraction of solidification
+risers: open and closed
+t_riser = 1.25 t_casting
+there is one slide on investment casting (better surface finish)
+* week 10 powder metallurgy
+** extra videos
+** websites
+- comprehensive information about the design and fabrication
+	- PickPM.com
+	-  an information resource sponsored by the metal powder industries federation
+** YouTube videos
+- conventional press and sinter powder metallurgy 
+	- https://www.youtube.com/watch?v=I39m28NZ7_s
+- a walk through the powdered metal sintering cycle
+	- https://www.youtube.com/watch?v=dnxYjXZO9u0
+- design decision guide for powder metallurgy
+	- https://www.youtube.com/watch?v=n-2oOq3Ao9U
+	- grooves, threads or undercuts most likely require machining
+	- id or od tolerance: turning, honing, or grinding
+* marking
+- material selection research
+	- 1: well defined by the use of referencing and or data sheets for each material selected with an appropriate level of insight shown
+- fixtures and jigs
+	- 1: a clear well presented attempt that defines the use of fixtures during the manufacturing process by the use of images, sketches, and text.
+- method of manufacturer
+	- 2.75: a comprehensive, in-depth attempt that decency two manufacturing processes with material that extends beyond the course notes provided.
+- analysis
+	- 2.75: a comprehensive, in depth attempt at calculations sourced from content that extends beyond the course notes provided.
+- surface coatings
+	- 1.5: an in-depth attempt that defines appropriate post-manufacturing surface coating processes with material that extends beyond the course notes provided (needs images apparently)
+- overall impression
+	- 1: comprehensive coverage all of key areas with material that is sourced from outside that which is provided, correct use of appendix for spreadsheets and or data plus correct referencing methods used for in-text and in the bibliography.
