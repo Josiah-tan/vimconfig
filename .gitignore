@@ -5,3 +5,4 @@ view/
 /quick_projects/
 /.luarc.json
 /plugged/*
+__pycache__

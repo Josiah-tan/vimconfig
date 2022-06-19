@@ -17,6 +17,16 @@ M.setupClangd = function()
 	}
 end
 
+M.setupArduino = function()
+	require('lspconfig').arduino_language_server.setup{
+		cmd = {
+			-- "/mnt/c/Users/josia/arduino-language-server.exe" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/mnt/c/Users/josia/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
+			-- "/mnt/c/Users/josia/arduino-language-server.exe" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/mnt/c/Users/josia/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
+			"/mnt/c/Users/josia/arduino-language-server" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/usr/local/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
+		}
+	}
+end
+
 M.texlab = function()
 	require('lspconfig').texlab.setup{
 		-- on_attach=require'completion'.on_attach,

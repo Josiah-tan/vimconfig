@@ -22,6 +22,7 @@ if has('nvim')
 	lua require("josiah.lsp").setupPylsp()
 	lua require("josiah.lsp").setupClangd()
 	lua require("josiah.lsp").sumnekoLua()
+	lua require("josiah.lsp").setupArduino()
 	" lua RELOAD("josiah.lsp").texlab()
 
 	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>
