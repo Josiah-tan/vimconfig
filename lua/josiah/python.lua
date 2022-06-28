@@ -2,8 +2,11 @@ local M = {
 }
 
 M.getSource = function()
-	if vim.fn.getcwd() == "/home/josiah/Desktop/josiah/neovim/plover/plover_clippy_2" then
+	-- if vim.fn.getcwd() == "/home/josiah/Desktop/josiah/neovim/plover/plover_clippy_2" then
+	if string.match(vim.fn.system("whoami"), "josiah") then
 		return "/home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
+	elseif string.match(vim.fn.system("whoami"), "chicken") then
+		return "/home/chicken/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
 	end
 end
 
