@@ -406,9 +406,9 @@ if executable(s:clip)
 	" the stuff required to make yanking to the system clipboard work
 	augroup WSLYank
 		autocmd!
-		autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+		" autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+		autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
 	augroup END
-
 	" let g:netrw_browsex_viewer = 'xdg-open'
 	map gx <Nop>
 endif

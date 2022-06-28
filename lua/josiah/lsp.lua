@@ -64,9 +64,14 @@ M.sumnekoLua = function()
 
 	-- local sumneko_root_path = vim.fn.stdpath('cache')..'/lspconfig/sumneko_lua/lua-language-server'
 	-- local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-server"
+	local sumneko_root_path = ''
+	if vim.fn.has('wsl') == 1 then
+		sumneko_root_path = '/mnt/c/Users/josia/lua-language-server'
+	else
+		sumneko_root_path = vim.fn.expand('~/lua-language-server')
+	end
 
-	local sumneko_root_path = vim.fn.expand('~/lua-language-server')
-	local sumneko_binary = sumneko_root_path .. "/bin/" .. "lua-language-server"
+	local sumneko_binary = sumneko_root_path .. "/bin/" .. "/lua-language-server"
 
 	local runtime_path = vim.split(package.path, ';')
 	table.insert(runtime_path, "lua/?.lua")
