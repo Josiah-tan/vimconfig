@@ -6,17 +6,20 @@ M.getSource = function()
 	if string.match(vim.fn.system("whoami"), "josiah") then
 		return "/home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
 	elseif string.match(vim.fn.system("whoami"), "chicken") then
-		return "/home/chicken/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
+		-- return "/home/chicken/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
+		return ""
 	end
 end
 
 M.getSourceAppend = function(str)
 	local source = M.getSource()
-	if source then
+	if source ~= "" then
 		return source .. str
+	else
+		return ""
 	end
 end
-
+-- print(M.getSourceAppend("activate"))
 M.setup = function()
 	require("python_nvim").setup({
 		source = M.getSourceAppend("activate")

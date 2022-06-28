@@ -139,6 +139,7 @@ if has('nvim')
 	endif
 	"Plugin for jupyter with neovim
 	let g:use_magma = 0
+	let g:jupyter_highlight_cells = 0
 	let g:use_jupyter_vim = 0
 	let g:use_josiah_jupyter = 1
 

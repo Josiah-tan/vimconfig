@@ -100,23 +100,28 @@ require'cmp'.setup({
 -- just an idea for writing new logs (and have them save without having to look into temp)
 -- defined in org.lua
 -- defined in org.lua
+local folder = '~/org/cap/'
 local tmuxSplit = function()
 	-- vim.cmd([[!tmux split-window -v -p 20 "nvim -c 'lua require("josiah.org").customLog()' .; $SHELL"]])  -- I wish this one works
 	-- vim.cmd([[!tmux split-window -v -p 20 "nvim -c 'vsplit'; $SHELL"]]) -- this one works but not what I want
 	vim.fn.system([[tmux split-window -v -p 20 "nvim .; $SHELL"]])  -- finally something that actually works
 end
 local captionSplit = function()
-	vim.fn.system([[tmux split-window -v -p 20 "nvim -c 'call CustomLog()' -c 'set laststatus=0' .; $SHELL"]])  -- finally something that actually works
+	-- vim.fn.system([[tmux split-window -v -p 20 "nvim -c 'call CustomLog()' -c 'set laststatus=0' .; $SHELL"]])  -- finally something that actually works
+	if vim.fn.isdirectory(vim.fn.expand(folder)) == 1 then
+		vim.fn.system([[tmux split-window -v -p 20 "nvim -c 'call CustomLog()' -c 'set laststatus=0' ."]])  -- finally something that actually works
+	else
+		print("clone or stow (todo) your org files first man")
+	end
 end
 
 M = {}
 M.customLog = function()
-	local folder = '~/org/cap/'
-	local time = vim.fn.strftime("%Y/%b/%d")
-	-- print(time)
-	-- print("edit "..folder..time..".org")
-	vim.cmd("edit "..folder..time..".org")
-	vim.cmd("silent !mkdir -p %:h")
+		local time = vim.fn.strftime("%Y/%b/%d")
+		-- print(time)
+		-- print("edit "..folder..time..".org")
+		vim.cmd("edit "..folder..time..".org")
+		vim.cmd("silent !mkdir -p %:h")
 end
 
 vim.keymap.set("n", "<leader>og", function ()
@@ -130,5 +135,6 @@ end)
 vim.keymap.set("n", "<leader>tc", function ()
 	captionSplit()
 end)
+
 return M
 
