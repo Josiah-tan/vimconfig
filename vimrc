@@ -91,6 +91,9 @@ if has('nvim')
 	" compiled fzy sorter (hence faster)
 	Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
+	" gh operations with telescoope integration
+	Plug 'nvim-telescope/telescope-github.nvim'
+
 	" plugin for lsp configurations
 	" https://microsoft.github.io/language-server-protocol/implementors/servers/
 	Plug 'neovim/nvim-lspconfig'
@@ -147,10 +150,16 @@ if has('nvim')
 	" Package that connects the power of jupyter and vim together
 	Plug 'jupyter-vim/jupyter-vim'
 
-	if isdirectory(expand("~/Desktop/josiah/neovim/python_nvim/"))
-		set rtp+=~/Desktop/josiah/neovim/python_nvim/
+	" if isdirectory(expand("~/Desktop/josiah/neovim/python_nvim/"))
+	" 	set rtp+=~/Desktop/josiah/neovim/python_nvim/
+	" else
+	" 	Plug 'Josiah-tan/python-nvim'
+	" endif
+
+	if isdirectory(expand("~/Desktop/chicken/repl-nvim/"))
+		set rtp+=~/Desktop/chicken/repl-nvim/
 	else
-		Plug 'Josiah-tan/python-nvim'
+		Plug 'Josiah-tan/repl-nvim'
 	endif
 
 	"Plugin for neovim with org mode
