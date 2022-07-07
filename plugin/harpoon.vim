@@ -20,6 +20,7 @@ if has('nvim')
 	nnoremap <leader>tk <cmd>lua require("harpoon.term").gotoTerminal(2)<cr>
 	nnoremap <leader>tl <cmd>lua require("harpoon.term").gotoTerminal(3)<cr>
 	nnoremap <leader>t; <cmd>lua require("harpoon.term").gotoTerminal(4)<cr>
+	nnoremap <leader>tp <cmd>lua require("harpoon.term").gotoTerminal(5)<cr>
 
 	"i for include?
 	nnoremap <leader>hi <cmd>lua require("harpoon.mark").add_file()<cr>
