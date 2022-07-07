@@ -21,7 +21,7 @@ M.getSourceAppend = function(str)
 end
 -- print(M.getSourceAppend("activate"))
 M.setup = function()
-	require("python_nvim").setup({
+	require("repl-nvim").setup({
 		source = M.getSourceAppend("activate")
 	})
 end
