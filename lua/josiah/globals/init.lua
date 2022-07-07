@@ -6,6 +6,12 @@ P = function(v1, v2)
 	local _P = function(v)
 		if type(v) == 'table' then
 			return vim.inspect(v)
+		elseif type(v) == 'boolean' then
+			if v then
+				return "true"
+			else
+				return "false"
+			end
 		else
 			return v
 		end
@@ -13,10 +19,10 @@ P = function(v1, v2)
 	if GlobalsDebugModeOn then
 		if v2 then
 			-- print(_P(v1), _P(v2))
-			vim.notify((_P(v2)), "debug", {title = _P(v1)})
+			vim.notify((_P(v2)), "info", {title = _P(v1)})
 			return v2
 		else
-			vim.notify((_P(v1)), "debug")
+			vim.notify((_P(v1)), "info")
 			return v1
 		end
 	end
