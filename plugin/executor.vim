@@ -30,4 +30,4 @@ function! s:save_and_exec() abort
 endfunction
 
 nnoremap <leader><leader>x :call <SID>save_and_exec()<CR>
-nmap <leader>tp <Plug>PlenaryTestFile
+nmap <leader>tpf <Plug>PlenaryTestFile
