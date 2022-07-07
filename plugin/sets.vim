@@ -65,7 +65,7 @@ if has('nvim')
 	" allows for fast swapping back and forth between buffers
 	set hidden
 
-	" set clipboard+=unnamedplus
+	set clipboard+=unnamedplus
 
 else
 " ################################################################ Vim General Configurations ################################################################
