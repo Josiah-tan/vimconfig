@@ -28,6 +28,13 @@ require('telescope').load_extension('fzy_native')
 
 local M = {}
 
+M.stringGrepDotFiles = function()
+	require("telescope.builtin").grep_string({
+		cwd = "~/.vim/",
+	})
+end
+
+
 M.grepDotFiles = function()
 	require("telescope.builtin").grep_string({
 		search = vim.fn.input("vimrc grep for > "),
@@ -192,6 +199,12 @@ M.findPlugins = function()
 	})
 end
 
+M.stringGrepPlugins = function()
+	require("telescope.builtin").grep_string({
+		cwd = "~/.local/share/nvim/plugged/",
+	})
+end
+
 M.grepPlugins = function()
 	require("telescope.builtin").grep_string({
 		search = vim.fn.input("plugin grep for > "),
@@ -214,11 +227,19 @@ M.findPloverFiles = function ()
 	})
 end
 
+M.stringGrepPloverFiles = function ()
+	require("telescope.builtin").grep_string({
+		cwd = "~/.local/lib/python3.8/site-packages/plover/"
+	})
+end
+
 M.grepPloverFiles = function ()
 	require("telescope.builtin").grep_string({
 		search = vim.fn.input("grep plover > "),
 		cwd = "~/.local/lib/python3.8/site-packages/plover/"
 	})
 end
+
+require('telescope').load_extension('gh')
 
 return M

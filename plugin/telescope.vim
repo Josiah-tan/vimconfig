@@ -36,18 +36,23 @@ if has('nvim')
 	nnoremap <leader>dd <cmd>lua require('telescope.builtin').diagnostics({bufnr=0})<cr>
 	nnoremap <leader>wd <cmd>lua require('telescope.builtin').diagnostics()<cr>
 	nnoremap <leader>km <cmd>lua require('telescope.builtin').keymaps()<cr>
+	nnoremap <leader>bc <cmd>lua require('telescope.builtin').git_bcommits()<cr>
+	nnoremap <leader>gc <cmd>lua require('telescope.builtin').git_commits()<cr>
 
 
 	" Custom
 
 	nnoremap <leader>fd <cmd>lua RELOAD('josiah.telescope').findFilesCurrentBufferDir()<cr>
 	nnoremap <leader>fp <cmd>lua require('josiah.telescope').findPlugins()<cr>
+	nnoremap <leader>slp <cmd>lua require('josiah.telescope').stringGrepPlugins()<cr>
 	nnoremap <leader>lp <cmd>lua require('josiah.telescope').grepPlugins()<cr>
 	nnoremap <leader>rc <cmd>lua require('josiah.telescope').searchDotfiles()<cr>
+	nnoremap <leader>slc <cmd>lua require('josiah.telescope').stringGrepDotFiles()<cr>
 	nnoremap <leader>lc <cmd>lua require('josiah.telescope').grepDotFiles()<cr>
 	nnoremap <leader>fb <cmd>lua require('josiah.telescope').buffers()<cr>
 	nnoremap <leader>gb <cmd>lua require('josiah.telescope').gitBranches()<cr>
 	nnoremap <leader>fs <cmd>lua require('josiah.telescope').findPloverFiles()<cr>
+	nnoremap <leader>sls <cmd>lua require('josiah.telescope').stringGrepPloverFiles()<cr>
 	nnoremap <leader>ls <cmd>lua require('josiah.telescope').grepPloverFiles()<cr>
 
 	" primeagen
