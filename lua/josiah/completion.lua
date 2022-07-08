@@ -23,6 +23,8 @@ M.setup = function()
 				select = true,
 			},
 			["<c-space>"] = cmp.mapping.complete(),
+			["<C-p>"] = cmp.mapping.select_prev_item {behavior = cmp.SelectBehavior.Insert},
+			["<C-n>"] = cmp.mapping.select_next_item {behavior = cmp.SelectBehavior.Insert}
 		},
 		sources = {  -- sources to use to provide completions, sources enabled globally, automatic ranking with order
 		{name = "gh_issues"},
