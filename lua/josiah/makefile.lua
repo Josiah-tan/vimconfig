@@ -9,6 +9,7 @@ vim.api.nvim_set_keymap("n", "<Leader>mt", ':lua RELOAD("makefile_nvim.builtin")
 vim.api.nvim_set_keymap("n", "<Leader>ma", ':lua RELOAD("makefile_nvim.builtin").makeFile({term = 1, selection = "all"})<CR>', {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("n", "<Leader>mc", ':lua RELOAD("makefile_nvim.builtin").makeFile({term = 1, selection = "clean"})<CR>', {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("n", "<Leader>md", ':lua RELOAD("makefile_nvim.builtin").makeFile({term = 1, selection = "docs"})<CR>', {noremap = true, silent = true, expr = false})
+vim.api.nvim_set_keymap("n", "<Leader>mp", ':lua RELOAD("makefile_nvim.builtin").makeFile({term = 1, selection = "compare"})<CR>', {noremap = true, silent = true, expr = false})
 
 
 return M
