@@ -5,7 +5,7 @@ OUT_DIR := out
 CMP_DIR := cmp
 
 CC := g++
-EXE := ./output
+EXE := ./final
 SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
@@ -18,7 +18,10 @@ CFLAGS   := -Wall -fsanitize=address -g
 LDFLAGS  := -Llib -fsanitize=address
 LDLIBS   := -lm
 
-.PHONY: all clean compare test
+.PHONY: all clean compare test stress
+
+stress: $(EXE)
+	$(EXE)
 
 compare: test
 	diff -r --ignore-trailing-space $(CMP_DIR) $(OUT_DIR)
