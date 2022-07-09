@@ -54,7 +54,7 @@ function SetCPPOptions()
 	let @r = ":!g++ % && ./a.out\n"
 	let @b = 'i#include<iostream>#include<vector>#include<algorithm>#include<climits>#include<string>int main(void){koreturn 0;kkOusing namespace std;3jOint T;cin >> T;for (int t=1;t<=T;t++){Ocout << "Case #" << t << ans << endl;Oans = 0;Iint '
 	" let @m = 
-	let @p = '^v$hdacout << "pA << pA << endl;j'
+	let @p = '^v$hdacout << "pa A << pA << endl;j'
 endfunction
 
 " .h settings
