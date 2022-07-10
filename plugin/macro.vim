@@ -75,8 +75,8 @@ function SetOrgOptions()
 	let @u = ':s/\w\+/\u&/ge'
 endfunction
 
-" .sh settings
-function SetSHOptions()
+" shell settings
+function SetShellFamGlobalOptions()
 	let @r = ':!%:p'
 endfunction
 
@@ -104,7 +104,7 @@ augroup MACROS
 	" autocmd BufEnter *.cpp call SetCPPOptions()
 	" autocmd BufEnter *.h call SetHOptions()
 	" autocmd BufEnter *.md call SetMDOptions()
-	" autocmd BufEnter *.sh call SetSHOptions()
+	" autocmd BufEnter *.sh call SetShellFamGlobalOptions()
 	" autocmd BufEnter *.tex call SetTexOptions()
 	" autocmd BufEnter *.lua call SetLuaOptions()
 	" autocmd BufEnter *.org call SetOrgOptions()
@@ -114,7 +114,7 @@ augroup MACROS
 	autocmd BufEnter *.cpp call SetCPPOptions()
 	autocmd BufEnter *.h call SetHOptions()
 	autocmd BufEnter *.md call SetMDOptions()
-	autocmd BufEnter *.sh call SetSHOptions()
+	autocmd BufEnter *.sh,*zsh call SetShellFamGlobalOptions()
 	autocmd BufEnter *.tex call SetTexOptions()
 	autocmd BufEnter *.lua call SetLuaOptions()
 	autocmd BufEnter *.org call SetOrgOptions()
