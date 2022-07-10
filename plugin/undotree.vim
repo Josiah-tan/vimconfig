@@ -3,7 +3,7 @@
 " Plug 'mbbill/undotree'
 if has("persistent_undo")
 	" for some strange reason the undo trees for neovim and vim are incompatible
-	let target_path = has('nvim') ? expand('~/.config/nvim/undodir'): expand('~/.vim/undodir')
+	let target_path = has('nvim') ? expand('~/.config/undodir/nvim'): expand('~/.config/undodir/vim')
 	" let target_path =  expand('~/.vim/undodir')
 
     " create the directory and any parent directories
