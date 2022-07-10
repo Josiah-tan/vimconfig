@@ -7,7 +7,7 @@ M.getSource = function()
 		return "/home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
 	elseif string.match(vim.fn.system("whoami"), "chicken") then
 		-- return "/home/chicken/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
-		return ""
+		return "/home/chicken/plover/.tox/dev/bin/"
 	end
 end
 
