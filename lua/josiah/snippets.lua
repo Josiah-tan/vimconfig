@@ -161,56 +161,44 @@ end
 
 ls.add_snippets("cpp", {
 	s("hello", t "hello world what on earth is going on these days"),
-	s("a",
+	s("class",
 	fmt(
 	[[
 	class {}{{
 		private:
 		{}
 		public:
-		{}({})
+			{}({}): {}{{
+				{}
+			}}
 	}};
 	]],
 	{
 		i(1, "ClassName"),
 		d(3,
 		function (arguments)
-			print(vim.inspect(arguments))
-			-- return sn(nil, c(3, {t"hello world"}))
-			-- return sn(nil, t"hello world")
 			local variables = splitVariables(arguments[1][1])
 			local results = {}
 			for _, value in ipairs(variables) do
-				-- print(vim.inspect(value))
 				local variable_type = value[1]
 				local variable_value = value[2]
-				-- print(type, variable)
-				-- -- print(index, vim.inspect(value))
 				table.insert(results, "\t" .. variable_type .. " " .. variable_value .. ";")
-				-- result = result .. type .. " = " .. variable .. ";\n"
 			end
 			return isn(1, t(results), "$PARENT_INDENT\t")
-			-- return {t"hello world"}
-		end, 2),  --should be a 4 in here somewhere
-		-- f(function(arguments)
-		-- 	local variables = splitVariables(arguments[1][1])
-		-- 	local result = ""
-		-- 	for _, value in ipairs(variables) do
-		-- 		-- print(vim.inspect(value))
-		-- 		local variable_type = value[1]
-		-- 		local variable_value = value[2]
-		-- 		-- print(type, variable)
-		-- 		-- -- print(index, vim.inspect(value))
-		-- 		result = result .. variable_type .. " " .. variable_value .. ";\r"
-		-- 		-- result = result .. type .. " = " .. variable .. ";\n"
-		-- 	end
-		-- 	-- print(result)
-		-- 	-- P("variables : ", variables )
-		-- 	-- return vim.trim(result)
-		-- 	return {"hello world", "hello world"}
-		-- end, {2}),
+		end, 2),
 		same(1),
 		i(2, "arguments"),
+		d(4,
+		function (arguments)
+			local variables = splitVariables(arguments[1][1])
+			local results = {}
+			for _, value in ipairs(variables) do
+				local variable_value = value[2]
+				table.insert(results, variable_value .. "(" .. variable_value .. ")")
+			end
+			return sn(nil, t(table.concat(results, ", ")))
+		end, 2),
+		i(0),
 	}
 	))
 })
