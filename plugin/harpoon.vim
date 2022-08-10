@@ -15,6 +15,7 @@ if has('nvim')
 	" n = normal, nore = no recursive, map just a mapping, <leader> is a predefined key, 
 	" run latex
 	" nnoremap <leader>rl <cmd>lua require("josiah.harpoon").runLatex("lualatex")<cr>
+	nnoremap <leader>flameshot <cmd>lua require("harpoon.term").sendCommand(1, "flameshot gui\n")<cr>
 
 	nnoremap <leader>tj <cmd>lua require("harpoon.term").gotoTerminal(1)<cr>
 	nnoremap <leader>tk <cmd>lua require("harpoon.term").gotoTerminal(2)<cr>

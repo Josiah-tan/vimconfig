@@ -12,6 +12,8 @@ P = function(v1, v2)
 			else
 				return "false"
 			end
+		elseif type(v) == "number" then
+			return tostring(v)
 		else
 			return v
 		end

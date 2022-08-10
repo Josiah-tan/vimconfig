@@ -89,10 +89,14 @@ if has('nvim')
 	" fuzzy finder etc...
 	Plug 'nvim-telescope/telescope.nvim'	
 	" compiled fzy sorter (hence faster)
-	Plug 'nvim-telescope/telescope-fzy-native.nvim'
+	" Plug 'nvim-telescope/telescope-fzy-native.nvim'
+	Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 	" gh operations with telescoope integration
 	Plug 'nvim-telescope/telescope-github.nvim'
+
+	" vim.ui.select
+	Plug 'nvim-telescope/telescope-ui-select.nvim'
 
 	" plugin for lsp configurations
 	" https://microsoft.github.io/language-server-protocol/implementors/servers/
@@ -156,8 +160,8 @@ if has('nvim')
 	" 	Plug 'Josiah-tan/python-nvim'
 	" endif
 
-	if isdirectory(expand("~/Desktop/chicken/repl-nvim/"))
-		set rtp+=~/Desktop/chicken/repl-nvim/
+	if isdirectory(expand("~/repl-nvim/"))
+		set rtp+=~/repl-nvim/
 	else
 		Plug 'Josiah-tan/repl-nvim'
 	endif
@@ -192,8 +196,8 @@ if has('nvim')
 		Plug 'Josiah-tan/autoread-nvim'
 	endif
 
-	if isdirectory(expand("~/Desktop/josiah/neovim/makefile_nvim/"))
-		set rtp+=~/Desktop/josiah/neovim/makefile_nvim/
+	if isdirectory(expand("~/makefile-nvim/"))
+		set rtp+=~/makefile-nvim/
 	else
 		Plug 'Josiah-tan/makefile-nvim'
 	endif

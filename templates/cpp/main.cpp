@@ -7,7 +7,6 @@
 
 using namespace std;
 
-
 int main(void){
 	// helloWorld();
 	int T, N;

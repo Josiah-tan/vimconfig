@@ -16,9 +16,9 @@ set smartindent
 
 
 "sets tabs to be n number of spaces
-set shiftwidth=2
+set shiftwidth=4
 "sets number of spaces that a tab character in the file counts for
-set tabstop=2
+set tabstop=4
 " Indents word-wrapped lines as much as the 'parent' line
 set breakindent
 " Ensures word-wrap does not split words

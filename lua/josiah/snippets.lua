@@ -69,15 +69,15 @@ end
 ls.add_snippets("all", {
 	-- any filetype
 	ls.parser.parse_snippet("expand", "my first snippet ever!"),
-	s("todo", {
-		c(1, {
-			t "TODO(Josiah): ",
-			t "FIXME(Josiah): ",
-			t "TODONT(Josiah): ",
-			t "TODO(anybody please help me): ",
-		})
-	}
-	),
+	-- s("todo", {
+	-- 	c(1, {
+	-- 		t "TODO(Josiah): ",
+	-- 		t "FIXME(Josiah): ",
+	-- 		t "TODONT(Josiah): ",
+	-- 		t "TODO(anybody please help me): ",
+	-- 	})
+	-- }
+	-- ),
 	s("time", { -- trying to understand the function node
 		f(function() return os.date "%D - %H:%M" end)
 	}),
@@ -135,6 +135,21 @@ ls.add_snippets("rust", {
 
 
 ls.add_snippets("org", {
+	s("source",
+	fmt(
+	[[
+	#+BEGIN_SRC {}
+	{}
+	#+END_SRC
+	]],
+	{
+		i(1, "language"),
+		i(1, "code here"),
+	}
+	))
+})
+
+ls.add_snippets("org", {
 	-- filetype org
 	s('figure', fmt("#+BEGIN_SRC latex\n\\begin{{figure}}[H]\\centering\\includegraphics[width=0.7\\textwidth]{{TEK000{}.png}}\\caption{{graph}}\\label{{fig:{}}}\\end{{figure}}\n#+END_SRC", {i(1, "number"), rep(1)})),
 })
@@ -148,7 +163,7 @@ ls.add_snippets("tex", {
 })
 
 local splitVariables = function(s)
-	sep = ","
+	local sep = ","
 	local t = {}
 	for str in string.gmatch(s, "([^"..sep.."]+)") do
 		str = vim.trim(str)
@@ -160,7 +175,27 @@ local splitVariables = function(s)
 end
 
 ls.add_snippets("cpp", {
-	s("hello", t "hello world what on earth is going on these days"),
+	s("comment",
+	fmt(
+	[[
+	/*
+		@brief:
+			{}
+		@param:
+			{}
+		@return:
+			{}
+	*/
+	]],
+	{
+		i(1, "brief description"),
+		i(2, "parameters"),
+		i(3, "returns"),
+	}
+	))
+})
+
+ls.add_snippets("cpp", {
 	s("class",
 	fmt(
 	[[
@@ -203,14 +238,6 @@ ls.add_snippets("cpp", {
 	))
 })
 
-		
--- s = ' vector<int>hello , int what '
-
--- print(s:match('^(.*)777')) --> 'The number '
--- print(s:match('([A-Za-z\\_]*)$')) --> ' is in the middle.'
-
--- P(s:match('([A-Za-z\\_]*)$'))
--- splitVariables(s)
 
 ls.add_snippets("lua", {
 	-- filetype lua

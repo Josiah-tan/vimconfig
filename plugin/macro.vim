@@ -17,7 +17,7 @@
 function SetPythonOptions()
 	let @h = 'ggO# =====================================================# File Name: "%po# Date of Creation: :put = strftime(\"%c\")kJo# Author: Josiah Tan# Description: ## =====================================================# =====================================================?Descri$'
 	let @r = ":!python3 %\n"
-	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2}")/j'
+	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\).\{-}\([^ ]\+\) \{-}$/\1print(f"\2 = {\2}")/j'
 	let @m = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2* 1e-6} 10^6")/j'
 	let @g = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2* 1e-9} 10^9")/j'
 	let @b = "oif __name__ == '__main__':\n"
@@ -53,8 +53,8 @@ endfunction
 function SetCPPOptions()
 	let @r = ":!g++ % && ./a.out\n"
 	let @b = 'i#include<iostream>#include<vector>#include<algorithm>#include<climits>#include<string>int main(void){koreturn 0;kkOusing namespace std;3jOint T;cin >> T;for (int t=1;t<=T;t++){Ocout << "Case #" << t << ans << endl;Oans = 0;Iint '
-	" let @m = 
-	let @p = '^v$hdacout << "pa A << pA << endl;j'
+	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\).\{-}\([^ ]\+\) \{-}$/\1std::cout << "\2 = " << \2 << std::endl;/j'
+	" let @p = '^v$hdastd::cout << "pa A << pA << std::endl;j'
 endfunction
 
 " .h settings

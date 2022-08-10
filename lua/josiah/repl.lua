@@ -7,9 +7,19 @@ M.getSource = function()
 		return "/home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
 	elseif string.match(vim.fn.system("whoami"), "chicken") then
 		-- return "/home/chicken/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
-		return "/home/chicken/plover/.tox/dev/bin/"
+		if string.match(vim.fn.getcwd(), vim.fn.expand("~/.dotfiles/plover/.config/plover/vim")) then
+			return vim.fn.expand("~/plover/.tox/dev/bin/")
+		else
+			return ""
+		end
+		-- if vim.fn.getcwd() == "/home/chicken/work/Robotic-waste-sorting-project/CoppeliaSim-Kuka-Arm-Simulation/CoppeliaSim-Python-Client" or vim.fn.getcwd() == "/home/chicken/work/Robotic-waste-sorting-project/main/CoppeliaSim-Kuka-Arm-Simulation/CoppeliaSim-Python-Client" or vim.fn.getcwd() == "/home/chicken/work/Fork-Robotic-waste-sorting-project/main/CoppeliaSim-Kuka-Arm-Simulation/CoppeliaSim-Python-Client" then
+		-- 	return vim.fn.getcwd() .. "/.tox/test_service/bin/"
+		-- else
+		-- 	return "/home/chicken/plover/.tox/dev/bin/"
+		-- end
 	end
 end
+-- P(M.getSource())
 
 M.getSourceAppend = function(str)
 	local source = M.getSource()
@@ -21,8 +31,11 @@ M.getSourceAppend = function(str)
 end
 -- print(M.getSourceAppend("activate"))
 M.setup = function()
+	-- P(M.getSourceAppend("activate"))
 	require("repl-nvim").setup({
-		source = M.getSourceAppend("activate")
+		python = {
+			source = M.getSourceAppend("activate")
+		}
 	})
 end
 

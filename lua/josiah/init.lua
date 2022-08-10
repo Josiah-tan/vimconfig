@@ -17,3 +17,7 @@ require('josiah.clipboard')
 require("josiah.snippets")
 
 require("josiah.arduino")
+
+require("josiah.telescope")
+
+require("josiah.switch_file")

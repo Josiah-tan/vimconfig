@@ -51,9 +51,18 @@ if has('nvim')
 	nnoremap <leader>lc <cmd>lua require('josiah.telescope').grepDotFiles()<cr>
 	nnoremap <leader>fb <cmd>lua require('josiah.telescope').buffers()<cr>
 	nnoremap <leader>gb <cmd>lua require('josiah.telescope').gitBranches()<cr>
+	
 	nnoremap <leader>fs <cmd>lua require('josiah.telescope').findPloverFiles()<cr>
 	nnoremap <leader>sls <cmd>lua require('josiah.telescope').stringGrepPloverFiles()<cr>
 	nnoremap <leader>ls <cmd>lua require('josiah.telescope').grepPloverFiles()<cr>
+	
+	nnoremap <leader>fo <cmd>lua require('josiah.telescope').findOrgFiles()<cr>
+	nnoremap <leader>slo <cmd>lua require('josiah.telescope').stringGrepOrgFiles()<cr>
+	nnoremap <leader>lo <cmd>lua require('josiah.telescope').grepOrgFiles()<cr>
+	
+	nnoremap <leader>fk <cmd>lua require('josiah.telescope').findCaptionFiles()<cr>
+	nnoremap <leader>slk <cmd>lua require('josiah.telescope').stringGrepCaptionFiles()<cr>
+	nnoremap <leader>lk <cmd>lua require('josiah.telescope').grepCaptionFiles()<cr>
 
 	" primeagen
 	"  the problem with live_grep is that it is apparently slow in large file

@@ -11,7 +11,7 @@ M.setupPyright = function()
 		capabilities = capabilities,
 		settings = {
 			python = {
-				pythonPath = require("josiah.python").getSourceAppend("python") --[[  "/home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/python" ]],
+				pythonPath = require("josiah.repl").getSourceAppend("python") --[[  "/home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/python" ]],
 			}
 		}
 	}
@@ -29,10 +29,16 @@ M.setupArduino = function()
 		cmd = {
 			-- "/mnt/c/Users/josia/arduino-language-server.exe" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/mnt/c/Users/josia/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
 			-- "/mnt/c/Users/josia/arduino-language-server.exe" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/mnt/c/Users/josia/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
-			"/mnt/c/Users/josia/arduino-language-server" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/usr/local/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
+			-- "/mnt/c/Users/josia/arduino-language-server" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/usr/local/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
+			"arduino-language-server",
+			"-cli-config", "/path/to/arduino-cli.yaml",
+			"-fqbn", "arduino:avr:uno",
+			"-cli", "arduino-cli",
+			"-clangd", "clangd"
 		}
 	}
 end
+
 
 M.texlab = function()
 	require('lspconfig').texlab.setup{

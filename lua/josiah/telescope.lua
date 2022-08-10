@@ -17,14 +17,41 @@ require('telescope').setup {
 		}
 	},
 	extensions = {
-		fzy_native = {
-			override_generic_sorter = false,
-			override_file_sorter = true,
+		extensions = {
+			fzf = {
+				fuzzy = true, -- false => only exact matching
+				override_generic_sorter = true, -- override generic sorter 
+				override_file_sorter = true, -- ovverride the file sorter
+				case_mode = "smart_case" -- "ignore_case" or "respect_case", default = "smart_case"
+			}
 		}
+		-- fzy_native = {
+		-- 	override_generic_sorter = false,
+		-- 	override_file_sorter = true,
+		-- 	["ui-select"] = {
+		-- 		require("telescope.themes").get_dropdown{
+		-- 		}
+		-- 	}
+		-- }
 	}
 }
 
-require('telescope').load_extension('fzy_native')
+-- require('telescope').load_extension('fzy_native')
+
+
+
+require('telescope').load_extension('fzf')
+
+-- require('telescope').setup {
+-- 	extensions = {
+-- 		["ui-select"] = {
+-- 			require("telescope.themes").get_dropdown{
+-- 			}
+-- 		}
+-- 	}
+-- }
+
+require("telescope").load_extension("ui-select")
 
 local M = {}
 
@@ -220,26 +247,66 @@ M.findFilesCurrentBufferDir = function()
 end
 
 
+
 M.findPloverFiles = function ()
 	require("telescope.builtin").find_files({
 		prompt_title = "find plover >",
-		cwd = "~/.local/lib/python3.8/site-packages/plover/"
+		cwd = "~/plover/"
 	})
 end
 
 M.stringGrepPloverFiles = function ()
 	require("telescope.builtin").grep_string({
-		cwd = "~/.local/lib/python3.8/site-packages/plover/"
+		cwd = "~/plover/"
 	})
 end
 
 M.grepPloverFiles = function ()
 	require("telescope.builtin").grep_string({
 		search = vim.fn.input("grep plover > "),
-		cwd = "~/.local/lib/python3.8/site-packages/plover/"
+		cwd = "~/plover/"
 	})
 end
 
 require('telescope').load_extension('gh')
 
+M.findOrgFiles = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "find org >",
+		cwd = "~/org/"
+	})
+end
+
+M.stringGrepOrgFiles = function ()
+	require("telescope.builtin").grep_string({
+		cwd = "~/org/"
+	})
+end
+
+M.grepOrgFiles = function ()
+	require("telescope.builtin").grep_string({
+		search = vim.fn.input("grep org > "),
+		cwd = "~/org/"
+	})
+end
+
+M.findCaptionFiles = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "find org/cap >",
+		cwd = "~/org/cap/"
+	})
+end
+
+M.stringGrepCaptionFiles = function ()
+	require("telescope.builtin").grep_string({
+		cwd = "~/org/cap/"
+	})
+end
+
+M.grepCaptionFiles = function ()
+	require("telescope.builtin").grep_string({
+		search = vim.fn.input("grep org/cap > "),
+		cwd = "~/org/cap/"
+	})
+end
 return M
