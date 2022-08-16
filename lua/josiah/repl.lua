@@ -17,6 +17,8 @@ M.getSource = function()
 		-- else
 		-- 	return "/home/chicken/plover/.tox/dev/bin/"
 		-- end
+	else
+		return ""
 	end
 end
 -- P(M.getSource())
