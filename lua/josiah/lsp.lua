@@ -32,7 +32,7 @@ M.setupArduino = function()
 			-- "/mnt/c/Users/josia/arduino-language-server" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/usr/local/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
 			"arduino-language-server",
 			"-cli-config", "/path/to/arduino-cli.yaml",
-			"-fqbn", "arduino:avr:uno",
+			"-fqbn", "arduino:samd:nano_33_iot",
 			"-cli", "arduino-cli",
 			"-clangd", "clangd"
 		}
