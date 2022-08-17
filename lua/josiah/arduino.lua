@@ -46,8 +46,8 @@ local function write_log()
 end
 
 vim.keymap.set('n', '<leader>al', function () 
-	RELOAD("plover_viewer.builtin").splitToggle(monitor_log())
-	vim.cmd[[wincmd p]]
+	-- RELOAD("plover_viewer.builtin").splitToggle(monitor_log())
+	-- vim.cmd[[wincmd p]]
 	RELOAD("plover_viewer.builtin").splitToggle(write_log())
 	vim.cmd[[wincmd h]]
 end)
