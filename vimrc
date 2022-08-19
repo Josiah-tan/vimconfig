@@ -75,6 +75,9 @@ if has('nvim')
 	" neovim specific plugins
 	" cheetsheet for finding the keys that have been mapped?
 	" Plug 'sudormrfbin/cheatsheet.nvim'
+	Plug 'aklt/plantuml-syntax'
+	Plug 'tyru/open-browser.vim'
+	Plug 'weirongxu/plantuml-previewer.vim'
 
 	" for syntax highlighting and refractor.nvim
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
