@@ -102,7 +102,7 @@ require'cmp'.setup({
 -- defined in org.lua
 local folder = '~/org/cap/'
 local tmuxSplit = function()
-	-- vim.cmd([[!tmux split-window -v -p 20 "nvim -c 'lua require("josiah.org").customLog()' .; $SHELL"]])  -- I wish this one works
+	-- vim.cmd([[!tmux split-window -v -p 20 "nvim -c 'lua require("user.org").customLog()' .; $SHELL"]])  -- I wish this one works
 	-- vim.cmd([[!tmux split-window -v -p 20 "nvim -c 'vsplit'; $SHELL"]]) -- this one works but not what I want
 	vim.fn.system([[tmux split-window -v -p 20 "nvim .; $SHELL"]])  -- finally something that actually works
 end

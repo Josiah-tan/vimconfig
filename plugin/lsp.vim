@@ -13,17 +13,17 @@ if has('nvim')
 
 	" for autocompletion
 	" Plug 'nvim-lua/completion-nvim'
-	" lua require("josiah.completion").setup()
-	lua require("josiah.lsp")
+	" lua require("user.completion").setup()
+	lua require("user.lsp")
 
 	" let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
-	lua require("josiah.lsp").setupPyright()
-	" lua require("josiah.lsp").setupPylsp()
-	lua require("josiah.lsp").setupClangd()
-	lua require("josiah.lsp").sumnekoLua()
-	lua require("josiah.lsp").setupArduino()
-	" lua RELOAD("josiah.lsp").texlab()
+	lua require("user.lsp").setupPyright()
+	" lua require("user.lsp").setupPylsp()
+	lua require("user.lsp").setupClangd()
+	lua require("user.lsp").sumnekoLua()
+	lua require("user.lsp").setupArduino()
+	" lua RELOAD("user.lsp").texlab()
 
 	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>
 	nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>
@@ -34,7 +34,7 @@ if has('nvim')
 		" the reason why this was included is because for some reason the
 		" completion doesn't work when I call it normally?
 		autocmd!
-		autocmd BufEnter * ++once :lua require("josiah.completion").setup()
+		autocmd BufEnter * ++once :lua require("user.completion").setup()
 		" autocmd BufEnter * ++once :lua print("hello world")
 	augroup END
 

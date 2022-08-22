@@ -1,12 +1,12 @@
 # The Ultimate Vim Setup
-## By Josiah Tan
+## By user Tan
 
 
 # Git cloning (for usage):
 
 - Here it is assumed that you already have installed git and vim
 - cd ~
-- git clone https://github.com/Josiah-tan/vimconfig.git .vim
+- git clone https://github.com/user-tan/vimconfig.git .vim
 - vim ~/.vim/vimrc
 - :PlugInstall
 

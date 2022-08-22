@@ -2,11 +2,11 @@ local M = {
 }
 
 M.getSource = function()
-	-- if vim.fn.getcwd() == "/home/josiah/Desktop/josiah/neovim/plover/plover_clippy_2" then
-	if string.match(vim.fn.system("whoami"), "josiah") then
-		return "/home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
+	-- if vim.fn.getcwd() == "/home/user/Desktop/user/neovim/plover/plover_clippy_2" then
+	if string.match(vim.fn.system("whoami"), "user") then
+		return "/home/user/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
 	elseif string.match(vim.fn.system("whoami"), "chicken") then
-		-- return "/home/chicken/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
+		-- return "/home/chicken/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
 		if string.match(vim.fn.getcwd(), vim.fn.expand("~/.dotfiles/plover/.config/plover/vim")) then
 			return vim.fn.expand("~/plover/.tox/dev/bin/")
 		else

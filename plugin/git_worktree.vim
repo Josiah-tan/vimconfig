@@ -1,3 +1,3 @@
 if has('nvim')
-	lua require('josiah.git_worktree')
+	lua require('user.git_worktree')
 endif

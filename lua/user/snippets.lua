@@ -71,9 +71,9 @@ ls.add_snippets("all", {
 	ls.parser.parse_snippet("expand", "my first snippet ever!"),
 	-- s("todo", {
 	-- 	c(1, {
-	-- 		t "TODO(Josiah): ",
-	-- 		t "FIXME(Josiah): ",
-	-- 		t "TODONT(Josiah): ",
+	-- 		t "TODO(user): ",
+	-- 		t "FIXME(user): ",
+	-- 		t "TODONT(user): ",
 	-- 		t "TODO(anybody please help me): ",
 	-- 	})
 	-- }

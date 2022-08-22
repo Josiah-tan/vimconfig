@@ -96,8 +96,8 @@ M.cheatSh = function(opts)
 end
 
 M.setup()
-vim.api.nvim_set_keymap("n", "<Leader>ch", ':lua RELOAD("josiah.cht_sh").cheatSh()<CR>', {noremap = true, silent = true, expr = false})
--- vim.api.nvim_set_keymap("n", "<Leader>sq", <Esc><Cmd>lua RELOAD('josiah.cht_sh').searchQuery(opts)<CR>, {noremap = true, silent = true, expr = false})
+vim.api.nvim_set_keymap("n", "<Leader>ch", ':lua RELOAD("user.cht_sh").cheatSh()<CR>', {noremap = true, silent = true, expr = false})
+-- vim.api.nvim_set_keymap("n", "<Leader>sq", <Esc><Cmd>lua RELOAD('user.cht_sh').searchQuery(opts)<CR>, {noremap = true, silent = true, expr = false})
 
 return M
 

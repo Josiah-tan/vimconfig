@@ -28,7 +28,7 @@ require'nvim-treesitter.configs'.setup {
 -- local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 -- parser_config.markdown = {
 --   install_info = {
---     url = "~/Desktop/josiah/neovim/tree-sitter-markdown", -- local path or git repo
+--     url = "~/Desktop/user/neovim/tree-sitter-markdown", -- local path or git repo
 --     files = {"src/parser.c"},
 --     -- optional entries:
 --     branch = "main", -- default branch in case of git repo if different from master

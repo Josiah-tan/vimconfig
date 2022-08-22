@@ -2,7 +2,7 @@
 #
 # File Name: markdown.py
 # Date of Creation: Thu 27 May 2021 11:19:53
-# Author: Josiah Tan
+# Author: user Tan
 # Description: stuff for the Jupyter QTConsole, should be executed with @q
 #
 # =====================================================

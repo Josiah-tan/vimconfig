@@ -23,7 +23,7 @@ M.fileSwitch = function(pattern)
 	print(":e ".. new_file)
 end
 
-vim.api.nvim_set_keymap("n", "<leader>scw", ":lua require('josiah.switch_file').fileSwitch({'*.h', '*.c'})<CR>", {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<leader>spw", ":lua require('josiah.switch_file').fileSwitch({'*.h', '*.cpp'})<CR>", {noremap = true, silent = true, expr = false})
+vim.api.nvim_set_keymap("n", "<leader>scw", ":lua require('user.switch_file').fileSwitch({'*.h', '*.c'})<CR>", {noremap = true, silent = true, expr = false})
+vim.api.nvim_set_keymap("n", "<leader>spw", ":lua require('user.switch_file').fileSwitch({'*.h', '*.cpp'})<CR>", {noremap = true, silent = true, expr = false})
 
 return M

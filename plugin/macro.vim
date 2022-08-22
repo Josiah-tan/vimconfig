@@ -15,7 +15,7 @@
 " Prerecorded macro settings for registers
 " Python macro settings
 function SetPythonOptions()
-	let @h = 'ggO# =====================================================# File Name: "%po# Date of Creation: :put = strftime(\"%c\")kJo# Author: Josiah Tan# Description: ## =====================================================# =====================================================?Descri$'
+	let @h = 'ggO# =====================================================# File Name: "%po# Date of Creation: :put = strftime(\"%c\")kJo# Author: user Tan# Description: ## =====================================================# =====================================================?Descri$'
 	let @r = ":!python3 %\n"
 	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\).\{-}\([^ ]\+\) \{-}$/\1print(f"\2 = {\2}")/j'
 	let @m = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\)\(.\+\)/\1print(f"\2 = {\2* 1e-6} 10^6")/j'
@@ -34,7 +34,7 @@ endfunction
 
 " Global C family settings for header, c and cpp files
 function SetCFamGlobalOptions()
-	let @h = 'ggO/* File Name: "%po Date of Creation: :put = strftime(\"%c\")kJoAuthor: Josiah TanDescription:xs*/?Descri$'
+	let @h = 'ggO/* File Name: "%po Date of Creation: :put = strftime(\"%c\")kJoAuthor: user TanDescription:xs*/?Descri$'
 	let @t = 'Sfor (int t=0;t<T;t++){O'
 	let @i = 'Sfor (int i=0;i<n;i++){O'
 	let @j = 'Sfor (int j=0;j<m;j++){O'

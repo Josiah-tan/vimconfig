@@ -10,14 +10,14 @@ if has('nvim')
 	" Plug 'nvim-telescope/telescope-fzy-native.nvim'
 	" override the file and generic sorter for telescope
 
-	"josiah_folder/year_2/uni/amme2500/project1
+	"user_folder/year_2/uni/amme2500/project1
 	"ctrl + t => new terminal window
-	"josiah_folder/work/projects/project2
+	"user_folder/work/projects/project2
 	"quick projects
 
 	"this is a deprecated version as I have now turned quickProjects into a
 	"plugin
-	nnoremap <leader>tqp <cmd>lua require('josiah.telescope').quickProjects()<cr>
+	nnoremap <leader>tqp <cmd>lua require('user.telescope').quickProjects()<cr>
 
 	"n = normal mode, nore = not recursive, map = mapping, <leader> = <space>
 	nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files({no_ignore=true})<cr>
@@ -42,27 +42,27 @@ if has('nvim')
 
 	" Custom
 
-	nnoremap <leader>fd <cmd>lua RELOAD('josiah.telescope').findFilesCurrentBufferDir()<cr>
-	nnoremap <leader>fp <cmd>lua require('josiah.telescope').findPlugins()<cr>
-	nnoremap <leader>slp <cmd>lua require('josiah.telescope').stringGrepPlugins()<cr>
-	nnoremap <leader>lp <cmd>lua require('josiah.telescope').grepPlugins()<cr>
-	nnoremap <leader>rc <cmd>lua require('josiah.telescope').searchDotfiles()<cr>
-	nnoremap <leader>slc <cmd>lua require('josiah.telescope').stringGrepDotFiles()<cr>
-	nnoremap <leader>lc <cmd>lua require('josiah.telescope').grepDotFiles()<cr>
-	nnoremap <leader>fb <cmd>lua require('josiah.telescope').buffers()<cr>
-	nnoremap <leader>gb <cmd>lua require('josiah.telescope').gitBranches()<cr>
+	nnoremap <leader>fd <cmd>lua RELOAD('user.telescope').findFilesCurrentBufferDir()<cr>
+	nnoremap <leader>fp <cmd>lua require('user.telescope').findPlugins()<cr>
+	nnoremap <leader>slp <cmd>lua require('user.telescope').stringGrepPlugins()<cr>
+	nnoremap <leader>lp <cmd>lua require('user.telescope').grepPlugins()<cr>
+	nnoremap <leader>rc <cmd>lua require('user.telescope').searchDotfiles()<cr>
+	nnoremap <leader>slc <cmd>lua require('user.telescope').stringGrepDotFiles()<cr>
+	nnoremap <leader>lc <cmd>lua require('user.telescope').grepDotFiles()<cr>
+	nnoremap <leader>fb <cmd>lua require('user.telescope').buffers()<cr>
+	nnoremap <leader>gb <cmd>lua require('user.telescope').gitBranches()<cr>
 	
-	nnoremap <leader>fs <cmd>lua require('josiah.telescope').findPloverFiles()<cr>
-	nnoremap <leader>sls <cmd>lua require('josiah.telescope').stringGrepPloverFiles()<cr>
-	nnoremap <leader>ls <cmd>lua require('josiah.telescope').grepPloverFiles()<cr>
+	nnoremap <leader>fs <cmd>lua require('user.telescope').findPloverFiles()<cr>
+	nnoremap <leader>sls <cmd>lua require('user.telescope').stringGrepPloverFiles()<cr>
+	nnoremap <leader>ls <cmd>lua require('user.telescope').grepPloverFiles()<cr>
 	
-	nnoremap <leader>fo <cmd>lua require('josiah.telescope').findOrgFiles()<cr>
-	nnoremap <leader>slo <cmd>lua require('josiah.telescope').stringGrepOrgFiles()<cr>
-	nnoremap <leader>lo <cmd>lua require('josiah.telescope').grepOrgFiles()<cr>
+	nnoremap <leader>fo <cmd>lua require('user.telescope').findOrgFiles()<cr>
+	nnoremap <leader>slo <cmd>lua require('user.telescope').stringGrepOrgFiles()<cr>
+	nnoremap <leader>lo <cmd>lua require('user.telescope').grepOrgFiles()<cr>
 	
-	nnoremap <leader>fk <cmd>lua require('josiah.telescope').findCaptionFiles()<cr>
-	nnoremap <leader>slk <cmd>lua require('josiah.telescope').stringGrepCaptionFiles()<cr>
-	nnoremap <leader>lk <cmd>lua require('josiah.telescope').grepCaptionFiles()<cr>
+	nnoremap <leader>fk <cmd>lua require('user.telescope').findCaptionFiles()<cr>
+	nnoremap <leader>slk <cmd>lua require('user.telescope').stringGrepCaptionFiles()<cr>
+	nnoremap <leader>lk <cmd>lua require('user.telescope').grepCaptionFiles()<cr>
 
 	" primeagen
 	"  the problem with live_grep is that it is apparently slow in large file
@@ -70,7 +70,7 @@ if has('nvim')
 	"  wordwise grep rather than a characterwise grep which could lead to some
 	"  performance issues
 	" nnoremap <leader>lg <cmd>lua require('telescope.builtin').live_grep()<cr>
-	nnoremap <leader>lg :lua require('josiah.telescope').liveGrep()<CR>
+	nnoremap <leader>lg :lua require('user.telescope').liveGrep()<CR>
 	" <C-c> exit telescope
 	" Using Lua functions
 	" require("telescope.previewers").vim_buffer_vimgrep.new

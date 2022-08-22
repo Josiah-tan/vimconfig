@@ -1,5 +1,5 @@
 
--- Plug 'Josiah-tan/quick_projects'
+-- Plug 'user-tan/quick_projects'
 
 require('quick_projects').setup(
 {

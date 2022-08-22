@@ -1,7 +1,7 @@
 # =====================================================
 # File Name: main.py
 # Date of Creation: Mon 08 Nov 2021 10:14:07 PM AEST
-# Author: Josiah Tan
+# Author: user Tan
 # Description: contains all code
 #
 # =====================================================

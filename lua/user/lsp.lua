@@ -11,7 +11,7 @@ M.setupPyright = function()
 		capabilities = capabilities,
 		settings = {
 			python = {
-				pythonPath = require("josiah.repl").getSourceAppend("python") --[[  "/home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/python" ]],
+				pythonPath = require("user.repl").getSourceAppend("python") --[[  "/home/user/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/python" ]],
 			}
 		}
 	}

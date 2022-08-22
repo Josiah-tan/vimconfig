@@ -67,7 +67,7 @@ Plug 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'}
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " for plover
-" Plug 'Josiah-tan/vim-plover-clippy'
+" Plug 'user-tan/vim-plover-clippy'
 
 
 if has('nvim')
@@ -141,32 +141,32 @@ if has('nvim')
 	Plug 'ThePrimeagen/refactoring.nvim'
 
 	"Plugin for quick_projects
-	let s:quick_projects='~/Desktop/josiah/neovim/quick_projects/'
+	let s:quick_projects='~/Desktop/user/neovim/quick_projects/'
 	if isdirectory(expand(s:quick_projects))
-		set rtp+=~/Desktop/josiah/neovim/quick_projects/
+		set rtp+=~/Desktop/user/neovim/quick_projects/
 	else
-		Plug 'Josiah-tan/quick-projects-nvim'
+		Plug 'user-tan/quick-projects-nvim'
 	endif
 	"Plugin for jupyter with neovim
 	let g:use_magma = 0
 	let g:jupyter_highlight_cells = 0
 	let g:use_jupyter_vim = 0
-	let g:use_josiah_jupyter = 1
+	let g:use_user_jupyter = 1
 
 	Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 	" Package that connects the power of jupyter and vim together
 	Plug 'jupyter-vim/jupyter-vim'
 
-	" if isdirectory(expand("~/Desktop/josiah/neovim/python_nvim/"))
-	" 	set rtp+=~/Desktop/josiah/neovim/python_nvim/
+	" if isdirectory(expand("~/Desktop/user/neovim/python_nvim/"))
+	" 	set rtp+=~/Desktop/user/neovim/python_nvim/
 	" else
-	" 	Plug 'Josiah-tan/python-nvim'
+	" 	Plug 'user-tan/python-nvim'
 	" endif
 
 	if isdirectory(expand("~/repl-nvim/"))
 		set rtp+=~/repl-nvim/
 	else
-		Plug 'Josiah-tan/repl-nvim'
+		Plug 'user-tan/repl-nvim'
 	endif
 
 	"Plugin for neovim with org mode
@@ -187,22 +187,22 @@ if has('nvim')
 	"for colorcoding hexcodes
 	Plug 'norcalli/nvim-colorizer.lua'
 
-	if isdirectory(expand('~/Desktop/josiah/neovim/plover/plover_live_view_nvim/'))
-		set rtp+=~/Desktop/josiah/neovim/plover/plover_live_view_nvim/
+	if isdirectory(expand('~/Desktop/user/neovim/plover/plover_live_view_nvim/'))
+		set rtp+=~/Desktop/user/neovim/plover/plover_live_view_nvim/
 	else
-		Plug 'Josiah-tan/plover-live-view-nvim'
+		Plug 'user-tan/plover-live-view-nvim'
 	endif
 
-	if isdirectory(expand("~/Desktop/josiah/neovim/autoread_nvim/"))
-		set rtp+=~/Desktop/josiah/neovim/autoread_nvim/
+	if isdirectory(expand("~/Desktop/user/neovim/autoread_nvim/"))
+		set rtp+=~/Desktop/user/neovim/autoread_nvim/
 	else
-		Plug 'Josiah-tan/autoread-nvim'
+		Plug 'user-tan/autoread-nvim'
 	endif
 
 	if isdirectory(expand("~/makefile-nvim/"))
 		set rtp+=~/makefile-nvim/
 	else
-		Plug 'Josiah-tan/makefile-nvim'
+		Plug 'user-tan/makefile-nvim'
 	endif
 
 else
@@ -408,10 +408,10 @@ nnoremap <leader>cn <cmd>cnext<CR>
 
 if has('nvim')
 	" just requires in some nice globals to use
-	lua require("josiah");
+	lua require("user");
 	
 	function! CustomLog()
-		lua require("josiah.org").customLog();
+		lua require("user.org").customLog();
 	endfunction
 end
 

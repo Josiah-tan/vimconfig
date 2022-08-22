@@ -104,6 +104,6 @@ M.gui = function(opts)
 		}):find()
 	end
 
-vim.api.nvim_set_keymap("n", "<Leader>gui", ':lua RELOAD("josiah.arduino").gui()<CR>', {noremap = true, silent = true, expr = false})
+vim.api.nvim_set_keymap("n", "<Leader>gui", ':lua RELOAD("user.arduino").gui()<CR>', {noremap = true, silent = true, expr = false})
 
 return M

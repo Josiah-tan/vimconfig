@@ -1,10 +1,10 @@
 
 if has('nvim')
-	lua require("josiah.repl")
+	lua require("user.repl")
 	nnoremap <leader>sv <cmd>lua require("repl-nvim.builtin.python").sourceVenv(1)<CR>
 	nnoremap <leader>si <cmd>lua require("repl-nvim.builtin.python").sourceInstallModules(1)<CR>
 
-	if g:use_josiah_jupyter
+	if g:use_user_jupyter
 		nnoremap <leader>jq <cmd>lua require("repl-nvim.builtin.python").replInit(4)<cr>
 		vnoremap <leader>x <cmd>lua require("repl-nvim.builtin.python").runReplSelection(4)<cr><esc>
 		nnoremap <leader>x <cmd>lua require("repl-nvim.builtin.python").runReplBlock(4)<cr>
@@ -17,4 +17,4 @@ if has('nvim')
 	nnoremap <leader>pxl <cmd>lua require("repl-nvim.builtin.cpp").runReplLineNoIndent(5)<cr>
 endif
 
-" source /home/josiah/Desktop/josiah/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/activate
+" source /home/user/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/activate

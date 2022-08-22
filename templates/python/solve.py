@@ -2,7 +2,7 @@
 #
 # File Name: solve.py
 # Date of Creation: Sat 15 May 2021 20:05:05
-# Author: Josiah Tan
+# Author: user Tan
 # Description: This python script is used to solve systems of linear equations
 # https://stackoverflow.com/questions/58878594/solving-simultaneous-equations-with-python
 # =====================================================
