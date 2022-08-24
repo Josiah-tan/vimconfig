@@ -1,4 +1,4 @@
-"kite settings (for some reason kite is so dodgy that it doesn't even use vim-plug
+" kite settings (for some reason kite is so dodgy that it doesn't even use vim-plug
 " disabling kite
 let g:kite_supported_languages = []
 
