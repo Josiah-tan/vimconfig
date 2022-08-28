@@ -110,11 +110,19 @@ require('quick_projects').setup(
 })
 
 
-vim.api.nvim_set_keymap("n", "<Leader>qp", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').quickProjects()<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<Leader>qm", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').quickMarks()<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<Leader>qj", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').navMark({idx = 1})<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<Leader>qk", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').navMark({idx = 2})<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<Leader>ql", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').navMark({idx = 3})<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<Leader>q;", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').navMark({idx = 4})<CR>]], {noremap = true, silent = true, expr = false})
+vim.keymap.set("n", "<leader>qp", function() require("quick_projects.builtins").quickProjects() end)
+vim.keymap.set("n", "<leader>qm", function() require("quick_projects.builtins").quickMarks() end)
+vim.keymap.set("n", "<leader>qj", function() require("quick_projects.builtins").navMark({idx = 1}) end)
+vim.keymap.set("n", "<leader>qk", function() require("quick_projects.builtins").navMark({idx = 2}) end)
+vim.keymap.set("n", "<leader>ql", function() require("quick_projects.builtins").navMark({idx = 3}) end)
+vim.keymap.set("n", "<leader>q;", function() require("quick_projects.builtins").navMark({idx = 4}) end)
+
+
+-- vim.api.nvim_set_keymap("n", "<Leader>qp", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').quickProjects()<CR>]], {noremap = true, silent = true, expr = false})
+-- vim.api.nvim_set_keymap("n", "<Leader>qm", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').quickMarks()<CR>]], {noremap = true, silent = true, expr = false})
+-- vim.api.nvim_set_keymap("n", "<Leader>qj", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').navMark({idx = 1})<CR>]], {noremap = true, silent = true, expr = false})
+-- vim.api.nvim_set_keymap("n", "<Leader>qk", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').navMark({idx = 2})<CR>]], {noremap = true, silent = true, expr = false})
+-- vim.api.nvim_set_keymap("n", "<Leader>ql", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').navMark({idx = 3})<CR>]], {noremap = true, silent = true, expr = false})
+-- vim.api.nvim_set_keymap("n", "<Leader>q;", [[ <Esc><Cmd>lua RELOAD('quick_projects.builtins').navMark({idx = 4})<CR>]], {noremap = true, silent = true, expr = false})
 
 vim.cmd [[autocmd User TelescopePreviewerLoaded setlocal wrap]]
