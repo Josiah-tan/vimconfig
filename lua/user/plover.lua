@@ -1,3 +1,4 @@
+M = {}
 require("autoread").setup({
 	builtin = {
 		job = {
@@ -131,7 +132,12 @@ location = "source "..location.."activate && plover"
 local exec = location .. " --log-level debug\n"
 local stop_exec = location ..  " -s plover_send_command quit\n"
 -- starts plover
-vim.keymap.set("n", '<leader>pr', function () require("harpoon.term").sendCommand(2, exec) end)
+M.startPlover = function()
+	require("harpoon.term").sendCommand(2, exec)
+end
+vim.keymap.set("n", '<leader>pr', function () require("user.plover").startPlover() end)
+
+-- vim.keymap.set("n", '<leader>pr', function () require("harpoon.term").sendCommand(2, exec) end)
 -- kills plover
 vim.keymap.set("n", '<leader>pc', function () require("harpoon.term").sendCommand(3, stop_exec) end)
 
@@ -247,3 +253,4 @@ vim.keymap.set("n", '<leader>uc', function () editDictionary("caption.json") end
 -- 	endif
 -- 	let b:clippyOff = 1
 -- endfunction
+return M;
