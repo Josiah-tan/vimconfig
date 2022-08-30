@@ -1,6 +1,22 @@
 
 M = {}
 
+-- defined in switch_file.lua
+local switchIncludeSource = function(filename)
+	if vim.fn.substitute(filename, "^src/", "include/", "") == filename then
+		filename = vim.fn.substitute(filename, "^include/", "src/", "")
+	else
+		filename = vim.fn.substitute(filename, "^src/", "include/", "")
+	end
+	return filename
+end
+
+-- P(switchIncludeSource("include/hello"))
+-- P(switchIncludeSource("src/hello"))
+-- P(switchIncludeSource("hello"))
+-- P(switchIncludeSource("hello/src/"))
+-- P(switchIncludeSource("hello/src/hello"))
+
 M.fileSwitch = function(pattern)
 	local filename = vim.fn.expand("%:r")
 	local extension = vim.fn.expand("%:e")
@@ -19,11 +35,12 @@ M.fileSwitch = function(pattern)
 		current_index = current_index + 1
 	end
 	local new_file = filename.."."..pattern[current_index]:match("[.](.*)$")
+	new_file = switchIncludeSource(new_file)
 	vim.cmd(":e "..new_file)
 	print(":e ".. new_file)
 end
 
-vim.api.nvim_set_keymap("n", "<leader>scw", ":lua require('user.switch_file').fileSwitch({'*.h', '*.c'})<CR>", {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<leader>spw", ":lua require('user.switch_file').fileSwitch({'*.h', '*.cpp'})<CR>", {noremap = true, silent = true, expr = false})
-
+vim.keymap.set("n", "<leader>scw", function() require("user.switch_file").fileSwitch({'*.h', '*.c'}) end)
+vim.keymap.set("n", "<leader>spw", function() require("user.switch_file").fileSwitch({'*.h', '*.cpp'}) end)
 return M
+
