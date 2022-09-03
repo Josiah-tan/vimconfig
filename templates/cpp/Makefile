@@ -37,7 +37,8 @@ $(EXE): $(OBJ)
 
 # how to make anything in the object directory
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
-		$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+		# $(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+		$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ -c $<
 
 $(OBJ_DIR):
 	mkdir -p $@
