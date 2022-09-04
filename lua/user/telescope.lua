@@ -1,4 +1,23 @@
 local actions = require("telescope.actions")
+
+require("telescope").setup {
+  pickers = {
+    find_files = {
+      mappings = {
+        i = {
+          ["<C-o>"] = function(prompt_bufnr, map)
+			local content = require('telescope.actions.state').get_selected_entry()
+			require('telescope.actions').close(prompt_bufnr)
+			local text = "!xdg-open "..content[1].." &"
+			vim.cmd(text)
+			return true
+		  end
+        },
+      },
+    },
+  },
+}
+
 require('telescope').setup {
 	defaults = {
 		file_sorter = require('telescope.sorters').get_fzy_sorter,
