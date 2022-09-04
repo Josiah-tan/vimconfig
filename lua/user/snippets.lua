@@ -180,11 +180,11 @@ ls.add_snippets("cpp", {
 	[[
 	/*
 		@brief:
-			{}
+		{}
 		@param:
-			{}
+		{}
 		@return:
-			{}
+		{}
 	*/
 	]],
 	{
