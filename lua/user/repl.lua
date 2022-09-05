@@ -1,3 +1,4 @@
+local Job = require"plenary.job"
 local M = {
 }
 
@@ -7,8 +8,30 @@ M.getSource = function()
 		return "/home/user/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
 	elseif string.match(vim.fn.system("whoami"), "chicken") then
 		-- return "/home/chicken/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
+		local tox_directory = vim.fn.getcwd().."/.tox"
 		if string.match(vim.fn.getcwd(), vim.fn.expand("~/.dotfiles/plover/.config/plover/vim")) then
 			return vim.fn.expand("~/plover/.tox/dev/bin/")
+		elseif (vim.fn.isdirectory(tox_directory) == 1) then
+			local available_environments
+			Job:new({
+				command = "ls",
+				args = {'--hide', 'log'},
+				cwd = tox_directory,
+				env ={['a'] = 'b'},
+				on_exit = function(j, return_value)
+					available_environments = j:result()
+				end,
+			}):sync()
+			local binary
+			if #available_environments > 0 then
+				P("#available_environments: ", #available_environments)
+				P("available_environments: ", available_environments)
+				local available_environment = available_environments[1]
+				P("available_environment : ", available_environment )
+				binary = tox_directory.."/"..available_environment.."/bin/"
+				P("binary : ", binary )
+			end
+			return binary
 		else
 			return ""
 		end
@@ -21,8 +44,25 @@ M.getSource = function()
 		return ""
 	end
 end
--- P(M.getSource())
-
+-- -- P(M.getSource())
+-- P(vim.fn.getcwd().."/.tox")
+-- local tox_directory = vim.fn.getcwd().."/.tox"
+-- -- local tox_binary_directory = tox_directory..
+-- 	-- ls .tox/ --hide "log"
+--
+-- local available_environments
+-- Job:new({
+-- 	command = "ls",
+-- 	args = {'--hide', 'log'},
+-- 	cwd = tox_directory,
+-- 	env ={['a'] = 'b'},
+-- 	on_exit = function(j, return_value)
+-- 		available_environments = j:result()
+-- 	end,
+-- }):sync()
+-- P("available_environments: ", available_environments)
+-- P(available_environments)
+-- P(vim.fn.isdirectory(vim.fn.getcwd().."/.tox") == 1)
 M.getSourceAppend = function(str)
 	local source = M.getSource()
 	if source ~= "" then
