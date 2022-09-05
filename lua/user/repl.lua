@@ -24,12 +24,12 @@ M.getSource = function()
 			}):sync()
 			local binary
 			if #available_environments > 0 then
-				P("#available_environments: ", #available_environments)
-				P("available_environments: ", available_environments)
+				-- P("#available_environments: ", #available_environments)
+				-- P("available_environments: ", available_environments)
 				local available_environment = available_environments[1]
-				P("available_environment : ", available_environment )
+				-- P("available_environment : ", available_environment )
 				binary = tox_directory.."/"..available_environment.."/bin/"
-				P("binary : ", binary )
+				-- P("binary : ", binary )
 			end
 			return binary
 		else
