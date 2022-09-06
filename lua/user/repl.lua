@@ -3,43 +3,30 @@ local M = {
 }
 
 M.getSource = function()
-	-- if vim.fn.getcwd() == "/home/user/Desktop/user/neovim/plover/plover_clippy_2" then
-	if string.match(vim.fn.system("whoami"), "user") then
-		return "/home/user/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
-	elseif string.match(vim.fn.system("whoami"), "chicken") then
-		-- return "/home/chicken/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/"
-		local tox_directory = vim.fn.getcwd().."/.tox"
-		if string.match(vim.fn.getcwd(), vim.fn.expand("~/.dotfiles/plover/.config/plover/vim")) then
-			return vim.fn.expand("~/plover/.tox/dev/bin/")
-		elseif (vim.fn.isdirectory(tox_directory) == 1) then
-			local available_environments
-			Job:new({
-				command = "ls",
-				args = {'--hide', 'log'},
-				cwd = tox_directory,
-				env ={['a'] = 'b'},
-				on_exit = function(j, return_value)
-					available_environments = j:result()
-				end,
-			}):sync()
-			local binary
-			if #available_environments > 0 then
-				-- P("#available_environments: ", #available_environments)
-				-- P("available_environments: ", available_environments)
-				local available_environment = available_environments[1]
-				-- P("available_environment : ", available_environment )
-				binary = tox_directory.."/"..available_environment.."/bin/"
-				-- P("binary : ", binary )
-			end
-			return binary
-		else
-			return ""
+	local tox_directory = vim.fn.getcwd().."/.tox"
+	if string.match(vim.fn.getcwd(), vim.fn.expand("~/.dotfiles/plover/.config/plover/vim")) then
+		return vim.fn.expand("~/plover/.tox/dev/bin/")
+	elseif (vim.fn.isdirectory(tox_directory) == 1) then
+		local available_environments
+		Job:new({
+			command = "ls",
+			args = {'--hide', 'log'},
+			cwd = tox_directory,
+			env ={['a'] = 'b'},
+			on_exit = function(j, return_value)
+				available_environments = j:result()
+			end,
+		}):sync()
+		local binary
+		if #available_environments > 0 then
+			-- P("#available_environments: ", #available_environments)
+			-- P("available_environments: ", available_environments)
+			local available_environment = available_environments[1]
+			-- P("available_environment : ", available_environment )
+			binary = tox_directory.."/"..available_environment.."/bin/"
+			-- P("binary : ", binary )
 		end
-		-- if vim.fn.getcwd() == "/home/chicken/work/Robotic-waste-sorting-project/CoppeliaSim-Kuka-Arm-Simulation/CoppeliaSim-Python-Client" or vim.fn.getcwd() == "/home/chicken/work/Robotic-waste-sorting-project/main/CoppeliaSim-Kuka-Arm-Simulation/CoppeliaSim-Python-Client" or vim.fn.getcwd() == "/home/chicken/work/Fork-Robotic-waste-sorting-project/main/CoppeliaSim-Kuka-Arm-Simulation/CoppeliaSim-Python-Client" then
-		-- 	return vim.fn.getcwd() .. "/.tox/test_service/bin/"
-		-- else
-		-- 	return "/home/chicken/plover/.tox/dev/bin/"
-		-- end
+		return binary
 	else
 		return ""
 	end
