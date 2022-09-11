@@ -238,6 +238,18 @@ ls.add_snippets("cpp", {
 	))
 })
 
+ls.add_snippets("markdown", {
+	s("link",
+	fmt(
+	[[
+	[{}]({})
+	]],
+	{
+		i(1, "filename"),
+		i(2, "link"),
+	}
+	))
+})
 
 ls.add_snippets("lua", {
 	-- filetype lua
@@ -251,3 +263,5 @@ ls.add_snippets("lua", {
 	"-- defined in $TM_FILENAME\nlocal $1 = function($2)\n	$0\nend"),
 		ls.parser.parse_snippet("method function", "$1.$2 = function($3)\n	$0\nend"),
 		})
+
+

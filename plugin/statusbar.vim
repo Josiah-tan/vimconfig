@@ -56,7 +56,7 @@ endfunction
 
 function! LightLineFunMessage()
 	if winwidth(0) > 100 
-		return 'Best Editor = nvim'
+		return 'nvim is cool'
 	else 
 		return ''
 	endif
