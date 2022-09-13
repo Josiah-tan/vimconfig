@@ -81,7 +81,7 @@ if has('nvim')
 
 	" for syntax highlighting and refractor.nvim
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-	Plug 'nvim-treesitter/playground', {'on': 'TSPlaygroundToggle'}
+	Plug 'nvim-treesitter/playground'
 	Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 	" This is a requirement, which implements some useful window management
