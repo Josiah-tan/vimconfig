@@ -24,6 +24,7 @@ if has('nvim')
 	lua require("user.lsp").sumnekoLua()
 	lua require("user.lsp").setupArduino()
 	" lua RELOAD("user.lsp").texlab()
+	lua require("user.lsp").setupHdlChecker()
 
 	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>
 	nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>

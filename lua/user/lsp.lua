@@ -2,6 +2,9 @@
 local M = {}
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+M.setupHdlChecker = function()
+	require'lspconfig'.hdl_checker.setup{capabilities = capabilities}
+end
 M.setupPylsp = function()
 	require('lspconfig').pylsp.setup{capabilities = capabilities}
 end
