@@ -32,6 +32,7 @@ M.setup = function()
 		{name = "nvim_lsp"},
 		{name = "path"},
 		{name = "luasnip"},
+		{name = "nvim_lsp_signature_help"},
 		{name = "buffer", keyword_length = 5}, -- won't suggest anything from the buffer until after you type 5 characters
 	},
 	snippet = {

@@ -67,7 +67,7 @@ Plug 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'}
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " for plover
-" Plug 'user-tan/vim-plover-clippy'
+" Plug 'Josiah-tan/vim-plover-clippy'
 
 
 if has('nvim')
@@ -125,6 +125,7 @@ if has('nvim')
 	Plug 'hrsh7th/cmp-nvim-lua' " for lua development special neovim knowledge
 	Plug 'hrsh7th/cmp-nvim-lsp' "for builtin lsp super easy autoimport on complete, moving between snippets
 	Plug 'hrsh7th/cmp-cmdline'
+	Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 
 	Plug 'L3MON4D3/LuaSnip'
 	Plug 'saadparwaiz1/cmp_luasnip' " depends on what snippets plugin you use, he uses luasnips
@@ -141,11 +142,11 @@ if has('nvim')
 	Plug 'ThePrimeagen/refactoring.nvim'
 
 	"Plugin for quick_projects
-	let s:quick_projects='~/Desktop/user/neovim/quick_projects/'
+	let s:quick_projects='~/Desktop/josia/neovim/quick_projects/'
 	if isdirectory(expand(s:quick_projects))
-		set rtp+=~/Desktop/user/neovim/quick_projects/
+		set rtp+=~/Desktop/josia/neovim/quick_projects/
 	else
-		Plug 'user-tan/quick-projects-nvim'
+		Plug 'Josiah-tan/quick-projects-nvim'
 	endif
 	"Plugin for jupyter with neovim
 	let g:use_magma = 0
@@ -157,16 +158,16 @@ if has('nvim')
 	" Package that connects the power of jupyter and vim together
 	Plug 'jupyter-vim/jupyter-vim'
 
-	" if isdirectory(expand("~/Desktop/user/neovim/python_nvim/"))
-	" 	set rtp+=~/Desktop/user/neovim/python_nvim/
+	" if isdirectory(expand("~/Desktop/josiah/neovim/python_nvim/"))
+	" 	set rtp+=~/Desktop/josiah/neovim/python_nvim/
 	" else
-	" 	Plug 'user-tan/python-nvim'
+	" 	Plug 'Josiah-tan/python-nvim'
 	" endif
 
 	if isdirectory(expand("~/repl-nvim/"))
 		set rtp+=~/repl-nvim/
 	else
-		Plug 'user-tan/repl-nvim'
+		Plug 'Josiah-tan/repl-nvim'
 	endif
 
 	"Plugin for neovim with org mode
@@ -187,22 +188,22 @@ if has('nvim')
 	"for colorcoding hexcodes
 	Plug 'norcalli/nvim-colorizer.lua'
 
-	if isdirectory(expand('~/Desktop/user/neovim/plover/plover_live_view_nvim/'))
-		set rtp+=~/Desktop/user/neovim/plover/plover_live_view_nvim/
+	if isdirectory(expand('~/Desktop/josiah/neovim/plover/plover_live_view_nvim/'))
+		set rtp+=~/Desktop/josiah/neovim/plover/plover_live_view_nvim/
 	else
-		Plug 'user-tan/plover-live-view-nvim'
+		Plug 'Josiah-tan/plover-live-view-nvim'
 	endif
 
-	if isdirectory(expand("~/Desktop/user/neovim/autoread_nvim/"))
-		set rtp+=~/Desktop/user/neovim/autoread_nvim/
+	if isdirectory(expand("~/Desktop/josiah/neovim/autoread_nvim/"))
+		set rtp+=~/Desktop/josiah/neovim/autoread_nvim/
 	else
-		Plug 'user-tan/autoread-nvim'
+		Plug 'Josiah-tan/autoread-nvim'
 	endif
 
 	if isdirectory(expand("~/makefile-nvim/"))
 		set rtp+=~/makefile-nvim/
 	else
-		Plug 'user-tan/makefile-nvim'
+		Plug 'Josiah-tan/makefile-nvim'
 	endif
 
 else
