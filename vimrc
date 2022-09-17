@@ -182,6 +182,9 @@ if has('nvim')
 	
 	Plug 'numToStr/Comment.nvim'
 
+	" trying out git signs
+	Plug 'lewis6991/gitsigns.nvim'
+	
 	"Plugin for git worktrees
 	Plug 'ThePrimeagen/git-worktree.nvim'
 
