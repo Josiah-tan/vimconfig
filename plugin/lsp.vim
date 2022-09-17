@@ -18,14 +18,14 @@ if has('nvim')
 
 	" let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
+	lua require("user.lsp").sumnekoLua()
 	lua require("user.lsp").setupPyright()
 	" lua require("user.lsp").setupPylsp()
 	lua require("user.lsp").setupClangd()
-	lua require("user.lsp").sumnekoLua()
 	lua require("user.lsp").setupArduino()
 	" lua RELOAD("user.lsp").texlab()
-	lua require("user.lsp").setupHdlChecker()
-
+	" lua require("user.lsp").setupHdlChecker()
+	lua require("user.lsp").setupSvLangServer()
 	nnoremap <leader>K <cmd>lua vim.lsp.buf.hover()<cr>
 	nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>
 	nnoremap <leader>dn <cmd>lua vim.diagnostic.goto_next()<cr> 
