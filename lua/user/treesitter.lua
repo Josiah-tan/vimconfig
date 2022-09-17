@@ -21,7 +21,7 @@ require'nvim-treesitter.configs'.setup {
 		},
 	},
 	indent = {
-		enable = false -- for some reason this messes up C indentation
+		enable = true -- for some reason this messes up C indentation
 	},
 }
 
