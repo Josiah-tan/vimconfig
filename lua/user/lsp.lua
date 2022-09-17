@@ -1,10 +1,14 @@
-
 local M = {}
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 M.setupHdlChecker = function()
 	require'lspconfig'.hdl_checker.setup{capabilities = capabilities}
 end
+
+M.setupSvLangServer = function()
+	require'lspconfig'.svlangserver.setup{capabilities = capabilities}
+end
+
 M.setupPylsp = function()
 	require('lspconfig').pylsp.setup{capabilities = capabilities}
 end
@@ -86,12 +90,19 @@ M.sumnekoLua = function()
 	table.insert(runtime_path, "lua/?.lua")
 	table.insert(runtime_path, "lua/?/init.lua")
 
+	require("lua-dev").setup({
+		--add any options here, or leave empty to use the default settings
+	})
+
 	require'lspconfig'.sumneko_lua.setup {
 		capabilities = capabilities,
 		-- on_attach=require'completion'.on_attach,
 		cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
 		settings = {
 			Lua = {
+				completion = {
+					callSnippet = "Replace" -- for the lua-dev
+				},
 				runtime = {
 					-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
 					version = 'LuaJIT',
