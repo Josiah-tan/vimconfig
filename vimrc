@@ -86,6 +86,7 @@ if has('nvim')
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'nvim-treesitter/playground'
 	Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+	Plug 'nvim-treesitter/nvim-treesitter-context'
 
 	" This is a requirement, which implements some useful window management
 	"   items for neovim
