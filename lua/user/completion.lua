@@ -26,60 +26,62 @@ M.setup = function()
 			["<C-n>"] = cmp.mapping.select_next_item {behavior = cmp.SelectBehavior.Insert}
 		},
 		sources = {  -- sources to use to provide completions, sources enabled globally, automatic ranking with order
-		{name = "gh_issues"},
-		{name = "nvim_lua"}, -- note that this already enables itself only in lua
-		{name = "nvim_lsp"},
-		{name = "path"},
-		{name = "luasnip"},
-		{name = "nvim_lsp_signature_help"},
-		{name = "buffer", keyword_length = 5}, -- won't suggest anything from the buffer until after you type 5 characters
-	},
-	snippet = {
-		-- include snippets
-		expand = function(args)
-			require("luasnip").lsp_expand(args.body)
-		end,
-	},
+			{name = "gh_issues"},
+			{name = "nvim_lua"}, -- note that this already enables itself only in lua
+			{name = "nvim_lsp"},
+			{name = "path"},
+			{name = "luasnip"},
+			{name = "nvim_lsp_signature_help"},
+			{name = "buffer", keyword_length = 5}, -- won't suggest anything from the buffer until after you type 5 characters
+		},
+		snippet = {
+			-- include snippets
+			expand = function(args)
+				require("luasnip").lsp_expand(args.body)
+			end,
+		},
 
-	formatting = {
-		format = lspkind.cmp_format {
-			with_text = true,
-			menu = {
-				buffer = "[buf]",
-				nvim_lsp = "[LSP]",
-				nvim_lua = "[api]",
-				path = "[path]",
-				luasnip = "[snip]",
-				gh_issues = "[issues]",
+		formatting = {
+			format = lspkind.cmp_format {
+				with_text = true,
+				menu = {
+					buffer = "[buf]",
+					nvim_lsp = "[LSP]",
+					nvim_lua = "[api]",
+					path = "[path]",
+					luasnip = "[snip]",
+					gh_issues = "[issues]",
+				}
 			}
-		}
-	},
+		},
 
-	experimental = {
-		native_menu = false,  -- trying the new completion menu
-		ghost_text = true, -- virtual text not inserted into the buffer yet
-	},
+		experimental = {
+			native_menu = false,  -- trying the new completion menu
+			ghost_text = true, -- virtual text not inserted into the buffer yet
+		},
 
-}
-
--- autocompletion for command line paths, and commands
-cmp.setup.cmdline(':', {
-	sources = cmp.config.sources({
-		{ name = 'path' }
-	}, {
-		{ name = 'cmdline', keyword_length = 4 }
-	})
-})
-
--- when performing a search do some autocompletion
-cmp.setup.cmdline('/', {
-	sources = {
-		{ name = 'buffer' }
 	}
-})
--- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
--- require('lspconfig')['clangd'].setup {
+	-- autocompletion for command line paths, and commands
+	cmp.setup.cmdline(':', {
+		mapping = cmp.mapping.preset.cmdline(),
+		sources = cmp.config.sources({
+			{ name = 'path' }
+			}, {
+				{ name = 'cmdline', keyword_length = 4 }
+		})
+	})
+
+	-- when performing a search do some autocompletion
+	cmp.setup.cmdline('/', {
+		mapping = cmp.mapping.preset.cmdline(),
+		sources = {
+			{ name = 'buffer' }
+		}
+	})
+	-- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+	-- require('lspconfig')['clangd'].setup {
 	-- 	capabilities = capabilities
 	-- }
 	-- file type only configuration example
