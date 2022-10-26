@@ -130,7 +130,7 @@ if has('nvim')
 	Plug 'hrsh7th/cmp-nvim-lsp' "for builtin lsp super easy autoimport on complete, moving between snippets
 	Plug 'hrsh7th/cmp-cmdline'
 	Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
-	Plug 'folke/lua-dev.nvim'
+	Plug 'folke/neodev.nvim'
 
 	Plug 'L3MON4D3/LuaSnip'
 	Plug 'saadparwaiz1/cmp_luasnip' " depends on what snippets plugin you use, he uses luasnips

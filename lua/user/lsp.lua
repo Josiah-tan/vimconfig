@@ -1,5 +1,6 @@
 local M = {}
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- cmp_nvim_lsp.update_capabilities is deprecated, use cmp_nvim_lsp.default_capabilities instead. See :h deprecated
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 M.setupHdlChecker = function()
 	require'lspconfig'.hdl_checker.setup{capabilities = capabilities}
@@ -90,7 +91,7 @@ M.sumnekoLua = function()
 	table.insert(runtime_path, "lua/?.lua")
 	table.insert(runtime_path, "lua/?/init.lua")
 
-	require("lua-dev").setup({
+	require("neodev").setup({
 		--add any options here, or leave empty to use the default settings
 	})
 
@@ -101,7 +102,7 @@ M.sumnekoLua = function()
 		settings = {
 			Lua = {
 				completion = {
-					callSnippet = "Replace" -- for the lua-dev
+					callSnippet = "Replace" -- for the neodev
 				},
 				runtime = {
 					-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
