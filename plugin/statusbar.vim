@@ -56,7 +56,7 @@ endfunction
 
 function! LightLineFunMessage()
 	if winwidth(0) > 100 
-		return 'nvim is neat'
+		return 'nvim is fun'
 	else 
 		return ''
 	endif
