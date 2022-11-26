@@ -15,13 +15,13 @@ ls.config.set_config {
 	ext_opts = {
 		[types.choiceNode] = {
 			active = {
-				virt_text = {{"<- current choice", "NonTest"}},
+				-- virt_text = {{"<- current choice", "NonTest"}},
 			}
 		}
 	}
 }
 
-vim.keymap.set("i", "<M-s>", require "luasnip.extras.select_choice")
+vim.keymap.set({"i", "s"}, "<M-s>", require "luasnip.extras.select_choice")
 -- expansion key, jumps to next item within the snippet
 vim.keymap.set({"i", "s"}, "<M-k>", function ()
 	if ls.expand_or_jumpable() then
@@ -133,6 +133,63 @@ ls.add_snippets("rust", {
 	)
 })
 
+
+
+local python_magic_fmt = function(method_name)
+	return sn(nil,
+	fmt(
+	[[
+	__{}__(self, {}):
+			{}
+	]],
+	{
+		t(method_name),
+		i(1, "parameter"),
+		i(2, "body")
+	}
+	)
+	)
+end
+
+ls.add_snippets("python", {
+	s("print",
+	fmt(
+	[[
+	print(f"{} = {{{}}}")
+	]],
+	{
+		i(1, "something"),
+		same(1)
+	}
+	)),
+	s("for range",
+	fmt(
+	[[
+	for {} in range({}):
+		{}
+	]],
+	{
+		i(1, "i"),
+		i(2, "n"),
+		i(3, "code here")
+	}
+	)),
+	s("class",
+	fmt(
+	[[
+	class {}:
+		def {}
+	]],
+	{
+		i(1, "ClassName"),
+		c(2, {
+			i(nil,"function_name"),
+			python_magic_fmt("init"),
+			python_magic_fmt("call"),
+		})
+	}
+	)),
+})
 
 ls.add_snippets("org", {
 	s("source",
@@ -252,7 +309,6 @@ ls.add_snippets("markdown", {
 })
 
 ls.add_snippets("lua", {
-	-- filetype lua
 	s("require", fmt([[local {} = require "{}"]], {f(
 	function(import_name)
 		local parts = vim.split(import_name[1][1], ".", true)
@@ -260,7 +316,7 @@ ls.add_snippets("lua", {
 		-- return import_name[1] 
 	end, {1}), i(1)})),
 	ls.parser.parse_snippet("local function",
-	"-- defined in $TM_FILENAME\nlocal $1 = function($2)\n	$0\nend"),
+	"-- local $1 = function($2)\n	$0\nend"),
 		ls.parser.parse_snippet("method function", "$1.$2 = function($3)\n	$0\nend"),
 		})
 
