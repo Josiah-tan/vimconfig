@@ -144,7 +144,7 @@ ls.add_snippets("org", {
 	]],
 	{
 		i(1, "language"),
-		i(1, "code here"),
+		i(2, "code here"),
 	}
 	))
 })
