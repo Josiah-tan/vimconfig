@@ -39,7 +39,7 @@ end, {silent = true})
 
 -- selection within a list of options (choice nodes in vid 2)
 -- that errors.wrap and errors thing that he showed in the video
-vim.keymap.set("i", "<M-l>", function ()
+vim.keymap.set({"i", "s"}, "<M-l>", function ()
 	if ls.choice_active() then
 		ls.change_choice(1)
 	end
