@@ -343,4 +343,18 @@ M.grepCaptionFiles = function ()
 		cwd = "~/org/cap/"
 	})
 end
+
+M.stringGrepStanleyFiles = function ()
+	require("telescope.builtin").grep_string({
+		cwd = "~/Stanley/"
+	})
+end
+
+M.grepStanleyFiles = function ()
+	require("telescope.builtin").grep_string({
+		search = vim.fn.input("grep Stanley > "),
+		cwd = "~/Stanley/"
+	})
+end
+
 return M
