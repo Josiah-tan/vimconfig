@@ -213,7 +213,8 @@ if has('nvim')
 	else
 		Plug 'Josiah-tan/makefile-nvim'
 	endif
-
+	
+	Plug 'derekthecool/plover-tapey-tape.nvim'
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" obviously for commentary shortcuts
