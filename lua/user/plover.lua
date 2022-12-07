@@ -74,21 +74,21 @@ local getSize = function()
 end
 vim.keymap.set('n', '<leader>pp', function () RELOAD("plover_viewer.builtin").splitToggle(pp()) end)
 
-require('plover-tapey-tape').setup({ -- Use custom settings (defaults are shown)
-    filepath = 'auto',
-    open_method = 'vsplit',
-    vertical_split_height = 9,
-    horizontal_split_width = 54,
-    steno_capture = '|(.-)|',
-    suggestion_notifications = {
-        enabled = true,
-    },
-    status_line_setup = {
-        enabled = true,
-        additional_filter = '(|.-|)',
-    },
-})
-vim.keymap.set('n', '<leader>pn', require('plover-tapey-tape').toggle) -- open tape window
+-- require('plover-tapey-tape').setup({ -- Use custom settings (defaults are shown)
+--     filepath = 'auto',
+--     open_method = 'vsplit',
+--     vertical_split_height = 9,
+--     horizontal_split_width = 54,
+--     steno_capture = '|(.-)|',
+--     suggestion_notifications = {
+--         enabled = true,
+--     },
+--     status_line_setup = {
+--         enabled = true,
+--         additional_filter = '(|.-|)',
+--     },
+-- })
+-- vim.keymap.set('n', '<leader>pn', require('plover-tapey-tape').toggle) -- open tape window
 
 vim.keymap.set('n', '<leader>ps', function () RELOAD("plover_viewer.builtin").splitToggle({
 	file_name = "clippy_2.org",

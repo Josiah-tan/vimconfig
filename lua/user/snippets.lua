@@ -249,7 +249,24 @@ ls.add_snippets("cpp", {
 		i(2, "parameters"),
 		i(3, "returns"),
 	}
-	))
+	)),
+	s("for",
+	fmt(
+	[[
+	for (unsigned int {} = {}; {} < {}; {}++)
+	{{
+		{}
+	}}
+	]],
+	{
+		i(1, "i"),
+		i(2, "0"),
+		same(1),
+		i(3, "n"),
+		same(1),
+		i(4, "code here")
+	}
+	)),
 })
 
 ls.add_snippets("cpp", {
