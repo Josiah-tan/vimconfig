@@ -64,7 +64,8 @@ if has('nvim')
 	nnoremap <leader>slk <cmd>lua require('user.telescope').stringGrepCaptionFiles()<cr>
 	nnoremap <leader>lk <cmd>lua require('user.telescope').grepCaptionFiles()<cr>
 
-	nnoremap <leader>slm <cmd>lua RELOAD('user.telescope').stringGrepStanleyFiles()<cr>
+	nnoremap <leader>fm <cmd>lua require('user.telescope').findStanleyFiles()<cr>
+	nnoremap <leader>slm <cmd>lua require('user.telescope').stringGrepStanleyFiles()<cr>
 	nnoremap <leader>lm <cmd>lua require('user.telescope').grepStanleyFiles()<cr>
 	" primeagen
 	"  the problem with live_grep is that it is apparently slow in large file

@@ -357,4 +357,11 @@ M.grepStanleyFiles = function ()
 	})
 end
 
+M.findStanleyFiles = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "find Stanley >",
+		cwd = "~/Stanley/"
+	})
+end
+
 return M

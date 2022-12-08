@@ -253,7 +253,7 @@ ls.add_snippets("cpp", {
 	s("for",
 	fmt(
 	[[
-	for (unsigned int {} = {}; {} < {}; {}++)
+	for (int {} = {}; {} < {}; {}++)
 	{{
 		{}
 	}}
