@@ -24,7 +24,7 @@ function SetPythonOptions()
 	let @d = "Oimport numpy as npimport pandas as pdimport matplotlib.pyplot as pltfrom sympy import symbols, Symbol, Eq, dsolve, sin, cos, tan, sqrt, asin, atan, acosfrom sympy import *"
 	" let @t = 'O%run -n "~/.vim/templates/python/markdown"%run -n "~/.vim/templates/python/solve"'
 	let @t = 'Oimport sys; import os; sys.path.append(os.path.expanduser("~/.vim/templates/python/")); from solve import *; from markdown import *'
-	let @n = 'o0i##'
+	let @n = 'o0i##'
 	let @s = '^v$hy^v$h:s/\%V /, /geA = symbols("p'
 	let @e = ':s/ *\(^ *\|, \) *\([^=]\{-}\)\s*= *\([^,]\+\)/\1Eq(\2, \3)/g|s/^\(\s*\)/\1ans = solve([/|s/\(\s*\)\(.*\)/\1\2])\r\1print(f"ans = {ans}")/'
 	let @a = ':s/\(\s*\)\(.*\)/\1\2 = ans[\2]j'
