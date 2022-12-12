@@ -405,8 +405,8 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
 " moving text
 " end of visual selection, '>+1 move text down, gv previous highlight, = fix indent, gv highlight again
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+" vnoremap J :m '>+1<CR>gv=gv
+" vnoremap K :m '<-2<CR>gv=gv
 
 
 " Vertical split with previous file
