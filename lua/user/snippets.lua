@@ -1,4 +1,4 @@
-local ls = RELOAD("luasnip")
+local ls = require("luasnip")
 local types = require("luasnip.util.types")
 
 ls.config.set_config {
@@ -22,9 +22,17 @@ ls.config.set_config {
 }
 
 vim.keymap.set({"i", "s"}, "<M-s>", require "luasnip.extras.select_choice")
--- expansion key, jumps to next item within the snippet
+
+-- expansion key
+vim.keymap.set({"i", "s"}, "<M-e>", function ()
+	if ls.expandable() then
+		ls.expand_or_jump()
+	end
+end, {silent = true})
+
+-- jumps to next item within the snippet
 vim.keymap.set({"i", "s"}, "<M-k>", function ()
-	if ls.expand_or_jumpable() then
+	if ls.jumpable() and not ls.expandable() then
 		ls.expand_or_jump()
 	end
 end, {silent = true})
@@ -64,7 +72,7 @@ local same = function(index)
 	end, {index})
 end
 
-
+ls.cleanup()
 -- vs**** style snippets... lol (ls.parser.parse_snippet)
 ls.add_snippets("all", {
 	-- any filetype
@@ -135,18 +143,85 @@ ls.add_snippets("rust", {
 
 
 
-local python_magic_fmt = function(method_name)
+local python_function_fmt = function(method_name)
+	local description_argument_returns = function()
+		return sn(nil,
+		fmt(
+		[[
+		"""
+				{}
+				
+				Args:
+					{}
+					
+				Returns:
+					{}
+				"""
+		]],
+		{
+			i(1, "brief description"),
+			i(2, "argument1: description"),
+			i(3, "returns")
+		}))
+	end
+	local description_argument = function()
+		return sn(nil,
+		fmt(
+		[[
+		"""
+				{}
+				
+				Args:
+					{}
+				"""
+		]],
+		{
+			i(1, "brief description"),
+			i(2, "argument1: description"),
+		}))
+	end
+	local description = function()
+		return sn(nil,
+		fmt(
+		[[
+		"""
+				{}
+				"""
+		]],
+		{
+			i(1, "brief description"),
+		}))
+	end
+	local choose_body_comment = function()
+		return {
+				i(nil, "body"),
+				description(),
+				description_argument(),
+				description_argument_returns()
+		}
+	end
+	local use_method_name = function()
+		if (method_name) then
+			return {
+				t(method_name),
+				i(1, "parameter"),
+				c(2, choose_body_comment())
+			}
+		else
+			return {
+				i(1,"method_name"),
+				i(2, "parameter"),
+				c(3, choose_body_comment())
+			}
+		end
+	end
 	return sn(nil,
 	fmt(
 	[[
-	__{}__(self, {}):
+	{}(self, {}):
 			{}
 	]],
-	{
-		t(method_name),
-		i(1, "parameter"),
-		i(2, "body")
-	}
+		use_method_name()
 	)
 	)
 end
@@ -183,9 +258,9 @@ ls.add_snippets("python", {
 	{
 		i(1, "ClassName"),
 		c(2, {
-			i(nil,"function_name"),
-			python_magic_fmt("init"),
-			python_magic_fmt("call"),
+			python_function_fmt(),
+			python_function_fmt("__init__"),
+			python_function_fmt("__call__"),
 		})
 	}
 	)),
