@@ -32,8 +32,8 @@ end, {silent = true})
 
 -- jumps to next item within the snippet
 vim.keymap.set({"i", "s"}, "<M-k>", function ()
-	if ls.jumpable() and not ls.expandable() then
-		ls.expand_or_jump()
+	if ls.jumpable(1) then
+		ls.jump(1)
 	end
 end, {silent = true})
 
@@ -205,13 +205,13 @@ local python_function_fmt = function(method_name)
 			return {
 				t(method_name),
 				i(1, "parameter"),
-				c(2, choose_body_comment())
+				i(2, "body")
 			}
 		else
 			return {
 				i(1,"method_name"),
 				i(2, "parameter"),
-				c(3, choose_body_comment())
+				i(3, "body")
 			}
 		end
 	end
@@ -264,6 +264,61 @@ ls.add_snippets("python", {
 		})
 	}
 	)),
+	s("comment",
+	fmt(
+		[[
+		"""
+		{}
+		
+		Args:
+			{}
+			
+		Returns:
+			{}
+		"""
+		{}
+		]],
+		{
+			i(1, "brief description"),
+			i(2, "argument1: description"),
+			i(3, "returns"),
+			i(0)
+		})
+	),
+	s("comment arguments",
+	fmt(
+		[[
+		"""
+		{}
+		
+		Args:
+			{}
+		"""
+		{}
+		]],
+		{
+			i(1, "brief description"),
+			i(2, "argument1: description"),
+			i(0)
+		})
+	),
+	s("comment returns",
+	fmt(
+		[[
+		"""
+		{}
+		
+		Returns:
+			{}
+		"""
+		{}
+		]],
+		{
+			i(1, "brief description"),
+			i(2, "returns"),
+			i(0)
+		})
+	)
 })
 
 ls.add_snippets("org", {
