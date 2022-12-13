@@ -215,6 +215,7 @@ if has('nvim')
 	endif
 	
 	Plug 'derekthecool/plover-tapey-tape.nvim'
+	Plug 'terror/chatgpt.nvim', { 'do': 'pip3 install -r requirements.txt'}
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" obviously for commentary shortcuts
