@@ -1,4 +1,3 @@
-
 require'nvim-treesitter.configs'.setup {
 	ensure_installed = {'python', 'lua', 'latex', 'vim', 'c', 'cpp', 'markdown', 'yaml', 'verilog'}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 	ignore_install = {}, -- List of parsers to ignore installing
@@ -49,7 +48,9 @@ require'nvim-treesitter.configs'.setup {
 
       keymaps = {
         -- You can use the capture groups defined in textobjects.scm
-        ["af"] = "@function.outer",
+        ['aa'] = '@parameter.outer',
+        ['ia'] = '@parameter.inner',
+		["af"] = "@function.outer",
         ["if"] = "@function.inner",
         ["ac"] = "@class.outer",
         ["ic"] = "@class.inner",
@@ -96,3 +97,8 @@ require'treesitter-context'.setup{
 		}
 	}
 }
+
+vim.keymap.set("n", "<leader>pt", vim.cmd.TSPlaygroundToggle)
+-- 	set foldmethod=expr
+-- 	set foldexpr=nvim_treesitter#foldexpr()
+-- 	autocmd BufEnter *.* nnoremap <leader>rac vac
