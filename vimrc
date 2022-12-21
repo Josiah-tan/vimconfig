@@ -107,12 +107,15 @@ if has('nvim')
 
 	" plugin for lsp configurations
 	" https://microsoft.github.io/language-server-protocol/implementors/servers/
+	Plug 'VonHeikemen/lsp-zero.nvim'
 	Plug 'neovim/nvim-lspconfig'
 	
+	Plug 'williamboman/mason.nvim'
+	Plug 'williamboman/mason-lspconfig.nvim'
 	" for autocompletion (thank you TJDevries from take tuesday ep 1)
 	Plug 'onsails/lspkind-nvim'
-	Plug 'tjdevries/colorbuddy.nvim'
-	Plug 'tjdevries/gruvbuddy.nvim'
+	" Plug 'tjdevries/colorbuddy.nvim'
+	" Plug 'tjdevries/gruvbuddy.nvim'
 
 	" function! s:local_plug(package_name) abort 
 	"   if isdirectory(expand("~/plugins/" . a:package_name))
@@ -122,6 +125,7 @@ if has('nvim')
 	"   endif
 	" endfunction
 	" call s:local_plug('colorbuddy.vim')
+	"
 	"
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-buffer'  " completes words from the buffer that you are in, don't have autocomplete (good for markdown)
@@ -134,6 +138,7 @@ if has('nvim')
 
 	Plug 'L3MON4D3/LuaSnip'
 	Plug 'saadparwaiz1/cmp_luasnip' " depends on what snippets plugin you use, he uses luasnips
+	Plug 'rafamadriz/friendly-snippets'
 	
 	" Plug 'nvim-lua/completion-nvim' "deprecated
 
