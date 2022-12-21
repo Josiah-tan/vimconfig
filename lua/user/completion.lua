@@ -3,6 +3,7 @@ M = {}
 -- set completeopt=menuone,noinsert,noselect
 -- Avoid showing message extra message when using completion
 -- set shortmess+=c
+local lsp = require("lsp-zero")
 
 vim.opt.completeopt = {"menu", "menuone", "noselect"}
 vim.opt.shortmess:append "c"
@@ -12,7 +13,7 @@ lspkind.init()
 
 local cmp = require "cmp"
 M.setup = function()
-	cmp.setup {
+	lsp.setup_nvim_cmp{
 		mapping = {
 			["<C-d>"] = cmp.mapping.scroll_docs(-4),
 			["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -26,20 +27,20 @@ M.setup = function()
 			["<C-n>"] = cmp.mapping.select_next_item {behavior = cmp.SelectBehavior.Insert}
 		},
 		sources = {  -- sources to use to provide completions, sources enabled globally, automatic ranking with order
-			{name = "gh_issues"},
-			{name = "nvim_lua"}, -- note that this already enables itself only in lua
-			{name = "nvim_lsp"},
-			{name = "path"},
-			{name = "luasnip"},
-			{name = "nvim_lsp_signature_help"},
-			{name = "buffer", keyword_length = 5}, -- won't suggest anything from the buffer until after you type 5 characters
-		},
-		snippet = {
-			-- include snippets
-			expand = function(args)
-				require("luasnip").lsp_expand(args.body)
-			end,
-		},
+		{name = "gh_issues"},
+		{name = "nvim_lua"}, -- note that this already enables itself only in lua
+		{name = "nvim_lsp"},
+		{name = "path"},
+		{name = "luasnip"},
+		{name = "nvim_lsp_signature_help"},
+		{name = "buffer", keyword_length = 5}, -- won't suggest anything from the buffer until after you type 5 characters
+	},
+	snippet = {
+		-- include snippets
+		expand = function(args)
+			require("luasnip").lsp_expand(args.body)
+		end,
+	},
 
 		formatting = {
 			format = lspkind.cmp_format {
