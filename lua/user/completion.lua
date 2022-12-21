@@ -80,32 +80,38 @@ M.setup = function()
 			{ name = 'buffer' }
 		}
 	})
+	-- If you want insert `(` after select function or method item
+	local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+	cmp.event:on(
+	'confirm_done',
+	cmp_autopairs.on_confirm_done()
+	)
 	-- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 	-- require('lspconfig')['clangd'].setup {
-	-- 	capabilities = capabilities
-	-- }
-	-- file type only configuration example
-	-- vim.cmd [[
-	-- 	augroup NvimLua
-	-- 		au!
-	-- 		autocmd FileType lua lua require'cmp'.setup.buffer{ sources = {name = 'nvim_lua'}}
-	-- 	augroup END
-	-- ]]
+		-- 	capabilities = capabilities
+		-- }
+		-- file type only configuration example
+		-- vim.cmd [[
+		-- 	augroup NvimLua
+		-- 		au!
+		-- 		autocmd FileType lua lua require'cmp'.setup.buffer{ sources = {name = 'nvim_lua'}}
+		-- 	augroup END
+		-- ]]
 
-	-- its also possible to turn comp off for a buffer, (note that in telescope you don't actually need to do it)
-	-- autocmd FileType TelescopePrompt lua require('cmp').setup.buffer {enabled = false}
+		-- its also possible to turn comp off for a buffer, (note that in telescope you don't actually need to do it)
+		-- autocmd FileType TelescopePrompt lua require('cmp').setup.buffer {enabled = false}
 
 
-	-- customizing the appearance
-	-- require('colorbuddy').colorscheme('gruvbuddy') -- this for some reason changes my colorscheme and I don't like that
-	-- local Group = require("colorbuddy.group").Group
-	-- local g = require("colorbuddy.group").groups
-	-- local s = require("colorbuddy.style").styles
-	-- Group.new("CmpItemAbbr", g.Comment)
-	-- Group.new("CmpItemAbbrDeprecated", g.Error)
-	-- Group.new("CmpItemAbbrMatchFuzzy", g.CmpItemAbbr.fg:dark(), nil, s.italic)
-	-- Group.new("CmpItemKind", g.Special)
-	-- Group.new("CmpItemMenu", g.NonText)
-end
-return M
+		-- customizing the appearance
+		-- require('colorbuddy').colorscheme('gruvbuddy') -- this for some reason changes my colorscheme and I don't like that
+		-- local Group = require("colorbuddy.group").Group
+		-- local g = require("colorbuddy.group").groups
+		-- local s = require("colorbuddy.style").styles
+		-- Group.new("CmpItemAbbr", g.Comment)
+		-- Group.new("CmpItemAbbrDeprecated", g.Error)
+		-- Group.new("CmpItemAbbrMatchFuzzy", g.CmpItemAbbr.fg:dark(), nil, s.italic)
+		-- Group.new("CmpItemKind", g.Special)
+		-- Group.new("CmpItemMenu", g.NonText)
+	end
+	return M

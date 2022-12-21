@@ -31,9 +31,6 @@ Plug 'michaeljsmith/vim-indent-object'
 " for easy motion
 Plug 'easymotion/vim-easymotion'
 
-"autobracket completion
-Plug 'Raimondi/delimitMate'
-
 "python code folding
 " Plug 'tmhedberg/SimpylFold'
 
@@ -221,6 +218,8 @@ if has('nvim')
 	
 	Plug 'derekthecool/plover-tapey-tape.nvim'
 	Plug 'terror/chatgpt.nvim', { 'do': 'pip3 install -r requirements.txt'}
+
+	Plug 'windwp/nvim-autopairs'
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" obviously for commentary shortcuts
@@ -231,7 +230,9 @@ else
 	Plug 'junegunn/fzf.vim'
 	" for language server (lsp)
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+	
+	Plug 'Raimondi/delimitMate' " bracket completion
+	au FileType tex let b:delimitMate_quotes = "\" ' $"
 endif
 
 " Initialize plugin system (end of plugins)
@@ -267,9 +268,6 @@ map <leader><leader>f <Plug>(easymotion-overwin-f)
 " map <leader><leader>j <Plug>(easymotion-overwin-line)
 " map <leader><leader>k <Plug>(easymotion-overwin-line)
 
-"autobracket completion
-" Plug 'Raimondi/delimitMate'
-au FileType tex let b:delimitMate_quotes = "\" ' $"
 
 "python code folding
 " Plug 'tmhedberg/SimpylFold'
