@@ -10,7 +10,11 @@ if exists('+termguicolors')
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 let g:gruvbox_invert_selection='0'
-colorscheme gruvbox
+try
+	colorscheme gruvbox
+catch
+	colorscheme desert
+endtry
 set background=dark
 
 " for 
