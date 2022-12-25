@@ -10,13 +10,13 @@ class Point:
         return(f"P{self.y, self.x}")
 
     def __add__(self, obj):
-        return Cartesian(self.y + obj.y, self.x + obj.x)
+        return Point(self.y + obj.y, self.x + obj.x)
     
     def __sub__(self, obj):
-        return Cartesian(self.y - obj.y, self.x - obj.x)
+        return Point(self.y - obj.y, self.x - obj.x)
         
     def __abs__(self):
-        return Cartesian(abs(self.y), abs(self.x))
+        return Point(abs(self.y), abs(self.x))
         
     def distanceManhattan(self, obj):
         distance = abs(self - obj)
