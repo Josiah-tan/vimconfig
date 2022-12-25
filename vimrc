@@ -220,6 +220,8 @@ if has('nvim')
 	Plug 'terror/chatgpt.nvim', { 'do': 'pip3 install -r requirements.txt'}
 
 	Plug 'windwp/nvim-autopairs'
+
+	Plug 'paretje/nvim-man'
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" obviously for commentary shortcuts
