@@ -14,7 +14,7 @@ require('user.notifications')
 
 require('user.clipboard')
 
-require("user.snippets")
+-- require("user.snippets")
 
 require("user.arduino")
 

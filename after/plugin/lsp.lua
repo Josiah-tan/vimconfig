@@ -52,7 +52,7 @@ lsp.configure('texlab', {
 })
 
 
-require("user.completion").setup()
+require("user.completion")
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
@@ -76,3 +76,4 @@ vim.diagnostic.config({
     virtual_text = true,
 })
 
+require("user.snippets")

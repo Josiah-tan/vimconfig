@@ -1,4 +1,4 @@
-M = {}
+
 -- Set completeopt to have a better completion experience
 -- set completeopt=menuone,noinsert,noselect
 -- Avoid showing message extra message when using completion
@@ -12,54 +12,55 @@ local lspkind = require "lspkind"
 lspkind.init()
 
 local cmp = require "cmp"
-M.setup = function()
-	lsp.setup_nvim_cmp{
-		mapping = {
-			["<C-d>"] = cmp.mapping.scroll_docs(-4),
-			["<C-f>"] = cmp.mapping.scroll_docs(4),
-			["<C-e>"] = cmp.mapping.close(),
-			["<C-y>"] = cmp.mapping.confirm {
-				behavior = cmp.ConfirmBehavior.Insert,
-				select = true,
-			},
-			["<c-space>"] = cmp.mapping.complete(),
-			["<C-p>"] = cmp.mapping.select_prev_item {behavior = cmp.SelectBehavior.Insert},
-			["<C-n>"] = cmp.mapping.select_next_item {behavior = cmp.SelectBehavior.Insert}
-		},
-		sources = {  -- sources to use to provide completions, sources enabled globally, automatic ranking with order
-		{name = "gh_issues"},
-		{name = "nvim_lua"}, -- note that this already enables itself only in lua
-		{name = "nvim_lsp"},
-		{name = "path"},
-		{name = "luasnip"},
-		{name = "nvim_lsp_signature_help"},
-		{name = "buffer", keyword_length = 5}, -- won't suggest anything from the buffer until after you type 5 characters
-	},
-	snippet = {
-		-- include snippets
-		expand = function(args)
-			require("luasnip").lsp_expand(args.body)
-		end,
-	},
 
-		formatting = {
-			format = lspkind.cmp_format {
-				with_text = true,
-				menu = {
-					buffer = "[buf]",
-					nvim_lsp = "[LSP]",
-					nvim_lua = "[api]",
-					path = "[path]",
-					luasnip = "[snip]",
-					gh_issues = "[issues]",
-				}
-			}
+lsp.setup_nvim_cmp{
+	mapping = {
+		["<C-d>"] = cmp.mapping.scroll_docs(-4),
+		["<C-f>"] = cmp.mapping.scroll_docs(4),
+		["<C-e>"] = cmp.mapping.close(),
+		["<C-y>"] = cmp.mapping.confirm {
+			behavior = cmp.ConfirmBehavior.Insert,
+			select = true,
 		},
+		["<CR>"] = nil,
+		["<c-space>"] = cmp.mapping.complete(),
+		["<C-p>"] = cmp.mapping.select_prev_item {behavior = cmp.SelectBehavior.Insert},
+		["<C-n>"] = cmp.mapping.select_next_item {behavior = cmp.SelectBehavior.Insert}
+	},
+	sources = {  -- sources to use to provide completions, sources enabled globally, automatic ranking with order
+	{name = "gh_issues"},
+	{name = "nvim_lua"}, -- note that this already enables itself only in lua
+	{name = "nvim_lsp"},
+	{name = "path"},
+	{name = "luasnip"},
+	{name = "nvim_lsp_signature_help"},
+	{name = "buffer", keyword_length = 5} -- won't suggest anything from the buffer until after you type 5 characters
+},
+snippet = {
+	-- include snippets
+	expand = function(args)
+		require("luasnip").lsp_expand(args.body)
+	end,
+},
 
-		experimental = {
-			native_menu = false,  -- trying the new completion menu
-			ghost_text = true, -- virtual text not inserted into the buffer yet
-		},
+formatting = {
+	format = lspkind.cmp_format {
+		with_text = true,
+		menu = {
+			buffer = "[buf]",
+			nvim_lsp = "[LSP]",
+			nvim_lua = "[api]",
+			path = "[path]",
+			luasnip = "[snip]",
+			gh_issues = "[issues]",
+		}
+	}
+},
+
+experimental = {
+	native_menu = false,  -- trying the new completion menu
+	ghost_text = true, -- virtual text not inserted into the buffer yet
+},
 
 	}
 
@@ -68,8 +69,8 @@ M.setup = function()
 		mapping = cmp.mapping.preset.cmdline(),
 		sources = cmp.config.sources({
 			{ name = 'path' }
-			}, {
-				{ name = 'cmdline', keyword_length = 4 }
+		}, {
+			{ name = 'cmdline', keyword_length = 4 }
 		})
 	})
 
@@ -113,5 +114,4 @@ M.setup = function()
 		-- Group.new("CmpItemAbbrMatchFuzzy", g.CmpItemAbbr.fg:dark(), nil, s.italic)
 		-- Group.new("CmpItemKind", g.Special)
 		-- Group.new("CmpItemMenu", g.NonText)
-	end
-	return M
+
