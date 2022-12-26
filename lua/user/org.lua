@@ -124,6 +124,10 @@ local captionSplit = function()
 	end
 end
 
+local goToProgram = function()
+	vim.fn.system([[tmux select-pane -t '~' && tmux select-pane -l]])
+end
+
 M = {}
 M.customLog = function()
 		local time = vim.fn.strftime("%Y/%b/%d")
@@ -143,6 +147,10 @@ end)
 
 vim.keymap.set("n", "<leader>tc", function ()
 	captionSplit()
+end)
+
+vim.keymap.set("n", "<leader>tpr", function ()
+	goToProgram()
 end)
 
 return M
