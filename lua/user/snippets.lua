@@ -144,62 +144,6 @@ ls.add_snippets("rust", {
 
 
 local python_function_fmt = function(method_name)
-	local description_argument_returns = function()
-		return sn(nil,
-		fmt(
-		[[
-		"""
-				{}
-				
-				Args:
-					{}
-					
-				Returns:
-					{}
-				"""
-		]],
-		{
-			i(1, "brief description"),
-			i(2, "argument1: description"),
-			i(3, "returns")
-		}))
-	end
-	local description_argument = function()
-		return sn(nil,
-		fmt(
-		[[
-		"""
-				{}
-				
-				Args:
-					{}
-				"""
-		]],
-		{
-			i(1, "brief description"),
-			i(2, "argument1: description"),
-		}))
-	end
-	local description = function()
-		return sn(nil,
-		fmt(
-		[[
-		"""
-				{}
-				"""
-		]],
-		{
-			i(1, "brief description"),
-		}))
-	end
-	local choose_body_comment = function()
-		return {
-				i(nil, "body"),
-				description(),
-				description_argument(),
-				description_argument_returns()
-		}
-	end
 	local use_method_name = function()
 		if (method_name) then
 			return {
@@ -394,8 +338,70 @@ ls.add_snippets("cpp", {
 		same(1),
 		i(3, "n"),
 		same(1),
-		i(4, "code here")
+		i(4, "// code here")
 	}
+	)),
+	s("forb",
+	fmt(
+	[[
+	for (int {} = {} - {}; {} >= {}; {}--)
+	{{
+		{}
+	}}
+	]],
+	{
+		i(1, "i"),
+		i(2, "n"),
+		i(3, "1"),
+		same(1),
+		i(4, "0"),
+		same(1),
+		i(5, "// code here")
+	}
+	)),
+	s("fort",
+	fmt(
+	[[
+	for (int {} = {} - {}; ~{}; {}--)
+	{{
+		{}
+	}}
+	]],
+	{
+		i(1, "i"),
+		i(2, "n"),
+		i(3, "1"),
+		same(1),
+		same(1),
+		i(4, "// code here")
+	}
+	)),
+	s("print",
+	fmt(
+	[[
+	std::cout << "{} = " << {} << std::endl;
+	]],
+	{
+		i(1, "variable"),
+		same(1),
+	}
+	)),
+	s("cout",
+	fmt(
+	[[
+	std::cout << "{} = " << {} << std::endl;
+	]],
+	{
+		i(1, "variable"),
+		same(1),
+	}
+	)),
+	s("break",
+	fmt(
+	[[
+	std::cout << "##########" << std::endl;
+	]],
+	{}
 	)),
 })
 
