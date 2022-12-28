@@ -141,15 +141,15 @@ vim.keymap.set("n", "<leader>og", function ()
 	M.customLog()
 end)
 
-vim.keymap.set("n", "<leader>ts", function ()
+vim.keymap.set({"n", "v"}, "<leader>ts", function ()
 	tmuxSplit()
 end)
 
-vim.keymap.set("n", "<leader>tc", function ()
+vim.keymap.set({"n", "v"}, "<leader>tc", function ()
 	captionSplit()
 end)
 
-vim.keymap.set("n", "<leader>tpr", function ()
+vim.keymap.set({"n", "v"}, "<leader>tpr", function ()
 	goToProgram()
 end)
 
