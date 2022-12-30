@@ -70,11 +70,11 @@ require('orgmode').setup({
 -- }
 -- vim.cmd[[autocmd FileType org setlocal iskeyword+=:,#,+ | lua require'completion'.on_attach()]]
 
-require'cmp'.setup({
-  sources = {
-	    { name = 'orgmode' }
-		  }
-		})
+-- require'cmp'.setup({ -- the culprit behind so much pain (lsp zero won't work with this in... Need to put it in the completion file)
+--   sources = {
+-- 	    { name = 'orgmode' }
+-- 		  }
+-- 		})
 
 -- vim.cmd[[
 -- autocmd FileType org lua require'cmp'.setup.buffer {

@@ -28,6 +28,7 @@ lsp.setup_nvim_cmp{
 		["<C-n>"] = cmp.mapping.select_next_item {behavior = cmp.SelectBehavior.Insert}
 	},
 	sources = {  -- sources to use to provide completions, sources enabled globally, automatic ranking with order
+	{name = 'orgmode'},
 	{name = "gh_issues"},
 	{name = "nvim_lua"}, -- note that this already enables itself only in lua
 	{name = "nvim_lsp"},
