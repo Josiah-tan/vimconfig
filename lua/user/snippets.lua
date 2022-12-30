@@ -193,7 +193,7 @@ ls.add_snippets("python", {
 		i(3, "code here")
 	}
 	)),
-	s("class",
+	s("cls",
 	fmt(
 	[[
 	class {}:
@@ -406,7 +406,25 @@ ls.add_snippets("cpp", {
 })
 
 ls.add_snippets("cpp", {
-	s("class",
+	s("clsi",
+	fmt(
+	[[
+	class {}{{
+		public:
+			{} {}({}){{
+				{}
+			}}
+	}};
+	]],
+	{
+		i(1, "ClassName"),
+		i(2, "void"),
+		i(3, "methodName"),
+		i(4, "int n"),
+		i(5, "// code")
+	}
+	)),
+	s("clsi",
 	fmt(
 	[[
 	class {}{{

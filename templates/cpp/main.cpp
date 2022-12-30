@@ -5,6 +5,7 @@
 #include<climits>
 #include<string>
 #include<cassert>
+#include<numeric>
 
 using namespace std;
 
