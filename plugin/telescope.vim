@@ -67,6 +67,11 @@ if has('nvim')
 	nnoremap <leader>fm <cmd>lua require('user.telescope').findStanleyFiles()<cr>
 	nnoremap <leader>slm <cmd>lua require('user.telescope').stringGrepStanleyFiles()<cr>
 	nnoremap <leader>lm <cmd>lua require('user.telescope').grepStanleyFiles()<cr>
+	
+	nnoremap <leader>fpc <cmd>lua require('user.telescope').findPloverConfigFiles()<cr>
+	nnoremap <leader>slpc <cmd>lua require('user.telescope').stringGrepPloverConfigFiles()<cr>
+	nnoremap <leader>lpc <cmd>lua require('user.telescope').grepPloverConfigFiles()<cr>
+	
 	" primeagen
 	"  the problem with live_grep is that it is apparently slow in large file
 	"  projects, might as well stick with the primagen version where you do a

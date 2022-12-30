@@ -364,4 +364,34 @@ M.findStanleyFiles = function ()
 	})
 end
 
+local function getPloverConfigDirectory()
+	local cwds = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"}
+	for _, cwd in ipairs(cwds) do
+		if vim.fn.isdirectory(vim.fn.expand(cwd)) == 1 then
+			return cwd
+		end
+	end
+	P("problem! plover config directory does not exist")
+end
+
+M.findPloverConfigFiles = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "find plover config >",
+		cwd = getPloverConfigDirectory()
+	})
+end
+
+M.stringGrepPloverConfigFiles = function ()
+	require("telescope.builtin").grep_string({
+		cwd = getPloverConfigDirectory()
+	})
+end
+
+M.grepPloverConfigFiles = function ()
+	require("telescope.builtin").grep_string({
+		search = vim.fn.input("grep plover config > "),
+		cwd = getPloverConfigDirectory()
+	})
+end
+
 return M
