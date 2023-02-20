@@ -4,7 +4,7 @@ local M = {
 
 M.getSource = function()
 	local tox_directory = vim.fn.getcwd().."/.tox"
-	if string.match(vim.fn.getcwd(), vim.fn.expand("~/.dotfiles/plover/.config/plover/vim")) then
+	if string.match(vim.fn.getcwd(), vim.fn.expand("~/.dotfiles/plover/.config/plover/vim")) or string.match(vim.fn.getcwd(), vim.fn.expand("~/.dotfiles/plover/.config/plover")) then
 		return vim.fn.expand("~/plover/.tox/dev/bin/")
 	elseif (vim.fn.isdirectory(tox_directory) == 1) then
 		local available_environments

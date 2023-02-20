@@ -69,6 +69,31 @@ Plug 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'}
 " for plover
 " Plug 'Josiah-tan/vim-plover-clippy'
 
+" for alignment
+Plug 'tommcdo/vim-lion'
+
+" text object for an entire document
+Plug 'kana/vim-textobj-user' "prerequisite
+Plug 'kana/vim-textobj-entire'
+
+" vim exchange plugin
+
+Plug 'tommcdo/vim-exchange'
+
+if isdirectory(expand("~/plover-vim-tutor/"))
+	" set rtp+=~/plover-vim-tutor/
+	Plug '~/plover-vim-tutor/'
+else
+	Plug 'Josiah-tan/plover-vim-tutor'
+endif
+	
+if isdirectory(expand("~/Emily-symbols-help.vim/"))
+	" set rtp+=~/plover-vim-tutor/
+	Plug '~/Emily-symbols-help.vim/'
+else
+	Plug 'Josiah-tan/Emily-symbols-help.vim'
+endif
+	
 
 if has('nvim')
 	" ################################################################ Neovim Plugin Management ################################################################
@@ -372,6 +397,8 @@ inoremap <C-l>  <Esc>:call CorrectSpellingError()<cr>a
 
 " turn on autospell checker for .tex files
 autocmd BufEnter *.tex :call TurnOnSpelling()
+
+inoremap <C-s> <C-o>B<cr><C-o>:w<cr><C-o>A
 
 " easy window movement
 nnoremap <leader>wl <C-w>l

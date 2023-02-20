@@ -76,7 +76,7 @@ ls.cleanup()
 -- vs**** style snippets... lol (ls.parser.parse_snippet)
 ls.add_snippets("all", {
 	-- any filetype
-	ls.parser.parse_snippet("expand", "my first snippet ever!"),
+	-- ls.parser.parse_snippet("expand", "my first snippet ever!"),
 	-- s("todo", {
 	-- 	c(1, {
 	-- 		t "TODO(user): ",
@@ -89,7 +89,7 @@ ls.add_snippets("all", {
 	s("time", { -- trying to understand the function node
 		f(function() return os.date "%D - %H:%M" end)
 	}),
-	s("same test",	fmt([[example: {}, function: {}]], {i(1), same(1)}))
+	s("same test",	fmt([[example: {}, function: {}]], {i(1), rep(1)}))
 })
 
 local get_test_result_rust = function(position)
@@ -149,13 +149,13 @@ local python_function_fmt = function(method_name)
 			return {
 				t(method_name),
 				i(1, "parameter"),
-				i(2, "body")
+				i(2, "// body")
 			}
 		else
 			return {
 				i(1,"method_name"),
 				i(2, "parameter"),
-				i(3, "body")
+				i(3, "// body")
 			}
 		end
 	end
@@ -178,7 +178,7 @@ ls.add_snippets("python", {
 	]],
 	{
 		i(1, "something"),
-		same(1)
+		rep(1)
 	}
 	)),
 	s("for range",
@@ -205,6 +205,21 @@ ls.add_snippets("python", {
 			python_function_fmt(),
 			python_function_fmt("__init__"),
 			python_function_fmt("__call__"),
+		})
+	}
+	)),
+	s("clsi",
+	fmt(
+	[[
+	class {}:
+		def {}
+	]],
+	{
+		i(1, "ClassName"),
+		c(2, {
+			python_function_fmt("__init__"),
+			python_function_fmt("__call__"),
+			python_function_fmt(),
 		})
 	}
 	)),
@@ -335,9 +350,9 @@ ls.add_snippets("cpp", {
 	{
 		i(1, "i"),
 		i(2, "0"),
-		same(1),
+		rep(1),
 		i(3, "n"),
-		same(1),
+		rep(1),
 		i(4, "// code here")
 	}
 	)),
@@ -353,9 +368,9 @@ ls.add_snippets("cpp", {
 		i(1, "i"),
 		i(2, "n"),
 		i(3, "1"),
-		same(1),
+		rep(1),
 		i(4, "0"),
-		same(1),
+		rep(1),
 		i(5, "// code here")
 	}
 	)),
@@ -371,8 +386,8 @@ ls.add_snippets("cpp", {
 		i(1, "i"),
 		i(2, "n"),
 		i(3, "1"),
-		same(1),
-		same(1),
+		rep(1),
+		rep(1),
 		i(4, "// code here")
 	}
 	)),
@@ -383,7 +398,7 @@ ls.add_snippets("cpp", {
 	]],
 	{
 		i(1, "variable"),
-		same(1),
+		rep(1),
 	}
 	)),
 	s("cout",
@@ -393,7 +408,7 @@ ls.add_snippets("cpp", {
 	]],
 	{
 		i(1, "variable"),
-		same(1),
+		rep(1),
 	}
 	)),
 	s("break",
@@ -406,7 +421,7 @@ ls.add_snippets("cpp", {
 })
 
 ls.add_snippets("cpp", {
-	s("clsi",
+	s("cls",
 	fmt(
 	[[
 	class {}{{
@@ -449,7 +464,7 @@ ls.add_snippets("cpp", {
 			end
 			return isn(1, t(results), "$PARENT_INDENT\t")
 		end, 2),
-		same(1),
+		rep(1),
 		i(2, "arguments"),
 		d(4,
 		function (arguments)

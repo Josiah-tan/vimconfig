@@ -28,18 +28,18 @@ require("neodev").setup({ -- for function signature lua
 	--add any options here, or leave empty to use the default settings
 })
 
-lsp.configure('arduino-language-server', {
-	cmd = {
-		-- "/mnt/c/Users/josia/arduino-language-server.exe" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/mnt/c/Users/josia/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
-		-- "/mnt/c/Users/josia/arduino-language-server.exe" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/mnt/c/Users/josia/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
-		-- "/mnt/c/Users/josia/arduino-language-server" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/usr/local/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
-		"arduino-language-server",
-		"-cli-config", "/path/to/arduino-cli.yaml",
-		"-fqbn", "arduino:samd:nano_33_iot",
-		"-cli", "arduino-cli",
-		"-clangd", "clangd"
-	}
-})
+-- lsp.configure('arduino-language-server', {
+-- 	cmd = {
+-- 		-- "/mnt/c/Users/josia/arduino-language-server.exe" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/mnt/c/Users/josia/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
+-- 		-- "/mnt/c/Users/josia/arduino-language-server.exe" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/mnt/c/Users/josia/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
+-- 		-- "/mnt/c/Users/josia/arduino-language-server" , "-cli-config", "/root/.arduino15/arduino-cli.yaml", "-cli", "/usr/local/bin/arduino-cli" , "-clangd", "/usr/bin/clangd"
+-- 		"arduino-language-server",
+-- 		"-cli-config", "/path/to/arduino-cli.yaml",
+-- 		"-fqbn", "arduino:samd:nano_33_iot",
+-- 		"-cli", "arduino-cli",
+-- 		"-clangd", "clangd"
+-- 	}
+-- })
 
 lsp.configure('texlab', {
 	settings={
