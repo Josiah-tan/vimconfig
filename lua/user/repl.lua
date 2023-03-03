@@ -21,7 +21,14 @@ M.getSource = function()
 		if #available_environments > 0 then
 			-- P("#available_environments: ", #available_environments)
 			-- P("available_environments: ", available_environments)
-			local available_environment = available_environments[1]
+			local available_environment;
+			for _, value in ipairs(available_environments) do
+				if value ~= "dist" then
+					available_environment = value;
+				end
+			end
+			-- P(available_environments)
+			-- local available_environment = available_environments[1]
 			-- P("available_environment : ", available_environment )
 			binary = tox_directory.."/"..available_environment.."/bin/"
 			-- P("binary : ", binary )
