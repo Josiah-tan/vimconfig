@@ -94,6 +94,10 @@ function SetLuaOptions()
 	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/local //e|s/\(\s*\)\(.\+\)/\1P("\2: ", \2)/j'
 endfunction
 
+" .m settings
+function SetMatlabOptions()
+	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/local //e|s/\(\s*\)\(.\+\)/\1disp("\2:")\r\disp(\2)/j'
+endfunction
 " setting the macros for the file types
 
 augroup MACROS
@@ -118,4 +122,5 @@ augroup MACROS
 	autocmd BufEnter *.tex call SetTexOptions()
 	autocmd BufEnter *.lua call SetLuaOptions()
 	autocmd BufEnter *.org call SetOrgOptions()
+	autocmd BufEnter *.m call SetMatlabOptions()
 augroup END

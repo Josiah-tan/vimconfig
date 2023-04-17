@@ -13,6 +13,15 @@ lspkind.init()
 
 local cmp = require "cmp"
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "org",
+	callback = function()
+		if vim.fn.expand("%:p"):match(".*/org/cap/.*") then -- disable in my cap files
+			require("cmp").setup.buffer{enabled = false}
+		end
+	end,
+})
+
 lsp.setup_nvim_cmp{
 	mapping = {
 		["<C-d>"] = cmp.mapping.scroll_docs(-4),

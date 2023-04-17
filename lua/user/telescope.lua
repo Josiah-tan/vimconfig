@@ -374,6 +374,16 @@ local function getPloverConfigDirectory()
 	P("problem! plover config directory does not exist")
 end
 
+local function getLightFieldDirectory()
+	local cwds = {"~/LFToolbox/"}
+	for _, cwd in ipairs(cwds) do
+		if vim.fn.isdirectory(vim.fn.expand(cwd)) == 1 then
+			return cwd
+		end
+	end
+	P("problem! light field directory does not exist")
+end
+
 M.findPloverConfigFiles = function ()
 	require("telescope.builtin").find_files({
 		prompt_title = "find plover config >",
@@ -391,6 +401,26 @@ M.grepPloverConfigFiles = function ()
 	require("telescope.builtin").grep_string({
 		search = vim.fn.input("grep plover config > "),
 		cwd = getPloverConfigDirectory()
+	})
+end
+
+M.findLightFieldFiles = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "find light field >",
+		cwd = getLightFieldDirectory()
+	})
+end
+
+M.stringGrepLightFieldFiles = function ()
+	require("telescope.builtin").grep_string({
+		cwd = getLightFieldDirectory()
+	})
+end
+
+M.grepLightFieldFiles = function ()
+	require("telescope.builtin").grep_string({
+		search = vim.fn.input("grep light field > "),
+		cwd = getLightFieldDirectory()
 	})
 end
 

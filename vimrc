@@ -20,6 +20,7 @@ call plug#begin(plugin_dir_plug)
 Plug 'tpope/vim-sensible'
 "surrounding things with things
 Plug 'tpope/vim-surround'
+let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
 " for the surround plugin repeatablility with .
 Plug 'tpope/vim-repeat'
 "git integration
