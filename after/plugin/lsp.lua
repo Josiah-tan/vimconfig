@@ -41,15 +41,15 @@ require("neodev").setup({ -- for function signature lua
 -- 	}
 -- })
 
-lsp.configure('texlab', {
-	settings={
-		texlab={
-			build={
-				executable = "luatex"
-			}
-		}
-	}
-})
+-- lsp.configure('texlab', {
+-- 	settings={
+-- 		texlab={
+-- 			build={
+-- 				executable = "luatex"
+-- 			}
+-- 		}
+-- 	}
+-- })
 
 
 require("user.completion")

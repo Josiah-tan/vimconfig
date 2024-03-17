@@ -384,6 +384,16 @@ local function getLightFieldDirectory()
 	P("problem! light field directory does not exist")
 end
 
+local function getLiFFDirectory()
+	local cwds = {"~/LiFF/"}
+	for _, cwd in ipairs(cwds) do
+		if vim.fn.isdirectory(vim.fn.expand(cwd)) == 1 then
+			return cwd
+		end
+	end
+	P("problem! light field directory does not exist")
+end
+
 M.findPloverConfigFiles = function ()
 	require("telescope.builtin").find_files({
 		prompt_title = "find plover config >",
@@ -423,5 +433,32 @@ M.grepLightFieldFiles = function ()
 		cwd = getLightFieldDirectory()
 	})
 end
+
+M.findLiFFFiles = function ()
+	require("telescope.builtin").find_files({
+		prompt_title = "find LiFF >",
+		cwd = getLiFFDirectory()
+	})
+end
+
+M.stringGrepLiFFFiles = function ()
+	require("telescope.builtin").grep_string({
+		cwd = getLiFFDirectory()
+	})
+end
+
+M.grepLiFFFiles = function ()
+	require("telescope.builtin").grep_string({
+		search = vim.fn.input("grep LiFF > "),
+		cwd = getLiFFDirectory()
+	})
+end
+
+-- M.grepMatlabFunction = function ()
+-- 	require("telescope.builtin").grep_string({
+-- 		search = vim.fn.expand("<cword>")..'.m'
+-- 		cwd = expand("%")
+-- 	})
+-- end
 
 return M

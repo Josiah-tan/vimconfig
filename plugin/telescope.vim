@@ -72,9 +72,16 @@ if has('nvim')
 	nnoremap <leader>slpc <cmd>lua require('user.telescope').stringGrepPloverConfigFiles()<cr>
 	nnoremap <leader>lpc <cmd>lua require('user.telescope').grepPloverConfigFiles()<cr>
 
-	nnoremap <leader>ffd <cmd>lua require('user.telescope').findLightFieldFiles()<cr>
-	nnoremap <leader>slfd <cmd>lua require('user.telescope').stringGrepLightFieldFiles()<cr>
-	nnoremap <leader>lfd <cmd>lua require('user.telescope').grepLightFieldFiles()<cr>
+	nnoremap <leader>fld <cmd>lua require('user.telescope').findLightFieldFiles()<cr>
+	nnoremap <leader>slld <cmd>lua require('user.telescope').stringGrepLightFieldFiles()<cr>
+	nnoremap <leader>lld <cmd>lua require('user.telescope').grepLightFieldFiles()<cr>
+
+	nnoremap <leader>flf <cmd>lua require('user.telescope').findLiFFFiles()<cr>
+	nnoremap <leader>sllf <cmd>lua require('user.telescope').stringGrepLiFFFiles()<cr>
+	nnoremap <leader>llf <cmd>lua require('user.telescope').grepLiFFFiles()<cr>
+
+	" nnoremap <leader>slf <cmd>lua RELOAD('user.telescope').grepMatlabFunction()<cr>
+
 	
 	" primeagen
 	"  the problem with live_grep is that it is apparently slow in large file

@@ -76,6 +76,24 @@ M.setup = function()
 end
 
 M.setup()
+
+local function RunCCode()
+	local fullpath = vim.fn.expand("%:p")
+	local fileExtension = vim.fn.expand("%:e")
+	local command = nil;
+	if fileExtension == 'c' then
+		command = 'gcc';
+	end
+	if fileExtension == 'cpp' then
+		command = 'g++'
+	end
+	if command then
+		require("harpoon.term").sendCommand(1, command..' '..fullpath..[[ && ./a.out]]..'\n')
+	end
+end
+
+vim.keymap.set("n", "<leader>cv", function () RunCCode() end)
+
 return M
 -- local M = {
 -- 	was_init = false,

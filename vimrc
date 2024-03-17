@@ -243,7 +243,11 @@ if has('nvim')
 	endif
 	
 	Plug 'derekthecool/plover-tapey-tape.nvim'
-	Plug 'terror/chatgpt.nvim', { 'do': 'pip3 install -r requirements.txt'}
+	" Plug 'terror/chatgpt.nvim', { 'do': 'pip3 install -r requirements.txt'}
+
+	"required by chatgpt
+	Plug 'MunifTanjim/nui.nvim' 
+	Plug 'jackMort/ChatGPT.nvim'
 
 	Plug 'windwp/nvim-autopairs'
 

@@ -8,19 +8,19 @@ if has('nvim')
 		nnoremap <leader>jq <cmd>lua require("repl-nvim.builtin.python").replInit(4)<cr>
 		vnoremap <leader>x <cmd>lua require("repl-nvim.builtin.python").runReplSelection(4)<cr><esc>
 		nnoremap <leader>x <cmd>lua require("repl-nvim.builtin.python").runReplBlock(4)<cr>
-		nnoremap <leader>xl <cmd>lua require("repl-nvim.builtin.python").runReplLineNoIndent(4)<cr>
+		nnoremap <leader>lx <cmd>lua require("repl-nvim.builtin.python").runReplLineNoIndent(4)<cr>
 	endif
 	
 	nnoremap <leader>pjq <cmd>lua require("repl-nvim.builtin.cpp").replInit(5)<cr>
 	vnoremap <leader>px <cmd>lua require("repl-nvim.builtin.cpp").runReplSelection(5)<cr><esc>
 	nnoremap <leader>px <cmd>lua require("repl-nvim.builtin.cpp").runReplBlock(5)<cr>
-	nnoremap <leader>pxl <cmd>lua require("repl-nvim.builtin.cpp").runReplLineNoIndent(5)<cr>
+	nnoremap <leader>plx <cmd>lua require("repl-nvim.builtin.cpp").runReplLineNoIndent(5)<cr>
 	
 	nnoremap <leader>msv <cmd>lua require("repl-nvim.builtin.matlab").sourceVenv(1)<CR>
 	nnoremap <leader>mjq <cmd>lua require("repl-nvim.builtin.matlab").replInit(5)<cr>
 	vnoremap <leader>mx <cmd>lua require("repl-nvim.builtin.matlab").runReplSelection(5)<cr><esc>
 	nnoremap <leader>mx <cmd>lua require("repl-nvim.builtin.matlab").runReplBlock(5)<cr>
-	nnoremap <leader>mxl <cmd>lua require("repl-nvim.builtin.matlab").runReplLineNoIndent(5)<cr>
+	nnoremap <leader>mlx <cmd>lua require("repl-nvim.builtin.matlab").runReplLineNoIndent(5)<cr>
 	nnoremap <leader>mca <cmd>lua require("harpoon.term").sendCommand(5, "close all\n")<cr>
 endif
 
