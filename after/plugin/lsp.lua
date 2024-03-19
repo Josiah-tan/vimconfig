@@ -1,32 +1,49 @@
-local lsp = require("lsp-zero")
+local lsp_zero = require("lsp-zero")
 
-lsp.preset("recommended")
+lsp_zero.on_attach(function(client, bufnr)
+	local opts = {buffer = bufnr, remap = false}
+	-- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+end)
 
-lsp.ensure_installed({
-  'sumneko_lua',
-})
-
-lsp.configure('pyright', {
-	settings = {
-		python = {
-			pythonPath = require("user.repl").getSourceAppend("python") --[[  "/home/user/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/python" ]],
-		}
+require('mason').setup({})
+require('mason-lspconfig').setup({
+	ensure_installed = {'lua_ls'},
+	handlers = {
+		lsp_zero.default_setup,
+		lua_ls = function()
+			local lua_opts = lsp_zero.nvim_lua_ls()
+			require('lspconfig').lua_ls.setup(lua_opts)
+		end,
 	}
 })
 
-lsp.configure('sumneko_lua', {
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { 'vim' }
-			}
-		}
-	}
-})
+-- lsp.preset("recommended")
+--
+-- lsp.ensure_installed({
+--   'sumneko_lua',
+-- })
+--
+-- lsp.configure('pyright', {
+-- 	settings = {
+-- 		python = {
+-- 			pythonPath = require("user.repl").getSourceAppend("python") --[[  "/home/user/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/python" ]],
+-- 		}
+-- 	}
+-- })
+--
+-- lsp.configure('sumneko_lua', {
+-- 	settings = {
+-- 		Lua = {
+-- 			diagnostics = {
+-- 				globals = { 'vim' }
+-- 			}
+-- 		}
+-- 	}
+-- })
 
-require("neodev").setup({ -- for function signature lua
+-- require("neodev").setup({ -- for function signature lua
 	--add any options here, or leave empty to use the default settings
-})
+-- })
 
 -- lsp.configure('arduino-language-server', {
 -- 	cmd = {
@@ -54,26 +71,26 @@ require("neodev").setup({ -- for function signature lua
 
 require("user.completion")
 
-lsp.set_preferences({
-    suggest_lsp_servers = false,
-	set_lsp_keymaps = false,
-    sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
-    }
-})
+-- lsp.set_preferences({
+--     suggest_lsp_servers = false,
+-- 	set_lsp_keymaps = false,
+--     sign_icons = {
+--         error = 'E',
+--         warn = 'W',
+--         hint = 'H',
+--         info = 'I'
+--     }
+-- })
 
 vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev)
 
-lsp.setup()
+-- lsp.setup()
 
-vim.diagnostic.config({
-    virtual_text = true,
-})
+-- vim.diagnostic.config({
+--     virtual_text = true,
+-- })
 
 require("user.snippets")
