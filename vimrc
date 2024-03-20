@@ -428,6 +428,7 @@ nnoremap Y y$
 function! LineJoin()
 	norm! mzJ`z
 endfunction
+nnoremap <leader>pl :silent !start powershell<cr>
 nnoremap J :call LineJoin()<cr>
 " nnoremap J mzJ`z
 
