@@ -1,8 +1,12 @@
-" ################################################################ Autoinstall Vim-plug ################################################################
-" automatically installs vim-plug (for both vim and neovim)
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+" " ################################################################ Autoinstall Vim-plug ################################################################
+" " automatically installs vim-plug (for both vim and neovim)
+" commented below cause still use vim config in neovim
+" let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+let data_dir = '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	" execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	execute '!curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	" silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
@@ -13,7 +17,9 @@ endif
 " - For Neovim: stdpath('data') . '/plugged'
 " - For vim: '~/.vim/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
-let plugin_dir_plug = has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged'
+" commented below cause still use vim config in neovim
+" let plugin_dir_plug = has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged'
+let plugin_dir_plug = '~/.vim/plugged'
 call plug#begin(plugin_dir_plug)
 
 " tpope stuff
