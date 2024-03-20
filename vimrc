@@ -18,8 +18,8 @@ endif
 " - For vim: '~/.vim/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 " commented below cause still use vim config in neovim
-" let plugin_dir_plug = has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged'
-let plugin_dir_plug = '~/.vim/plugged'
+let plugin_dir_plug = has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged'
+" let plugin_dir_plug = '~/.vim/plugged'
 call plug#begin(plugin_dir_plug)
 
 " tpope stuff
