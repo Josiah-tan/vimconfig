@@ -280,8 +280,6 @@ M.findFilesCurrentBufferDir = function()
 	})
 end
 
-
-
 M.findPloverFiles = function ()
 	require("telescope.builtin").find_files({
 		prompt_title = "find plover >",
@@ -365,7 +363,7 @@ M.findStanleyFiles = function ()
 end
 
 local function getPloverConfigDirectory()
-	local cwds = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/"}
+	local cwds = {"~/.config/plover/", "/mnt/c/Users/josia/AppData/Local/plover/plover/", "C:\\Users\\Josiah Tan\\AppData\\Local\\plover\\plover\\"}
 	for _, cwd in ipairs(cwds) do
 		if vim.fn.isdirectory(vim.fn.expand(cwd)) == 1 then
 			return cwd

@@ -164,6 +164,9 @@ local getConfigDirectory = function ()
 	if (vim.fn.isdirectory(config_directory) == 0) then
 		config_directory = "~/.dotfiles/plover/.config/plover/"
 	end
+	if (vim.fn.isdirectory(config_directory) == 0) then
+		config_directory = "C:\\Users\\Josiah Tan\\AppData\\Local\\plover\\plover\\"
+	end
 	return config_directory
 end
 
