@@ -181,9 +181,8 @@ if has('nvim')
 	Plug 'ThePrimeagen/refactoring.nvim'
 
 	"Plugin for quick_projects
-	let s:quick_projects='~/Desktop/josia/neovim/quick_projects/'
-	if isdirectory(expand(s:quick_projects))
-		set rtp+=~/Desktop/josia/neovim/quick_projects/
+	if isdirectory(expand('~/quick-projects-nvim/'))
+		set rtp+=~/quick-projects-nvim/
 	else
 		Plug 'Josiah-tan/quick-projects-nvim'
 	endif

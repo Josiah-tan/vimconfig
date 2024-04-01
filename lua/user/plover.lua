@@ -161,10 +161,10 @@ vim.keymap.set("n", '<leader>pc', function () require("harpoon.term").sendComman
 
 local getConfigDirectory = function ()
 	local config_directory = vim.fn.expand('/mnt/c/Users/josia/AppData/Local/plover/plover/')
-	if (vim.fn.isdirectory(config_directory) == 0) then
+	if (vim.fn.isdirectory(vim.fn.expand(config_directory)) == 0) then
 		config_directory = "~/.dotfiles/plover/.config/plover/"
 	end
-	if (vim.fn.isdirectory(config_directory) == 0) then
+	if (vim.fn.isdirectory(vim.fn.expand(config_directory)) == 0) then
 		config_directory = "C:\\Users\\Josiah Tan\\AppData\\Local\\plover\\plover\\"
 	end
 	return config_directory
