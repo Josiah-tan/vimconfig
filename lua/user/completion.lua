@@ -35,6 +35,8 @@ cmp.setup({
 			select = true,
 		},
 		["<CR>"] = nil,
+		["<Down>"] = nil, -- not sure if this works
+		["<Up>"] = nil,
 		["<c-space>"] = cmp.mapping.complete(),
 		["<C-p>"] = cmp.mapping.select_prev_item {cmp_select},
 		["<C-n>"] = cmp.mapping.select_next_item {cmp_select}
