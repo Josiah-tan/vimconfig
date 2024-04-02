@@ -88,7 +88,7 @@ local function RunCCode()
 		command = 'g++'
 	end
 	if command then
-		require("harpoon.term").sendCommand(1, command..' '..fullpath..[[ && ./a.out]]..'\n')
+		require("harpoon.term").sendCommand(1, command..' '..fullpath..[[ && ./a.out]]..'\r') -- change back to \n if not work
 	end
 end
 

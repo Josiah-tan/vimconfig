@@ -21,7 +21,7 @@ if has('nvim')
 	vnoremap <leader>mx <cmd>lua require("repl-nvim.builtin.matlab").runReplSelection(5)<cr><esc>
 	nnoremap <leader>mx <cmd>lua require("repl-nvim.builtin.matlab").runReplBlock(5)<cr>
 	nnoremap <leader>mlx <cmd>lua require("repl-nvim.builtin.matlab").runReplLineNoIndent(5)<cr>
-	nnoremap <leader>mca <cmd>lua require("harpoon.term").sendCommand(5, "close all\n")<cr>
+	nnoremap <leader>mca <cmd>lua require("harpoon.term").sendCommand(5, "close all\r")<cr>
 endif
 
 " source /home/user/Desktop/user/plover/benoit-pierre/retro_formatter_with_translations/.tox/dev/bin/activate
