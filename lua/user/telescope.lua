@@ -23,7 +23,14 @@ require("telescope").setup {
           ["<C-o>"] = function(prompt_bufnr, map)
 			local content = require('telescope.actions.state').get_selected_entry()
 			require('telescope.actions').close(prompt_bufnr)
-			local text = "!xdg-open "..content[1].." &"
+
+			local text;
+			if vim.fn.has('linux') ~= 0 then
+				text = "!xdg-open "..content[1].." &";
+			else
+				text = "!start "..content[1].." &";
+			end
+			-- local text = "!xdg-open "..content[1].." &"
 			vim.cmd(text)
 			return true
 		  end
