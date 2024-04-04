@@ -2,21 +2,26 @@ local actions = require("telescope.actions")
 
 require("telescope").setup {
   pickers = {
-   --  git_files = {
-   --    mappings = {
-   --      i = {
-   --        ["<C-o>"] = function(prompt_bufnr, map)
-			-- local content = require('telescope.actions.state').get_selected_entry()
-			-- require('telescope.actions').close(prompt_bufnr)
-			-- P("content:", content)
-			-- P("content cwd:", content["cwd"])
-			-- local text = "!xdg-open "..content["cwd"].."/"..content[1].." &"
-			-- vim.cmd(text)
-			-- return true
-		 --  end
-   --      },
-   --    },
-   --  }, -- yeah I don't know why this doesn't work on windows, the full path gives an error when xdg-open for some reason
+    git_files = {
+      mappings = {
+        i = {
+          ["<C-o>"] = function(prompt_bufnr, map)
+			local content = require('telescope.actions.state').get_selected_entry()
+			require('telescope.actions').close(prompt_bufnr)
+			P("content:", content)
+			P("content cwd:", content["cwd"])
+			local text;
+			if vim.fn.has('linux') ~= 0 then
+				text = "!xdg-open "..content["cwd"].."/"..content[1].." &";
+			else
+				text = "!start "..content["cwd"].."/"..content[1].." &";
+			end
+			vim.cmd(text)
+			return true
+		  end
+        },
+      },
+    }, -- yeah I don't know why this doesn't work on windows, the full path gives an error when xdg-open for some reason
     find_files = {
       mappings = {
         i = {
