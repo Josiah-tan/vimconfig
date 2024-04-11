@@ -18,6 +18,7 @@ M.getSource = function()
 			end,
 		}):sync()
 		local binary
+		
 		if #available_environments > 0 then
 			-- P("#available_environments: ", #available_environments)
 			-- P("available_environments: ", available_environments)
@@ -30,7 +31,11 @@ M.getSource = function()
 			-- P(available_environments)
 			-- local available_environment = available_environments[1]
 			-- P("available_environment : ", available_environment )
-			binary = tox_directory.."/"..available_environment.."/bin/"
+			if vim.fn.has("linux") == 1 then
+				binary = tox_directory.."/"..available_environment.."/bin/"
+			else
+				binary = tox_directory.."/"..available_environment.."/Scripts/"
+			end
 			-- P("binary : ", binary )
 		end
 		return binary
