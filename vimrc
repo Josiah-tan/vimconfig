@@ -427,7 +427,6 @@ nnoremap Y y$
 function! LineJoin()
 	norm! mzJ`z
 endfunction
-nnoremap <leader>pl :silent !start powershell<cr>
 nnoremap J :call LineJoin()<cr>
 " nnoremap J mzJ`z
 
@@ -483,3 +482,9 @@ if executable(s:clip)
 	" let g:netrw_browsex_viewer = 'xdg-open'
 	map gx <Nop>
 endif
+
+if executable('pwsh.exe')
+	set shell=pwsh.exe
+endif
+
+nnoremap <leader>pl <cmd>lua require("harpoon.term").sendCommand(5, "start pwsh.exe\r")<cr>
