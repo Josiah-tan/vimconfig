@@ -75,7 +75,7 @@ M.setup = function()
 	-- P(M.getSourceAppend("activate"))
 	require("repl-nvim").setup({
 		python = {
-			source = M.getSourceAppend("activate")
+			getSource = function() return M.getSourceAppend("activate") end
 		}
 	})
 end
