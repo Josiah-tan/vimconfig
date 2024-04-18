@@ -33,7 +33,7 @@ require("telescope").setup {
 			if vim.fn.has('linux') ~= 0 then
 				text = "!xdg-open "..content[1].." &";
 			else
-				text = "!start "..content[1].." &";
+				text = "!start "..content[1];
 			end
 			-- local text = "!xdg-open "..content[1].." &"
 			vim.cmd(text)

@@ -427,7 +427,6 @@ nnoremap Y y$
 function! LineJoin()
 	norm! mzJ`z
 endfunction
-nnoremap <leader>pl :silent !start powershell<cr>
 nnoremap J :call LineJoin()<cr>
 " nnoremap J mzJ`z
 
@@ -483,3 +482,33 @@ if executable(s:clip)
 	" let g:netrw_browsex_viewer = 'xdg-open'
 	map gx <Nop>
 endif
+
+if executable('pwsh.exe')
+	" https://www.reddit.com/r/neovim/comments/vpnhrl/how_do_i_make_neovim_use_powershell_for_external/
+	set shell=pwsh.exe
+	set shellxquote=
+	let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command '
+	 let &shellquote   = ''
+	 let &shellpipe    = '| Out-File -Encoding UTF8 %s'
+	 let &shellredir   = '| Out-File -Encoding UTF8 %s'
+endif
+
+nnoremap <leader>pl <cmd>lua require("harpoon.term").sendCommand(5, "start pwsh.exe\r")<cr>
+
+" function! LazyGit()
+	" " execute '!git pull'
+	" if v:shell_error
+	" 	return
+	" endif
+	" execute "!git add ."
+	" if v:shell_error
+	" 	return
+	" endif
+	" execute "!git commit -a -m 'auto commit'"
+	" if v:shell_error
+	" 	return
+	" endif
+	" execute "!git push"
+" endfunction
+
+nnoremap <leader>lz :Git pull <Bar> Gwrite <Bar> Git commit -a -m 'automated commit' <Bar> Git push <CR>

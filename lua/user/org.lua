@@ -25,7 +25,7 @@ M.captionSplit = function()
 			end
 		else
 			vim.cmd("belowright 10 split")
-			M.customLog()
+			require("user.org").customLog()
 		end
 	else
 		print("clone or stow (todo) your org files first man")
