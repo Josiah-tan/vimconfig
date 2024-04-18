@@ -488,3 +488,9 @@ if executable('pwsh.exe')
 endif
 
 nnoremap <leader>pl <cmd>lua require("harpoon.term").sendCommand(5, "start pwsh.exe\r")<cr>
+
+function! LazyGit()
+	execute 'git pull'
+endfunction
+
+nnoremap <leader>lz :call LazyGit()<CR>
