@@ -3,8 +3,13 @@
 " commented below cause still use vim config in neovim
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 " let data_dir = '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-	execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+if has('win64')
+	let plugin_dir = substitute(data_dir.'/autoload/plug.vim', '/', '\\', 'g')
+else
+	let plugin_dir = data_dir.'/autoload/plug.vim'
+end
+if empty(glob(plugin_dir))
+	execute '!curl -fLo '''.plugin_dir.''' --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	" execute '!curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	" silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
