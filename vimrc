@@ -484,13 +484,32 @@ if executable(s:clip)
 endif
 
 if executable('pwsh.exe')
+	" https://www.reddit.com/r/neovim/comments/vpnhrl/how_do_i_make_neovim_use_powershell_for_external/
 	set shell=pwsh.exe
+	set shellxquote=
+	let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command '
+	 let &shellquote   = ''
+	 let &shellpipe    = '| Out-File -Encoding UTF8 %s'
+	 let &shellredir   = '| Out-File -Encoding UTF8 %s'
 endif
 
 nnoremap <leader>pl <cmd>lua require("harpoon.term").sendCommand(5, "start pwsh.exe\r")<cr>
 
 function! LazyGit()
-	execute 'git pull'
+	execute "!git pull"
+	" execute '!git pull'
+	if v:shell_error
+		return
+	endif
+	execute "!git add ."
+	if v:shell_error
+		return
+	endif
+	execute "!git commit -a -m 'auto commit'"
+	if v:shell_error
+		return
+	endif
+	execute "!git push"
 endfunction
 
 nnoremap <leader>lz :call LazyGit()<CR>
