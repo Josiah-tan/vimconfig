@@ -495,21 +495,20 @@ endif
 
 nnoremap <leader>pl <cmd>lua require("harpoon.term").sendCommand(5, "start pwsh.exe\r")<cr>
 
-function! LazyGit()
-	execute "!git pull"
-	" execute '!git pull'
-	if v:shell_error
-		return
-	endif
-	execute "!git add ."
-	if v:shell_error
-		return
-	endif
-	execute "!git commit -a -m 'auto commit'"
-	if v:shell_error
-		return
-	endif
-	execute "!git push"
-endfunction
+" function! LazyGit()
+	" " execute '!git pull'
+	" if v:shell_error
+	" 	return
+	" endif
+	" execute "!git add ."
+	" if v:shell_error
+	" 	return
+	" endif
+	" execute "!git commit -a -m 'auto commit'"
+	" if v:shell_error
+	" 	return
+	" endif
+	" execute "!git push"
+" endfunction
 
-nnoremap <leader>lz :call LazyGit()<CR>
+nnoremap <leader>lz :Gwrite <Bar> Git commit -a -m 'automated commit'<CR>
