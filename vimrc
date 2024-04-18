@@ -511,4 +511,4 @@ nnoremap <leader>pl <cmd>lua require("harpoon.term").sendCommand(5, "start pwsh.
 	" execute "!git push"
 " endfunction
 
-nnoremap <leader>lz :Gwrite <Bar> Git commit -a -m 'automated commit' <Bar> Git push <CR>
+nnoremap <leader>lz :Git pull <Bar> Gwrite <Bar> Git commit -a -m 'automated commit' <Bar> Git push <CR>
