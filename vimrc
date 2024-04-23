@@ -36,6 +36,7 @@ let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
 Plug 'tpope/vim-repeat'
 "git integration
 Plug 'tpope/vim-fugitive' 
+Plug 'junegunn/gv.vim'
 
 " for vii etc.
 Plug 'michaeljsmith/vim-indent-object' 
