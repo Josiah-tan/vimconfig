@@ -32,6 +32,11 @@ function SetPythonOptions()
 	let @c = ':g/^$/norm!dd'
 endfunction
 
+function SetJavascriptOptions()
+	" let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\).\{-}\([^ ]\+\) \{-}$/\1print(f"\2 = {\2}")/j'
+	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\).\{-}\([^ ]\+\) \{-}$/\1console.log(`\2 = ${\2}`)/j'
+endfunction
+
 " Global C family settings for header, c and cpp files
 function SetCFamGlobalOptions()
 	let @h = 'ggO/* File Name: "%po Date of Creation: :put = strftime(\"%c\")kJoAuthor: user TanDescription:xs*/?Descri$'
@@ -113,6 +118,7 @@ augroup MACROS
 	" autocmd BufEnter *.lua call SetLuaOptions()
 	" autocmd BufEnter *.org call SetOrgOptions()
 	autocmd BufEnter *.py call SetPythonOptions()
+	autocmd BufEnter *.js call SetJavascriptOptions()
 	autocmd BufEnter *.c,*.cpp,*.h call SetCFamGlobalOptions()
 	autocmd BufEnter *.c call SetCOptions()
 	autocmd BufEnter *.cpp call SetCPPOptions()
