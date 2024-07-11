@@ -20,7 +20,8 @@ require'nvim-treesitter.configs'.setup {
 		},
 	},
 	indent = {
-		enable = false -- for some reason this messes up C indentation
+		enable = true,
+		disable = {'python', 'c'} -- for some reason this messes up C indentation
 	},
 }
 
