@@ -34,6 +34,11 @@ endfunction
 
 function SetJavascriptOptions()
 	" let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\).\{-}\([^ ]\+\) \{-}$/\1print(f"\2 = {\2}")/j'
+	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\).\{-}\([^ ]\+\) \{-}$/\1console.log("\2");\r\1console.log(\2);/j'
+endfunction
+
+function SetHtmlOptions()
+	" let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\).\{-}\([^ ]\+\) \{-}$/\1print(f"\2 = {\2}")/j'
 	let @p = ':s/\([^=]*\)=.*/&\r\1/ge|s/\(\s*\).\{-}\([^ ]\+\) \{-}$/\1console.log(`\2 = ${\2}`)/j'
 endfunction
 
@@ -119,6 +124,7 @@ augroup MACROS
 	" autocmd BufEnter *.org call SetOrgOptions()
 	autocmd BufEnter *.py call SetPythonOptions()
 	autocmd BufEnter *.js call SetJavascriptOptions()
+	autocmd BufEnter *.html call SetHtmlOptions()
 	autocmd BufEnter *.c,*.cpp,*.h call SetCFamGlobalOptions()
 	autocmd BufEnter *.c call SetCOptions()
 	autocmd BufEnter *.cpp call SetCPPOptions()
