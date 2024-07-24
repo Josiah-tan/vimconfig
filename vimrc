@@ -124,6 +124,7 @@ if has('nvim')
 	Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 	Plug 'nvim-treesitter/nvim-treesitter-context'
 	Plug 'windwp/nvim-ts-autotag'
+	Plug 'luckasRanarison/tailwind-tools.nvim'
 
 	" This is a requirement, which implements some useful window management
 	"   items for neovim
