@@ -59,6 +59,7 @@ Plug 'preservim/nerdtree'
 " best colorscheme ever
 Plug 'morhetz/gruvbox'
 
+Plug 'lepture/vim-jinja'
 
 "for performing calculations on the fly
 " Plug 'theniceboy/vim-calc'
