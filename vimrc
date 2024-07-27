@@ -56,8 +56,6 @@ Plug 'AndrewRadev/switch.vim'
 "file finding
 Plug 'preservim/nerdtree'
 
-" best colorscheme ever
-Plug 'morhetz/gruvbox'
 
 Plug 'lepture/vim-jinja'
 
@@ -266,6 +264,8 @@ if has('nvim')
 	Plug 'windwp/nvim-autopairs'
 
 	Plug 'paretje/nvim-man'
+	Plug 'ellisonleao/gruvbox.nvim'
+	
 else
 " ################################################################ Vim Plugin Management ################################################################
 	" obviously for commentary shortcuts
@@ -276,6 +276,9 @@ else
 	Plug 'junegunn/fzf.vim'
 	" for language server (lsp)
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	
+	" best colorscheme ever
+	Plug 'morhetz/gruvbox'
 	
 	Plug 'Raimondi/delimitMate' " bracket completion
 	au FileType tex let b:delimitMate_quotes = "\" ' $"
