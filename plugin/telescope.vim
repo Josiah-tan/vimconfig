@@ -20,7 +20,7 @@ if has('nvim')
 	nnoremap <leader>tqp <cmd>lua require('user.telescope').quickProjects()<cr>
 
 	"n = normal mode, nore = not recursive, map = mapping, <leader> = <space>
-	nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files({no_ignore=true})<cr>
+	nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files({no_ignore=false})<cr>
 	nnoremap <leader>bf <cmd>lua require('telescope.builtin').file_browser()<cr>
 	"note that <leader>gs collides with git status remap
 	nnoremap <leader>sg <cmd>lua require('telescope.builtin').grep_string()<cr>
