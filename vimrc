@@ -523,4 +523,6 @@ nnoremap <leader>pl <cmd>lua require("harpoon.term").sendCommand(5, "start pwsh.
 	" execute "!git push"
 " endfunction
 
+let $PATH .= ':/home/josiah/.nvm/versions/node/v20.16.0/bin'
+
 nnoremap <leader>lz :Git pull <Bar> Gwrite <Bar> Git commit -a -m 'automated commit' <Bar> Git push <CR>
