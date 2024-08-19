@@ -10,10 +10,25 @@ M.tmuxSplit = function()
 	vim.fn.system([[tmux split-window -v -p 20 "nvim .; $SHELL"]])  -- finally something that actually works
 end
 
+
+-- tmux split doesn't work with debian 12 for some reason
+local function debian_version()
+  local handle = io.popen('cat /etc/os-release')
+  local result = handle:read('*a')
+  handle:close()
+
+  if result:match('VERSION_ID="12"') then
+		return 12
+  else
+		return 0
+  end
+end
+
+
 M.captionSplit = function()
 	-- vim.fn.system([[tmux split-window -v -p 20 "nvim -c 'call CustomLog()' -c 'set laststatus=0' .; $SHELL"]])  -- finally something that actually works
 	if vim.fn.isdirectory(vim.fn.expand(folder)) == 1 then
-		if vim.fn.getenv("TMUX") ~= vim.NIL then
+		if vim.fn.getenv("TMUX") ~= vim.NIL and debian_version() ~= 12 then
 			local not_marked = vim.fn.system("tmux display -p -t '~' '#D'") == "no marked target\n"
 			if not_marked then
 				vim.fn.system([[tmux split-window -v -p 20 "tmux select-pane -m && nvim -c 'call CustomLog()' -c 'set laststatus=0' ."]])  -- finally something that actually works
