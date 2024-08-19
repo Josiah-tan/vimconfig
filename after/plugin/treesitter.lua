@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = {'python', 'lua', 'vim', 'c', 'cpp', 'markdown', 'yaml', 'verilog'}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	ensure_installed = {'python', 'lua', 'vim', 'c', 'cpp', 'markdown', 'html', 'css', 'tsx'}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 	ignore_install = {}, -- List of parsers to ignore installing
 	highlight = {
 		enable = true,              -- false will disable the whole extension
