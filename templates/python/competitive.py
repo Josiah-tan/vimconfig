@@ -35,7 +35,7 @@ class Point:
         if type(obj) == int:
             return Point(self.y * obj, self.x * obj)
         else:
-            return NotImplementedError
+            return NotImplemented
 
 class Cartesian:
     def __init__(self, x: int, y: int):
